@@ -10,12 +10,12 @@ $(document).ready(function() {
         var value = $("#form1").alpaca('get').getValue();
         this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(value)));
         this.setAttribute('download', "Υποβολή" + new Date().toLocaleString() + ".txt");
-    })
+    });
 
-    $("#advanced-download-link").on('click', function() {
+    $('#form1').on('change', function () {
         var value = $("#form1").alpaca('get').getValue();
         $('#submit-content').val(JSON.stringify(value));
-    })
+    });
 
     $("#upload-file").on('change', function() {
         var file = this.files[0];
@@ -35,5 +35,5 @@ $(document).ready(function() {
 
             }
         }
-    })
+    });
 });
