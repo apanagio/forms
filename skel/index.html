@@ -44,15 +44,22 @@
     <div class="container">
         <div>
             <label class="btn btn-info btn-sm btn-file">
+                <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                 Upload
                 <input id="upload-file" type="file" style="display: none;">
             </label>
             <div id="form1">
             </div>
             <div class="row">
-            <a id="download-btn" class="download-btn btn btn-primary btn-lg col-md-3">Download</a>
+            <a id="download-btn" class="download-btn btn btn-primary btn-lg col-md-3">
+                <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+                Download
+            </a>
             <div class="col-md-8">
-                <a href="#advanced-download" id="advanced-download-link" data-toggle="collapse">Πρόβλημα στο κατέβασμα</a>
+                <a href="#advanced-download" id="advanced-download-link" data-toggle="collapse"class="download-btn btn btn-danger btn-sm">
+                    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                    Πρόβλημα στο κατέβασμα
+                </a>
                 <div id="advanced-download" class="collapse">
                     Αντιγράψτε το παρακάτω περιεχόμενο σε ένα αρχείο και ανεβάστε το αρχέιο στο σύστημα υποβολών
                     <textarea id="submit-content" class="form-control"></textarea>
