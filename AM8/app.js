@@ -50,7 +50,13 @@ $(document).ready(function() {
             }, {
                 title: "10",
                 description: "Δήλωση"
-            }]
+            }],
+            buttons: {
+                submit: {
+                    title: "Next",
+                    id: "no-submit"
+                }
+            }
         }
     }
     });

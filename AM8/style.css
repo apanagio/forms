@@ -19,3 +19,6 @@ body {
 .download-btn {
   margin-left: 10px;
 }
+#no-submit {
+    disabled: disabled;
+}
