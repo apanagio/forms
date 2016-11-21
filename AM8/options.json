@@ -1,23 +1,5 @@
 {
     "fields": {
-        "details": {
-            "type": "textarea",
-            "rows": 5
-        },
-        "expenses": {
-            "type": "table",
-            "items": {
-                "fields": {
-                    "budget": {
-                        "type": "currency",
-                        "centsSeparator": ",",
-                        "prefix": "",
-                        "suffix": "€",
-                        "thousandsSeparator": "."
-                    }
-                }
-            }
-        },
 		"1": {
 			"fields": {
 				"1.1": {
@@ -37,18 +19,6 @@
 					"type": "table"
 				}
 			}
-		},
-        "testGroup": {
-            "fields": {
-                "field1": {
-                    "vertical": false
-                },
-                "field3": {
-                    "dependencies": {
-                        "field1": ["μεσαίο"]
-                    }
-                }
-            }
-        }
+		}
     }
 }

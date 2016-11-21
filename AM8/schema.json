@@ -231,7 +231,7 @@
 													"type": "string"
 												}
 											}
-										}	
+										}
 									}
 								}
 							}
@@ -310,7 +310,7 @@
 		},
 		"9": {
 			"type": "object",
-			"title": "9. ΔΕΙΚΤΕΣ ΑΞΙΟΛΟΓΗΣΗΣ – ΑΠΟΤΙΜΗΣΗΣ ΤΟΥ ΕΡΓΟΥ – ΣΥΜΒΟΛΗ ΣΤΗΝ ΕΠΙΤΕΥΞΗ ΤΩΝ ΓΕΝΙΚΟΤΕΡΩΝ ΣΤΟΧΩΝ ΤΩΝ ΔΡΑΣΕΩΝ. ",
+			"title": "9. ΔΕΙΚΤΕΣ ΑΞΙΟΛΟΓΗΣΗΣ – ΑΠΟΤΙΜΗΣΗΣ ΤΟΥ ΕΡΓΟΥ – ΣΥΜΒΟΛΗ ΣΤΗΝ ΕΠΙΤΕΥΞΗ ΤΩΝ ΓΕΝΙΚΟΤΕΡΩΝ ΣΤΟΧΩΝ ΤΩΝ ΔΡΑΣΕΩΝ",
 			"properties": {
 				"fields": {}
 			}
@@ -320,57 +320,6 @@
 			"title": "10. Δήλωση υποψήφιου Δικαιούχου",
 			"properties": {
 				"fields": {}
-			}
-		},
-		"description": {
-			"type": "boolean",
-			"title": "Περιγραφή"
-		},
-		"details": {
-			"type": "string",
-			"title": "Λεπτομέρειες"
-		},
-		"testGroup": {
-			"type": "object",
-			"title": "ομαδοποίηση",
-			"properties": {
-				"field1": {
-					"type": "string",
-					"title": "πεδίο1",
-					"enum": ["μικρό", "μεσαίο", "μεγάλο"]
-				},
-				"field2": {
-					"type": "string",
-					"title": "πεδίο2"
-				},
-				"field3": {
-					"type": "string",
-					"title": "πεδίο3"
-				}
-			},
-			"dependencies": {
-				"field3": ["field1"]
-			}
-		},
-		"expenses": {
-			"type": "array",
-			"title": "Δαπάνες",
-			"items": {
-				"type": "object",
-				"properties": {
-					"description": {
-						"title": "Περιγραφή",
-						"type": "string"
-					},
-					"category": {
-						"title": "Κατηγορία",
-						"enum": ["Λειτουργικές", "Πάγια", "Αποσβέσεις", "Προσωπικού", "Άλλες"]
-					},
-					"budget": {
-						"title": "Προϋπολογισμός",
-						"type": "number"
-					}
-				}
 			}
 		}
 	}

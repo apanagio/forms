@@ -1,9 +1,58 @@
 $(document).ready(function() {
-    $("#form1").alpaca({
+    $('#form1').alpaca({
         schemaSource: "./schema.json",
         optionsSource: "./options.json",
         dataSource: "./data.json",
-        view: "bootstrap-edit-horizontal"
+        view: {
+        parent: "bootstrap-edit-horizontal",
+        wizard: {
+            title: "Welcome to the Wizard",
+            description: "Please fill things in as you wish",
+            bindings: {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "5": 5,
+                "6": 6,
+                "7": 7,
+                "8": 8,
+                "9": 9,
+                "10": 10
+            },
+            steps: [{
+                title: "1",
+                description: "Γενικά"
+            }, {
+                title: "2",
+                description: "Παρουσίαση"
+            }, {
+                title: "3",
+                description: "Δικαιούχος"
+            }, {
+                title: "4",
+                description: "Αναλυτικά",
+            }, {
+                title: "5",
+                description: "Οικονομικά"
+            }, {
+                title: "6",
+                description: "Ενσωμάτωση"
+            }, {
+                title: "7",
+                description: "Άδειες"
+            }, {
+                title: "8",
+                description: "Χρονοδιάγραμμα"
+            }, {
+                title: "9",
+                description: "Δείκτες"
+            }, {
+                title: "10",
+                description: "Δήλωση"
+            }]
+        }
+    }
     });
 
     $("#download-btn").on('click', function() {
