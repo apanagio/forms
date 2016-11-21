@@ -7,7 +7,7 @@
             "title": "id"
         },
         "description": {
-            "type": "string",
+            "type": "boolean",
             "title": "Περιγραφή"
         },
         "details": {
