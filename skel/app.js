@@ -9,12 +9,12 @@ $(document).ready(function() {
     $("#download-btn").on('click', function() {
         var value = $("#form1").alpaca('get').getValue();
         this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(value)));
-        this.setAttribute('download', "Υποβολή" + new Date().toLocaleString() + ".txt");
+        this.setAttribute('download', "Υποβολή" + $.format.date(new Date(), 'yyyy_M_d_H_mm_ss') + ".txt");
     });
 
-    $('#form1').on('change', function () {
+    $('#advanced-download-link').on('click', function () {
         var value = $("#form1").alpaca('get').getValue();
-        $('#submit-content').val(JSON.stringify(value));
+    	$('#submit-content').val(JSON.stringify(value));
     });
 
     $("#upload-file").on('change', function() {

@@ -26,6 +26,9 @@
 
     <!-- jQuery Price Format for currency field -->
     <script src="../deps/jquery-price-format2/jquery.priceformat.min.js"></script>
+    
+    <!-- jQuery date Format -->
+    <script src="../deps/jquery-dateFormat.min.js"></script>
 
     <script type="text/javascript" src="app.js"></script>
     <link href="style.css" rel="stylesheet">
@@ -56,14 +59,23 @@
                 Download
             </a>
             <div class="col-md-8">
-                <a href="#advanced-download" id="advanced-download-link" data-toggle="collapse"class="download-btn btn btn-danger btn-sm">
+                <button type="button" id="advanced-download-link" data-toggle="modal" data-target="#advanced-download" class="download-btn btn btn-danger btn-sm">
                     <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
                     Πρόβλημα στο κατέβασμα
-                </a>
-                <div id="advanced-download" class="collapse">
+                </button>
+<div class="modal fade" id="advanced-download" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+        <div class="modal-body">
                     Αντιγράψτε το παρακάτω περιεχόμενο σε ένα αρχείο και ανεβάστε το αρχέιο στο σύστημα υποβολών
                     <textarea id="submit-content" class="form-control"></textarea>
-                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+</div>
+    </div>
+</div>
             </div>
             </div>
         </div>
