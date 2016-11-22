@@ -22,3 +22,6 @@ body {
 #no-submit {
     disabled: disabled;
 }
+.help-block {
+    margin-left: 25%;
+}
