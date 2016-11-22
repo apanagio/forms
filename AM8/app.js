@@ -8,6 +8,7 @@ $(document).ready(function() {
         wizard: {
             title: "Welcome to the Wizard",
             description: "Please fill things in as you wish",
+            hideSubmitButton: true,
             bindings: {
                 "1": 1,
                 "2": 2,
@@ -50,13 +51,7 @@ $(document).ready(function() {
             }, {
                 title: "10",
                 description: "Δήλωση"
-            }],
-            buttons: {
-                submit: {
-                    title: "Next",
-                    id: "no-submit"
-                }
-            }
+            }]
         }
     }
     });
