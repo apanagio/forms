@@ -789,12 +789,220 @@
             }
         },
         "4": {
-            "type": "object",
-            "title": "4. ΑΝΑΛΥΤΙΚΑ ΣΤΟΙΧΕΙΑ ΤΟΥ ΕΡΓΟΥ ΩΣ ΠΡΟΣ ΤΟ ΦΥΣΙΚΟ ΑΝΤΙΚΕΙΜΕΝΟ  & ΤΙΣ ΕΠΙΠΤΩΣΕΙΣ",
-            "properties": {
-                "fields": {}
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Root schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "4α": {
+      "type": "string",
+      "title": "4α schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "4β": {
+      "type": "string",
+      "title": "4β schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "4γ": {
+      "type": "string",
+      "title": "4γ schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "4.1α": {
+      "type": "array",
+      "title": "4.1α schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "items": {
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "properties": {
+          "Κωδικός": {
+            "type": "string",
+            "title": "Κωδικός schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Περιγραφή ΚΑΔ": {
+            "type": "string",
+            "title": "Περιγραφή ΚΑΔ schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Ημερομηνία": {
+            "type": "string",
+            "title": "Ημερομηνία schema.",
+            "description": "An explanation about the purpose of this instance."
+          }
+        }
+      }
+    },
+    "4.1": {
+      "type": "array",
+      "title": "4.1 schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "items": {
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "properties": {
+          "Α/Α": {
+            "type": "integer",
+            "title": "Α/Α schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Τίτλος": {
+            "type": "string",
+            "title": "Τίτλος schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Κατηγορία": {
+            "type": "string",
+            "title": "Κατηγορία schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Υπέυθυνος": {
+            "type": "string",
+            "title": "Υπέυθυνος schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Προϋπολογισμός": {
+            "type": "number",
+            "title": "Προϋπολογισμός schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Δημόσια": {
+            "type": "number",
+            "title": "Δημόσια schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Α/Μ": {
+            "type": "string",
+            "title": "Α/Μ schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "'Εναρξη": {
+            "type": "integer",
+            "title": "'Εναρξη schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Τέλος": {
+            "type": "integer",
+            "title": "Τέλος schema.",
+            "description": "An explanation about the purpose of this instance."
+          }
+        }
+      }
+    },
+    "4.2": {
+      "type": "array",
+      "title": "4.2 schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "items": {
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "properties": {
+          "Α/Α": {
+            "type": "integer",
+            "title": "Α/Α schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "ΕΕ": {
+            "type": "integer",
+            "title": "ΕΕ schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Τίτλος": {
+            "type": "string",
+            "title": "Τίτλος schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Είδος": {
+            "type": "string",
+            "title": "Είδος schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Υπεύθυνος": {
+            "type": "string",
+            "title": "Υπεύθυνος schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Παράδοση": {
+            "type": "integer",
+            "title": "Παράδοση schema.",
+            "description": "An explanation about the purpose of this instance."
+          }
+        }
+      }
+    },
+    "4.3": {
+      "type": "array",
+      "title": "4.3 schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "items": {
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "properties": {
+          "Α/Α": {
+            "type": "integer",
+            "title": "Α/Α schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Συντομογραφία": {
+            "type": "string",
+            "title": "Συντομογραφία schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Ονοματεπώνυμο": {
+            "type": "string",
+            "title": "Ονοματεπώνυμο schema.",
+            "description": "An explanation about the purpose of this instance."
+          },
+          "Ειδικότητα": {
+            "type": "string",
+            "title": "Ειδικότητα schema.",
+            "description": "An explanation about the purpose of this instance."
+          }
+        }
+      }
+    },
+    "4.4": {
+      "type": "object",
+      "title": "4.4 schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "4.4.α": {
+          "type": "object",
+          "title": "4.4.α schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "διάδοση": {
+              "type": "boolean",
+              "title": "Διάδοση schema.",
+              "description": "An explanation about the purpose of this instance."
+            },
+            "τεκμηρίωση": {
+              "type": "string",
+              "title": "Τεκμηρίωση schema.",
+              "description": "An explanation about the purpose of this instance."
+            },
+            "καινοτομία": {
+              "type": "boolean",
+              "title": "Καινοτομία schema.",
+              "description": "An explanation about the purpose of this instance."
+            },
+            "πειραματική": {
+              "type": "boolean",
+              "title": "Πειραματική schema.",
+              "description": "An explanation about the purpose of this instance."
             }
-        },
+          }
+        }
+      }
+    }
+  }
+},
         "5": {
             "type": "object",
             "title": "5. ΟΙΚΟΝΟΜΙΚΑ ΣΤΟΙΧΕΙΑ ΤΟΥ ΕΡΓΟΥ",
