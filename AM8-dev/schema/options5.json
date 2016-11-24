@@ -1,0 +1,27 @@
+{
+	"fields": {
+		"2": {
+			"items": {
+				"fields": {
+					"2": {
+						"type": "table"
+					}
+				}
+			}
+		},
+		"3": {
+			"fields": {
+				"1": {
+					"type": "table"
+				},
+				"2": {
+					"type": "table"
+				},
+				"3": {
+					"type": "table"
+				}
+			}
+		}		
+	}
+
+}

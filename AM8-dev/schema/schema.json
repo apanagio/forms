@@ -1,0 +1,134 @@
+{
+    "title": "Φόρμα Υποβολής",
+    "type": "object",
+    "definitions": {
+        "empty": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {}
+        },
+        "person": {
+            "type": "object",
+            "properties": {
+                "1": {
+                    "type": "string",
+                    "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ"
+                },
+                "2": {
+                    "type": "string",
+                    "title": "ΟΝΟΜΑΣΙΑ ΦΟΡΕΑ"
+                },
+                "3": {
+                    "type": "string",
+                    "title": "ΘΕΣΗ ΣΤΟ ΦΟΡΕΑ"
+                },
+                "4": {
+                    "type": "string",
+                    "title": "ΔΙΕΥΘΥΝΣΗ"
+                },
+                "5": {
+                    "type": "string",
+                    "title": "ΤΗΛΕΦΩΝΟ"
+                },
+                "6": {
+                    "type": "string",
+                    "title": "ΤΗΛΕΦΩΝΟ ΚΙΝΗΤΟ"
+                },
+                "7": {
+                    "type": "string",
+                    "title": "FAX"
+                },
+                "8": {
+                    "type": "string",
+                    "title": "e-mail"
+                }
+            }
+        },
+		"company": {
+			"properties": {
+				"1": {
+					"type": "integer",
+					"title": "α/α"
+				}, 
+				"2": {
+					"type": "string",
+					"title": "Συνδεδεμένος Φορέας"
+				},
+				"3": {
+					"type": "string",
+					"title": "Περίοδος Αναφοράς"
+				},
+				"4": {
+					"type": "number",
+					"title": "Απασχολούμενοι (ΕΜΕ)"
+				},
+				"5": {
+					"type": "number",
+					"title": "Σύνολο Ενεργητικού (€)"
+				},
+				"6": {
+					"type": "number",
+					"title": "Κύκλος Εργασιών (€)"
+				}
+			}
+		}, 
+		"companySize": {
+			"type": "object",
+			"properties": {
+				"1": {
+					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
+					"type": "number"
+				}, 
+				"2": {
+					"title": "ΣΥΝΟΛΟ ΕΤΗΣΙΟΥ ΙΣΟΛΟΓΙΣΜΟΥ (ΣΕ €)",
+					"type": "number"
+				},
+				"3": {
+					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ (ΣΕ ΕΜΕ)",
+					"type": "number"				
+				}		
+			}
+		},
+		"companyFinance": {
+			"type": "object",
+			"properties": {
+				"1": {
+					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
+					"type": "number"
+				}, 
+				"2": {
+					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ   (ΣΕ ΕΜΕ)",
+					"type": "number"
+				},
+				"3": {
+					"title": "ΙΔΙΩΤΙΚΗ ΣΥΜΜΕΤΟΧΗ ΓΙΑ ΤΗΝ ΧΡΗΜΑΤΟΔΟΤΗΣΗ ΕΠΕΝΔΥΣΕΩΝ  (ΣΕ €)",
+					"type": "number"				
+				},
+				"4": {
+					"title": "ΑΞΙΑ ΕΞΑΓΩΓΩΝ (ΣΕ €)",
+					"type": "number"				
+				},
+				"5": {
+					"title": "Σύνολο Ενεργητικού",
+					"type": "number"				
+				},		
+				"6": {
+					"title": "Αποτελέσματα Χρήσης",
+					"type": "number"				
+				}
+			}
+		}
+    },
+    "properties": {
+        "1": {"$ref": "1.json"},
+        "2": {"$ref": "2.json"},
+        "3": {"$ref": "3.json"},
+		"4": {"$ref": "4.json"},
+        "5": {"$ref": "5.json"},
+        "6": {"$ref": "6.json"},
+        "7": {"$ref": "7.json"},
+		"8": {"$ref": "8.json"},
+		"9": {"$ref": "9.json"},
+        "10": {"$ref": "10.json"}
+    }
+}

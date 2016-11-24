@@ -1,0 +1,786 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"title": "Root schema.",
+	"description": "An explanation about the purpose of this instance.",
+	"properties": {
+		"1": {
+			"type": "object",
+			"title": "ΕΚ 651/2014 ΚΑΤΗΓΟΡΙΑ ΔΑΠΑΝΗΣ ΑΝΑ ΕΝΟΤΗΤΑ ΕΡΓΑΣΙΩΝ",
+			"description": "An explanation about the purpose of this instance.",
+			"properties": {
+				"1": {
+					"type": "object",
+					"title": "Άρθ. 25 Δαπάνες για έργα έρευνας & ανάπτυξης",
+					"properties": {
+						"1": {
+							"type": "object",
+							"title": "1 Δαπάνες προσωπικού",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "1.1 Δαπάνες ήδη απασχολούμενου ερευνητικού προσωπικού με μισθωτή σχέση εργασίας",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "1.2 Δαπάνες νέου προσωπικού με  σύμβαση εξαρτημένης εργασίας- μισθωτή σχέση εργασίας",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "number",
+									"title": "1.3 Δαπάνες προσωπικού με ΔΠΥ/ανάθεση έργου",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"2": {
+							"type": "object",
+							"title": "2. Δαπάνες Οργάνων & ερευνητικού εξοπλισμού",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "2.1 Δαπάνες για πάγιο εξοπλισμό: όργανα και εξοπλισμός, (λογιστικές αποσβέσεις κατά το χρονικό διάστημα χρήσης τους εντός της διάρκειας του έργου)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "2.2 Δαπάνες για κτίρια, εγκαταστάσεις",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"3": {
+							"type": "object",
+							"title": "3. Δαπάνες για έρευνα επί συμβάσει, γνώσεις και διπλώματα ευρεσιτεχνίας",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "3.1 Δαπάνες για έρευνα επί συμβάσει και δαπάνες ΦΤΕ (Αμοιβές τρίτων – Υπεργολαβίες)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "3.2 Δαπάνες για αγορά τεχνογνωσίας",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "number",
+									"title": "3.3 Δαπάνες για δικαιώματα βιομηχανικής ιδιοκτησίας για ΜΜΕ",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"4": {
+							"type": "object",
+							"title": "4. Πρόσθετα γενικά έξοδα και λοιπές λειτουργικές δαπάνες",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "4.1 Δαπάνες Υλικών και εφοδίων",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "4.2 Δαπάνες Αναλωσίμων",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "number",
+									"title": "4.3 Συμπληρωματικές Δαπάνες (δημοσιότητα, ορκωτοί λογιστές κλπ)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"4": {
+									"type": "number",
+									"title": "4.4 Δαπάνες Μετακινήσεων για την υλοποίηση του έργου",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"5": {
+							"type": "object",
+							"title": "5 Δαπάνες για μελέτες σκοπιμότητας",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "5.1 Δαπάνες για μελέτες σκοπιμότητας",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						}
+					}
+				},
+				"2": {
+					"type": "object",
+					"title": "Άρθ. 28 Δαπάνες για έργα καινοτομίας για ΜΜΕ",
+					"properties": {
+						"6": {
+							"type": "object",
+							"title": "6 Δαπάνες προσωπικού",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "6.1 Δαπάνες από οργανισμό έρευνας και διάδοσης γνώσεων ή από μεγάλη επιχείρηση, προσωπικού υψηλής ειδίκευσης, το οποίο απασχολείται σε δραστηριότητες έρευνας, ανάπτυξης και καινοτομίας σε νέες θέσεις που έχουν δημιουργηθεί προς τον σκοπό αυτό στη δικαιούχο επιχείρηση και δεν αντικαθιστά άλλο προσωπικό.",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"7": {
+							"type": "object",
+							"title": "7 Δαπάνες απόκτησης επικύρωσης και προστασίας διπλωμάτων ευρεσιτεχνίας",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "7.1 Δαπάνες απόκτησης επικύρωσης και προστασίας διπλωμάτων ευρεσιτεχνίας, στο εσωτερικό",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "7.2 Δαπάνες απόκτησης επικύρωσης και προστασίας διπλωμάτων ευρεσιτεχνίας, στο εξωτερικό",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"8": {
+							"type": "object",
+							"title": "8. Δαπάνες για συμβουλευτικές και υποστηρικτικές υπηρεσίες στον τομέα της καινοτομίας.",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "8.1 Δαπάνες για συμβουλευτικές και υποστηρικτικές υπηρεσίες στον τομέα της καινοτομίας.",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						}
+					}
+				},
+				"3": {
+					"title": "Άρθ. 3 Δαπάνες ενισχύσεων ήσσονος σημασίας δραστηριοτήτων Πειραματικής ανάπτυξης",
+					"type": "object",
+					"properties": {
+						"9": {
+							"type": "object",
+							"title": "9 Δαπάνες προσωπικού",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "9.1 Δαπάνες ήδη απασχολούμενου ερευνητικού προσωπικού με μισθωτή σχέση εργασίας",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "9.2 Δαπάνες νέου προσωπικού με  σύμβαση εξαρτημένης εργασίας- μισθωτή σχέση εργασίας",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "number",
+									"title": "9.3 Δαπάνες προσωπικού με ΔΠΥ/ανάθεση έργου",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"10": {
+							"type": "object",
+							"title": "10. Δαπάνες Οργάνων & ερευνητικού εξοπλισμού",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "10.1 Δαπάνες για πάγιο εξοπλισμό: όργανα και εξοπλισμός, (λογιστικές αποσβέσεις κατά το χρονικό διάστημα χρήσης τους εντός της διάρκειας του έργου)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "10.2 Δαπάνες για κτίρια, εγκαταστάσεις",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"11": {
+							"type": "object",
+							"title": "11 Δαπάνες για έρευνα επί συμβάσει, γνώσεις και διπλώματα ευρεσιτεχνίας",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "11.1 Δαπάνες για έρευνα επί συμβάσει και δαπάνες ΦΤΕ (Αμοιβές τρίτων – Υπεργολαβίες)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "11.2 Δαπάνες για αγορά τεχνογνωσίας",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "number",
+									"title": "11.3 Δαπάνες για δικαιώματα βιομηχανικής ιδιοκτησίας για ΜΜΕ",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"12": {
+							"type": "object",
+							"title": "12. Πρόσθετα γενικά έξοδα και λοιπές λειτουργικές δαπάνες",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "12.1 Δαπάνες Υλικών και εφοδίων",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "number",
+									"title": "12.2 Δαπάνες Αναλωσίμων.",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "number",
+									"title": "12.3 Συμπληρωματικές Δαπάνες (δημοσιότητα, ορκωτοί λογιστές κλπ)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"4": {
+									"type": "number",
+									"title": "12.4 Δαπάνες Μετακινήσεων για την υλοποίηση του έργου",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						},
+						"13": {
+							"type": "object",
+							"title": "13 Δαπάνες για μελέτες σκοπιμότητας",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "number",
+									"title": "13.1 Δαπάνες για μελέτες σκοπιμότητας",
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						}
+
+					}
+				}
+
+			}
+		},
+		"2": {
+			"type": "array",
+			"title": "5.2 ΠΡΟΫΠΟΛΟΓΙΣΜΟΣ ΑΝΑ ΕΝΟΤΗΤΑ ΕΡΓΑΣΙΑΣ ΚΑΙ ΚΑΤΗΓΟΡΙΑ ΕΡΕΥΝΑΣ",
+			"description": "An explanation about the purpose of this instance.",
+			"default": [{}],
+			"items": {
+				"type": "object",
+				"description": "An explanation about the purpose of this instance.",
+				"properties": {
+					"1": {
+						"type": "string",
+						"title": "Συντμγραφία Επωνυμίας Φορέα",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"2": {
+						"type": "array",
+						"title": null,
+						"description": "An explanation about the purpose of this instance.",
+						"default": [{}],
+						"items": {
+							"type": "object",
+							"description": "An explanation about the purpose of this instance.",
+							"properties": {
+								"1": {
+									"type": "string",
+									"title": "ΔΑΠΑΝΗ",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"2": {
+									"type": "string",
+									"title": "ΕΙΔΟΣ ΕΡΕΥΝΑΣ",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "number",
+									"title": "Προϋπολογισμός  (€)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"4": {
+									"type": "number",
+									"title": "Ένταση Ενίσχυσης (%)",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"5": {
+									"type": "number",
+									"title": "ΠΡΟΣΑΎΞΗΣΗ ΑΝΑΛΟΓΑ ΤΟ ΜΕΓΕΘΟΣ",
+									"readonly": true,
+									"description": "An explanation about the purpose of this instance."
+								},
+								"6": {
+									"type": "number",
+									"title": "ΠΡΟΣΑΥΞΗΣΕΙΣ ΠΕΔΙΟΥ 4.4 ΕΝΤΥΠΟΥ ΥΠΟΒΟΛΗΣ",
+									"readonly": true,
+									"description": "An explanation about the purpose of this instance."
+								},
+								"7": {
+									"type": "number",
+									"title": "Δημόσια Δαπάνη  (€)",
+									"readonly": true,
+									"description": "An explanation about the purpose of this instance."
+								}
+							}
+						}
+					},
+					"3": {
+						"type": "number",
+						"title": "% επί του συνολικού Π/Υ έργου",
+						"description": "An explanation about the purpose of this instance."
+					}
+				}
+			}
+		},
+		"3": {
+			"type": "object",
+			"title": "5.3.1 ΑΝΑΛΥΣΗ ΤΟΥ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ ΑΝΑ ΚΑΤΗΓΟΡΙΑ ΔΑΠΑΝΗΣ",
+			"description": "An explanation about the purpose of this instance.",
+			"properties": {
+				"1": {
+					"type": "array",
+					"default": [{}],
+					"title": "1. Δαπάνες προσωπικού ",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": null,
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "Α/Α",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ*",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "ΕΙΔΙΚΟΤΗΤΑ",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"4": {
+								"type": "string",
+								"title": "ΥΦΙΣΤΑΜΕΝΟ Ή ΝΕΟ ΠΡΟΣΩΠΙΚΟ η ΔΕΛΤΙΟ ΠΑΡΟΧΗΣ",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"5": {
+								"type": "string",
+								"title": "ΚΑΤΗΓΟΡΙΑ ΠΡΟΣΩΠΙΚΟΥ**",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"6": {
+								"type": "number",
+								"title": "ΣΥΝΟΛΙΚΗ ΔΑΠΑΝΗ (€) ***",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"7": {
+								"type": "string",
+								"title": "Αριθμός Α/Μ",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"2": {
+					"type": "array",
+					"default": [{}],
+					"title": "2. Δαπάνες για πάγιο Εξοπλισμό (άρθρο 25, EK 651/2014)",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "Α/Α",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "Περιγραφή, αιτιολογία και Τεχνικά Χαρακτηριστικά",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "Τύπος / Μοντέλο",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"4": {
+								"type": "integer",
+								"title": "Έτος κτήσης",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"5": {
+								"type": "string",
+								"title": "Κόστος Αγοράς (€)",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"6": {
+								"type": "number",
+								"title": "Διάρκεια απόσβεσης*",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"7": {
+								"type": "string",
+								"title": "Αξία απόσβεσης** (€)",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"3": {
+					"type": "array",
+					"title": "3. Δαπάνες για έρευνα επί συμβάσει και δαπάνες ΦΤΕ (Αμοιβές τρίτων – Υπεργολαβίες)",
+					"description": "An explanation about the purpose of this instance.",
+					"default": [{}],
+					"items": {
+						"type": "object",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "Α/Α",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "Επωνυμία προμηθευτή*",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "Περιγραφή & Τεκμηρίωση",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"4": {
+								"type": "string",
+								"title": "Δαπάνη",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"4": {
+					"type": "array",
+					"title": "4 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"4": {
+								"type": "string",
+								"title": "4 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"5": {
+					"type": "array",
+					"title": "5 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"4": {
+								"type": "string",
+								"title": "4 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"6": {
+					"type": "array",
+					"title": "6 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"7": {
+					"type": "array",
+					"title": "7 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"8": {
+					"type": "array",
+					"title": "8 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"9": {
+					"type": "array",
+					"title": "9 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"10": {
+					"type": "array",
+					"title": "10 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				},
+				"11": {
+					"type": "array",
+					"title": "11 schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "object",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance.",
+						"properties": {
+							"1": {
+								"type": "integer",
+								"title": "1 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"2": {
+								"type": "string",
+								"title": "2 schema.",
+								"description": "An explanation about the purpose of this instance."
+							},
+							"3": {
+								"type": "string",
+								"title": "3 schema.",
+								"description": "An explanation about the purpose of this instance."
+							}
+						}
+					}
+				}
+			}
+		},
+		"4": {
+			"type": "array",
+			"title": "4 schema.",
+			"description": "An explanation about the purpose of this instance.",
+			"items": {
+				"type": "object",
+				"title": "0 schema.",
+				"description": "An explanation about the purpose of this instance.",
+				"properties": {
+					"1": {
+						"type": "integer",
+						"title": "1 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"2": {
+						"type": "string",
+						"title": "2 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"3": {
+						"type": "string",
+						"title": "3 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"4": {
+						"type": "string",
+						"title": "4 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"5": {
+						"type": "string",
+						"title": "5 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"6": {
+						"type": "number",
+						"title": "6 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"7": {
+						"type": "string",
+						"title": "7 schema.",
+						"description": "An explanation about the purpose of this instance."
+					}
+				}
+			}
+		},
+		"5": {
+			"type": "array",
+			"title": "5 schema.",
+			"description": "An explanation about the purpose of this instance.",
+			"items": {
+				"type": "object",
+				"title": "0 schema.",
+				"description": "An explanation about the purpose of this instance.",
+				"properties": {
+					"1": {
+						"type": "integer",
+						"title": "1 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"2": {
+						"type": "string",
+						"title": "2 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"3": {
+						"type": "string",
+						"title": "3 schema.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"4": {
+						"type": "string",
+						"title": "4 schema.",
+						"description": "An explanation about the purpose of this instance."
+					}
+				}
+			}
+		}
+	}
+}

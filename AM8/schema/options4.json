@@ -1,0 +1,50 @@
+{
+	"fields": { 
+		"1": {
+			"type": "textarea"
+		},
+		"2": {
+			"type": "textarea"
+		},
+		"3": {
+			"type": "textarea"
+		},
+		"4": {
+			"type": "table"
+		},
+		"5": {
+			"type": "table",
+			"view": "bootstrap-edit"
+		},
+		"6": {
+			"type": "table",
+			"view": "bootstrap-edit"
+		},
+		"7": {
+			"type": "table",
+			"view": "bootstrap-edit"
+		}, 
+		"8": {
+			"fields": {
+				"1": {
+					"fields": {
+						"1": {
+							"fields": {
+								"3": {
+									"type": "textarea"
+								}
+							}							
+						},
+						"2": {
+							"fields": {
+								"3": {
+									"type": "textarea"
+								}
+							}							
+						}
+					}
+				}
+			}
+		}
+	}
+}

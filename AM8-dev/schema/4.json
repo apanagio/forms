@@ -1,0 +1,263 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"title": "4. ΑΝΑΛΥΤΙΚΑ ΣΤΟΙΧΕΙΑ ΤΟΥ ΕΡΓΟΥ ΩΣ ΠΡΟΣ ΤΟ ΦΥΣΙΚΟ ΑΝΤΙΚΕΙΜΕΝΟ  & ΤΙΣ ΕΠΙΠΤΩΣΕΙΣ",
+	"description": "An explanation about the purpose of this instance.",
+	"properties": {
+		"1": {
+			"type": "string",
+			"title": "4α Περιγραφή  Επενδυτικού Σχεδίου  (έως 1000 χαρακτήρες)",
+			"description": "An explanation about the purpose of this instance."
+		},
+		"2": {
+			"type": "string",
+			"title": "4β Αντικείμενο του Επενδυτικού Σχεδίου – Αναμενόμενα Αποτελέσματα",
+			"description": "An explanation about the purpose of this instance."
+		},
+		"3": {
+			"type": "string",
+			"title": "4γ Ωριμότητα Επενδυτικού Σχεδίου",
+			"description": "An explanation about the purpose of this instance."
+		},
+		"4": {
+			"type": "array",
+			"title": "4.1 Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
+			"description": "An explanation about the purpose of this instance.",
+			"default": [{}],
+			"items": {
+				"type": "object",
+				"title": "",
+				"description": "An explanation about the purpose of this instance.",
+				"properties": {
+					"1": {
+						"type": "string",
+						"title": "Κωδικός",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"2": {
+						"type": "string",
+						"title": "Περιγραφή ΚΑΔ",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"3": {
+						"type": "string",
+						"title": "Ημερομηνία ενεργοποίησης ΚΑΔ",
+						"description": "An explanation about the purpose of this instance."
+					}
+				}
+			}
+		},
+		"5": {
+			"type": "array",
+			"title": "4.1 ΠΙΝΑΚΑΣ ΕΝΟΤΗΤΩΝ ΕΡΓΑΣΙΑΣ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
+			"description": "An explanation about the purpose of this instance.",
+			"default": [{}],
+			"items": {
+				"type": "object",
+				"title": "",
+				"description": "An explanation about the purpose of this instance.",
+				"properties": {
+					"0": {
+						"type": "integer",
+						"title": "Α/Α.",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"1": {
+						"type": "string",
+						"title": "Τίτλος Ενότητας Εργασίας",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"2": {
+						"type": "string",
+						"title": "Κατηγορία Δραστηριότητας",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"3": {
+						"type": "string",
+						"title": "Υπεύθυνος Ε.Ε. (Φορέας)",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"4": {
+						"type": "number",
+						"title": "Προϋπολογισμός (€)",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"5": {
+						"type": "number",
+						"title": "Δημόσια Δαπάνη (€)",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"6": {
+						"type": "string",
+						"title": "Α/Μ",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"7": {
+						"type": "integer",
+						"title": "Έναρξη (μήνας)",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"8": {
+						"type": "integer",
+						"title": "Τέλος (μήνας)",
+						"description": "An explanation about the purpose of this instance."
+					}
+				}
+			}
+		},
+		"6": {
+			"type": "array",
+			"title": "4.2 ΠΙΝΑΚΑΣ ΠΑΡΑΔΟΤΕΩΝ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
+			"description": "An explanation about the purpose of this instance.",
+			"default": [{}],
+			"items": {
+				"type": "object",
+				"title": "",
+				"description": "An explanation about the purpose of this instance.",
+				"properties": {
+					"1": {
+						"type": "string",
+						"title": "Α/Α",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"2": {
+						"type": "integer",
+						"title": "ΕΕ",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"3": {
+						"type": "string",
+						"title": "Τίτλος Παραδοτέου",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"4": {
+						"type": "string",
+						"title": "Είδος Παραδοτέου",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"5": {
+						"type": "string",
+						"title": "Υπεύθυνος Φορέας (συντομογραφία)",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"6": {
+						"type": "integer",
+						"title": "Παράδοση (μήνας)",
+						"description": "An explanation about the purpose of this instance."
+					}
+				}
+			}
+		},
+		"7": {
+			"type": "array",
+			"title": "4.3 ΣΥΝΘΕΣΗ ΚΥΡΙΑΣ ΕΡΕΥΝΗΤΙΚΗΣ ΟΜΑΔΑΣ  ",
+			"description": "An explanation about the purpose of this instance.",
+			"default": [{}],
+			"items": {
+				"type": "object",
+				"title": "",
+				"description": "An explanation about the purpose of this instance.",
+				"properties": {
+					"1": {
+						"type": "integer",
+						"title": "Α/Α",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"2": {
+						"type": "string",
+						"title": "Α/Α ΦΟΡΕΑ & ΣΥΝΤΜΓΡΦΙΑ ",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"3": {
+						"type": "string",
+						"title": "Ονοματεπώνυμο",
+						"description": "An explanation about the purpose of this instance."
+					},
+					"4": {
+						"type": "string",
+						"title": "Ειδικότητα",
+						"description": "An explanation about the purpose of this instance."
+					}
+				}
+			}
+		},
+		"8": {
+			"type": "object",
+			"title": "4.4 ΤΕΚΜΗΡΙΩΣΗ ΠΡΟΣΑΥΞΗΣΗΣ ΠΟΣΟΣΤΟΥ ΕΝΙΣΧΥΣΗΣ",
+			"description": "An explanation about the purpose of this instance.",
+			"properties": {
+				"1": {
+					"type": "object",
+					"title": "4.4.α Έργα Έρευνας και Ανάπτυξης (ΕΚ 651/2014 (Άρθ. 25)",
+					"properties": {
+						"1": {
+							"type": "object",
+							"title": "II ΒΙΟΜΗΧΑΝΙΚΗ / ΕΦΑΡΜΟΣΜΕΝΗ ΕΡΕΥΝΑ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 50%)",
+							"properties": {
+								"1": {
+									"type": "boolean",
+									"title": "II ΒΙΟΜΗΧΑΝΙΚΗ / ΕΦΑΡΜΟΣΜΕΝΗ ΕΡΕΥΝΑ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 50%)"
+								},
+								"2": {
+									"type": "boolean",
+									"title": "Τα αποτελέσματα του έργου διαδίδονται ευρέως μέσω συνεδρίων, δημοσιεύσεων, αποθετηρίων ελεύθερης πρόσβασης ή μέσω δωρεάν λογισμικού ή λογισμικού ανοικτής πηγής;",
+									"description": "An explanation about the purpose of this instance."
+								},
+								"3": {
+									"type": "string",
+									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)",
+									"description": "An explanation about the purpose of this instance."
+								}
+							},
+							"dependencies": {
+								"3": ["2"]
+							}
+						},
+						"2": {
+							"type": "object",
+							"title": "III ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 25%)",
+							"properties": {
+								"1": {
+									"type": "boolean",
+									"title": "III ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 25%)"
+								},
+								"2": {
+									"type": "boolean",
+									"title": "Τα αποτελέσματα του έργου διαδίδονται ευρέως μέσω συνεδρίων, δημοσιεύσεων, αποθετηρίων ελεύθερης πρόσβασης ή μέσω δωρεάν λογισμικού ή λογισμικού ανοικτής πηγής;"
+								},
+								"3": {
+									"type": "string",
+									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)",
+									"description": "An explanation about the purpose of this instance."
+								}
+							},
+							"dependencies": {
+								"3": ["2"]
+							}
+						}
+					}
+				},
+				"2": {
+					"type": "object",
+					"title": "4.4.β Έργα Καινοτομίας για ΜΜΕ (ΕΚ 651/2014 - Άρθ. 28) (50%)",
+					"properties": {
+						"1": {
+							"type": "boolean",
+							"title": "Καινοτομία για ΜΜΕ (Η χρήση αυτού του άρθρου γίνεται μόνο από ΜΜΕ)"
+						}
+					}
+				},
+				"3": {
+					"type": "object",
+					"title": "4.4.γ Ενισχύσεις Ήσσονος Σημασίας (ΕΚ 1407/2013 - Άρθ. 3)",
+					"properties": { 
+						"1": {
+							"type": "boolean",
+							"title": "ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ"
+						}
+					}
+				}
+			}
+		}
+	}
+}
