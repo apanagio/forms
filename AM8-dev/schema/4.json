@@ -21,35 +21,80 @@
 		},
 		"4": {
 			"type": "array",
-			"title": "4.1 Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
-			"description": "An explanation about the purpose of this instance.",
+			"title": "4.1α Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
 			"default": [{}],
 			"items": {
 				"type": "object",
 				"title": "",
 				"description": "An explanation about the purpose of this instance.",
 				"properties": {
+					"0": {
+						"type": "integer",
+						"title": "A/A"
+					},
 					"1": {
 						"type": "string",
-						"title": "Κωδικός",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Κωδικός"
 					},
 					"2": {
 						"type": "string",
-						"title": "Περιγραφή ΚΑΔ",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Περιγραφή ΚΑΔ"
 					},
 					"3": {
 						"type": "string",
-						"title": "Ημερομηνία ενεργοποίησης ΚΑΔ",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Ημερομηνία ενεργοποίησης ΚΑΔ"
 					}
 				}
 			}
 		},
 		"5": {
+			"type": "object",
+			"title": "4.1.α.1 Επιπλέον Κ.Α.Δ.",
+			"dependencies": {
+				"2": ["1"],
+				"3": ["1"]
+			},
+			"properties": {
+				"1": {
+					"type": "boolean",
+					"title": "Δήλωση επιπλέον ΚΑΔ"
+				},
+				"2": {
+					"type": "array",
+					"title": "4.1α Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
+					"default": [{}],
+					"items": {
+						"type": "object",
+						"title": "",
+						"properties": {
+							"0": {
+								"type": "integer",
+								"title": "A/A"
+							},
+							"1": {
+								"type": "string",
+								"title": "Κωδικός"
+							},
+							"2": {
+								"type": "string",
+								"title": "Περιγραφή ΚΑΔ"
+							},
+							"3": {
+								"type": "string",
+								"title": "Ημερομηνία ενεργοποίησης ΚΑΔ"
+							}
+						}
+					}
+				},
+				"3": {
+					"type": "string",
+					"title": "Τεκμηρίωση συνεισφοράς πρότασης στην αλυσίδα αξίας του κλάδου"
+				}
+			}
+		},
+		"6": {
 			"type": "array",
-			"title": "4.1 ΠΙΝΑΚΑΣ ΕΝΟΤΗΤΩΝ ΕΡΓΑΣΙΑΣ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
+			"title": "4.1β ΠΙΝΑΚΑΣ ΕΝΟΤΗΤΩΝ ΕΡΓΑΣΙΑΣ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
 			"description": "An explanation about the purpose of this instance.",
 			"default": [{}],
 			"items": {
@@ -105,7 +150,7 @@
 				}
 			}
 		},
-		"6": {
+		"7": {
 			"type": "array",
 			"title": "4.2 ΠΙΝΑΚΑΣ ΠΑΡΑΔΟΤΕΩΝ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
 			"description": "An explanation about the purpose of this instance.",
@@ -148,7 +193,7 @@
 				}
 			}
 		},
-		"7": {
+		"8": {
 			"type": "array",
 			"title": "4.3 ΣΥΝΘΕΣΗ ΚΥΡΙΑΣ ΕΡΕΥΝΗΤΙΚΗΣ ΟΜΑΔΑΣ  ",
 			"description": "An explanation about the purpose of this instance.",
@@ -181,10 +226,9 @@
 				}
 			}
 		},
-		"8": {
+		"9": {
 			"type": "object",
 			"title": "4.4 ΤΕΚΜΗΡΙΩΣΗ ΠΡΟΣΑΥΞΗΣΗΣ ΠΟΣΟΣΤΟΥ ΕΝΙΣΧΥΣΗΣ",
-			"description": "An explanation about the purpose of this instance.",
 			"properties": {
 				"1": {
 					"type": "object",

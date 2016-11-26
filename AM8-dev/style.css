@@ -28,3 +28,6 @@ body {
 .zero-margin .alpaca-field {
 	margin-left: 0px !important;
 }
+.top-level-object>.alpaca-helper {
+	margin-left:0px;
+}
