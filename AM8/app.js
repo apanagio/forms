@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $('body').css('cursor', 'progress');
+
     Alpaca.views["bootstrap-edit"].callbacks["collapsible"] = function() {
         var $fieldEl = $(this.getFieldEl());
         var $legendEl = $fieldEl.find("legend").first();
@@ -27,6 +29,9 @@ $(document).ready(function() {
         schemaSource: "./schema/compiledSchema.json",
         optionsSource: "./options.json",
         dataSource: "./data.json",
+        postRender: function () {
+            $('body').css('cursor', 'default');
+        },
         view: {
         parent: "bootstrap-edit-horizontal",
         wizard: {

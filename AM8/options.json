@@ -23,8 +23,6 @@
             }
         },
         "3": {
-			"collapsible": true,
-			"collapsed": true,
             "fields": {
                 "1": {
                     "fields": {
