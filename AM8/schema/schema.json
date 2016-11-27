@@ -49,7 +49,7 @@
 				"1": {
 					"type": "integer",
 					"title": "α/α"
-				}, 
+				},
 				"2": {
 					"type": "string",
 					"title": "Συνδεδεμένος Φορέας"
@@ -71,50 +71,60 @@
 					"title": "Κύκλος Εργασιών (€)"
 				}
 			}
-		}, 
+		},
 		"companySize": {
 			"type": "object",
 			"properties": {
+                "0": {
+                    "type": "integer",
+                    "title": "Έτος",
+                    "readonly": true
+                },
 				"1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
-				}, 
+				},
 				"2": {
 					"title": "ΣΥΝΟΛΟ ΕΤΗΣΙΟΥ ΙΣΟΛΟΓΙΣΜΟΥ (ΣΕ €)",
 					"type": "number"
 				},
 				"3": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ (ΣΕ ΕΜΕ)",
-					"type": "number"				
-				}		
+					"type": "number"
+				}
 			}
 		},
 		"companyFinance": {
 			"type": "object",
 			"properties": {
+                "0": {
+                    "type": "integer",
+                    "title": "Έτος",
+                    "readonly": true
+                },
 				"1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
-				}, 
+				},
 				"2": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ   (ΣΕ ΕΜΕ)",
 					"type": "number"
 				},
 				"3": {
 					"title": "ΙΔΙΩΤΙΚΗ ΣΥΜΜΕΤΟΧΗ ΓΙΑ ΤΗΝ ΧΡΗΜΑΤΟΔΟΤΗΣΗ ΕΠΕΝΔΥΣΕΩΝ  (ΣΕ €)",
-					"type": "number"				
+					"type": "number"
 				},
 				"4": {
 					"title": "ΑΞΙΑ ΕΞΑΓΩΓΩΝ (ΣΕ €)",
-					"type": "number"				
+					"type": "number"
 				},
 				"5": {
 					"title": "Σύνολο Ενεργητικού",
-					"type": "number"				
-				},		
+					"type": "number"
+				},
 				"6": {
 					"title": "Αποτελέσματα Χρήσης",
-					"type": "number"				
+					"type": "number"
 				}
 			}
 		}

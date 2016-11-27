@@ -1,4 +1,28 @@
 $(document).ready(function() {
+
+    Alpaca.views["bootstrap-edit"].callbacks["collapsible"] = function() {
+        var $fieldEl = $(this.getFieldEl());
+        var $legendEl = $fieldEl.find("legend").first();
+        var $anchorEl = $("[data-toggle='collapse']", $legendEl);
+        if ($anchorEl.length > 0) {
+            var $containerEl = $(this.getContainerEl());
+            var id = $containerEl.attr("id");
+            if (!id) {
+                id = Alpaca.generateId();
+                $containerEl.attr("id", id);
+            }
+            $anchorEl.attr("aria-expanded", this.options.collapsed ? "false" : "true");
+            $containerEl.addClass(this.options.collapsed ? "collapse" : "collapse in");
+            if (!$anchorEl.attr("data-target")) {
+                $anchorEl.attr("data-target", "#" + id);
+            }
+            $anchorEl.mouseover(function(e) {
+                $(this).css("cursor", "pointer");
+            })
+        }
+    };
+
+
     $('#form1').alpaca({
         schemaSource: "./schema/compiledSchema.json",
         optionsSource: "./options.json",
