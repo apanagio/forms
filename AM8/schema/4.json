@@ -196,32 +196,26 @@
 		"8": {
 			"type": "array",
 			"title": "4.3 ΣΥΝΘΕΣΗ ΚΥΡΙΑΣ ΕΡΕΥΝΗΤΙΚΗΣ ΟΜΑΔΑΣ  ",
-			"description": "An explanation about the purpose of this instance.",
 			"default": [{}],
 			"items": {
 				"type": "object",
 				"title": "",
-				"description": "An explanation about the purpose of this instance.",
 				"properties": {
 					"1": {
 						"type": "integer",
-						"title": "Α/Α",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Α/Α"
 					},
 					"2": {
 						"type": "string",
-						"title": "Α/Α ΦΟΡΕΑ & ΣΥΝΤΜΓΡΦΙΑ ",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Α/Α ΦΟΡΕΑ & ΣΥΝΤΜΓΡΦΙΑ "
 					},
 					"3": {
 						"type": "string",
-						"title": "Ονοματεπώνυμο",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Ονοματεπώνυμο"
 					},
 					"4": {
 						"type": "string",
-						"title": "Ειδικότητα",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Ειδικότητα"
 					}
 				}
 			}
@@ -244,14 +238,12 @@
 								},
 								"2": {
 									"type": "boolean",
-									"title": "Τα αποτελέσματα του έργου διαδίδονται ευρέως μέσω συνεδρίων, δημοσιεύσεων, αποθετηρίων ελεύθερης πρόσβασης ή μέσω δωρεάν λογισμικού ή λογισμικού ανοικτής πηγής;",
-									"description": "An explanation about the purpose of this instance."
+									"title": "Τα αποτελέσματα του έργου διαδίδονται ευρέως μέσω συνεδρίων, δημοσιεύσεων, αποθετηρίων ελεύθερης πρόσβασης ή μέσω δωρεάν λογισμικού ή λογισμικού ανοικτής πηγής;"
 								},
 								"3": {
 									"type": "string",
-									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)",
-									"description": "An explanation about the purpose of this instance."
-								}
+									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)"
+									}
 							},
 							"dependencies": {
 								"3": ["2"]
@@ -271,8 +263,7 @@
 								},
 								"3": {
 									"type": "string",
-									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)",
-									"description": "An explanation about the purpose of this instance."
+									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)"
 								}
 							},
 							"dependencies": {

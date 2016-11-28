@@ -37,6 +37,7 @@ $(document).ready(function() {
         wizard: {
             title: "Welcome to the Wizard",
             description: "Please fill things in as you wish",
+			validation: false,
             hideSubmitButton: true,
              bindings: {
                 "1": 1,
