@@ -271,6 +271,62 @@
 					}
 				}
 			}
+		},
+		"5": {
+			"fields": {
+				"1": {
+					"fields": {
+						"0": {
+							"type": "table",
+							"showActionsColumn": false,
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin",
+							"items": {
+								"fields": {
+									"2": {
+										"type": "textarea",
+										"rows": 2,
+										"cols": 35
+									}
+								}
+							}
+
+						},
+						"1": {
+							"type": "table",
+							"showActionsColumn": false,
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin",
+							"items": {
+								"fields": {
+									"2": {
+										"type": "textarea",
+										"rows": 2,
+										"cols": 35
+									}
+								}
+							}
+
+						},
+						"2": {
+							"type": "table",
+							"showActionsColumn": false,
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin",
+							"items": {
+								"fields": {
+									"2": {
+										"type": "textarea",
+										"rows": 2,
+										"cols": 35
+									}
+								}
+							}
+
+						}
+					}
+				}
+			}
 		}
 	}
 }

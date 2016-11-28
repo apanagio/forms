@@ -2,22 +2,18 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
 	"title": "4. ΑΝΑΛΥΤΙΚΑ ΣΤΟΙΧΕΙΑ ΤΟΥ ΕΡΓΟΥ ΩΣ ΠΡΟΣ ΤΟ ΦΥΣΙΚΟ ΑΝΤΙΚΕΙΜΕΝΟ  & ΤΙΣ ΕΠΙΠΤΩΣΕΙΣ",
-	"description": "An explanation about the purpose of this instance.",
 	"properties": {
 		"1": {
 			"type": "string",
-			"title": "4α Περιγραφή  Επενδυτικού Σχεδίου  (έως 1000 χαρακτήρες)",
-			"description": "An explanation about the purpose of this instance."
+			"title": "4α Περιγραφή  Επενδυτικού Σχεδίου  (έως 1000 χαρακτήρες)"
 		},
 		"2": {
 			"type": "string",
-			"title": "4β Αντικείμενο του Επενδυτικού Σχεδίου – Αναμενόμενα Αποτελέσματα",
-			"description": "An explanation about the purpose of this instance."
+			"title": "4β Αντικείμενο του Επενδυτικού Σχεδίου – Αναμενόμενα Αποτελέσματα"
 		},
 		"3": {
 			"type": "string",
-			"title": "4γ Ωριμότητα Επενδυτικού Σχεδίου",
-			"description": "An explanation about the purpose of this instance."
+			"title": "4γ Ωριμότητα Επενδυτικού Σχεδίου"
 		},
 		"5": {
 			"type": "object",
@@ -92,58 +88,47 @@
 		"6": {
 			"type": "array",
 			"title": "4.1β ΠΙΝΑΚΑΣ ΕΝΟΤΗΤΩΝ ΕΡΓΑΣΙΑΣ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
-			"description": "An explanation about the purpose of this instance.",
 			"default": [{}
 			],
 			"items": {
 				"type": "object",
 				"title": "",
-				"description": "An explanation about the purpose of this instance.",
 				"properties": {
 					"0": {
 						"type": "integer",
-						"title": "Α/Α.",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Α/Α."
 					},
 					"1": {
 						"type": "string",
-						"title": "Τίτλος Ενότητας Εργασίας",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Τίτλος Ενότητας Εργασίας"
 					},
 					"2": {
 						"type": "string",
-						"title": "Κατηγορία Δραστηριότητας",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Κατηγορία Δραστηριότητας"
 					},
 					"3": {
 						"type": "string",
-						"title": "Υπεύθυνος Ε.Ε. (Φορέας)",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Υπεύθυνος Ε.Ε. (Φορέας)"
 					},
 					"4": {
 						"type": "number",
-						"title": "Προϋπολογισμός (€)",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Προϋπολογισμός (€)"
 					},
 					"5": {
 						"type": "number",
-						"title": "Δημόσια Δαπάνη (€)",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Δημόσια Δαπάνη (€)"
 					},
 					"6": {
 						"type": "string",
-						"title": "Α/Μ",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Α/Μ"
 					},
 					"7": {
 						"type": "integer",
-						"title": "Έναρξη (μήνας)",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Έναρξη (μήνας)"
 					},
 					"8": {
 						"type": "integer",
-						"title": "Τέλος (μήνας)",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Τέλος (μήνας)"
 					}
 				}
 			}
@@ -151,43 +136,35 @@
 		"7": {
 			"type": "array",
 			"title": "4.2 ΠΙΝΑΚΑΣ ΠΑΡΑΔΟΤΕΩΝ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
-			"description": "An explanation about the purpose of this instance.",
 			"default": [{}
 			],
 			"items": {
 				"type": "object",
 				"title": "",
-				"description": "An explanation about the purpose of this instance.",
 				"properties": {
 					"1": {
 						"type": "string",
-						"title": "Α/Α",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Α/Α"
 					},
 					"2": {
 						"type": "integer",
-						"title": "ΕΕ",
-						"description": "An explanation about the purpose of this instance."
+						"title": "ΕΕ"
 					},
 					"3": {
 						"type": "string",
-						"title": "Τίτλος Παραδοτέου",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Τίτλος Παραδοτέου"
 					},
 					"4": {
 						"type": "string",
-						"title": "Είδος Παραδοτέου",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Είδος Παραδοτέου"
 					},
 					"5": {
 						"type": "string",
-						"title": "Υπεύθυνος Φορέας (συντομογραφία)",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Υπεύθυνος Φορέας (συντομογραφία)"
 					},
 					"6": {
 						"type": "integer",
-						"title": "Παράδοση (μήνας)",
-						"description": "An explanation about the purpose of this instance."
+						"title": "Παράδοση (μήνας)"
 					}
 				}
 			}
