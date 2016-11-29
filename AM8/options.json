@@ -274,6 +274,21 @@
 		},
 		"5": {
 			"fields": {
+				"0": {
+					"type": "table",
+					"view": "bootstrap-edit",
+					"showActionsColumn": false,
+					"fieldClass": "zero-margin",
+					"items": {
+						"fields": {
+							"2": {
+								"type": "textarea",
+								"cols": 160,
+								"rows": 2
+							}
+						}
+					}
+				},
 				"1": {
 					"fields": {
 						"0": {
@@ -325,7 +340,112 @@
 
 						}
 					}
+				},
+				"2": {
+					"fields": {
+						"2": {
+							"items": {
+								"fields": {
+									"2": {
+										"type": "table",
+										"view": "bootstrap-edit",
+										"fieldClass": "zero-margin"
+									},
+									"3": {
+										"type": "table",
+										"view": "bootstrap-edit",
+										"fieldClass": "zero-margin",
+										"showActionsColumn": false
+									}
+								}
+							}
+						},
+						"3": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin"
+						}
+					}
+				},
+				"3": {
+					"fields": {
+						"1": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["(*) Ονοματίζονται τα άτομα της ομάδας έργου από κάθε φορέα. Για τα ονοματιζόμενα αυτά άτομα (των οποίων τα βιογραφικά λαμβάνονται υπόψη κατά την αξιολόγηση) δηλώνονται συνολική αμοιβή και ανθρωπομήνες. Η υπόλοιπη ανθρωποπροσπάθεια ορίζεται ως προς τις ειδικότητες, της συνολική δαπάνη και τους συνολικούς ανθρωπομήνες μόνο (όχι αριθμός ατόμων, όχι ονόματα).","(**) Αναφέρεται η κατηγορία ερευνητικού προσωπικού: Έμπειρος Ερευνητής, Ερευνητής, τεχνικό προσωπικό, βοηθητικό προσωπικό","(***) Μικτό κόστος ανθρωπομήνα σύμφωνα με τα όρια που ορίζονται στην αναλυτική πρόσκληση"]
+						},
+						"2": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["(*) Σε μήνες που αποδίδονται/ αναλογούν στο έργο","(**) Επιλέξιμες θεωρούνται μόνον οι δαπάνες απόσβεσης, που αντιστοιχούν στη διάρκεια του έργο, οι οποίες υπολογίζονται με βάσει τις γενικά αποδεκτές λογιστικές αρχές"]
+						},
+						"3": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"]
+						},
+						"4": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"]
+						},
+						"5": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Απαιτείται προσφορά από τον αναφερόμενο φορέα"]
+						},
+						"6": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Αφορούν δαπάνες μετακινήσεων και λοιπών δαπανών απαραίτητες για την εκτέλεση του έργου"]
+						},
+						"7": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Αφορούν απαραίτητα υλικά ή εξαρτήματα για την εκτέλεση του έργου"]
+						},
+						"8": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"]
+						},
+						"9": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin"
+						},
+						"10": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin"
+						},
+						"11": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin"
+						}						
+					}
+				},
+				"4": {
+					"type": "table",
+					"view": "bootstrap-edit",
+					"fieldClass": "zero-margin"
+				},
+				"5": {
+					"type": "table",
+					"view": "bootstrap-edit",
+					"fieldClass": "zero-margin",
+					"helpers": ["Επιτρέπεται η κατανομή της Δημόσιας Δαπάνης εκτός Περιφέρειας Δ. Ελλάδας μόνο για δαπάνες ΦΤΕ ή έρευνας επί συμβάσει"]
 				}
+
 			}
 		}
 	}

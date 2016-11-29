@@ -533,184 +533,185 @@
 				},
 				"4": {
 					"type": "array",
-					"title": "4 schema.",
+					"title": "4. Δαπάνες Μελέτες Τεχνικής Σκοπιμότητας (άρθρο 25, EK 651/2014)",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ", "3":"---"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
+						"title": null,
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Επωνυμία προμηθευτή / μελετητή*"
 							},
 							"3": {
 								"type": "string",
-								"title": "3 schema."
+								"title": "Περιγραφή & Τεκμηρίωση"
 							},
 							"4": {
-								"type": "string",
-								"title": "4 schema."
+								"type": "number",
+								"title": "Δαπάνη"
 							}
 						}
 					}
 				},
 				"5": {
 					"type": "array",
-					"title": "5 schema.",
+					"title": "5. Δαπάνες για αγορά τεχνογνωσίας (άρθρο 25, EK 651/2014).",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ", "3":"---"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Επωνυμία προμηθευτή / μελετητή*"
 							},
 							"3": {
 								"type": "string",
-								"title": "3 schema."
+								"title": "Περιγραφή & Τεκμηρίωση"
 							},
 							"4": {
-								"type": "string",
-								"title": "4 schema."
+								"type": "number",
+								"title": "Δαπάνη"
 							}
 						}
 					}
 				},
 				"6": {
 					"type": "array",
-					"title": "6 schema.",
+					"title": "6.Συμπληρωματικές Δαπάνες* (άρθρο 25, EK 651/2014)",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Περιγραφή"
 							},
 							"3": {
-								"type": "string",
-								"title": "3 schema."
+								"type": "number",
+								"title": "Δαπάνη"
 							}
 						}
 					}
 				},
 				"7": {
 					"type": "array",
-					"title": "7 schema.",
+					"title": "7. Δαπάνες για  Υλικά (άρθρο 25, EK 651/2014)",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Περιγραφή & αιτιολογία*"
 							},
 							"3": {
-								"type": "string",
-								"title": "3 schema."
+								"type": "number",
+								"title": "Κόστος Αγοράς (€)"
 							}
 						}
 					}
 				},
 				"8": {
 					"type": "array",
-					"title": "8 schema.",
+					"title": "8. Δαπάνες Αναλωσίμων* (άρθρο 25, EK 651/2014)",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Περιγραφή"
 							},
 							"3": {
-								"type": "string",
-								"title": "3 schema."
+								"type": "number",
+								"title": "Δαπάνη"
 							}
 						}
 					}
 				},
 				"9": {
 					"type": "array",
-					"title": "9 schema.",
+					"title": "9. Δαπάνες για δικαιώματα βιομηχανικής ιδιοκτησίας για ΜΜΕ  (άρθρο 25, EK 651/2014)",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Περιγραφή"
 							},
 							"3": {
-								"type": "string",
-								"title": "3 schema."
+								"type": "number",
+								"title": "Δαπάνη"
 							}
 						}
 					}
 				},
 				"10": {
 					"type": "array",
-					"title": "10 schema.",
+					"title": "10. Δαπάνες προσωπικού υψηλής ειδίκευσης,  (άρθρο 28, EK 651/2014)",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Περιγραφή"
 							},
 							"3": {
-								"type": "string",
-								"title": "3 schema."
+								"type": "number",
+								"title": "Δαπάνη"
 							}
 						}
 					}
 				},
 				"11": {
 					"type": "array",
-					"title": "11 schema.",
+					"title": "11. Δαπάνες απόκτησης επικύρωσης και προστασίας διπλωμάτων ευρεσιτεχνίας (άρθρο 28, EK 651/2014)",
+					"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ"}],
 					"items": {
 						"type": "object",
-						"title": "0 schema.",
 						"properties": {
 							"1": {
 								"type": "integer",
-								"title": "1 schema."
+								"title": "A/A"
 							},
 							"2": {
 								"type": "string",
-								"title": "2 schema."
+								"title": "Περιγραφή"
 							},
 							"3": {
-								"type": "string",
-								"title": "3 schema."
+								"type": "number",
+								"title": "Δαπάνη"
 							}
 						}
 					}
@@ -719,64 +720,64 @@
 		},
 		"4": {
 			"type": "array",
-			"title": "4 schema.",
+			"title": "5.4 ΚΑΤΑΝΟΜΗ ΤΟΥ ΣΥΝΟΛΙΚΟΥ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ ΚΑΙ ΤΗΣ ΔΗΜΟΣΙΑΣ ΔΑΠΑΝΗΣ ΑΝΑ ΣΥΜΜΕΤΕΧΟΝΤΑ ΦΟΡΕΑ ΚΑΙ ΠΕΡΙΦΕΡΕΙΑ",
+			"default": [{}, {"1": null, "2": "ΣΥΝΟΛΟ", "3": "---"}],
 			"items": {
 				"type": "object",
-				"title": "0 schema.",
 				"properties": {
 					"1": {
 						"type": "integer",
-						"title": "1 schema."
+						"title": "Α/Α ΦΟΡΕΑ"
 					},
 					"2": {
 						"type": "string",
-						"title": "2 schema."
+						"title": "ΣΥΝΤΜΓΡΦΙΑ ΕΠΩΝΥΜΙΑΣ ΦΟΡΕΑ"
 					},
 					"3": {
 						"type": "string",
-						"title": "3 schema."
+						"title": "ΕΙΔΟΣ ΦΟΡΕΑ"
 					},
 					"4": {
-						"type": "string",
-						"title": "4 schema."
+						"type": "number",
+						"title": "ΠΡΟΫΠΟΛΟΓΙΣΜΟΣ (€)"
 					},
 					"5": {
-						"type": "string",
-						"title": "5 schema."
+						"type": "number",
+						"title": "ΔΗΜΟΣΙΑ ΔΑΠΑΝΗ (€)"
 					},
 					"6": {
 						"type": "number",
-						"title": "6 schema."
+						"title": "ΔΗΜΟΣΙΑ ΔΑΠΑΝΗ (%)"
 					},
 					"7": {
-						"type": "string",
-						"title": "7 schema."
+						"type": "number",
+						"title": "ΙΔΙΩΤΙΚΗ ΣΥΜΜΕΤΟΧΗ"
 					}
 				}
 			}
 		},
 		"5": {
 			"type": "array",
-			"title": "5 schema.",
+			"title": "5.5 ΚΑΤΑΝΟΜΗ ΔΗΜΟΣΙΑΣ ΔΑΠΑΝΗΣ ΤΟΥ ΕΡΓΟΥ ΣΤΗΝ ΠΕΡΙΦΕΡΕΙΑ ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ",
+			"default": [{}, {"1": "---", "2": "ΣΥΝΟΛΟ"}],
 			"items": {
 				"type": "object",
-				"title": "0 schema.",
 				"properties": {
 					"1": {
-						"type": "integer",
-						"title": "1 schema."
+						"type": "string",
+						"title": "ΛΙΓΟΤΕΡΟ ΑΝΑΠΤΥΓΜΕΝΕΣ ΠΕΡΙΦΕΡΕΙΕΣ"
 					},
 					"2": {
 						"type": "string",
-						"title": "2 schema."
+						"title": "Ανατολική Μακεδονία και Θράκη"
 					},
 					"3": {
-						"type": "string",
-						"title": "3 schema."
+						"type": "number",
+						"title": "ΔΗΜΟΣΙΑ ΔΑΠΑΝΗ (€)"
 					},
 					"4": {
-						"type": "string",
-						"title": "4 schema."
+						"type": "number",
+						"title": "ΠΟΣΟΣΤΟ (%)"
 					}
 				}
 			}

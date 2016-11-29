@@ -31,3 +31,6 @@ body {
 .top-level-object>.alpaca-helper {
 	margin-left:0px;
 }
+.array-with-help .help-block {
+	margin-left: 0;
+}
