@@ -386,8 +386,54 @@
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"]
-						}
+						},
+						"4": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"]
+						},
+						"5": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Απαιτείται προσφορά από τον αναφερόμενο φορέα"]
+						},
+						"6": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Αφορούν δαπάνες μετακινήσεων και λοιπών δαπανών απαραίτητες για την εκτέλεση του έργου"]
+						},
+						"7": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["Αφορούν απαραίτητα υλικά ή εξαρτήματα για την εκτέλεση του έργου"]
+						},
+						"8": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin, array-with-help",
+							"helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"]
+						},
+						"9": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin"
+						},
+						"10": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin"
+						},
+						"11": {
+							"type": "table",
+							"view": "bootstrap-edit",
+							"fieldClass": "zero-margin"
+						}						
 					}
+<<<<<<< HEAD
 				}
 			}
 		},
@@ -435,3 +481,22 @@
 					
 	}
 }
+=======
+				},
+				"4": {
+					"type": "table",
+					"view": "bootstrap-edit",
+					"fieldClass": "zero-margin"
+				},
+				"5": {
+					"type": "table",
+					"view": "bootstrap-edit",
+					"fieldClass": "zero-margin",
+					"helpers": ["Επιτρέπεται η κατανομή της Δημόσιας Δαπάνης εκτός Περιφέρειας Δ. Ελλάδας μόνο για δαπάνες ΦΤΕ ή έρευνας επί συμβάσει"]
+				}
+
+			}
+		}
+	}
+}
+>>>>>>> f1057a6b17be23652c2e4720e3ce2a93f850bcbb
