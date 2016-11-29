@@ -23,7 +23,8 @@ $(document).ready(function() {
             })
         }
     };
-
+ 
+	Alpaca.defaultToolbarSticky = true;
 
     $('#form1').alpaca({
         schemaSource: "./schema/compiledSchema.json",
@@ -31,6 +32,9 @@ $(document).ready(function() {
         dataSource: "./data.json",
         postRender: function () {
             $('body').css('cursor', 'default');
+			$('.array-with-help').find('.help-block').each(function () {
+				this.parentNode.appendChild(this);
+			});
         },
         view: {
         parent: "bootstrap-edit-horizontal",
@@ -40,11 +44,11 @@ $(document).ready(function() {
 			validation: false,
             hideSubmitButton: true,
              bindings: {
-                "1": 1,
+                "1": 5,
                 "2": 2,
                 "3": 3,
                 "4": 4,
-                "5": 5,
+                "5": 1,
                 "6": 6,
                 "7": 7,
                 "8": 8,
