@@ -433,9 +433,21 @@
 							"fieldClass": "zero-margin"
 						}						
 					}
-<<<<<<< HEAD
 				}
 			}
+		},
+		"8": {
+		  "fields": {
+			  "1": {
+				"type": "table",
+				"view": "bootstrap-edit",
+				"fieldClass": "zero-margin, array-with-help-2"			  
+			  },
+			  "2": {
+			  	"label": "Τεκμηρίωση του χρονοδιαγράμματος (Διαδικασίες – Μεθοδολογία – Χρονοδιάγραμμα κλπ)",
+        		"type": "textarea"        		
+			  }
+		  }
 		},
 		"9":{
 			"fields": {
@@ -481,22 +493,3 @@
 					
 	}
 }
-=======
-				},
-				"4": {
-					"type": "table",
-					"view": "bootstrap-edit",
-					"fieldClass": "zero-margin"
-				},
-				"5": {
-					"type": "table",
-					"view": "bootstrap-edit",
-					"fieldClass": "zero-margin",
-					"helpers": ["Επιτρέπεται η κατανομή της Δημόσιας Δαπάνης εκτός Περιφέρειας Δ. Ελλάδας μόνο για δαπάνες ΦΤΕ ή έρευνας επί συμβάσει"]
-				}
-
-			}
-		}
-	}
-}
->>>>>>> f1057a6b17be23652c2e4720e3ce2a93f850bcbb
