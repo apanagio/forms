@@ -44,11 +44,11 @@ $(document).ready(function() {
 			validation: false,
             hideSubmitButton: true,
              bindings: {
-                "1": 5,
+                "1": 1,
                 "2": 2,
                 "3": 3,
                 "4": 4,
-                "5": 1,
+                "5": 5,
                 "6": 6,
                 "7": 7,
                 "8": 8,
