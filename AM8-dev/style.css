@@ -43,9 +43,9 @@ body {
 .array-with-help-2 .table>thead>tr>td, .table>thead>tr>th {
   padding: 12px;
 }
-#alpaca310, #alpaca360 {
-font-weight: bold;
+[data-alpaca-container-item-name="5_0_0_2"], [data-alpaca-container-item-name="5_0_10_2"]{
+  font-weight: bold;
 }
-#alpaca309, #alpaca312, #alpaca311, #alpaca359, #alpaca361, #alpaca362, #alpaca388, #alpaca389, #alpaca408, #alpaca409, #alpaca423, #alpaca424, #alpaca443, #alpaca444, #alpaca468, #alpaca469, #alpaca484, #alpaca485, #alpaca494, #alpaca495, #alpaca509, #alpaca510, #alpaca525, #alpaca526, #alpaca545, #alpaca546, #alpaca560, #alpaca561, #alpaca580, #alpaca581, #alpaca605, #alpaca606 {
-display:none;
+[name="5_0_0_1"], [name="5_0_0_3"], [name="5_0_0_4"], [name="5_0_10_1"], [name="5_0_10_3"], [name="5_0_10_4"], [name="5_0_14_1"], [name="5_1_0_0_3"], [name="5_1_0_0_4"], [name="5_1_0_4_3"], [name="5_1_0_4_4"], [name="5_1_0_7_3"], [name="5_1_0_7_4"], [name="5_1_0_11_3"], [name="5_1_0_11_4"], [name="5_1_0_16_3"], [name="5_1_0_16_4"], [name="5_1_0_18_1"], [name="5_1_1_0_3"], [name="5_1_1_0_4"], [name="5_1_1_2_3"], [name="5_1_1_2_4"], [name="5_1_1_5_3"], [name="5_1_1_5_4"], [name="5_1_1_7_1"], [name="5_1_2_0_3"], [name="5_1_2_0_4"], [name="5_1_2_4_3"], [name="5_1_2_4_4"], [name="5_1_2_7_3"], [name="5_1_2_7_4"], [name="5_1_2_11_3"], [name="5_1_2_11_4"], [name="5_1_2_16_3"], [name="5_1_2_16_4"], [name="5_1_2_18_1"] {
+  display:none;
 }
