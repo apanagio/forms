@@ -37,6 +37,10 @@ body {
 .array-with-help-2 {
   margin-right: 0;
 }
-.array-with-help-2 tbody tr {
+.array-with-help-2 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th {
   padding: 1px;
 }
+.array-with-help-2 .table>thead>tr>td, .table>thead>tr>th {
+  padding: 12px;
+}
+

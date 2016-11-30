@@ -436,19 +436,63 @@
 				}
 			}
 		},
-		"8": {
-		  "fields": {
-			  "1": {
-				"type": "table",
-				"view": "bootstrap-edit",
-				"fieldClass": "zero-margin, array-with-help-2"			  
-			  },
-			  "2": {
-			  	"label": "Τεκμηρίωση του χρονοδιαγράμματος (Διαδικασίες – Μεθοδολογία – Χρονοδιάγραμμα κλπ)",
-        		"type": "textarea"        		
-			  }
-		  }
+		"6": {
+  		 	"fields": {
+              			"2": {
+              				"type":"textarea",
+					"helpers": ["Μέχρι 1000 χαρακτήρες"]
+
+				},
+              			"4": {
+                      			"type":"textarea",
+					"helpers": ["Μέχρι 1000 χαρακτήρες"]
+
+              			},
+              			"6": {
+                    			 "type":"textarea",
+					 "helpers": ["Μέχρι 1000 χαρακτήρες"]
+
+              			},
+              			"8": {
+                      			"type":"textarea",
+					"helpers": ["Μέχρι 1000 χαρακτήρες"]
+
+              			},
+              			"10": {
+                      			"type":"textarea",
+					"helpers": ["Μέχρι 1000 χαρακτήρες"]
+
+              			}
+  		
+			}
 		},
+		"7": {
+     			 "fields" : {
+     				   "1": {
+     					     "type": "radio",
+     					     "label": "Υπάρχουν για την  υλοποίηση του ερευνητικού έργου όλες οι απαιτούμενες  άδειες;",
+  				             "removeDefaultNone": true,
+      					     "vertical": true,
+      					     "sort" : false
+       				 }
+      			}
+    		},
+    		"8": {
+    			  "fields": {
+      				 "1": {
+        				     "type": "table",
+        				     "view": "bootstrap-edit",
+          				     "fieldClass": "zero-margin, array-with-help-2"
+        			 },
+        			 "2": {          
+       					     "fields": {
+          					"1": {
+          	  					"type": "textarea"
+          					}
+          				     }
+        			}
+      			}
+    		},
 		"9":{
 			"fields": {
                         	"1": {
