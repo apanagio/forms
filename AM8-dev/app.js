@@ -73,7 +73,36 @@ $(document).ready(function() {
             $('[data-alpaca-container-item-name="5_1_2_16_2"]').attr('colspan','4');
             $('[data-alpaca-container-item-name="5_1_2_16_1"],[data-alpaca-container-item-name="5_1_2_16_3"],[data-alpaca-container-item-name="5_1_2_16_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_2_18_2"]').attr('colspan','2');
-            $('[data-alpaca-container-item-name="5_1_2_18_1"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_2_18_1"]').remove();    
+	    $('[name="5_1_0_18_3"]').attr('readonly',true);
+
+
+	    $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input').on('change', function () {
+        	
+		console.log(this.value);
+		var sum = 0;
+		var arr =  $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input');
+		
+		$.each(arr, function (i, el){
+			if(i === (arr.length-1)) {
+			      return;
+  			}	
+				sum+=1*el.value;
+		});
+		 
+		$.each(arr, function (i, el){
+			 
+			if(i === (arr.length-1)) {	
+				 return;
+			}
+			
+			$(this).parents("tr").find('td[data-alpaca-container-item-index="3"]').find("input").val((Math.floor(10000*(this.value/sum), 1) /100) +"%"  );
+		});
+		 arr.last().parents("tr").find('td[data-alpaca-container-item-index="3"]').find("input").val("100%");	
+		arr.last().parents("tr").find('td[data-alpaca-container-item-index="2"]').find("input").val(sum);
+  	  });
+ 
+
 	   
         },
         view: {
@@ -84,11 +113,11 @@ $(document).ready(function() {
 			validation: false,
             hideSubmitButton: true,
              bindings: {
-                "1": 1,
+                "1": 5,
                 "2": 2,
                 "3": 3,
                 "4": 4,
-                "5": 5,
+                "5": 1,
                 "6": 6,
                 "7": 7,
                 "8": 8,
@@ -160,4 +189,5 @@ $(document).ready(function() {
             }
         }
     });
+    
 });
