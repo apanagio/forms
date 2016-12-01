@@ -1,3 +1,28 @@
+/**
+    selects the td and tr elements of a given table
+    @param {string} arr - selector for the array (usually a class)
+    @param {number[]} rows - list of rows to be returned 0 indexed - empty array => all rows - negatives count from the end
+    @param {number[]} cols - list of columns to be returned 0 indexed - empty array => all columns
+    @returns {element[]} - list of all DOM elements that match the criteria
+*/
+var tableSelect = function (arr, rows, cols) {
+    var $arr = $(arr);
+    var length = $arr.length;
+    var rowSelector = 'tr' + rows.map(function (el, i) {
+        el < 0 && (el = length - el);
+        var selector = '[data-alpaca-container-item-index="' + el + '"]';
+        i != 0 && (selector = ',' + selector);
+        return selector;
+    });
+    var colSelector = 'td' + cols.map(function (el, i) {
+        var selector = '[data-alpaca-container-item-index="' + el + '"]';
+        i != 0 && (selector = ',' + selector);
+        return selector;
+    })
+
+    return $(arr).find(rowSelector).find(colSelector);
+};
+
 $(document).ready(function() {
 
     $('body').css('cursor', 'progress');
@@ -23,7 +48,7 @@ $(document).ready(function() {
             })
         }
     };
- 
+
 	Alpaca.defaultToolbarSticky = true;
 
     $('#form1').alpaca({
@@ -32,11 +57,13 @@ $(document).ready(function() {
         dataSource: "./data.json",
         postRender: function () {
 		$('body').css('cursor', 'default');
-		
+
 		$('.array-with-help').find('.help-block').each(function () {
 			this.parentNode.appendChild(this);
 		});
-		
+
+console.log(tableSelect('.zero-margin', [0], [0]))
+
 	    $('[data-alpaca-container-item-name="5_0_0_2"], [data-alpaca-container-item-name="5_0_10_2"]').attr('colspan','4');
             $('[data-alpaca-container-item-name="5_0_0_1"],[data-alpaca-container-item-name="5_0_0_3"],[data-alpaca-container-item-name="5_0_0_4"]').remove();
             $('[data-alpaca-container-item-name="5_0_10_1"],[data-alpaca-container-item-name="5_0_10_3"],[data-alpaca-container-item-name="5_0_10_4"]').remove();
@@ -59,51 +86,51 @@ $(document).ready(function() {
             $('[data-alpaca-container-item-name="5_1_1_2_2"]').attr('colspan','4');
             $('[data-alpaca-container-item-name="5_1_1_2_1"],[data-alpaca-container-item-name="5_1_1_2_3"],[data-alpaca-container-item-name="5_1_1_2_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_1_5_2"]').attr('colspan','4');
-            $('[data-alpaca-container-item-name="5_1_1_5_1"],[data-alpaca-container-item-name="5_1_1_5_3"],[data-alpaca-container-item-name="5_1_1_5_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_1_5_1"],[data-alpaca-container-item-name="5_1_1_5_3"],[data-alpaca-container-item-name="5_1_1_5_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_1_7_2"]').attr('colspan','2');
             $('[data-alpaca-container-item-name="5_1_1_7_1"]').remove();
             $('[data-alpaca-container-item-name="5_1_2_0_2"]').attr('colspan','4');
-            $('[data-alpaca-container-item-name="5_1_2_0_1"],[data-alpaca-container-item-name="5_1_2_0_3"],[data-alpaca-container-item-name="5_1_2_0_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_2_0_1"],[data-alpaca-container-item-name="5_1_2_0_3"],[data-alpaca-container-item-name="5_1_2_0_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_2_4_2"]').attr('colspan','4');
-            $('[data-alpaca-container-item-name="5_1_2_4_1"],[data-alpaca-container-item-name="5_1_2_4_3"],[data-alpaca-container-item-name="5_1_2_4_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_2_4_1"],[data-alpaca-container-item-name="5_1_2_4_3"],[data-alpaca-container-item-name="5_1_2_4_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_2_7_2"]').attr('colspan','4');
-            $('[data-alpaca-container-item-name="5_1_2_7_1"],[data-alpaca-container-item-name="5_1_2_7_3"],[data-alpaca-container-item-name="5_1_2_7_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_2_7_1"],[data-alpaca-container-item-name="5_1_2_7_3"],[data-alpaca-container-item-name="5_1_2_7_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_2_11_2"]').attr('colspan','4');
             $('[data-alpaca-container-item-name="5_1_2_11_1"],[data-alpaca-container-item-name="5_1_2_11_3"],[data-alpaca-container-item-name="5_1_2_11_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_2_16_2"]').attr('colspan','4');
             $('[data-alpaca-container-item-name="5_1_2_16_1"],[data-alpaca-container-item-name="5_1_2_16_3"],[data-alpaca-container-item-name="5_1_2_16_4"]').remove();
             $('[data-alpaca-container-item-name="5_1_2_18_2"]').attr('colspan','2');
-            $('[data-alpaca-container-item-name="5_1_2_18_1"]').remove();    
+            $('[data-alpaca-container-item-name="5_1_2_18_1"]').remove();
 	    $('[name="5_1_0_18_3"]').attr('readonly',true);
 
 
 	    $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input').on('change', function () {
-        	
+
 		console.log(this.value);
 		var sum = 0;
 		var arr =  $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input');
-		
+
 		$.each(arr, function (i, el){
 			if(i === (arr.length-1)) {
 			      return;
-  			}	
+  			}
 				sum+=1*el.value;
 		});
-		 
+
 		$.each(arr, function (i, el){
-			 
-			if(i === (arr.length-1)) {	
+
+			if(i === (arr.length-1)) {
 				 return;
 			}
-			
+
 			$(this).parents("tr").find('td[data-alpaca-container-item-index="3"]').find("input").val((Math.floor(10000*(this.value/sum), 1) /100) +"%"  );
 		});
-		 arr.last().parents("tr").find('td[data-alpaca-container-item-index="3"]').find("input").val("100%");	
+		 arr.last().parents("tr").find('td[data-alpaca-container-item-index="3"]').find("input").val("100%");
 		arr.last().parents("tr").find('td[data-alpaca-container-item-index="2"]').find("input").val(sum);
   	  });
- 
 
-	   
+
+
         },
         view: {
         parent: "bootstrap-edit-horizontal",
@@ -189,5 +216,5 @@ $(document).ready(function() {
             }
         }
     });
-    
+
 });
