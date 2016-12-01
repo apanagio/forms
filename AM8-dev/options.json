@@ -283,6 +283,7 @@
 						"fields": {
 							"2": {
 								"type": "textarea",
+								"view": "bootstrap-display",
 								"cols": 160,
 								"rows": 2
 							}
@@ -303,6 +304,7 @@
 								"fields": {
 									"2": {
 										"type": "textarea",
+										"view": "bootstrap-display",
 										"rows": 2,
 										"cols": 35
 									}
@@ -319,6 +321,7 @@
 								"fields": {
 									"2": {
 										"type": "textarea",
+										"view": "bootstrap-display",
 										"rows": 2,
 										"cols": 35
 									}
@@ -335,6 +338,7 @@
 								"fields": {
 									"2": {
 										"type": "textarea",
+										"view": "bootstrap-display",
 										"rows": 2,
 										"cols": 35
 									}
@@ -353,14 +357,14 @@
 										"type": "table",
 										"view": "bootstrap-edit",
 										"fieldClass": "zero-margin, array-with-help",
-										"helper":["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας"]
+										"helpers":["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας"]
 									},
 									"3": {
 										"type": "table",
 										"view": "bootstrap-edit",
 										"fieldClass": "zero-margin, array-with-help",
 										"showActionsColumn": false,
-										"helpers":["(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"]
+										"helper":["(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"]
 									}
 								}
 							}
@@ -554,3 +558,4 @@
 					
 	}
 }
+

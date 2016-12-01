@@ -31,10 +31,50 @@ $(document).ready(function() {
         optionsSource: "./options.json",
         dataSource: "./data.json",
         postRender: function () {
-            $('body').css('cursor', 'default');
-			$('.array-with-help').find('.help-block').each(function () {
-				this.parentNode.appendChild(this);
-			});
+		$('body').css('cursor', 'default');
+		
+		$('.array-with-help').find('.help-block').each(function () {
+			this.parentNode.appendChild(this);
+		});
+		
+	    $('[data-alpaca-container-item-name="5_0_0_2"], [data-alpaca-container-item-name="5_0_10_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_0_0_1"],[data-alpaca-container-item-name="5_0_0_3"],[data-alpaca-container-item-name="5_0_0_4"]').remove();
+            $('[data-alpaca-container-item-name="5_0_10_1"],[data-alpaca-container-item-name="5_0_10_3"],[data-alpaca-container-item-name="5_0_10_4"]').remove();
+            $('[data-alpaca-container-item-name="5_0_14_2"]').attr('colspan','2');
+            $('[data-alpaca-container-item-name="5_0_14_1"]').remove();
+            $('[data-alpaca-container-item-name="5_1_0_0_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_0_0_1"],[data-alpaca-container-item-name="5_1_0_0_3"],[data-alpaca-container-item-name="5_1_0_0_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_0_4_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_0_4_1"],[data-alpaca-container-item-name="5_1_0_4_3"],[data-alpaca-container-item-name="5_1_0_4_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_0_7_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_0_7_1"],[data-alpaca-container-item-name="5_1_0_7_3"],[data-alpaca-container-item-name="5_1_0_7_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_0_11_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_0_11_1"],[data-alpaca-container-item-name="5_1_0_11_3"],[data-alpaca-container-item-name="5_1_0_11_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_0_16_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_0_16_1"],[data-alpaca-container-item-name="5_1_0_16_3"],[data-alpaca-container-item-name="5_1_0_16_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_0_18_2"]').attr('colspan','2');
+            $('[data-alpaca-container-item-name="5_1_0_18_1"]').remove();
+            $('[data-alpaca-container-item-name="5_1_1_0_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_1_0_1"],[data-alpaca-container-item-name="5_1_1_0_3"],[data-alpaca-container-item-name="5_1_1_0_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_1_2_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_1_2_1"],[data-alpaca-container-item-name="5_1_1_2_3"],[data-alpaca-container-item-name="5_1_1_2_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_1_5_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_1_5_1"],[data-alpaca-container-item-name="5_1_1_5_3"],[data-alpaca-container-item-name="5_1_1_5_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_1_7_2"]').attr('colspan','2');
+            $('[data-alpaca-container-item-name="5_1_1_7_1"]').remove();
+            $('[data-alpaca-container-item-name="5_1_2_0_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_2_0_1"],[data-alpaca-container-item-name="5_1_2_0_3"],[data-alpaca-container-item-name="5_1_2_0_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_2_4_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_2_4_1"],[data-alpaca-container-item-name="5_1_2_4_3"],[data-alpaca-container-item-name="5_1_2_4_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_2_7_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_2_7_1"],[data-alpaca-container-item-name="5_1_2_7_3"],[data-alpaca-container-item-name="5_1_2_7_4"]').remove();     
+            $('[data-alpaca-container-item-name="5_1_2_11_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_2_11_1"],[data-alpaca-container-item-name="5_1_2_11_3"],[data-alpaca-container-item-name="5_1_2_11_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_2_16_2"]').attr('colspan','4');
+            $('[data-alpaca-container-item-name="5_1_2_16_1"],[data-alpaca-container-item-name="5_1_2_16_3"],[data-alpaca-container-item-name="5_1_2_16_4"]').remove();
+            $('[data-alpaca-container-item-name="5_1_2_18_2"]').attr('colspan','2');
+            $('[data-alpaca-container-item-name="5_1_2_18_1"]').remove();     
+	   
         },
         view: {
         parent: "bootstrap-edit-horizontal",
