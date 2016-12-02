@@ -299,7 +299,7 @@
 							"type": "table",
 							"showActionsColumn": false,
 							"view": "bootstrap-edit",
-							"fieldClass": "zero-margin, array512",
+							"fieldClass": "zero-margin, array25",
 							"items": {
 								"fields": {
 									"2": {
@@ -316,7 +316,7 @@
 							"type": "table",
 							"showActionsColumn": false,
 							"view": "bootstrap-edit",
-							"fieldClass": "zero-margin",
+							"fieldClass": "zero-margin, array28",
 							"items": {
 								"fields": {
 									"2": {
@@ -333,7 +333,7 @@
 							"type": "table",
 							"showActionsColumn": false,
 							"view": "bootstrap-edit",
-							"fieldClass": "zero-margin",
+							"fieldClass": "zero-margin, array3",
 							"items": {
 								"fields": {
 									"2": {
