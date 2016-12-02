@@ -10,35 +10,35 @@
         "person": {
             "type": "object",
             "properties": {
-                "1": {
+                "a": {
                     "type": "string",
                     "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ"
                 },
-                "2": {
+                "b": {
                     "type": "string",
                     "title": "ΟΝΟΜΑΣΙΑ ΦΟΡΕΑ"
                 },
-                "3": {
+                "c": {
                     "type": "string",
                     "title": "ΘΕΣΗ ΣΤΟ ΦΟΡΕΑ"
                 },
-                "4": {
+                "d": {
                     "type": "string",
                     "title": "ΔΙΕΥΘΥΝΣΗ"
                 },
-                "5": {
+                "e": {
                     "type": "string",
                     "title": "ΤΗΛΕΦΩΝΟ"
                 },
-                "6": {
+                "f": {
                     "type": "string",
                     "title": "ΤΗΛΕΦΩΝΟ ΚΙΝΗΤΟ"
                 },
-                "7": {
+                "g": {
                     "type": "string",
                     "title": "FAX"
                 },
-                "8": {
+                "h": {
                     "type": "string",
                     "title": "e-mail"
                 }
@@ -46,27 +46,27 @@
         },
 		"company": {
 			"properties": {
-				"1": {
+				"a": {
 					"type": "integer",
 					"title": "α/α"
 				},
-				"2": {
+				"b": {
 					"type": "string",
 					"title": "Συνδεδεμένος Φορέας"
 				},
-				"3": {
+				"c": {
 					"type": "string",
 					"title": "Περίοδος Αναφοράς"
 				},
-				"4": {
+				"d": {
 					"type": "number",
 					"title": "Απασχολούμενοι (ΕΜΕ)"
 				},
-				"5": {
+				"e": {
 					"type": "number",
 					"title": "Σύνολο Ενεργητικού (€)"
 				},
-				"6": {
+				"f": {
 					"type": "number",
 					"title": "Κύκλος Εργασιών (€)"
 				}
@@ -75,20 +75,20 @@
 		"companySize": {
 			"type": "object",
 			"properties": {
-                "0": {
+                "aa": {
                     "type": "integer",
                     "title": "Έτος",
                     "readonly": true
                 },
-				"1": {
+				"a": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"2": {
+				"b": {
 					"title": "ΣΥΝΟΛΟ ΕΤΗΣΙΟΥ ΙΣΟΛΟΓΙΣΜΟΥ (ΣΕ €)",
 					"type": "number"
 				},
-				"3": {
+				"c": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ (ΣΕ ΕΜΕ)",
 					"type": "number"
 				}
@@ -97,32 +97,32 @@
 		"companyFinance": {
 			"type": "object",
 			"properties": {
-                "0": {
+                "aa": {
                     "type": "integer",
                     "title": "Έτος",
                     "readonly": true
                 },
-				"1": {
+				"a": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"2": {
+				"b": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ   (ΣΕ ΕΜΕ)",
 					"type": "number"
 				},
-				"3": {
+				"c": {
 					"title": "ΙΔΙΩΤΙΚΗ ΣΥΜΜΕΤΟΧΗ ΓΙΑ ΤΗΝ ΧΡΗΜΑΤΟΔΟΤΗΣΗ ΕΠΕΝΔΥΣΕΩΝ  (ΣΕ €)",
 					"type": "number"
 				},
-				"4": {
+				"d": {
 					"title": "ΑΞΙΑ ΕΞΑΓΩΓΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"5": {
+				"e": {
 					"title": "Σύνολο Ενεργητικού",
 					"type": "number"
 				},
-				"6": {
+				"f": {
 					"title": "Αποτελέσματα Χρήσης",
 					"type": "number"
 				}
@@ -130,15 +130,15 @@
 		}
     },
     "properties": {
-        "1": {"$ref": "1.json"},
-        "2": {"$ref": "2.json"},
-        "3": {"$ref": "3.json"},
-		"4": {"$ref": "4.json"},
-        "5": {"$ref": "5.json"},
-        "6": {"$ref": "6.json"},
-        "7": {"$ref": "7.json"},
-		"8": {"$ref": "8.json"},
-		"9": {"$ref": "9.json"},
-        "10": {"$ref": "10.json"}
+        "a": {"$ref": "1.json"},
+        "b": {"$ref": "2.json"},
+        "c": {"$ref": "3.json"},
+		"d": {"$ref": "4.json"},
+        "e": {"$ref": "5.json"},
+        "f": {"$ref": "6.json"},
+        "g": {"$ref": "7.json"},
+		"h": {"$ref": "8.json"},
+		"i": {"$ref": "9.json"},
+        "j": {"$ref": "10.json"}
     }
 }

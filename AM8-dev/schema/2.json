@@ -2,26 +2,26 @@
  	"type": "object",
  	"title": "2. ΣΥΝΤΟΜΗ ΠΑΡΟΥΣΙΑΣΗ ΒΑΣΙΚΩΝ ΣΤΟΙΧΕΙΩΝ ΤΟΥ ΕΡΓΟΥ",
  	"properties": {
- 		"1": {
+ 		"a": {
  			"type": "array",
  			"title": "2.1 ΔΙΚΑΙΟΥΧΟΣ ΦΟΡΕΑΣ",
 			"default": [{}],
  			"items": {
  				"type": "object",
  				"properties": {
- 					"1": {
+ 					"a": {
  						"title": "Α.Α Φορέα",
  						"type": "number"
  					},
- 					"2": {
+ 					"b": {
  						"title": "Επωνυμία Φορέα",
  						"type": "string"
  					},
- 					"3": {
+ 					"c": {
  						"title": "Συντομογραφία Φορέα",
  						"type": "string"
  					},
- 					"4": {
+ 					"d": {
  						"title": "Είδος Φορέα",
  						"type": "string"
  					}
@@ -29,14 +29,14 @@
  				}
  			}
  		},
- 		"2": {
+ 		"b": {
  			"type": "object",
  			"title": "2.2α ΥΠΕΥΘΥΝΟΣ ΕΡΓΟΥ ",
  			"properties": {
 				"$ref": "#/definitions/person/properties"
 			}
  		},
- 		"3": {
+ 		"c": {
  			"type": "object",
  			"title": "2.2β Επιστημονικός υπεθυνος έργου (αν είναι διαφορετικός από τον υπεύθυνο έργου)",
  			"properties": {

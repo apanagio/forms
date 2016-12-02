@@ -1,47 +1,47 @@
 {
 	"fields": {
-		"1": {
+		"a": {
 			"fields": {
-				"1": {
+				"a": {
 					"type": "textarea"
 				},
-				"2": {
+				"b": {
 					"type": "textarea"
 				},
-				"3": {
+				"c": {
 					"type": "textarea"
 				}
 			}
 		},
-		"2": {
+		"b": {
 			"fields": {
-				"1": {
+				"a": {
 					"type": "table",
 					"view": "bootstrap-edit",
 					"fieldClass": "zero-margin"
 				}
 			}
 		},
-		"3": {
+		"c": {
 			"fields": {
-				"1": {
+				"a": {
 					"fields": {
-						"4": {
+						"d": {
 							"fields": {
-								"3": {
+								"c": {
 									"type": "table",
 									"view": "bootstrap-edit",
 									"fieldClass": "zero-margin",
 									"items": {
 										"fields": {
-											"5": {
+											"e": {
 												"type": "currency",
 												"centsSeparator": ",",
 												"prefix": "",
 												"suffix": "€",
 												"thousandsSeparator": "."
 											},
-											"6": {
+											"f": {
 												"type": "currency",
 												"centsSeparator": ",",
 												"prefix": "",
@@ -51,20 +51,20 @@
 										}
 									}
 								},
-								"4": {
+								"d": {
 									"type": "table",
 									"view": "bootstrap-edit",
 									"fieldClass": "zero-margin",
 									"items": {
 										"fields": {
-											"5": {
+											"e": {
 												"type": "currency",
 												"centsSeparator": ",",
 												"prefix": "",
 												"suffix": "€",
 												"thousandsSeparator": "."
 											},
-											"6": {
+											"f": {
 												"type": "currency",
 												"centsSeparator": ",",
 												"prefix": "",
@@ -76,99 +76,99 @@
 								}
 							}
 						},
-						"5": {
+						"e": {
 							"fields": {
-								"1": {
+								"a": {
 									"type": "table",
 									"view": "bootstrap-edit",
 									"fieldClass": "zero-margin",
 									"showActionsColumn": false
 								},
-								"2": {
+								"b": {
 									"type": "textarea"
 								},
-								"3": {
+								"c": {
 									"type": "table",
 									"view": "bootstrap-edit",
 									"fieldClass": "zero-margin",
 									"showActionsColumn": false
 								},
-								"4": {
+								"d": {
 									"type": "textarea",
 									"helpers": ["Περιγράψτε με σαφήνεια τους τρόπους με τους οποίους θα καλύψετε την απαιτούμενη «ίδια συμμετοχή» της προτεινόμενης επένδυσης (Εφόσον απαιτείται)", "Δηλώνονται αναλυτικά για κάθε έναν από τους συμμετέχοντες στο φορέα της επένδυσης οι πηγές από τις οποίες θα αντλήσει τα κεφάλαια για την εισφορά του μεριδίου του στο ποσό της ίδιας συμμετοχής. "]
 								},
-								"6": {
+								"f": {
 									"fields": {
-										"2": {
+										"b": {
 											"type": "textarea"
 										}
 									}
 								}
 							}
 						},
-						"6": {
+						"f": {
 							"fields": {
-								"1": {
+								"a": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"2": {
+								"b": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"3": {
+								"c": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"4": {
+								"d": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"5": {
+								"e": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"6": {
+								"f": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"7": {
+								"g": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"8": {
+								"h": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"9": {
+								"i": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"10": {
+								"j": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"11": {
+								"k": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"12": {
+								"l": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"13": {
+								"m": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"14": {
+								"n": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"15": {
+								"o": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								},
-								"17": {
+								"q": {
 									"type": "textarea",
 									"helper": "Εως 1000 χαρακτήρες"
 								}
@@ -176,19 +176,19 @@
 						}
 					}
 				},
-				"2": {
+				"b": {
 					"items": {
 						"fields": {
-							"6": {
+							"f": {
 								"hideNone": true
 							},
-							"7": {
+							"g": {
 								"type": "textarea",
 								"dependencies": {
-									"6": "3. άλλη"
+									"f": "3. άλλη"
 								}
 							},
-							"11": {
+							"k": {
 								"type": "textarea",
 								"helpers": ["Περιγράψτε με σαφήνεια τους τρόπους με τους οποίους θα καλύψετε την απαιτούμενη «ίδια συμμετοχή» της προτεινόμενης επένδυσης", "Δηλώνονται οι πηγές από τις οποίες θα αντλήσει τα κεφάλαια για την εισφορά του μεριδίου του στο ποσό της ίδιας συμμετοχής"]
 							}
@@ -197,70 +197,70 @@
 				}
 			}
 		},
-		"4": {
+		"d": {
 			"fieldClass": "top-level-object",
 			"helpers": ["Για την πληρέστερη αξιολόγηση της πρότασης, δύναται να επισυναφθεί στην αίτηση ηλεκτρονικά, αρχείο (έως 10 σελίδες Α4), που θα περιλαμβάνει πρόσθετες επεξηγηματικές πληροφορίες των ανωτέρω."],
 			"fields": {
-				"1": {
+				"a": {
 					"type": "textarea",
 					"helpers": ["Περιγράφεται το στάδιο ανάπτυξης και προστιθέμενης αξίας του επενδυτικού σχεδίου, καθώς και η κατανόηση ανταγωνιστικών λύσεων. Δύναται να περιληφθεί και σύγκριση με «ιδεατές», γνωστές εμπορικές λύσεις", "Όριο στα mb (πχ 5 για κάθε εντυπο) μέχρι 25 στο σύνολο της πράξης"]
 				},
-				"2": {
+				"b": {
 					"type": "textarea",
 					"helpers": ["Περιγράφονται:<br>Η στόχευση νέων ευκαιριών της αγοράς,</br>Η δυνατότητα ενίσχυσης της ανάπτυξης της εταιρίας</br>Η πειστικότητα επιδόσεων πρότασης και «value for money»</br>Η κατανόηση κινδύνων κι ευκαιριών για την επιτυχή εισαγωγή της καινοτομίας στην αγορά, από τεχνικής κι από εμπορικής απόψεως</br>Η ύπαρξη ζήτησης/αγοράς για την καινοτομία</br>Περιγραφή Παραδοτέων"]
 				},
-				"3": {
+				"c": {
 					"type": "textarea",
 					"helpers": ["Περιγράφονται:<br>Οι άδειες που απαιτούνται για την έναρξη της υλοποίησης του επιχειρηματικού σχεδίου<br>Η ρεαλιστικότητα του χρονοδιαγράμματος<br>Η ρεαλιστικότητα του προϋπολογισμού<br>Η καταλληλότητα του οργανωτικού σχήματος, εάν δηλαδή η πρόταση αποδεικνύει ότι το έργο έχει τους σχετικούς πόρους (προσωπικούς, εγκαταστάσεις, δίκτυα, κλπ.) για την ανάπτυξη των δραστηριοτήτων του και τους ρόλους που θα διαδραματίσουν οι μετέχοντες<br>Η επάρκεια του δυναμικού της επιχείρησης για την υλοποίηση της πρότασης"]
 				},
-				"5": {
+				"e": {
 					"fields": {
-						"0": {
+						"aa": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin"
 						},
-						"2": {
+						"b": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin"
 						},
-						"3": {
+						"c": {
 							"type": "textarea",
 							"helpers": ["Μέχρι 1000 χαρακτήρες"]
 						}
 					}
 				},
-				"6": {
+				"f": {
 					"type": "table",
 					"view": "bootstrap-edit",
 					"fieldClass": "zero-margin"
 				},
-				"7": {
+				"g": {
 					"type": "table",
 					"view": "bootstrap-edit",
 					"fieldClass": "zero-margin"
 				},
-				"8": {
+				"h": {
 					"type": "table",
 					"view": "bootstrap-edit",
 					"fieldClass": "zero-margin"
 				},
-				"9": {
+				"i": {
 					"fields": {
-						"1": {
+						"a": {
 							"fields": {
-								"1": {
+								"a": {
 									"fields": {
-										"3": {
+										"c": {
 											"type": "textarea",
 											"helpers": ["Εφόσον η επενδυτική πρόταση περιλαμβάνει «χρηματοδοτική ενίσχυση προσαυξημένη κατά 15%, διότι τα αποτελέσματα του έργου διαδίδονται ευρέως», τότε, τα αποτελέσματα της έρευνας (όχι μόνο τα συνολικά παραδοτέα του έργου) θα πρέπει να διαδοθούν στο ευρύτερο δυνατό βαθμό, τόσο σε εθνικό όσο και σε κοινοτικό επίπεδο (Ε.Ε.). Οι ανωτέρω προτάσεις θα πρέπει να περιλαμβάνουν στο χρονοπρογραμματισμό τους και ένα σχέδιο δράσεων για τη διάδοση των ερευνητικών αποτελεσμάτων του έργου.", "Μέχρι 1000 χαρακτήρες"]
 										}
 									}
 								},
-								"2": {
+								"b": {
 									"fields": {
-										"3": {
+										"c": {
 											"type": "textarea",
 											"helpers": ["Εφόσον η επενδυτική πρόταση περιλαμβάνει «χρηματοδοτική ενίσχυση προσαυξημένη κατά 15%, διότι τα αποτελέσματα του έργου διαδίδονται ευρέως», τότε, τα αποτελέσματα της έρευνας (όχι μόνο τα συνολικά παραδοτέα του έργου) θα πρέπει να διαδοθούν στο ευρύτερο δυνατό βαθμό, τόσο σε εθνικό όσο και σε κοινοτικό επίπεδο (Ε.Ε.). Οι ανωτέρω προτάσεις θα πρέπει να περιλαμβάνουν στο χρονοπρογραμματισμό τους και ένα σχέδιο δράσεων για τη διάδοση των ερευνητικών αποτελεσμάτων του έργου.", "Μέχρι 1000 χαρακτήρες"]
 										}
@@ -272,16 +272,16 @@
 				}
 			}
 		},
-		"5": {
+		"e": {
 			"fields": {
-				"0": {
+				"aa": {
 					"type": "table",
 					"view": "bootstrap-edit",
 					"showActionsColumn": false,
 					"fieldClass": "zero-margin, array-with-help, array51",
 					"items": {
 						"fields": {
-							"2": {
+							"b": {
 								"type": "textarea",
 								"view": "bootstrap-display",
 								"cols": 160,
@@ -293,16 +293,16 @@
 
 
 				},
-				"1": {
+				"a": {
 					"fields": {
-						"0": {
+						"aa": {
 							"type": "table",
 							"showActionsColumn": false,
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array25",
 							"items": {
 								"fields": {
-									"2": {
+									"b": {
 										"type": "textarea",
 										"view": "bootstrap-display",
 										"rows": 2,
@@ -312,14 +312,14 @@
 							}
 
 						},
-						"1": {
+						"a": {
 							"type": "table",
 							"showActionsColumn": false,
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array28",
 							"items": {
 								"fields": {
-									"2": {
+									"b": {
 										"type": "textarea",
 										"view": "bootstrap-display",
 										"rows": 2,
@@ -329,14 +329,14 @@
 							}
 
 						},
-						"2": {
+						"b": {
 							"type": "table",
 							"showActionsColumn": false,
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array3",
 							"items": {
 								"fields": {
-									"2": {
+									"b": {
 										"type": "textarea",
 										"view": "bootstrap-display",
 										"rows": 2,
@@ -348,18 +348,18 @@
 						}
 					}
 				},
-				"2": {
+				"b": {
 					"fields": {
-						"2": {
+						"b": {
 							"items": {
 								"fields": {
-									"2": {
+									"b": {
 										"type": "table",
 										"view": "bootstrap-edit",
 										"fieldClass": "zero-margin, array-with-help",
 										"helpers":["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας"]
 									},
-									"3": {
+									"c": {
 										"type": "table",
 										"view": "bootstrap-edit",
 										"fieldClass": "zero-margin, array-with-help",
@@ -369,86 +369,86 @@
 								}
 							}
 						},
-						"3": {
+						"c": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin"
 						}
 					}
 				},
-				"3": {
+				"c": {
 					"fields": {
-						"1": {
+						"a": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["(*) Ονοματίζονται τα άτομα της ομάδας έργου από κάθε φορέα. Για τα ονοματιζόμενα αυτά άτομα (των οποίων τα βιογραφικά λαμβάνονται υπόψη κατά την αξιολόγηση) δηλώνονται συνολική αμοιβή και ανθρωπομήνες. Η υπόλοιπη ανθρωποπροσπάθεια ορίζεται ως προς τις ειδικότητες, της συνολική δαπάνη και τους συνολικούς ανθρωπομήνες μόνο (όχι αριθμός ατόμων, όχι ονόματα).","(**) Αναφέρεται η κατηγορία ερευνητικού προσωπικού: Έμπειρος Ερευνητής, Ερευνητής, τεχνικό προσωπικό, βοηθητικό προσωπικό","(***) Μικτό κόστος ανθρωπομήνα σύμφωνα με τα όρια που ορίζονται στην αναλυτική πρόσκληση"]
 						},
-						"2": {
+						"b": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["(*) Σε μήνες που αποδίδονται/ αναλογούν στο έργο","(**) Επιλέξιμες θεωρούνται μόνον οι δαπάνες απόσβεσης, που αντιστοιχούν στη διάρκεια του έργο, οι οποίες υπολογίζονται με βάσει τις γενικά αποδεκτές λογιστικές αρχές"]
 						},
-						"3": {
+						"c": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"]
 						},
-						"4": {
+						"d": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"]
 						},
-						"5": {
+						"e": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["Απαιτείται προσφορά από τον αναφερόμενο φορέα"]
 						},
-						"6": {
+						"f": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["Αφορούν δαπάνες μετακινήσεων και λοιπών δαπανών απαραίτητες για την εκτέλεση του έργου"]
 						},
-						"7": {
+						"g": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["Αφορούν απαραίτητα υλικά ή εξαρτήματα για την εκτέλεση του έργου"]
 						},
-						"8": {
+						"h": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin, array-with-help",
 							"helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"]
 						},
-						"9": {
+						"i": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin"
 						},
-						"10": {
+						"j": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin"
 						},
-						"11": {
+						"k": {
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin"
 						}
 					}
 				},
-				"4": {
+				"d": {
                                                         "type": "table",
                                                         "view": "bootstrap-edit",
                                                         "fieldClass": "zero-margin"
                                 },
-				"5": {
+				"e": {
                                                         "type": "table",
                                                         "view": "bootstrap-edit",
                                                         "fieldClass": "zero-margin"
@@ -457,29 +457,29 @@
 			}
 
 		},
-		"6": {
+		"f": {
   		 	"fields": {
-              			"2": {
+              			"b": {
               				"type":"textarea",
 					"helpers": ["Μέχρι 1000 χαρακτήρες"]
 
 				},
-              			"4": {
+              			"d": {
                       			"type":"textarea",
 					"helpers": ["Μέχρι 1000 χαρακτήρες"]
 
               			},
-              			"6": {
+              			"f": {
                     			 "type":"textarea",
 					 "helpers": ["Μέχρι 1000 χαρακτήρες"]
 
               			},
-              			"8": {
+              			"h": {
                       			"type":"textarea",
 					"helpers": ["Μέχρι 1000 χαρακτήρες"]
 
               			},
-              			"10": {
+              			"j": {
                       			"type":"textarea",
 					"helpers": ["Μέχρι 1000 χαρακτήρες"]
 
@@ -487,9 +487,9 @@
 
 			}
 		},
-		"7": {
+		"g": {
      			 "fields" : {
-     				   "1": {
+     				   "a": {
      					     "type": "radio",
      					     "label": "Υπάρχουν για την  υλοποίηση του ερευνητικού έργου όλες οι απαιτούμενες  άδειες;",
   				             "removeDefaultNone": true,
@@ -498,45 +498,45 @@
        				 }
       			}
     		},
-    		"8": {
+    		"h": {
     			  "fields": {
-      				 "1": {
+      				 "a": {
         				     "type": "table",
         				     "view": "bootstrap-edit",
           				     "fieldClass": "zero-margin, array-with-help-2"
         			 },
-        			 "2": {
+        			 "b": {
        					     "fields": {
-          					"1": {
+          					"a": {
           	  					"type": "textarea"
           					}
           				     }
         			}
       			}
     		},
-		"9":{
+		"i":{
 			"fields": {
-                        	"1": {
+                        	"a": {
                 			"fields": {
-						"1": {
+						"a": {
 							 "type": "textarea"
 
 						}
 					}
 				},
 
-				"2": {
+				"b": {
                                 	"fields": {
-                                		"1": {
+                                		"a": {
                                         		"type": "textarea"
                                 		},
-						"2": {
+						"b": {
                                                         "type": "textarea"
                                                 },
-						"3": {
+						"c": {
                                                         "type": "textarea"
                                                 },
-						"4": {
+						"d": {
                                                         "type": "textarea"
                                                 }
 
@@ -546,11 +546,11 @@
 				}
 			}
 		},
-		"10": {
+		"j": {
 			"fields": {
-				"1": {
+				"a": {
 					"fields": {
-						"1": {}
+						"a": {}
 					}
 				}
 			}

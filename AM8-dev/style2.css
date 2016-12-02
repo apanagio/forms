@@ -1,0 +1,88 @@
+html{
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  padding-top: 15px;
+}
+.download-btn {
+  margin-left: 10px;
+}
+#no-submit {
+    disabled: disabled;
+}
+.help-block {
+    margin-left: 25%;
+}
+.zero-margin .alpaca-field {
+	margin-left: 0px !important;
+}
+.top-level-object>.alpaca-helper {
+	margin-left:0px;
+}
+.array-with-help .help-block {
+	margin-left: 0;
+}
+.array-with-help-2 {
+  margin-right: 0;
+}
+.array-with-help-2 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th {
+  padding: 1px;
+}
+.array-with-help-2 .table>thead>tr>td, .table>thead>tr>th {
+  padding: 12px;
+}
+
+.array51 tr[data-alpaca-container-item-index="0"], 
+	 tr[data-alpaca-container-item-index="10"],
+	 tr[data-alpaca-container-item-index="14"] {
+  
+	font-weight: bold;
+}
+
+.array25 tr[data-alpaca-container-item-index="0"], 
+	 tr[data-alpaca-container-item-index="4"],  
+	 tr[data-alpaca-container-item-index="6"],  
+	 tr[data-alpaca-container-item-index="8"],  
+	 tr[data-alpaca-container-item-index="11"],  
+	 tr[data-alpaca-container-item-index="16"],  
+	 tr[data-alpaca-container-item-index="18"] { 
+  
+	font-weight: bold;
+}
+
+.array28 tr[data-alpaca-container-item-index="0"], 
+	 tr[data-alpaca-container-item-index="2"], 
+	 tr[data-alpaca-container-item-index="5"], 
+	 tr[data-alpaca-container-item-index="7"] {
+   
+	font-weight: bold;
+}
+
+.array3 tr[data-alpaca-container-item-index="0"], 
+	tr[data-alpaca-container-item-index="4"], 
+	tr[data-alpaca-container-item-index="7"], 
+	tr[data-alpaca-container-item-index="11"]
+	tr[data-alpaca-container-item-index="16"],
+	tr[data-alpaca-container-item-index="18"],  {
+   
+	font-weight: bold;
+}
+
+button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-actionbar-action="down"] {
+  display: none;
+}
+.actionbar {
+  width: 85px;
+}
