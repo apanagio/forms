@@ -9,7 +9,7 @@ var tableSelect = function (arr, rows, cols) {
     'use strict';
     var $arr = $(arr).find('table');
     var length = $arr.find('>tbody >tr').length;
-    var colSelector,
+    var colSelector, ret,
     res;
     var rowSelector = rows.reduce(function (acc, el, i) {
             el < 0 && (el = length + el);
