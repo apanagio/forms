@@ -278,7 +278,7 @@
 					"type": "table",
 					"view": "bootstrap-edit",
 					"showActionsColumn": false,
-					"fieldClass": "zero-margin, array-with-help",
+					"fieldClass": "zero-margin, array-with-help, array51",
 					"items": {
 						"fields": {
 							"2": {
@@ -440,7 +440,7 @@
 							"type": "table",
 							"view": "bootstrap-edit",
 							"fieldClass": "zero-margin"
-						}						
+						}
 					}
 				},
 				"4": {
@@ -453,9 +453,9 @@
                                                         "view": "bootstrap-edit",
                                                         "fieldClass": "zero-margin"
                                 }
-					
+
 			}
-			
+
 		},
 		"6": {
   		 	"fields": {
@@ -484,7 +484,7 @@
 					"helpers": ["Μέχρι 1000 χαρακτήρες"]
 
               			}
-  		
+
 			}
 		},
 		"7": {
@@ -505,7 +505,7 @@
         				     "view": "bootstrap-edit",
           				     "fieldClass": "zero-margin, array-with-help-2"
         			 },
-        			 "2": {          
+        			 "2": {
        					     "fields": {
           					"1": {
           	  					"type": "textarea"
@@ -520,7 +520,7 @@
                 			"fields": {
 						"1": {
 							 "type": "textarea"
-	
+
 						}
 					}
 				},
@@ -555,7 +555,6 @@
 				}
 			}
 		}
-					
+
 	}
 }
-

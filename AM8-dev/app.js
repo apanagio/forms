@@ -6,21 +6,27 @@
     @returns {element[]} - list of all DOM elements that match the criteria
 */
 var tableSelect = function (arr, rows, cols) {
-    var $arr = $(arr);
-    var length = $arr.length;
-    var rowSelector = 'tr' + rows.map(function (el, i) {
-        el < 0 && (el = length - el);
+    var $arr = $(arr).find('table');
+    var length = $arr.find('>tbody >tr').length;
+    var colSelector, res;
+    var rowSelector = rows.reduce(function (acc, el, i) {
+        el < 0 && (el = length + el);
         var selector = '[data-alpaca-container-item-index="' + el + '"]';
         i != 0 && (selector = ',' + selector);
-        return selector;
-    });
-    var colSelector = 'td' + cols.map(function (el, i) {
-        var selector = '[data-alpaca-container-item-index="' + el + '"]';
-        i != 0 && (selector = ',' + selector);
-        return selector;
-    })
+        return acc + selector;
+    }, 'tr');
+    if (cols === undefined) {
+        ret = $arr.find(rowSelector);
+    } else {
+        colSelector = cols.reduce(function (acc, el, i) {
+            var selector = '[data-alpaca-container-item-index="' + el + '"]';
+            i != 0 && (selector = ',' + selector);
+            return acc + selector;
+        }, 'td');
+        ret = $arr.find(rowSelector).find(colSelector);
+    }
 
-    return $(arr).find(rowSelector).find(colSelector);
+    return ret;
 };
 
 $(document).ready(function() {
@@ -62,7 +68,7 @@ $(document).ready(function() {
 			this.parentNode.appendChild(this);
 		});
 
-console.log(tableSelect('.zero-margin', [0], [0]))
+console.log(tableSelect('.array51', [1, 4, -2], [0, 2]).each(function() {$(this).css('background', 'red');}));
 
 	    $('[data-alpaca-container-item-name="5_0_0_2"], [data-alpaca-container-item-name="5_0_10_2"]').attr('colspan','4');
             $('[data-alpaca-container-item-name="5_0_0_1"],[data-alpaca-container-item-name="5_0_0_3"],[data-alpaca-container-item-name="5_0_0_4"]').remove();
@@ -106,7 +112,6 @@ console.log(tableSelect('.zero-margin', [0], [0]))
 
 	    $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input').on('change', function () {
 
-		console.log(this.value);
 		var sum = 0;
 		var arr =  $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input');
 
