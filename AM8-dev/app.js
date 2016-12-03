@@ -31,6 +31,29 @@ var tableSelect = function (arr, rows, cols) {
     return ret;
 };
 
+var tableSum = function (table, sumCol, perCol) {
+    tableSelect(table, [], [sumCol]).find('input').on('change', function () {
+        var sum = 0;
+        var arr = tableSelect(table, [], [sumCol]).find('input');
+
+        $.each(arr, function (i, el) {
+            if (i !== (arr.length - 1)) {
+                sum += 1 * el.value;
+            }
+        });
+
+        $.each(arr, function (i, el) {
+            if (i !== (arr.length - 1)) {
+                $(this).parents("tr").find('td[data-alpaca-container-item-index="' + perCol + '"]').find("input").val((1 * this.value).toFixed(2) + "%");
+            }
+        });
+
+        arr.last().parents("tr").find('td[data-alpaca-container-item-index="' + perCol + '"]').find("input").val("100%");
+        arr.last().parents("tr").find('td[data-alpaca-container-item-index="' + sumCol + '"]').find("input").val(sum);
+    });
+
+};
+
 $(document).ready(function () {
 
     $('body').css('cursor', 'progress');
@@ -70,74 +93,25 @@ $(document).ready(function () {
                 this.parentNode.appendChild(this);
             });
 
-            tableSelect('.array51', [-1], []).find('input').attr('readonly', true);
-            tableSelect('.array25', [-1], []).find('input').attr('readonly', true);
-            tableSelect('.array3', [-1], []).find('input').attr('readonly', true);
-            tableSelect('.array28', [-1], []).find('input').attr('readonly', true);
-            tableSelect('.array51', [0], [1]).attr('colspan', 4);
-            tableSelect('.array51', [0], [0, 2, 3]).remove();
-            tableSelect('.array51', [10], [1]).attr('colspan', 4);
-            tableSelect('.array51', [10], [0, 2, 3]).remove();
-            tableSelect('.array51', [-1], [1]).attr('colspan', 2);
-            tableSelect('.array51', [-1], [0]).remove();
-            tableSelect('.array25', [0], [1]).attr('colspan', 4);
-            tableSelect('.array25', [0], [0, 2, 3]).remove();
-            tableSelect('.array25', [4], [1]).attr('colspan', 4);
-            tableSelect('.array25', [4], [0, 2, 3]).remove();
-            tableSelect('.array25', [7], [1]).attr('colspan', 4);
-            tableSelect('.array25', [7], [0, 2, 3]).remove();
-            tableSelect('.array25', [11], [1]).attr('colspan', 4);
-            tableSelect('.array25', [11], [0, 2, 3]).remove();
-            tableSelect('.array25', [16], [1]).attr('colspan', 4);
-            tableSelect('.array25', [16], [0, 2, 3]).remove();
-            tableSelect('.array25', [-1], [1]).attr('colspan', 2);
-            tableSelect('.array25', [-1], [0]).remove();
-            tableSelect('.array28', [0], [1]).attr('colspan', 4);
-            tableSelect('.array28', [0], [0, 2, 3]).remove();
-            tableSelect('.array28', [2], [1]).attr('colspan', 4);
-            tableSelect('.array28', [2], [0, 2, 3]).remove();
-            tableSelect('.array28', [5], [1]).attr('colspan', 4);
-            tableSelect('.array28', [5], [0, 2, 3]).remove();
-            tableSelect('.array28', [-1], [1]).attr('colspan', 2);
-            tableSelect('.array28', [-1], [0]).remove();
-            tableSelect('.array3', [0], [1]).attr('colspan', 4);
-            tableSelect('.array3', [0], [0, 2, 3]).remove();
-            tableSelect('.array3', [4], [1]).attr('colspan', 4);
-            tableSelect('.array3', [4], [0, 2, 3]).remove();
-            tableSelect('.array3', [7], [1]).attr('colspan', 4);
-            tableSelect('.array3', [7], [0, 2, 3]).remove();
-            tableSelect('.array3', [11], [1]).attr('colspan', 4);
-            tableSelect('.array3', [11], [0, 2, 3]).remove();
-            tableSelect('.array3', [16], [1]).attr('colspan', 4);
-            tableSelect('.array3', [16], [0, 2, 3]).remove();
-            tableSelect('.array3', [-1], [1]).attr('colspan', 2);
-            tableSelect('.array3', [-1], [0]).remove();
-
-
-
-            $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input').on('change', function () {
-
-                var sum = 0;
-                var arr = $('.array512').find('td[data-alpaca-container-item-index="2"]').find('input');
-
-                $.each(arr, function (i, el) {
-                    if (i === (arr.length - 1)) {
-                        return;
-                    }
-                    sum += 1 * el.value;
-                });
-
-                $.each(arr, function (i, el) {
-
-                    if (i === (arr.length - 1)) {
-                        return;
-                    }
-
-                    $(this).parents("tr").find('td[data-alpaca-container-item-index="3"]').find("input").val((Math.floor(10000 * (this.value / sum), 1) / 100) + "%");
-                });
-                arr.last().parents("tr").find('td[data-alpaca-container-item-index="3"]').find("input").val("100%");
-                arr.last().parents("tr").find('td[data-alpaca-container-item-index="2"]').find("input").val(sum);
+            ['.array51', '.array25', '.array3', '.array28'].forEach(function (el) {
+                tableSelect(el, [-1], []).find('input').attr('readonly', true);
+                tableSelect(el, [-1], [1]).attr('colspan', 2);
+                tableSelect(el, [-1], [0]).remove();
             });
+
+            tableSelect('.array51', [0, 10], [1]).attr('colspan', 4).addClass('subtitle');
+            tableSelect('.array51', [0, 10], [0, 2, 3]).remove();
+
+            tableSelect('.array25', [0, 4, 7, 11, 16], [1]).attr('colspan', 4).addClass('subtitle');
+            tableSelect('.array25', [0, 4, 7, 11, 16], [0, 2, 3]).remove();
+
+            tableSelect('.array28', [0, 2, 5], [1]).attr('colspan', 4).addClass('subtitle');
+            tableSelect('.array28', [0, 2, 5], [0, 2, 3]).remove();
+
+            tableSelect('.array3', [0, 4, 7, 11, 16], [1]).attr('colspan', 4).addClass('subtitle');
+            tableSelect('.array3', [0, 4, 7, 11, 16], [0, 2, 3]).remove();
+
+            tableSum('.array25', 2, 3);
 
         },
         view: {
@@ -148,11 +122,11 @@ $(document).ready(function () {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "a": 1,
+                    "a": 5,
                     "b": 2,
                     "c": 3,
                     "d": 4,
-                    "e": 5,
+                    "e": 1,
                     "f": 6,
                     "g": 7,
                     "h": 8,

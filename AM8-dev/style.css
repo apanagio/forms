@@ -44,11 +44,10 @@ body {
   padding: 12px;
 }
 
-.array51>tr[data-alpaca-container-item-index="0"], .array51>tr[data-alpaca-container-item-index="10"], .array51>tr[data-alpaca-container-item-index="14"] {
-
-        font-weight: bold;
+.subtitle {
+    font-weight: bold;
+    text-align: center;
 }
-
 
 
 
