@@ -31,6 +31,13 @@ var tableSelect = function (arr, rows, cols) {
     return ret;
 };
 
+/**
+creates a "sum" cell and a % column
+@param {string} table - jquery style table selector
+@param {numner} sumCol - which column has the sums
+@param {number} perCol - which column has the percentages. If undefined no percentages are caculated
+@returns undefined
+*/
 var tableSum = function (table, sumCol, perCol) {
     tableSelect(table, [], [sumCol]).find('input').on('change', function () {
         var sum = 0;
@@ -42,16 +49,14 @@ var tableSum = function (table, sumCol, perCol) {
             }
         });
 
-        $.each(arr, function (i, el) {
+        perCol !== undefined && $.each(arr, function (i, el) {
             if (i !== (arr.length - 1)) {
-                $(this).parents("tr").find('td[data-alpaca-container-item-index="' + perCol + '"]').find("input").val((1 * this.value).toFixed(2) + "%");
+                $(this).parents("tr").find('td[data-alpaca-container-item-index="' + perCol + '"]').find("input").val((100 * this.value / sum).toFixed(2));
             }
         });
 
-        arr.last().parents("tr").find('td[data-alpaca-container-item-index="' + perCol + '"]').find("input").val("100%");
         arr.last().parents("tr").find('td[data-alpaca-container-item-index="' + sumCol + '"]').find("input").val(sum);
     });
-
 };
 
 $(document).ready(function () {
