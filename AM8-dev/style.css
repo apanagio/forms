@@ -50,10 +50,13 @@ body {
 }
 
 
-
 button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-actionbar-action="down"] {
   display: none;
 }
 .actionbar {
   width: 85px;
+}
+
+.dynamic-table tr.alpaca-container-item-last .actionbar{
+    display: none;
 }

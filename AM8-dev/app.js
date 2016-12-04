@@ -1,3 +1,8 @@
+
+var $alpaca = function(index, prefix, suffix) {
+    return (prefix ? prefix : "") + '[data-alpaca-container-item-index="' + index + '"]' + (suffix ? suffix : "");
+};
+
 /**
 selects the td and tr elements of a given table
 @param {string} arr - selector for the array (usually a class)
@@ -13,7 +18,7 @@ var tableSelect = function (arr, rows, cols) {
     res;
     var rowSelector = rows.reduce(function (acc, el, i) {
             el < 0 && (el = length + el);
-            var selector = '[data-alpaca-container-item-index="' + el + '"]';
+            var selector = $alpaca(el);
             i != 0 && (selector = ',' + selector);
             return acc + selector;
         }, 'tr');
@@ -21,42 +26,13 @@ var tableSelect = function (arr, rows, cols) {
         ret = $arr.find(rowSelector);
     } else {
         colSelector = cols.reduce(function (acc, el, i) {
-                var selector = '[data-alpaca-container-item-index="' + el + '"]';
+                var selector = $alpaca(el);
                 i != 0 && (selector = ',' + selector);
                 return acc + selector;
             }, 'td');
         ret = $arr.find(rowSelector).find(colSelector);
     }
-
     return ret;
-};
-
-/**
-creates a "sum" cell and a % column
-@param {string} table - jquery style table selector
-@param {numner} sumCol - which column has the sums
-@param {number} perCol - which column has the percentages. If undefined no percentages are caculated
-@returns undefined
-*/
-var tableSum = function (table, sumCol, perCol) {
-    tableSelect(table, [], [sumCol]).find('input').on('change', function () {
-        var sum = 0;
-        var arr = tableSelect(table, [], [sumCol]).find('input');
-
-        $.each(arr, function (i, el) {
-            if (i !== (arr.length - 1)) {
-                sum += 1 * el.value;
-            }
-        });
-
-        perCol !== undefined && $.each(arr, function (i, el) {
-            if (i !== (arr.length - 1)) {
-                $(this).parents("tr").find('td[data-alpaca-container-item-index="' + perCol + '"]').find("input").val((100 * this.value / sum).toFixed(2));
-            }
-        });
-
-        arr.last().parents("tr").find('td[data-alpaca-container-item-index="' + sumCol + '"]').find("input").val(sum);
-    });
 };
 
 $(document).ready(function () {
@@ -116,7 +92,21 @@ $(document).ready(function () {
             tableSelect('.array3', [0, 4, 7, 11, 16], [1]).attr('colspan', 4).addClass('subtitle');
             tableSelect('.array3', [0, 4, 7, 11, 16], [0, 2, 3]).remove();
 
-            tableSum('.array25', 2, 3);
+            $('.auto-sum').each(function (i, el) {
+                $(el).on('change', '.sum-col input', function () {
+                    var sum = 0;
+                    var arr = $(el).find('tr:not(:last-child) .sum-col input');
+                    $.each(arr, function () {
+                        sum += 1 * this.value;
+                    });
+
+                    ($(el).find('.per-col').length > 0) && $.each(arr, function () {
+                        $(this).closest("tr").find('.per-col input').val(100 * this.value / sum);
+                    });
+
+                    $(el).find('tr:last-child .sum-col input').val(sum);
+                });
+            });
 
         },
         view: {
