@@ -49,6 +49,11 @@ body {
     text-align: center;
 }
 
+.subtitle-sum {
+    font-weight: bold;
+    text-align: right;
+}
+
 
 button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-actionbar-action="down"] {
   display: none;
@@ -60,3 +65,5 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
 .dynamic-table tr.alpaca-container-item-last .actionbar{
     display: none;
 }
+
+
