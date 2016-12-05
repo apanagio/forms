@@ -1,47 +1,47 @@
 {
     "fields": {
-        "a": {
+        "tab1": {
             "fields": {
-                "a": {
+                "textfield1": {
                     "type": "textarea"
                 },
-                "b": {
+                "textfield2": {
                     "type": "textarea"
                 },
-                "c": {
+                "textfield3": {
                     "type": "textarea"
                 }
             }
         },
-        "b": {
+        "tab2": {
             "fields": {
-                "a": {
+                "table2.1": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin"
                 }
             }
         },
-        "c": {
+        "tab3": {
             "fields": {
-                "a": {
+                "form1": {
                     "fields": {
-                        "d": {
+                        "fields3D": {
                             "fields": {
-                                "c": {
+                                "array3.D.2.1": {
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
                                     "items": {
                                         "fields": {
-                                            "e": {
+                                            "fieldtext5": {
                                                 "type": "currency",
                                                 "centsSeparator": ",",
                                                 "prefix": "",
                                                 "suffix": "€",
                                                 "thousandsSeparator": "."
                                             },
-                                            "f": {
+                                            "fieldtext6": {
                                                 "type": "currency",
                                                 "centsSeparator": ",",
                                                 "prefix": "",
@@ -51,20 +51,20 @@
                                         }
                                     }
                                 },
-                                "d": {
+                                "array3.D.2.2": {
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
                                     "items": {
                                         "fields": {
-                                            "e": {
+                                            "fieldtext5": {
                                                 "type": "currency",
                                                 "centsSeparator": ",",
                                                 "prefix": "",
                                                 "suffix": "€",
                                                 "thousandsSeparator": "."
                                             },
-                                            "f": {
+                                            "fieldtext6": {
                                                 "type": "currency",
                                                 "centsSeparator": ",",
                                                 "prefix": "",
@@ -76,99 +76,99 @@
                                 }
                             }
                         },
-                        "e": {
+                        "fields3E": {
                             "fields": {
-                                "a": {
+                                "array3E.1": {
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
                                     "showActionsColumn": false
                                 },
-                                "b": {
+                                "field3E.2": {
                                     "type": "textarea"
                                 },
-                                "c": {
+                                "array3E.3": {
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
                                     "showActionsColumn": false
                                 },
-                                "d": {
+                                "field3E.4": {
                                     "type": "textarea",
                                     "helpers": ["Περιγράψτε με σαφήνεια τους τρόπους με τους οποίους θα καλύψετε την απαιτούμενη «ίδια συμμετοχή» της προτεινόμενης επένδυσης (Εφόσον απαιτείται)", "Δηλώνονται αναλυτικά για κάθε έναν από τους συμμετέχοντες στο φορέα της επένδυσης οι πηγές από τις οποίες θα αντλήσει τα κεφάλαια για την εισφορά του μεριδίου του στο ποσό της ίδιας συμμετοχής. "]
                                 },
-                                "f": {
+                                "fields3E.6": {
                                     "fields": {
-                                        "b": {
+                                        "textfield1": {
                                             "type": "textarea"
                                         }
                                     }
                                 }
                             }
                         },
-                        "f": {
+                        "fields3F": {
                             "fields": {
-                                "a": {
+                                "textfield1": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "b": {
+                                "textfield2": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "c": {
+                                "textfield3": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "d": {
+                                "textfield4": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "e": {
+                                "textfield5": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "f": {
+                                "textfield6": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "g": {
+                                "textfield7": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "h": {
+                                "textfield8": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "i": {
+                                "textfield9": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "j": {
+                                "textfield10": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "k": {
+                                "textfield11": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "l": {
+                                "textfield12": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "m": {
+                                "textfield13": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "n": {
+                                "textfield14": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "o": {
+                                "textfield15": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "q": {
+                                "textfield16": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 }
@@ -176,19 +176,19 @@
                         }
                     }
                 },
-                "b": {
+                "form2": {
                     "items": {
                         "fields": {
-                            "f": {
+                            "textfield6": {
                                 "hideNone": true
                             },
-                            "g": {
+                            "textfield7": {
                                 "type": "textarea",
                                 "dependencies": {
                                     "f": "3. άλλη"
                                 }
                             },
-                            "k": {
+                            "textfield11": {
                                 "type": "textarea",
                                 "helpers": ["Περιγράψτε με σαφήνεια τους τρόπους με τους οποίους θα καλύψετε την απαιτούμενη «ίδια συμμετοχή» της προτεινόμενης επένδυσης", "Δηλώνονται οι πηγές από τις οποίες θα αντλήσει τα κεφάλαια για την εισφορά του μεριδίου του στο ποσό της ίδιας συμμετοχής"]
                             }
@@ -197,54 +197,54 @@
                 }
             }
         },
-        "d": {
+	"tab4": {
             "fieldClass": "top-level-object",
             "helpers": ["Για την πληρέστερη αξιολόγηση της πρότασης, δύναται να επισυναφθεί στην αίτηση ηλεκτρονικά, αρχείο (έως 10 σελίδες Α4), που θα περιλαμβάνει πρόσθετες επεξηγηματικές πληροφορίες των ανωτέρω."],
             "fields": {
-                "a": {
+                "textfield4a": {
                     "type": "textarea",
                     "helpers": ["Περιγράφεται το στάδιο ανάπτυξης και προστιθέμενης αξίας του επενδυτικού σχεδίου, καθώς και η κατανόηση ανταγωνιστικών λύσεων. Δύναται να περιληφθεί και σύγκριση με «ιδεατές», γνωστές εμπορικές λύσεις", "Όριο στα mb (πχ 5 για κάθε εντυπο) μέχρι 25 στο σύνολο της πράξης"]
                 },
-                "b": {
+                "textfield4b": {
                     "type": "textarea",
                     "helpers": ["Περιγράφονται:<br>Η στόχευση νέων ευκαιριών της αγοράς,</br>Η δυνατότητα ενίσχυσης της ανάπτυξης της εταιρίας</br>Η πειστικότητα επιδόσεων πρότασης και «value for money»</br>Η κατανόηση κινδύνων κι ευκαιριών για την επιτυχή εισαγωγή της καινοτομίας στην αγορά, από τεχνικής κι από εμπορικής απόψεως</br>Η ύπαρξη ζήτησης/αγοράς για την καινοτομία</br>Περιγραφή Παραδοτέων"]
                 },
-                "c": {
+                "textfield4c": {
                     "type": "textarea",
                     "helpers": ["Περιγράφονται:<br>Οι άδειες που απαιτούνται για την έναρξη της υλοποίησης του επιχειρηματικού σχεδίου<br>Η ρεαλιστικότητα του χρονοδιαγράμματος<br>Η ρεαλιστικότητα του προϋπολογισμού<br>Η καταλληλότητα του οργανωτικού σχήματος, εάν δηλαδή η πρόταση αποδεικνύει ότι το έργο έχει τους σχετικούς πόρους (προσωπικούς, εγκαταστάσεις, δίκτυα, κλπ.) για την ανάπτυξη των δραστηριοτήτων του και τους ρόλους που θα διαδραματίσουν οι μετέχοντες<br>Η επάρκεια του δυναμικού της επιχείρησης για την υλοποίηση της πρότασης"]
                 },
-                "e": {
+                "fields4.1a": {
                     "fields": {
-                        "aa": {
+                        "array4.1a": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin"
                         },
-                        "b": {
+                        "array4.1a2": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin"
                         },
-                        "c": {
+                        "textfield3": {
                             "type": "textarea",
                             "helpers": ["Μέχρι 1000 χαρακτήρες"]
                         }
                     }
                 },
-                "f": {
+                "fields4.1b": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin",
-		       "items": {
+               "items": {
                         "fields": {
-                            "d" : {
+                            "textfield4" : {
                                 "type": "currency",
                                 "centsSeparator": ",",
                                 "prefix": "",
                                 "suffix": "€",
                                 "thousandsSeparator": "."
                             },
-                            "e" : {
+                            "textfield5" : {
                                 "type": "currency",
                                 "centsSeparator": ",",
                                 "prefix": "",
@@ -254,31 +254,31 @@
                         }
                     }
                 },
-                "g": {
+                "fields4.2": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin"
                 },
-                "h": {
+                "fields4.3": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin"
                 },
-                "i": {
+                "fields4.4": {
                     "fields": {
-                        "a": {
+                        "fields4.4a": {
                             "fields": {
-                                "a": {
+                                "fields4.4a1": {
                                     "fields": {
-                                        "c": {
+                                        "fieldtext1": {
                                             "type": "textarea",
                                             "helpers": ["Εφόσον η επενδυτική πρόταση περιλαμβάνει «χρηματοδοτική ενίσχυση προσαυξημένη κατά 15%, διότι τα αποτελέσματα του έργου διαδίδονται ευρέως», τότε, τα αποτελέσματα της έρευνας (όχι μόνο τα συνολικά παραδοτέα του έργου) θα πρέπει να διαδοθούν στο ευρύτερο δυνατό βαθμό, τόσο σε εθνικό όσο και σε κοινοτικό επίπεδο (Ε.Ε.). Οι ανωτέρω προτάσεις θα πρέπει να περιλαμβάνουν στο χρονοπρογραμματισμό τους και ένα σχέδιο δράσεων για τη διάδοση των ερευνητικών αποτελεσμάτων του έργου.", "Μέχρι 1000 χαρακτήρες"]
                                         }
                                     }
                                 },
-                                "b": {
+                                "fields4.4a2": {
                                     "fields": {
-                                        "c": {
+                                        "fieldtext1": {
                                             "type": "textarea",
                                             "helpers": ["Εφόσον η επενδυτική πρόταση περιλαμβάνει «χρηματοδοτική ενίσχυση προσαυξημένη κατά 15%, διότι τα αποτελέσματα του έργου διαδίδονται ευρέως», τότε, τα αποτελέσματα της έρευνας (όχι μόνο τα συνολικά παραδοτέα του έργου) θα πρέπει να διαδοθούν στο ευρύτερο δυνατό βαθμό, τόσο σε εθνικό όσο και σε κοινοτικό επίπεδο (Ε.Ε.). Οι ανωτέρω προτάσεις θα πρέπει να περιλαμβάνουν στο χρονοπρογραμματισμό τους και ένα σχέδιο δράσεων για τη διάδοση των ερευνητικών αποτελεσμάτων του έργου.", "Μέχρι 1000 χαρακτήρες"]
                                         }
@@ -304,7 +304,13 @@
                                 "view": "bootstrap-display"
                             },
 							"c": {
-								"fieldClass": "sum-col"
+								"fieldClass": "sum-col",
+								"type": "currency",
+                                                		"centsSeparator": ",",
+                                                		"prefix": "",
+                                                		"suffix": "€",
+                                                		"thousandsSeparator": "."
+	
 							}
                         }
                     },
@@ -326,10 +332,18 @@
                                         "view": "bootstrap-display"
                                     },
 									"c": {
-										"fieldClass": "sum-col"
+										"fieldClass": "sum-col",
+										"type": "currency",
+                                                				"centsSeparator": ",",
+                                                				"prefix": "",
+                                                				"suffix": "€",
+                                                				"thousandsSeparator": "."
+
 									},
 									"d": {
 										"fieldClass": "per-col"
+										
+										
 									}
                                 }
                             }
@@ -347,10 +361,17 @@
                                         "view": "bootstrap-display"
                                     },
 									"c": {
-										"fieldClass": "sum-col"
+										"fieldClass": "sum-col",
+										"type": "currency",
+                                                				"centsSeparator": ",",
+                                                				"prefix": "",
+                                                				"suffix": "€",
+                                                				"thousandsSeparator": "."
+										
 									},
 									"d": {
 										"fieldClass": "per-col"
+										
 									}
                                 }
                             }
@@ -367,7 +388,13 @@
                                         "view": "bootstrap-display"
                                     },
 				    "c": {
-					"fieldClass": "sum-col"
+					"fieldClass": "sum-col",
+					"type": "currency",
+                                        "centsSeparator": ",",
+                                        "prefix": "",
+                                        "suffix": "€",
+                                        "thousandsSeparator": "."
+					
 				    },
 				    "d": {
 					"fieldClass": "per-col"
@@ -405,7 +432,13 @@
                                 "fields": {
 
 					"f": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+						
 					}
 			        }
 			    }
@@ -419,10 +452,22 @@
                                 "fields": {
    
 			 		"e": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+						 
 					},
 			    		"g": { 
-						"fieldClass": "sum-col-extra" 
+						"fieldClass": "sum-col-extra",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+						 
 					}
 				}
 			    }
@@ -436,7 +481,13 @@
                                 "fields": {
 	
                             		"d": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+						 
 					}
 				}
 			    }
@@ -450,7 +501,13 @@
                                 "fields": {
 
                             		"d": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 			   	}
 			    }
@@ -464,7 +521,13 @@
                                 "fields": {
 
 			    		"d": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 				}
 			    }
@@ -478,7 +541,13 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 				}
 			    }
@@ -492,7 +561,13 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 				}
 			    }
@@ -507,7 +582,13 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 				}
 			    }
@@ -521,7 +602,13 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 				}
 			    }
@@ -535,7 +622,13 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 				}
 			    }
@@ -549,7 +642,13 @@
                                 "fields": {
 
 	 		    		"c": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					}
 				}
 			    }
@@ -565,16 +664,34 @@
                                 "fields": {
 
 		    			"d": { 
-						"fieldClass": "sum-col-extra" 
+						"fieldClass": "sum-col-extra",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					},
 		    			"e": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+ 
 					},
 		   			"f": { 
 						"fieldClass": "per-col" 
 					},
 		    			"g": { 
-						"fieldClass": "sum-col-extra-2" 
+						"fieldClass": "sum-col-extra-2" ,
+						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+
 					}
 				}
 		    }
@@ -587,7 +704,14 @@
                                 "fields": {
 
 		    			"c": { 
-						"fieldClass": "sum-col" 
+						"fieldClass": "sum-col",
+ 						"type": "currency",
+                                                "centsSeparator": ",",
+                                                "prefix": "",
+                                                "suffix": "€",
+                                                "thousandsSeparator": "."
+
+
 					},
       		    			"d": { 
 						"fieldClass": "per-col" 

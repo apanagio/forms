@@ -119,11 +119,20 @@ $(document).ready(function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col input');
                     $.each(arr, function () {
-                        sum += 1 * this.value;
+			
+			num = parseFloat(this.value.replace(".","").replace(",","."));
+			if( !isNaN(num))
+			{
+                        	sum += num;
+			}
                     });
 
                     ($(el).find('.per-col').length > 0) && $.each(arr, function () {
-                        $(this).closest("tr").find('.per-col input').val(100 * this.value / sum);
+			num = parseFloat(this.value.replace(".","").replace(",", "."));
+			if( !isNaN(num))
+			{
+ 				$(this).closest("tr").find('.per-col input').val(100 * num / sum);
+			}
                     });
 		   
                     $(el).find('tr:last-child .sum-col input').val(sum);
@@ -136,7 +145,13 @@ $(document).ready(function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col-extra input');
                     $.each(arr, function () {
-                        sum += 1 * this.value;
+			
+			num = parseFloat(this.value.replace(".","").replace(",","."));
+			if( !isNaN(num))
+			{
+                        	sum += num;
+			}
+
                     });
 
 		   
@@ -149,8 +164,10 @@ $(document).ready(function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col-extra-2 input');
                     $.each(arr, function () {
-                        sum += 1 * this.value;
-                    });
+			num = parseFloat(this.value.replace(".","").replace(",",""));
+			if( !isNaN(num))
+				sum += num;
+		    });
 
 		   
                     $(el).find('tr:last-child .sum-col-extra-2 input').val(sum);
@@ -168,10 +185,10 @@ $(document).ready(function () {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "a": 5,
-                    "b": 2,
-                    "c": 3,
-                    "d": 4,
+                    "tab1": 5,
+                    "tab2": 2,
+                    "tab3": 3,
+                    "tab4": 4,
                     "e": 1,
                     "f": 6,
                     "g": 7,

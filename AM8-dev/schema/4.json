@@ -1,275 +1,549 @@
 {
+
 	"$schema": "http://json-schema.org/draft-04/schema#",
+
 	"type": "object",
+
 	"title": "4. ΑΝΑΛΥΤΙΚΑ ΣΤΟΙΧΕΙΑ ΤΟΥ ΕΡΓΟΥ ΩΣ ΠΡΟΣ ΤΟ ΦΥΣΙΚΟ ΑΝΤΙΚΕΙΜΕΝΟ  & ΤΙΣ ΕΠΙΠΤΩΣΕΙΣ",
+
 	"properties": {
-		"a": {
+
+		"textfield4a": {
+
 			"type": "string",
+
 			"title": "4α Περιγραφή  Επενδυτικού Σχεδίου  (έως 1000 χαρακτήρες)"
+
 		},
-		"b": {
+
+		"textfield4b": {
+
 			"type": "string",
+
 			"title": "4β Αντικείμενο του Επενδυτικού Σχεδίου – Αναμενόμενα Αποτελέσματα"
+
 		},
-		"c": {
+
+		"textfield4c": {
+
 			"type": "string",
+
 			"title": "4γ Ωριμότητα Επενδυτικού Σχεδίου"
+
 		},
-		"e": {
+
+		"fields4.1α": {
+
 			"type": "object",
+
 			"title": "4.1α Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
+
 			"dependencies": {
-				"b": ["a"]
+
+				"array4.1a2": ["fieldBool1"]
+
 			},
+
 			"properties": {
-				"aa": {
+
+				"array4.1a": {
+
 					"type": "array",
+
 					"default": [{}],
+
 					"items": {
+
 						"type": "object",
+
 						"title": "",
+
 						"properties": {
-							"aa": {
+
+							"textfield0": {
+
 								"type": "integer",
+
 								"title": "A/A"
+
 							},
-							"a": {
+
+							"textfield1": {
+
 								"type": "string",
+
 								"title": "Κωδικός"
+
 							},
-							"b": {
+
+							"textfield2": {
+
 								"type": "string",
+
 								"title": "Περιγραφή ΚΑΔ"
+
 							},
-							"c": {
+
+							"textfield3": {
+
 								"type": "string",
+
 								"title": "Ημερομηνία ενεργοποίησης ΚΑΔ"
+
 							}
+
 						}
+
 					}
+
 				},
-				"a": {
+
+				"fieldBool1": {
+
 					"type": "boolean",
+
 					"title": "Δήλωση επιπλέον ΚΑΔ"
+
 				},
-				"b": {
+
+				"array4.1a2": {
+
 					"type": "array",
+
 					"title": "4.1α Επιπλέον Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
+
 					"default": [{}],
+
 					"items": {
+
 						"type": "object",
+
 						"title": "",
+
 						"properties": {
-							"aa": {
+
+							"textfield0": {
+
 								"type": "integer",
+
 								"title": "A/A"
+
 							},
-							"a": {
+
+							"textfield1": {
+
 								"type": "string",
+
 								"title": "Κωδικός"
+
 							},
-							"b": {
+
+							"textfield2": {
+
 								"type": "string",
+
 								"title": "Περιγραφή ΚΑΔ"
+
 							},
-							"c": {
+
+							"textfield3": {
+
 								"type": "string",
+
 								"title": "Ημερομηνία ενεργοποίησης ΚΑΔ"
+
 							}
+
 						}
+
 					}
+
 				},
-				"c": {
+
+				"textfield3": {
+
 					"type": "string",
+
 					"title": "Τεκμηρίωση συνεισφοράς πρότασης στην αλυσίδα αξίας του κλάδου"
+
 				}
+
 			}
+
 		},
-		"f": {
+
+		"fields4.1b": {
+
 			"type": "array",
+
 			"title": "4.1β ΠΙΝΑΚΑΣ ΕΝΟΤΗΤΩΝ ΕΡΓΑΣΙΑΣ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
+
 			"default": [{}
+
 			],
+
 			"items": {
+
 				"type": "object",
+
 				"title": "",
+
 				"properties": {
-					"aa": {
+
+					"textfield0": {
+
 						"type": "integer",
+
 						"title": "Α/Α."
+
 					},
-					"a": {
+
+					"textfield1": {
+
 						"type": "string",
+
 						"title": "Τίτλος Ενότητας Εργασίας"
+
 					},
-					"b": {
+
+					"textfield2": {
+
 						"type": "string",
+
 						"title": "Κατηγορία Δραστηριότητας"
+
 					},
-					"c": {
+
+					"textfield3": {
+
 						"type": "string",
+
 						"title": "Υπεύθυνος Ε.Ε. (Φορέας)"
+
 					},
-					"d": {
+
+					"textfield4": {
+
 						"type": "number",
+
 						"title": "Προϋπολογισμός (€)"
+
 					},
-					"e": {
+
+					"textfield5": {
+
 						"type": "number",
+
 						"title": "Δημόσια Δαπάνη (€)"
+
 					},
-					"f": {
+
+					"textfield6": {
+
 						"type": "string",
+
 						"title": "Α/Μ"
+
 					},
-					"g": {
+
+					"textfield7": {
+
 						"type": "integer",
+
 						"title": "Έναρξη (μήνας)"
+
 					},
-					"h": {
+
+					"textfield8": {
+
 						"type": "integer",
+
 						"title": "Τέλος (μήνας)"
+
 					}
+
 				}
+
 			}
+
 		},
-		"g": {
+
+		"fields4.2": {
+
 			"type": "array",
+
 			"title": "4.2 ΠΙΝΑΚΑΣ ΠΑΡΑΔΟΤΕΩΝ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
+
 			"default": [{}
+
 			],
+
 			"items": {
+
 				"type": "object",
+
 				"title": "",
+
 				"properties": {
-					"a": {
+
+					"textfield1": {
+
 						"type": "string",
+
 						"title": "Α/Α"
+
 					},
-					"b": {
+
+					"textfield2": {
+
 						"type": "integer",
+
 						"title": "ΕΕ"
+
 					},
-					"c": {
+
+					"textfield3": {
+
 						"type": "string",
+
 						"title": "Τίτλος Παραδοτέου"
+
 					},
-					"d": {
+
+					"textfield4": {
+
 						"type": "string",
+
 						"title": "Είδος Παραδοτέου"
+
 					},
-					"e": {
+
+					"textfield5": {
+
 						"type": "string",
+
 						"title": "Υπεύθυνος Φορέας (συντομογραφία)"
+
 					},
-					"f": {
+
+					"textfield6": {
+
 						"type": "integer",
+
 						"title": "Παράδοση (μήνας)"
+
 					}
+
 				}
+
 			}
+
 		},
-		"h": {
+
+		"fields4.3": {
+
 			"type": "array",
+
 			"title": "4.3 ΣΥΝΘΕΣΗ ΚΥΡΙΑΣ ΕΡΕΥΝΗΤΙΚΗΣ ΟΜΑΔΑΣ  ",
+
 			"default": [{}
+
 			],
+
 			"items": {
+
 				"type": "object",
+
 				"title": "",
+
 				"properties": {
-					"a": {
+
+					"textfield1": {
+
 						"type": "integer",
+
 						"title": "Α/Α"
+
 					},
-					"b": {
+
+					"textfield2": {
+
 						"type": "string",
+
 						"title": "Α/Α ΦΟΡΕΑ & ΣΥΝΤΜΓΡΦΙΑ "
+
 					},
-					"c": {
+
+					"textfield3": {
+
 						"type": "string",
+
 						"title": "Ονοματεπώνυμο"
+
 					},
-					"d": {
+
+					"textfield4": {
+
 						"type": "string",
+
 						"title": "Ειδικότητα"
+
 					}
+
 				}
+
 			}
+
 		},
-		"i": {
+
+		"fields4.4": {
+
 			"type": "object",
+
 			"title": "4.4 ΤΕΚΜΗΡΙΩΣΗ ΠΡΟΣΑΥΞΗΣΗΣ ΠΟΣΟΣΤΟΥ ΕΝΙΣΧΥΣΗΣ",
+
 			"properties": {
-				"a": {
+
+				"fields4.4a": {
+
 					"type": "object",
+
 					"title": "4.4.α Έργα Έρευνας και Ανάπτυξης (ΕΚ 651/2014 (Άρθ. 25)",
+
 					"properties": {
-						"a": {
+
+						"fields4.4a1": {
+
 							"type": "object",
+
 							"title": "II ΒΙΟΜΗΧΑΝΙΚΗ / ΕΦΑΡΜΟΣΜΕΝΗ ΕΡΕΥΝΑ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 50%)",
+
 							"properties": {
-								"a": {
+
+								"fieldBool1": {
+
 									"type": "boolean",
+
 									"title": "II ΒΙΟΜΗΧΑΝΙΚΗ / ΕΦΑΡΜΟΣΜΕΝΗ ΕΡΕΥΝΑ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 50%)"
+
 								},
-								"b": {
+
+								"fieldBool2": {
+
 									"type": "boolean",
+
 									"title": "Τα αποτελέσματα του έργου διαδίδονται ευρέως μέσω συνεδρίων, δημοσιεύσεων, αποθετηρίων ελεύθερης πρόσβασης ή μέσω δωρεάν λογισμικού ή λογισμικού ανοικτής πηγής;"
+
 								},
-								"c": {
+
+								"fieldtext1": {
+
 									"type": "string",
+
 									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)"
+
 								}
+
 							},
+
 							"dependencies": {
-								"c": ["b"]
+
+								"fieldtext1": ["fieldBool2"]
+
 							}
+
 						},
-						"b": {
+
+						"fields4.4a2": {
+
 							"type": "object",
+
 							"title": "III ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 25%)",
+
 							"properties": {
-								"a": {
+
+								"fieldBool1": {
+
 									"type": "boolean",
+
 									"title": "III ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 25%)"
+
 								},
-								"b": {
+
+								"fieldBool2": {
+
 									"type": "boolean",
+
 									"title": "Τα αποτελέσματα του έργου διαδίδονται ευρέως μέσω συνεδρίων, δημοσιεύσεων, αποθετηρίων ελεύθερης πρόσβασης ή μέσω δωρεάν λογισμικού ή λογισμικού ανοικτής πηγής;"
+
 								},
-								"c": {
+
+								"fieldtext1": {
+
 									"type": "string",
+
 									"title": "ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)"
+
 								}
+
 							},
+
 							"dependencies": {
-								"c": ["b"]
+
+								"fieldtext1": ["fieldBool2"]
+
 							}
+
 						}
+
 					}
+
 				},
-				"b": {
+
+				"fields4.4.b": {
+
 					"type": "object",
+
 					"title": "4.4.β Έργα Καινοτομίας για ΜΜΕ (ΕΚ 651/2014 - Άρθ. 28) (50%)",
+
 					"properties": {
-						"a": {
+
+						"fieldBool1": {
+
 							"type": "boolean",
+
 							"title": "Καινοτομία για ΜΜΕ (Η χρήση αυτού του άρθρου γίνεται μόνο από ΜΜΕ)"
+
 						}
+
 					}
+
 				},
-				"c": {
+
+				"fields4.4.c": {
+
 					"type": "object",
+
 					"title": "4.4.γ Ενισχύσεις Ήσσονος Σημασίας (ΕΚ 1407/2013 - Άρθ. 3)",
+
 					"properties": {
-						"a": {
+
+						"fieldBool1": {
+
 							"type": "boolean",
+
 							"title": "ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ"
+
 						}
+
 					}
+
 				}
+
 			}
+
 		}
+
 	}
+
 }

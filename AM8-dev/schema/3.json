@@ -2,101 +2,101 @@
     "title": "3. ΣΤΟΙΧΕΙΑ ΔΙΚΑΙΟΥΧΟΥ",
     "type": "object",
     "properties": {
-        "a": {
+        "form1": {
             "title": "ΣΥΝΟΠΤΙΚΗ ΠΑΡΟΥΣΙΑΣΗ ΔΙΚΑΙΟΥΧΟΥ ",
             "type": "object",
             "properties": {
-                "a": {
+                "fields3A": {
                     "title": "3Α. ΣΤΟΙΧΕΙΑ ΤΑΥΤΟΤΗΤΑΣ ΕΠΙΧΕΙΡΗΣΗΣ",
                     "type": "object",
                     "properties": {
-                        "a": {
+                        "fields3A.1": {
                             "title": "3Α.1. ΒΑΣΙΚΑ ΣΤΟΙΧΕΙΑ ΕΠΙΧΕΙΡΗΣΗΣ",
                             "type": "object",
                             "properties": {
-                                "a": {
+                                "fields3A.1.1": {
                                     "title": "3Α.1.1 ΓΕΝΙΚΑ ΣΤΟΙΧΕΙΑ",
                                     "type": "object",
                                     "properties": {
-                                        "a": {
+                                        "fieldtext1": {
                                             "title": "3Α.1.1. ΕΠΩΝΥΜΙΑ ΕΠΙΧΕΙΡΗΣΗΣ",
                                             "type": "string"
                                         },
-                                        "b": {
+                                        "fieldtext2": {
                                             "title": "3Α.1.2. ΔΙΑΚΡΙΤΙΚΟΣ ΤΙΤΛΟΣ ΕΠΙΧΕΙΡΗΣΗΣ",
                                             "type": "string"
                                         },
-                                        "c": {
+                                        "fieldtext3": {
                                             "title": "3Α.1.3. ΗΜΕΡΟΜΗΝΙΑ ΙΔΡΥΣΗΣ",
                                             "type": "string"
                                         },
-                                        "d": {
+                                        "fieldtext4": {
                                             "title": "3Α.1.4. ΝΟΜΙΚΗ ΜΟΡΦΗ",
                                             "type": "string"
                                         },
-                                        "e": {
+                                        "fieldtext5": {
                                             "title": "3Α.1.5. Α.Φ.Μ.",
                                             "type": "string"
                                         },
-                                        "f": {
+                                        "fieldtext6": {
                                             "title": "3Α.1.6. V.A.T. (ΕΚΤΟΣ ΕΛΛΑΔΟΣ)",
                                             "type": "string"
                                         },
-                                        "g": {
+                                        "fieldtext7": {
                                             "title": "3Α.1.7. Δ.Ο.Υ.",
                                             "type": "string"
                                         },
-                                        "h": {
+                                        "fieldtext8": {
                                             "title": "3Α.1.8. ΥΦΙΣΤΑΜΕΝΟ ΑΝΤΙΚΕΙΜΕΝΟ ΚΥΡΙΑΣ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ (ΚΑΔ)",
                                             "type": "string"
                                         },
-                                        "i": {
+                                        "fieldtext9": {
                                             "title": "3Α.1.9. ΕΙΔΟΣ ΕΠΙΧΕΙΡΗΣΗΣ",
                                             "type": "string"
                                         },
-                                        "j": {
+                                        "fieldtext10": {
                                             "title": "3Α.1.10. ΜΕΓΕΘΟΣ ΕΠΙΧΕΙΡΗΣΗΣ",
                                             "type": "string"
                                         }
                                     }
                                 },
-                                "b": {
+                                "fields3A.2": {
                                     "title": "3Α.2. ΔΙΕΥΘΥΝΣΗ ΕΔΡΑΣ",
                                     "type": "object",
                                     "properties": {
-                                        "a": {
+                                        "fieldtext1": {
                                             "title": "3Α.2.1. ΠΕΡΙΦΕΡΕΙΑ",
                                             "type": "string"
                                         },
-                                        "b": {
+                                        "fieldtext2": {
                                             "title": "3Α.2.2. ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ",
                                             "type": "string"
                                         },
-                                        "c": {
+                                        "fieldtext3": {
                                             "title": "3Α.2.3. ΔΗΜΟΣ – ΚΟΙΝΟΤΗΤΑ",
                                             "type": "string"
                                         },
-                                        "d": {
+                                        "fieldtext4": {
                                             "title": "3Α.2.4. ΔΗΜΟΤΙΚΟ ΔΙΑΜΕΡΙΣΜΑ",
                                             "type": "string"
                                         },
-                                        "e": {
+                                        "fieldtext5": {
                                             "title": "3Α.2.5. ΔΙΕΥΘΥΝΣΗ ΕΔΡΑΣ ΟΔΟΣ – ΑΡΙΘΜΟΣ ΤΟΠΟΘΕΣΙΑ ΤΑΧ. ΚΩΔΙΚΟΣ",
                                             "type": "string"
                                         },
-                                        "f": {
+                                        "fieldtext6": {
                                             "title": "3Α.2.6. ΤΗΛΕΦΩΝΟ ΕΠΙΚΟΙΝΩΝΙΑΣ",
                                             "type": "string"
                                         },
-                                        "g": {
+                                        "fieldtext7": {
                                             "title": "3Α.2.7. FAX",
                                             "type": "string"
                                         },
-                                        "h": {
+                                        "fieldtext8": {
                                             "title": "3Α.2.8. Ιστοχώρος (Website)",
                                             "type": "string"
                                         },
-                                        "i": {
+                                        "fieldtext9": {
                                             "title": "3Α.2.9. Ηλεκτρονική Διεύθυνση (e-mail) (αποκλειστικά της επιχείρησης ή του νόμιμου εκπροσώπου)",
                                             "type": "string"
                                         }
@@ -106,58 +106,58 @@
                         }
                     }
                 },
-                "b": {
+                "fields3B": {
                     "title": "3Β. ΒΑΣΙΚΑ ΣΤΟΙΧΕΙΑ ΤΟΠΟΥ ΥΛΟΠΟΙΗΣΗΣ ΤΟΥ ΕΡΓΟΥ",
                     "type": "object",
                     "properties": {
-                        "a": {
+                        "fieldtext1": {
                             "title": "Περιφέρεια",
                             "type": "string"
                         },
-                        "b": {
+                        "array3B": {
                             "title": "Τόπος",
                             "type": "array",
                             "default": [{}],
                             "items": {
                                 "type": "object",
                                 "properties": {
-                                    "a": {
+                                    "fieldtext1": {
                                         "title": "ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ",
                                         "type": "string"
                                     },
-                                    "b": {
+                                    "fieldtext2": {
                                         "title": "ΔΗΜΟΣ – ΚΟΙΝΟΤΗΤΑ",
                                         "type": "string"
                                     },
-                                    "c": {
+                                    "fieldtext3": {
                                         "title": "ΔΗΜΟΤΙΚΟ ΔΙΑΜΕΡΙΣΜΑ",
                                         "type": "string"
                                     },
-                                    "d": {
+                                    "fieldtext4": {
                                         "title": "ΟΔΟΣ – ΑΡΙΘΜΟΣ",
                                         "type": "string"
                                     },
-                                    "e": {
+                                    "fieldtext5": {
                                         "title": "ΤΟΠΟΘΕΣΙΑ",
                                         "type": "string"
                                     },
-                                    "f": {
+                                    "fieldtext6": {
                                         "title": "ΤΑΧ. ΚΩΔΙΚΟΣ",
                                         "type": "string"
                                     },
-                                    "g": {
+                                    "fieldtext7": {
                                         "title": "ΤΗΛΕΦΩΝΟ ΕΠΙΚΟΙΝΩΝΙΑΣ",
                                         "type": "string"
                                     },
-                                    "h": {
+                                    "fieldtext8": {
                                         "title": "FAX",
                                         "type": "string"
                                     },
-                                    "i": {
+                                    "fieldtext9": {
                                         "title": "e-mail",
                                         "type": "string"
                                     },
-                                    "j": {
+                                    "fieldtext10": {
                                         "title": "ΕΙΔΟΣ ΕΓΚΑΤΑΣΤΑΣΗΣ (ΠΑΡΑΓΩΓΙΚΗ, ΕΡΕΥΝΗΤΙΚΗ ΚΛΠ)",
                                         "type": "string"
                                     }
@@ -166,62 +166,62 @@
                         }
                     }
                 },
-                "c": {
+                "fields3C": {
                     "title": "3Γ. ΣΤΟΙΧΕΙΑ ΝΟΜΙΜΟΥ ΕΚΠΡΟΣΩΠΟΥ",
                     "type": "object",
                     "properties": {
-                        "a": {
+                        "fieldBool1": {
                             "title": "Άλλος από τον συντονιστή",
                             "type": "boolean"
                         },
-                        "b": {
+                        "personFields1": {
                             "type": "object",
                             "properties": {
-                                "a": {
+                                "fieldtext1": {
                                     "title": "ΕΠΩΝΥΜΟ",
                                     "type": "string"
                                 },
-                                "b": {
+                                "fieldtext2": {
                                     "title": "ΟΝΟΜΑ",
                                     "type": "string"
                                 },
-                                "c": {
+                                "fieldtext3": {
                                     "title": "Α.Φ.Μ.",
                                     "type": "string"
                                 },
-                                "d": {
+                                "fieldtext4": {
                                     "title": "ΝΟΜΟΣ",
                                     "type": "string"
                                 },
-                                "e": {
+                                "fieldtext5": {
                                     "title": "ΟΔΟΣ ",
                                     "type": "string"
                                 },
-                                "f": {
+                                "fieldtext6": {
                                     "title": "ΑΡΙΘΜΟΣ",
                                     "type": "integer"
                                 },
-                                "g": {
+                                "fieldtext7": {
                                     "title": "ΠΟΛΗ / ΤΟΠΟΘΕΣΙΑ",
                                     "type": "string"
                                 },
-                                "h": {
+                                "fieldtext8": {
                                     "title": "ΤΑΧΥΔΡΟΜΙΚΟΣ ΚΩΔΙΚΑΣ / ΤΘ",
                                     "type": "string"
                                 },
-                                "i": {
+                                "fieldtext9": {
                                     "title": "ΤΗΛΕΦΩΝΟ (Σταθερό)",
                                     "type": "string"
                                 },
-                                "j": {
+                                "fieldtext10": {
                                     "title": "ΤΗΛΕΦΩΝΟ (Κινητό)",
                                     "type": "string"
                                 },
-                                "k": {
+                                "fieldtext11": {
                                     "title": "FAX",
                                     "type": "string"
                                 },
-                                "l": {
+                                "fieldtext12": {
                                     "title": "e-mail  του νόμιμου εκπροσώπου ή της επιχείρησης",
                                     "type": "string"
                                 }
@@ -229,131 +229,131 @@
                         }
                     },
                     "dependencies": {
-                        "b": ["a"]
+                        "personFields1": ["fieldBool1"]
                     }
                 },
-                "d": {
+                "fields3D": {
                     "title": "3Δ. ΣΤΟΙΧΕΙΑ ΕΤΑΙΡΩΝ/ΜΕΤΟΧΩΝ/ΣΥΝΔΕΔΕΜΕΝΩΝ",
                     "type": "object",
                     "properties": {
-                        "a": {
+                        "array3D": {
                             "title": "ΣΤΟΙΧΕΙΑ ΕΤΑΙΡΩΝ/ΜΕΤΟΧΩΝ/ΣΥΝΔΕΔΕΜΕΝΩΝ",
                             "type": "array",
                             "default": [{}],
                             "items": {
                                 "type": "object",
                                 "properties": {
-                                    "a": {
+                                    "textarea1": {
                                         "title": "ΠΟΣΟΣΤΟ%",
                                         "type": "string"
                                     },
-                                    "b": {
+                                    "textarea2": {
                                         "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ Ή ΕΠΩΝΥΜΙΑ",
                                         "type": "string"
                                     },
-                                    "c": {
+                                    "textarea3": {
                                         "title": "ΕΙΔΟΣ ΠΡΟΣΩΠΟΥ",
                                         "type": "string"
                                     },
-                                    "d": {
+                                    "textarea4": {
                                         "title": "ΜΕΤΟΧΟΣ ΕΚΤΟΣ ΕΛΛΑΔΟΣ",
                                         "type": "string"
                                     },
-                                    "e": {
+                                    "textarea5": {
                                         "title": "Α.Φ.Μ.",
                                         "type": "string"
                                     },
-                                    "f": {
+                                    "textarea6": {
                                         "title": "V.A.T. (ΕΚΤΟΣ ΕΛΛΑΔΟΣ)",
                                         "type": "string"
                                     },
-                                    "g": {
+                                    "textarea7": {
                                         "title": "Δ.Ο.Υ",
                                         "type": "string"
                                     },
-                                    "h": {
+                                    "textarea8": {
                                         "title": "ΧΩΡΑ ΕΓΚΑΤΑΣΤΑΣΗΣ/ΔΙΑΜΟΝΗΣ",
                                         "type": "string"
                                     },
-                                    "i": {
+                                    "textarea9": {
                                         "title": "ΟΔΟΣ – ΑΡΙΘΜΟΣ",
                                         "type": "string"
                                     },
-                                    "j": {
+                                    "textarea10": {
                                         "title": "ΠΟΛΗ",
                                         "type": "string"
                                     },
-                                    "k": {
+                                    "textarea11": {
                                         "title": "ΤΑΧ. ΚΩΔΙΚΑΣ",
                                         "type": "string"
                                     },
-                                    "l": {
+                                    "textarea12": {
                                         "title": "ΤΗΛΕΦΩΝΟ ΕΠΙΚΟΙΝΩΝΙΑΣ",
                                         "type": "string"
                                     },
-                                    "m": {
+                                    "textarea13": {
                                         "title": "FAX",
                                         "type": "string"
                                     },
-                                    "n": {
+                                    "textarea14": {
                                         "title": "e-mail",
                                         "type": "string"
                                     },
-                                    "o": {
+                                    "textarea15": {
                                         "title": "ΕΤΟΣ ΙΔΡΥΣΗΣ ΕΠΙΧΕΙΡΗΣΗΣ",
                                         "type": "string"
                                     },
-                                    "p": {
+                                    "textarea16": {
                                         "title": "Α.Φ.Μ. ΝΟΜΙΜΟΥ ΕΚΠΡΟΣΩΠΟΥ",
                                         "type": "string"
                                     },
-                                    "q": {
+                                    "textarea17": {
                                         "title": "ΘΕΣΗ ΕΤΑΙΡΟΥ/ΜΕΤΟΧΟΥ ΣΤΟΝ ΦΟΡΕΑ",
                                         "type": "string"
                                     }
                                 }
                             }
                         },
-                        "b": {
+                        "fields3D.1": {
                             "title": "3Δ.1 ΣΥΜΜΕΤΟΧΗ ΦΟΡΕΑ Ή ΕΤΑΙΡΩΝ  Ή ΜΕΤΟΧΩΝ ΣΕ ΑΛΛΕΣ ΕΠΙΧΕΙΡΗΣΕΙΣ",
                             "type": "object",
                             "properties": {
-                                "a": {
+                                "fieldBool1": {
                                     "title": "Ο Φορέας ή οι εταίροι ή οι Μέτοχοι του συμμετέχουν σε άλλες επιχειρήσεις;",
                                     "type": "boolean"
                                 },
-                                "b": {
+                                "array3D.2": {
                                     "title": "3Δ.2 Στοιχεία Επιχειρήσεων στις οποίες συμμετέχουν οι Μέτοχοι (συμπεριλαμβανομένων των offshore)",
                                     "type": "array",
                                     "default": [{}],
                                     "items": {
                                         "type": "object",
                                         "properties": {
-                                            "a": {
+                                            "fieldtext1": {
                                                 "title": "ΠΟΣΟΣΤΟ ΣΥΜΜΕΤΟΧΗΣ ΣΤΗΝ ΕΠΙΧΕΙΡΗΣΗ %",
                                                 "type": "string"
                                             },
-                                            "b": {
+                                            "fieldtext2": {
                                                 "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ Ή ΕΠΩΝΥΜΙΑ ΕΤΑΙΡΟΥ ΜΕΤΟΧΟΥ",
                                                 "type": "string"
                                             },
-                                            "c": {
+                                            "fieldtext3": {
                                                 "title": "ΕΙΔΟΣ ΠΡΟΣΩΠΟΥ",
                                                 "type": "string"
                                             },
-                                            "d": {
+                                            "fieldtext4": {
                                                 "title": "ΕΠΩΝΥΜΙΑ ΕΠΙΧΕΙΡΗΣΗΣ",
                                                 "type": "string"
                                             },
-                                            "e": {
+                                            "fieldtext5": {
                                                 "title": "ΕΤΟΣ ΙΔΡΥΣΗΣ ΕΠΙΧΕΙΡΗΣΗΣ",
                                                 "type": "string"
                                             },
-                                            "f": {
+                                            "fieldtext6": {
                                                 "title": "ΑΝΤΙΚΕΙΜΕΝΟ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ ΤΗΣ ΕΠΙΧΕΙΡΗΣΗΣ",
                                                 "type": "string"
                                             },
-                                            "g": {
+                                            "fieldtext7": {
                                                 "title": "ΘΕΣΗ ΕΤΑΙΡΟΥ-ΜΕΤΟΧΟΥ ΣΤΟΝ ΦΟΡΕΑ(Νόμιμος εκπρόσωπος, μέλος ΔΣ, Πρόεδρος Δ.Σ., Διευθύνων Σύμβουλος κ.λ.π.)",
                                                 "type": "string"
                                             }
@@ -362,10 +362,10 @@
                                 }
                             },
                             "dependencies": {
-                                "b": ["a"]
+                                "array3D.2": ["fieldBool1"]
                             }
                         },
-                        "c": {
+                        "array3.D.2.1": {
                             "title": "3.Δ.2.1 Συνδεδεμένες Επιχειρήσεις (βάσει της δήλωσης που υποβλήθηκε)",
                             "type": "array",
                             "default": [{}],
@@ -376,7 +376,7 @@
                                 }
                             }
                         },
-                        "d": {
+                        "array3.D.2.2": {
                             "title": "3.Δ.2.2 Συνεργαζόμενες Επιχειρήσεις (βάσει της δήλωσης που υποβλήθηκε)",
                             "type": "array",
                             "default": [{}],
@@ -389,144 +389,144 @@
                         }
                     }
                 },
-                "e": {
+                "fields3E": {
                     "title": "3Ε. ΟΙΚΟΝΟΜΙΚΗ ΚΑΤΑΣΤΑΣΗ ΕΠΙΧΕΙΡΗΣΗΣ",
                     "type": "object",
                     "properties": {
-                        "a": {
+                        "array3E.1": {
                             "title": "3Ε.1 ΣΥΓΚΕΝΤΡΩΤΙΚΑ ΣΤΟΙΧΕΙΑ ΜΕΓΕΘΟΥΣ ΕΠΙΧΕΙΡΗΣΗΣ ",
                             "type": "array",
-							"default": [{"aa": 2013}, {"aa": 2014}, {"aa": 2015}],
-							"minItems": 3,
-							"maxItems": 3,
+                            "default": [{"aa": 2013}, {"aa": 2014}, {"aa": 2015}],
+                            "minItems": 3,
+                            "maxItems": 3,
                             "items": {
-								"$ref": "#/definitions/companySize"
-							}
+                                "$ref": "#/definitions/companySize"
+                            }
                         },
-                        "b": {
+                        "field3E.2": {
                             "title": "3Ε.2 ΧΑΡΑΚΤΗΡΙΣΜΟΣ ΕΠΙΧΕΙΡΗΣΗΣ ΜΕ ΒΑΣΗ ΤΟ ΜΕΓΕΘΟΣ ΤΗΣ ΣΥΜΦΩΝΑ ΜΕ ΤΟΝ ΚΑΝ. (ΕΚ) 651/2014 (ΠΑΡΑΡΤΗΜΑ ΙV ΤΟΥ ΟΔΗΓΟΥ)",
                             "type": "string"
                         },
-						"c": {
+                        "array3E.3": {
                             "title": "3Ε.3 ΟΙΚΟΝΟΜΙΚΗ ΚΑΤΑΣΤΑΣΗ ΕΠΙΧΕΙΡΗΣΗΣ",
                             "type": "array",
-							"default": [{"aa": 2011}, {"aa": 2012},{"aa": 2013}, {"aa": 2014}, {"aa": 2015}],
-							"minItems": 5,
-							"maxItems": 5,
+                            "default": [{"aa": 2011}, {"aa": 2012},{"aa": 2013}, {"aa": 2014}, {"aa": 2015}],
+                            "minItems": 5,
+                            "maxItems": 5,
                             "items": {
-								"$ref": "#/definitions/companyFinance"
-							}
+                                "$ref": "#/definitions/companyFinance"
+                            }
                         },
-                        "d": {
+                        "field3E.4": {
                             "title": "3Ε.4 ΠΗΓΕΣ ΚΑΛΥΨΗΣ ΙΔΙΑΣ ΣΥΜΜΕΤΟΧΗΣ",
                             "type": "string"
                         },
-                        "e": {
+                        "fields3E.5": {
                             "title": "3Ε.5 ΑΝΑΚΤΗΣΗ ΠΡΟΗΓΟΥΜΕΝΗΣ ΕΝΙΣΧΥΣΗΣ",
                             "type": "object",
                             "properties": {
-                                "a": {
+                                "fieldBool1": {
                                     "type": "boolean",
                                     "title": "Εκκρεμεί εις βάρος της επιχείρησης ανάκτηση βάση  προηγουμένης απόφασης της ΕΕ και του Ευρωπαϊκού Δικαστηρίου;"
                                 },
-                                "b": {
+                                "textfield1": {
                                     "type": "string",
                                     "title": "Εάν ΝΑΙ, αριθμός απόφασης ανάκτησης και ΑΔΑ:"
                                 }
                             },
                             "dependencies": {
-                                "b": ["a"]
+                                "textfield1": ["fieldBool1"]
                             }
                         },
-                        "f": {
+                        "fields3E.6": {
                             "title": "3Ε.6 ΠΡΟΒΛΗΜΑΤΙΚΗ ΕΠΙΧΕΙΡΗΣΗ",
                             "type": "object",
                             "properties": {
-                                "a": {
+                                "fieldBool1": {
                                     "type": "boolean",
                                     "title": "Είναι η επιχείρηση προβληματική, σύμφωνα με τον ΕΚ 651/2014 (παράρτημα II της αναλυτικής πρόσκλησης της Δράσης);"
                                 },
-                                "b": {
+                                "textfield1": {
                                     "type": "string",
                                     "title": "Εάν ΝΑΙ, επεξηγήσεις (προαιρετικά)"
                                 }
                             },
                             "dependencies": {
-                                "b": ["a"]
+                                "textfield1": ["fieldBool1"]
                             }
                         }
                     }
 
                 },
-                "f": {
+                "fields3F": {
                     "title": "3ΣΤ. Πεδία που αφορούν στην επιχείρηση",
                     "type": "object",
                     "properties": {
-                        "a": {
+                        "textfield1": {
                             "type": "string",
                             "title": "Σύντομο ιστορικό, έτος έναρξης δραστηριότητας της επιχείρησης"
                         },
-                        "b": {
+                        "textfield2": {
                             "type": "string",
                             "title": "Περιγραφή Στρατηγικής της επιχείρησης"
                         },
-                        "c": {
+                        "textfield3": {
                             "type": "string",
                             "title": "Ανάλυση επιχειρηματικής δραστηριότητας"
                         },
-                        "d": {
+                        "textfield4": {
                             "type": "string",
                             "title": "Διαδικασίες οργάνωσης - προσωπικό"
                         },
-                        "e": {
+                        "textfield5": {
                             "type": "string",
                             "title": "Συνοπτική παρουσίαση της παραγωγικής διαδικασίας"
                         },
-                        "f": {
+                        "textfield6": {
                             "type": "string",
                             "title": "Παραγωγικά μέσα για έρευνα (προσωπικό, εξοπλισμός, κονδύλια) - Επίπεδα Τεχνολογικής Ετοιμότητας"
                         },
-                        "g": {
+                        "textfield7": {
                             "type": "string",
                             "title": "Συμμετοχές σε Ευρωπαϊκούς ή Διεθνείς διαγωνισμούς που διοργανώθηκαν από κοινοτικό, εθνικό, διεθνή ή εμπορικό φορέα και έχει βραβευτεί ή διακριθεί σε κάποια κατηγορία"
                         },
-                        "h": {
+                        "textfield8": {
                             "type": "string",
                             "title": "Εμπορικά Σήματα"
                         },
-                        "i": {
+                        "textfield9": {
                             "type": "string",
                             "title": "Συστήματα διασφάλισης ποιότητας παραγωγικής διαδικασίας"
                         },
-                        "j": {
+                        "textfield10": {
                             "type": "string",
                             "title": "Συστήματα αυτομ/σης για την παρακολούθηση και τον έλεγχο της 'παραγωγικής' διαδικασίας"
                         },
-                        "k": {
+                        "textfield11": {
                             "type": "string",
                             "title": "Εξειδικευμένα Λογισμικά (ERP, CRM, Logistics, κ.α.)"
                         },
-                        "l": {
+                        "textfield12": {
                             "type": "string",
                             "title": "Ηλεκτρονικές πωλήσεις"
                         },
-                        "m": {
+                        "textfield13": {
                             "type": "string",
                             "title": "Αυτόματα συστήματα παραγγελιοληψίας (remote, κ.α.)"
                         },
-                        "n": {
+                        "textfield14": {
                             "type": "string",
                             "title": "Οργανωμένη προβολή (επαγγελματικοί οδηγοί, μηχανές αναζήτησης)"
                         },
-                        "o": {
+                        "textfield15": {
                             "type": "string",
                             "title": "Λειτουργία e-shop"
                         },
-                        "p": {
+                        "textfield16": {
                             "type": "string",
                             "title": "Εταιρική ιστοσελίδα"
                         },
-                        "q": {
+                        "textfield17": {
                             "type": "string",
                             "title": "Συμφωνητικά ή και Προσύμφωνα πώλησης νέων προϊόντων/ υπηρεσιών"
                         }
@@ -535,139 +535,139 @@
             }
 
         },
-        "b": {
+        "form2": {
             "title": "ΕΡΕΥΝΗΤΙΚΟΣ ΦΟΡΕΑΣ – ΦΟΡΜΑ 2 (Συμπληρώνεται εφόσον συμμετέχει στην πράξη)",
             "type": "array",
             "default": [{}],
             "items": {
                 "type": "object",
                 "properties": {
-                    "a": {
+                    "textfield1": {
                         "type": "number",
                         "title": "Α/Α ΦΟΡΕΑ"
                     },
-                    "b": {
+                    "textfield2": {
                         "type": "string",
                         "title": "ΕΠΩΝΥΜΙΑ ΦΟΡΕΑ (εργαστήριο, τμήμα/ ινστιτούτο)"
                     },
-                    "c": {
+                    "textfield3": {
                         "type": "string",
                         "title": "ΣΥΝΤΟΜΟΓΡΑΦΙΑ ΕΠΩΝΥΜΙΑΣ"
                     },
-                    "d": {
+                    "textfield4": {
                         "type": "string",
                         "title": "ΕΙΔΟΣ ΦΟΡΕΑ"
                     },
-                    "e": {
+                    "textfield5": {
                         "type": "string",
                         "title": "ΕΠΩΝΥΜΙΑ ΤΟΥ ΚΥΡΙΟΥ ΦΟΡΕΑ ΣΤΟΝ ΟΠΟΙΟ ΑΝΗΚΕΙ (ΑΕΙ, ΤΕΙ, Ερευνητικός Οργανισμός, κλπ)"
                     },
-                    "f": {
+                    "textfield6": {
                         "enum": ["1. δραστηριότητες εκπαίδευσης για την εξασφάλιση περισσότερων και πιο ειδικευμένων ανθρώπινων πόρων", "2. ανεξάρτητη Ε&Α για περισσότερη γνώση και καλύτερη κατανόηση", "3. άλλη"],
                         "title": "ΚΥΡΙΑ ΔΡΑΣΤΗΡΙΟΤΗΤΑ ΤΟΥ ΦΟΡΕΑ ΤΕΧΝΟΛΟΓΙΚΗΣ ΕΡΕΥΝΑΣ"
                     },
-                    "g": {
+                    "textfield7": {
                         "type": "string",
                         "title": "ΕΑΝ Η ΑΠΑΝΤΗΣΗ ΣΤΗΝ ΠΡΟΗΓΟΥΜΕΝΗ ΕΡΩΤΗΣΗ ΕΙΝΑΙ «ΑΛΛΗ» ΠΕΡΙΓΡΑΨΤΕ"
                     },
-                    "h": {
+                    "textfields8": {
                         "type": "object",
                         "title": "ΣΤΟΙΧΕΙΑ ΔΙΕΥΘΥΝΣΗΣ ΚΥΡΙΟΥ ΕΡΕΥΝΗΤΙΚΟΥ ΦΟΡΕΑ",
                         "properties": {
-                            "a": {
+                            "textfield1": {
                                 "title": "Περιφέρεια",
                                 "type": "string"
                             },
-                            "b": {
+                            "textfield2": {
                                 "title": "ΝΟΜΟΣ",
                                 "type": "string"
                             },
-                            "c": {
+                            "textfield3": {
                                 "title": "ΔΗΜΟΣ – ΚΟΙΝΟΤΗΤΑ",
                                 "type": "string"
                             },
-                            "d": {
+                            "textfield4": {
                                 "title": "ΔΗΜΟΤΙΚΟ ΔΙΑΜΕΡΙΣΜΑ",
                                 "type": "string"
                             },
-                            "e": {
+                            "textfield5": {
                                 "title": "ΟΔΟΣ – ΑΡΙΘΜΟΣ",
                                 "type": "string"
                             },
-                            "f": {
+                            "textfield6": {
                                 "title": "ΤΟΠΟΘΕΣΙΑ",
                                 "type": "string"
                             },
-                            "g": {
+                            "textfield7": {
                                 "title": "ΤΑΧ. ΚΩΔΙΚΟΣ",
                                 "type": "string"
                             },
-                            "h": {
+                            "textfield8": {
                                 "title": "Δ.Ο.Υ",
                                 "type": "string"
                             },
-                            "i": {
+                            "textfield9": {
                                 "title": "ΑΦΜ",
                                 "type": "string"
                             },
-                            "j": {
+                            "textfield10": {
                                 "title": "ΙΣΤΟΣΕΛΙΔΑ",
                                 "type": "string"
                             }
                         }
                     },
-                    "i": {
+                    "textfields9": {
                         "type": "object",
                         "title": "ΣΤΟΙΧΕΙΑ ΔΙΕΥΘΥΝΣΗΣ ΕΡΕΥΝΗΤΙΚΟΥ ΦΟΡΕΑ (ΤΟΠΟΣ ΥΛΟΠΟΙΗΣΗΣ) (Εφόσον είναι διαφορετικός από τον κύριο φορέα.)",
                         "properties": {
-                            "a": {
+                            "textfield1": {
                                 "title": "Περιφέρεια",
                                 "type": "string"
                             },
-                            "b": {
+                            "textfield2": {
                                 "title": "ΝΟΜΟΣ",
                                 "type": "string"
                             },
-                            "c": {
+                            "textfield3": {
                                 "title": "ΔΗΜΟΣ – ΚΟΙΝΟΤΗΤΑ",
                                 "type": "string"
                             },
-                            "d": {
+                            "textfield4": {
                                 "title": "ΔΗΜΟΤΙΚΟ ΔΙΑΜΕΡΙΣΜΑ",
                                 "type": "string"
                             },
-                            "e": {
+                            "textfield5": {
                                 "title": "ΟΔΟΣ – ΑΡΙΘΜΟΣ",
                                 "type": "string"
                             },
-                            "f": {
+                            "textfield6": {
                                 "title": "ΤΟΠΟΘΕΣΙΑ",
                                 "type": "string"
                             },
-                            "g": {
+                            "textfield7": {
                                 "title": "ΤΑΧ. ΚΩΔΙΚΟΣ",
                                 "type": "string"
                             },
-                            "h": {
+                            "textfield8": {
                                 "title": "ΙΣΤΟΣΕΛΙΔΑ",
                                 "type": "string"
                             }
                         }
                     },
-                    "j": {
-			"type":"object",
+                    "textfield10": {
+            "type":"object",
                         "title": "ΥΠΕΥΘΥΝΟΣ ΤΟΥ ΕΡΕΥΝΗΤΙΚΟΥ ΦΟΡΕΑ ΓΙΑ ΤΟ ΕΡΓΟ",
                         "properties": {
                             "$ref": "#/definitions/person/properties"
                         }
                     },
-                    "k": {
+                    "textfield11": {
                         "type": "string",
                         "title": "ΠΗΓΕΣ ΚΑΛΥΨΗΣ ΙΔΙΑΣ ΣΥΜΜΕΤΟΧΗΣ"
                     }
                 },
                 "dependencies": {
-                    "g": ["f"]
+                    "textfield7": ["textfield6"]
                 }
             }
         }

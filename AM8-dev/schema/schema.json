@@ -10,35 +10,35 @@
         "person": {
             "type": "object",
             "properties": {
-                "a": {
+                "fieldtext1": {
                     "type": "string",
                     "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ"
                 },
-                "b": {
+                "fieldtext2": {
                     "type": "string",
                     "title": "ΟΝΟΜΑΣΙΑ ΦΟΡΕΑ"
                 },
-                "c": {
+                "fieldtext3": {
                     "type": "string",
                     "title": "ΘΕΣΗ ΣΤΟ ΦΟΡΕΑ"
                 },
-                "d": {
+                "fieldtext4": {
                     "type": "string",
                     "title": "ΔΙΕΥΘΥΝΣΗ"
                 },
-                "e": {
+                "fieldtext5": {
                     "type": "string",
                     "title": "ΤΗΛΕΦΩΝΟ"
                 },
-                "f": {
+                "fieldtext6": {
                     "type": "string",
                     "title": "ΤΗΛΕΦΩΝΟ ΚΙΝΗΤΟ"
                 },
-                "g": {
+                "fieldtext7": {
                     "type": "string",
                     "title": "FAX"
                 },
-                "h": {
+                "fieldtext8": {
                     "type": "string",
                     "title": "e-mail"
                 }
@@ -46,27 +46,27 @@
         },
 		"company": {
 			"properties": {
-				"a": {
+				"fieldtext1": {
 					"type": "integer",
 					"title": "α/α"
 				},
-				"b": {
+				"fieldtext2": {
 					"type": "string",
 					"title": "Συνδεδεμένος Φορέας"
 				},
-				"c": {
+				"fieldtext3": {
 					"type": "string",
 					"title": "Περίοδος Αναφοράς"
 				},
-				"d": {
+				"fieldtext4": {
 					"type": "number",
 					"title": "Απασχολούμενοι (ΕΜΕ)"
 				},
-				"e": {
+				"fieldtext5": {
 					"type": "number",
 					"title": "Σύνολο Ενεργητικού (€)"
 				},
-				"f": {
+				"fieldtext6": {
 					"type": "number",
 					"title": "Κύκλος Εργασιών (€)"
 				}
@@ -75,20 +75,20 @@
 		"companySize": {
 			"type": "object",
 			"properties": {
-                "aa": {
+                "fieldtext0": {
                     "type": "integer",
                     "title": "Έτος",
                     "readonly": true
                 },
-				"a": {
+				"fieldtext1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"b": {
+				"fieldtext2": {
 					"title": "ΣΥΝΟΛΟ ΕΤΗΣΙΟΥ ΙΣΟΛΟΓΙΣΜΟΥ (ΣΕ €)",
 					"type": "number"
 				},
-				"c": {
+				"fieldtext3": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ (ΣΕ ΕΜΕ)",
 					"type": "number"
 				}
@@ -97,32 +97,32 @@
 		"companyFinance": {
 			"type": "object",
 			"properties": {
-                "aa": {
+                "fieldtext0": {
                     "type": "integer",
                     "title": "Έτος",
                     "readonly": true
                 },
-				"a": {
+				"fieldtext1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"b": {
+				"fieldtext2": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ   (ΣΕ ΕΜΕ)",
 					"type": "number"
 				},
-				"c": {
+				"fieldtext3": {
 					"title": "ΙΔΙΩΤΙΚΗ ΣΥΜΜΕΤΟΧΗ ΓΙΑ ΤΗΝ ΧΡΗΜΑΤΟΔΟΤΗΣΗ ΕΠΕΝΔΥΣΕΩΝ  (ΣΕ €)",
 					"type": "number"
 				},
-				"d": {
+				"fieldtext4": {
 					"title": "ΑΞΙΑ ΕΞΑΓΩΓΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"e": {
+				"fieldtext5": {
 					"title": "Σύνολο Ενεργητικού",
 					"type": "number"
 				},
-				"f": {
+				"fieldtext": {
 					"title": "Αποτελέσματα Χρήσης",
 					"type": "number"
 				}
@@ -130,10 +130,10 @@
 		}
     },
     "properties": {
-        "a": {"$ref": "1.json"},
-        "b": {"$ref": "2.json"},
-        "c": {"$ref": "3.json"},
-		"d": {"$ref": "4.json"},
+        "tab1": {"$ref": "1.json"},
+        "tab2": {"$ref": "2.json"},
+        "tab3": {"$ref": "3.json"},
+	"tab4": {"$ref": "4.json"},
         "e": {"$ref": "5.json"},
         "f": {"$ref": "6.json"},
         "g": {"$ref": "7.json"},
