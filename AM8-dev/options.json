@@ -630,39 +630,53 @@
         },
         "tab6": {
             "fields": {
-                "textfield2": {
-                    "type": "textarea",
-                    "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                "fields6.1": {
+					"fields":{
+						"textfield2":{
+							"type": "textarea",
+							"helpers": ["Μέχρι 1000 χαρακτήρες"]
+						},
+						"textfield4":{
+							"type": "textarea",
+							"helpers": ["Μέχρι 1000 χαρακτήρες"]
+						}
+					}
 
                 },
-                "textfield4": {
-                    "type": "textarea",
-                    "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                "fields6.2": {
+					"fields":{
+						"textfield6":{
+							"type": "textarea",
+							"helpers": ["Μέχρι 1000 χαρακτήρες"]
+						}
+					}
 
                 },
-                "textfield6": {
-                    "type": "textarea",
-                    "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                "fields6.3": {
+					"fields":{
+						"textfield8":{
+							"type": "textarea",
+							"helpers": ["Μέχρι 1000 χαρακτήρες"]
+						}
+					}
 
                 },
-                "textfield8": {
-                    "type": "textarea",
-                    "helpers": ["Μέχρι 1000 χαρακτήρες"]
-
-                },
-                "textfield10": {
-                    "type": "textarea",
-                    "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                "fields6.4": {
+					"fields":{
+						"textfield10":{
+							"type": "textarea",
+							"helpers": ["Μέχρι 1000 χαρακτήρες"]
+						}
+					}
 
                 }
-
             }
         },
         "tab7": {
             "fields": {
                 "radiobutton1": {
                     "type": "radio",
-                    "label": "Υπάρχουν για την  υλοποίηση του ερευνητικού έργου όλες οι απαιτούμενες  άδειες;",
+                    "label": "7.1 Υπάρχουν για την  υλοποίηση του ερευνητικού έργου όλες οι απαιτούμενες  άδειες;",
                     "removeDefaultNone": true,
                     "vertical": true,
                     "sort": false
