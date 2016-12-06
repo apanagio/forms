@@ -396,7 +396,7 @@
                         "array3E.1": {
                             "title": "3Ε.1 ΣΥΓΚΕΝΤΡΩΤΙΚΑ ΣΤΟΙΧΕΙΑ ΜΕΓΕΘΟΥΣ ΕΠΙΧΕΙΡΗΣΗΣ ",
                             "type": "array",
-                            "default": [{"aa": 2013}, {"aa": 2014}, {"aa": 2015}],
+                            "default": [{"fieldtext0": 2013}, {"fieldtext0": 2014}, {"fieldtext0": 2015}],
                             "minItems": 3,
                             "maxItems": 3,
                             "items": {
@@ -410,7 +410,7 @@
                         "array3E.3": {
                             "title": "3Ε.3 ΟΙΚΟΝΟΜΙΚΗ ΚΑΤΑΣΤΑΣΗ ΕΠΙΧΕΙΡΗΣΗΣ",
                             "type": "array",
-                            "default": [{"aa": 2011}, {"aa": 2012},{"aa": 2013}, {"aa": 2014}, {"aa": 2015}],
+                            "default": [{"fieldtext0": 2011}, {"fieldtext0": 2012},{"fieldtext0": 2013}, {"fieldtext0": 2014}, {"fieldtext0": 2015}],
                             "minItems": 5,
                             "maxItems": 5,
                             "items": {

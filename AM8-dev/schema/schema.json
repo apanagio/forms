@@ -133,12 +133,12 @@
         "tab1": {"$ref": "1.json"},
         "tab2": {"$ref": "2.json"},
         "tab3": {"$ref": "3.json"},
-	"tab4": {"$ref": "4.json"},
-        "e": {"$ref": "5.json"},
-        "f": {"$ref": "6.json"},
-        "g": {"$ref": "7.json"},
-		"h": {"$ref": "8.json"},
-		"i": {"$ref": "9.json"},
-        "j": {"$ref": "10.json"}
+	    "tab4": {"$ref": "4.json"},
+        "tab5": {"$ref": "5.json"},
+        "tab6": {"$ref": "6.json"},
+        "tab7": {"$ref": "7.json"},
+		"tab8": {"$ref": "8.json"},
+		"tab9": {"$ref": "9.json"},
+        "tab10": {"$ref": "10.json"}
     }
 }

@@ -189,12 +189,12 @@ $(document).ready(function () {
                     "tab2": 2,
                     "tab3": 3,
                     "tab4": 4,
-                    "e": 1,
-                    "f": 6,
-                    "g": 7,
-                    "h": 8,
-                    "i": 9,
-                    "j": 10
+                    "tab5": 1,
+                    "tab6": 6,
+                    "tab7": 7,
+                    "tab8": 8,
+                    "tab9": 9,
+                    "tab10": 10
                 },
                 steps: [{
                         title: "1",

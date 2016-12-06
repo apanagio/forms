@@ -2,7 +2,7 @@
   "title": "8. ΧΡΟΝΟΔΙΑΓΡΑΜΜΑ ΑΝΑ ΦΟΡΕΑ",
   "type": "object",
   "properties": {
-    "a": {
+    "array1": {
       "type": "array",
       "default": [{}],
       "items": {
@@ -27,11 +27,11 @@
         }
       }
     },
-    "b": {
+    "inputFields2": {
       "type" : "object",
       "title" : "Τεκμηρίωση του χρονοδιαγράμματος (Διαδικασίες – Μεθοδολογία – Χρονοδιάγραμμα κλπ)",
       "properties": {
-        "a": {
+        "textfield1": {
           "type" : "string"
         }
       }

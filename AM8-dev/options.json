@@ -290,7 +290,7 @@
                 }
             }
         },
-        "e": {
+        "tab5": {
             "fields": {
                 "aa": {
                     "type": "table",
@@ -628,29 +628,29 @@
             }
 
         },
-        "f": {
+        "tab6": {
             "fields": {
-                "b": {
+                "textfield2": {
                     "type": "textarea",
                     "helpers": ["Μέχρι 1000 χαρακτήρες"]
 
                 },
-                "d": {
+                "textfield4": {
                     "type": "textarea",
                     "helpers": ["Μέχρι 1000 χαρακτήρες"]
 
                 },
-                "f": {
+                "textfield6": {
                     "type": "textarea",
                     "helpers": ["Μέχρι 1000 χαρακτήρες"]
 
                 },
-                "h": {
+                "textfield8": {
                     "type": "textarea",
                     "helpers": ["Μέχρι 1000 χαρακτήρες"]
 
                 },
-                "j": {
+                "textfield10": {
                     "type": "textarea",
                     "helpers": ["Μέχρι 1000 χαρακτήρες"]
 
@@ -658,9 +658,9 @@
 
             }
         },
-        "g": {
+        "tab7": {
             "fields": {
-                "a": {
+                "radiobutton1": {
                     "type": "radio",
                     "label": "Υπάρχουν για την  υλοποίηση του ερευνητικού έργου όλες οι απαιτούμενες  άδειες;",
                     "removeDefaultNone": true,
@@ -669,45 +669,45 @@
                 }
             }
         },
-        "h": {
+        "tab8": {
             "fields": {
-                "a": {
+                "array1": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin, array-with-help-2"
                 },
-                "b": {
+                "inputFields2": {
                     "fields": {
-                        "a": {
+                        "textfield1": {
                             "type": "textarea"
                         }
                     }
                 }
             }
         },
-        "i": {
+        "tab9": {
             "fields": {
-                "a": {
+                "inputFields1": {
                     "fields": {
-                        "a": {
+                        "textfield1": {
                             "type": "textarea"
 
                         }
                     }
                 },
 
-                "b": {
+                "inputFields2": {
                     "fields": {
-                        "a": {
+                        "textfield1": {
                             "type": "textarea"
                         },
-                        "b": {
+                        "textfield2": {
                             "type": "textarea"
                         },
-                        "c": {
+                        "textfield3": {
                             "type": "textarea"
                         },
-                        "d": {
+                        "textfield4": {
                             "type": "textarea"
                         }
 
@@ -717,11 +717,11 @@
                 }
             }
         },
-        "j": {
+        "tab10": {
             "fields": {
-                "a": {
+                "textfield1": {
                     "fields": {
-                        "a": {}
+                        "textinput1": {}
                     }
                 }
             }
