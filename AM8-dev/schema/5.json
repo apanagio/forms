@@ -412,121 +412,143 @@
             }
           }
         },
-        "b": {
-          "type": "object",
-          "properties": {
-			"b": {
-				"type": "array",
-				"title": "5.2 ΠΡΟΫΠΟΛΟΓΙΣΜΟΣ ΑΝΑ ΕΝΟΤΗΤΑ ΕΡΓΑΣΙΑΣ ΚΑΙ ΚΑΤΗΓΟΡΙΑ ΕΡΕΥΝΑΣ",
-				"default": [{}],
-				"items": {
-					"type": "object",
-					"properties": {
-						"a": {
-							"type": "string",
-							"title": "5.2.1 Συντμγραφία Επωνυμίας Φορέα"
-						},
-						"b": {
-							"type": "array",
-							"title": null,
-							"default": [{}, {"a": null, "b": "Σύνολο Δικαιούχος", "c": null, "d": null, "e": null, "f": null, "g": null}],
-							"items": {
-								"type": "object",
-								"properties": {
-									"a": {
-										"type": "string",
-										"title": "ΔΑΠΑΝΗ"
-									},
-									"b": {
-										"type": "string",
-										"title": "(*) ΕΙΔΟΣ ΕΡΕΥΝΑΣ"
-									},
-									"c": {
-										"type": "number",
-										"title": "Προϋπολογισμός  (€)"
-									},
-									"d": {
-										"type": "number",
-										"title": "Ένταση Ενίσχυσης (%)"
-									},
-									"e": {
-										"type": "number",
-										"title": "ΠΡΟΣΑYΞΗΣΗ ΑΝΑΛΟΓΑ ΤΟ ΜΕΓΕΘΟΣ",
-										"readonly": true
-									},
-									"f": {
-										"type": "number",
-										"title": "ΠΡΟΣΑΥΞΗΣΕΙΣ ΠΕΔΙΟΥ 4.4 ΕΝΤΥΠΟΥ ΥΠΟΒΟΛΗΣ",
-										"readonly": true
-									},
-									"g": {
-										"type": "number",
-										"title": "Δημόσια Δαπάνη  (€)",
-										"readonly": true
-									},
-									"h": {
-										"type": "number",
-										"title": "(**) % επί του συνολικού Π/Υ έργου ",
-										"readonly": true
-									}
+	"b": {
+  "type": "object",
+  "properties": {
+    "a": {
+      "type": "array",
+      "title": "5.2 ΠΡΟΫΠΟΛΟΓΙΣΜΟΣ ΑΝΑ ΕΝΟΤΗΤΑ ΕΡΓΑΣΙΑΣ ΚΑΙ ΚΑΤΗΓΟΡΙΑ ΕΡΕΥΝΑΣ",
+      "default": [
+        {}
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "string",
+            "title": "Συντμγραφία Επωνυμίας Φορέα"
+          },
+          "b": {
+            "type": "array",
+            "title": null,
+            "default": [
+              {},
+              {
+                "a": null,
+                "b": "Σύνολο Δικαιούχος",
+                "c": null,
+                "d": null,
+                "e": null,
+                "f": null,
+                "g": null
+              }
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "string",
+                  "title": "ΔΑΠΑΝΗ"
+                },
+                "b": {
+                  "type": "string",
+                  "title": "(*) ΕΙΔΟΣ ΕΡΕΥΝΑΣ"
+                },
+                "c": {
+                  "type": "number",
+                  "title": "Προϋπολογισμός  (€)"
+                },
+                "d": {
+                  "type": "number",
+                  "title": "Ένταση Ενίσχυσης (%)"
+                },
+                "e": {
+                  "type": "number",
+                  "title": "ΠΡΟΣΑYΞΗΣΗ ΑΝΑΛΟΓΑ ΤΟ ΜΕΓΕΘΟΣ",
+                  "readonly": true
+                },
+                "f": {
+                  "type": "number",
+                  "title": "ΠΡΟΣΑΥΞΗΣΕΙΣ ΠΕΔΙΟΥ 4.4 ΕΝΤΥΠΟΥ ΥΠΟΒΟΛΗΣ",
+                  "readonly": true
+                },
+                "g": {
+                  "type": "number",
+                  "title": "Δημόσια Δαπάνη  (€)",
+                  "readonly": true
+                },
+                "h": {
+                  "type": "number",
+                  "title": "(**) % επί του συνολικού Π/Υ έργου ",
+                  "readonly": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "b": {
+      "type": "array",
+      "title": null,
+      "default": [
+        {
+          "a": null,
+          "b": "Γενικό Σύνολο",
+          "c": null,
+          "d": null,
+          "e": null,
+          "f": null,
+          "g": null
+        }
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "string",
+            "title": "ΔΑΠΑΝΗ"
+          },
+          "b": {
+            "type": "string",
+            "title": "(*) ΕΙΔΟΣ ΕΡΕΥΝΑΣ"
+          },
+          "c": {
+            "type": "number",
+            "title": "Προϋπολογισμός  (€)"
+          },
+          "d": {
+            "type": "number",
+            "title": "Ένταση Ενίσχυσης (%)"
+          },
+          "e": {
+            "type": "number",
+            "title": "ΠΡΟΣΑYΞΗΣΗ ΑΝΑΛΟΓΑ ΤΟ ΜΕΓΕΘΟΣ",
+            "readonly": true
+          },
+          "f": {
+            "type": "number",
+            "title": "ΠΡΟΣΑΥΞΗΣΕΙΣ ΠΕΔΙΟΥ 4.4 ΕΝΤΥΠΟΥ ΥΠΟΒΟΛΗΣ",
+            "readonly": true
+          },
+          "g": {
+            "type": "number",
+            "title": "Δημόσια Δαπάνη  (€)",
+            "readonly": true
+          },
+          "h": {
+            "type": "number",
+            "title": "(**) % επί του συνολικού Π/Υ έργου ",
+            "readonly": true
+          }
+        }
+      }
+    }
+  }
+},
 	
-								}
-							}
-						},
-						"c": {
-							"type": "array",
-							"title": "Γενικό Σύνολο",
-							"default": [{"a": null, "b": "Γενικό Σύνολο", "c": null, "d": null, "e": null, "f": null, "g": null}
-							],
-							"items": {
-								"type": "object",
-								"properties": {
-									"a": {
-										"type": "string",
-										"title": "ΔΑΠΑΝΗ"
-									},
-									"b": {
-										"type": "string",
-										"title": "(*) ΕΙΔΟΣ ΕΡΕΥΝΑΣ"
-									},
-									"c": {
-										"type": "number",
-										"title": "Προϋπολογισμός  (€)"
-									},
-									"d": {
-										"type": "number",
-										"title": "Ένταση Ενίσχυσης (%)"
-									},
-									"e": {
-										"type": "number",
-										"title": "ΠΡΟΣΑYΞΗΣΗ ΑΝΑΛΟΓΑ ΤΟ ΜΕΓΕΘΟΣ",
-										"readonly": true
-									},
-									"f": {
-										"type": "number",
-										"title": "ΠΡΟΣΑΥΞΗΣΕΙΣ ΠΕΔΙΟΥ 4.4 ΕΝΤΥΠΟΥ ΥΠΟΒΟΛΗΣ",
-										"readonly": true
-									},
-									"g": {
-										"type": "number",
-										"title": "Δημόσια Δαπάνη  (€)",
-										"readonly": true
-									},
-									"h": {
-										"type": "number",
-										"title": "(**) % επί του συνολικού Π/Υ έργου ",
-										"readonly": true
-									}
-	
-								}
-												
-							}
-						}
-					}
-				}	
-			}
-        	}
-        },
+
+
         "c": {
           "type": "object",
           "title": "5.3.1 ΑΝΑΛΥΣΗ ΤΟΥ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ ΑΝΑ ΚΑΤΗΓΟΡΙΑ ΔΑΠΑΝΗΣ",
