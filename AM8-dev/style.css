@@ -54,7 +54,6 @@ body {
     text-align: right;
 }
 
-
 button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-actionbar-action="down"] {
   display: none;
 }
