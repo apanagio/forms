@@ -148,7 +148,7 @@ $(document).ready(function () {
 
 
 	    $('.auto-sum').each(function (i, el) {    				// On .sum-col-extra  FIXME 
-                $(el).on('change', 'input: .sum-col-extra', function () {
+                $(el).on('change', '.sum-col-extra input', function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col-extra input');
                     $.each(arr, function () {
@@ -178,6 +178,12 @@ $(document).ready(function () {
                     $(el).find('tr:last-child .sum-col-extra-2 input').val(sum);
                 });
             });
+			
+	$('body').on('mouseup','.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]',function (el) {
+		alert("You pressed remove button");
+		//add the logic for sum/percentages. They have to be unified.				
+	});
+
 
         },
         view: {
