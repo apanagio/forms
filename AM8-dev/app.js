@@ -165,6 +165,11 @@ $(document).ready(function () {
                     $(el).find('tr:last-child .sum-col-extra-2 input').val(sum);
                 });
             });
+			
+			$('body').on('mouseup','.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]',function (el) {
+				alert("You pressed remove button");
+				//add the logic for sum/percentages. They have to be unified.				
+			});
         },
         view: {
             parent: "bootstrap-edit-horizontal",
