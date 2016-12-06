@@ -385,25 +385,43 @@
                 },
 		 "b": {
                     "fields": {
-                        "b": {
+                        "a": {
                             "items": {
                                 "fields": {
                                     "b": {
                                         "type": "table",
                                         "view": "bootstrap-edit",
-                                        "fieldClass": "zero-margin, array-with-help, array52, dynamic-table",
-                                        "helpers": ["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας", "(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"]
-                                    },
-				   "c": {
-                            		"type": "table",
-                            		"showActionsColumn": false,
-                            		"view": "bootstrap-edit",
-                            		"fieldClass": "zero-margin, array_total_sum, auto-sum"
+                                        "fieldClass": "zero-margin,  array52, dynamic-table, auto-sum",
+					"items": {
+						"fields": {
+							"c" : {
+								"fieldClass": "sum-col"
+							},
+							"d": {
+								"fieldClass": "per-col"
+							},
+							"g": {
+								"fieldClass": "sum-col-extra"
+							}
+						}
+					}
+                                    
+				    }
+				}
+                           }
+                            
+                       },
+		      "b": {
+				"type": "table",
+                            	"showActionsColumn": false,
+                            	"view": "bootstrap-edit",
+                            	"fieldClass": "zero-margin, array-total-sum, array-with-help",
+				"helpers": ["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας", 
+					"(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"]
                           
-				   }
-                                }
-                            }
-                        }
+		        }
+
+				
                     }
                 },
                 "c": {

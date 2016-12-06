@@ -78,16 +78,15 @@ $(document).ready(function () {
 	    '.array5311', '.array5312', '.array5313', '.array5314', 
 	    '.array5315', '.array5316', '.array5317', '.array5318', 
 	    '.array5319', '.array53110', '.array53111', '.array54', 
-	    '.array55'].forEach(function (el) {
+	    '.array55', '.array-total-sum'].forEach(function (el) {
             tableSelect(el, [-1], []).find('input').attr('readonly', true);
             tableSelect(el, [-1], [1]).attr('colspan', 2).addClass('subtitle-sum');
-			tableSelect(el, [-1], [0]).remove();
+	    tableSelect(el, [-1], [0]).remove();
             });
 	
 	   tableSelect('.array52', [1],[1]).attr('colspan', 2).addClass('subtitle');
 	   tableSelect('.array52', [1], []).find('input').attr('readonly', true);
 	   tableSelect('.array52', [1], [0]).remove();
-           //tableSelect('.array52', [1], []).find('.actionbar').hide();   		not working?  FIXME
 
             tableSelect('.array51', [0, 10], [1]).attr('colspan', 4).addClass('subtitle');
             tableSelect('.array51', [0, 10], [0, 2, 3]).remove();
@@ -115,15 +114,21 @@ $(document).ready(function () {
             tableSelect('.array54', [], [5]).find('input').attr('readonly', true);
 	    tableSelect('.array55', [], [3]).find('input').attr('readonly', true);
 			
-            $('.auto-sum').each(function (i, el) {				// Default sum, per function FIXME
-                $(el).on('change', '.sum-col input', function () {
+	    $('body').on('DOMNodeInserted', '.array52', function() {   // testing for new array FIXME
+		
+			alert('');
+		});
+
+
+            $('body ').each(function (i, el) {				// Default sum, per function FIXME
+                $(el).on('change', '.sum-col > input', function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col input');
                     $.each(arr, function () {
 			num = parseFloat(this.value.replace(".","").replace(",","."));
 			if( !isNaN(num))
 			{
-							sum += num;
+				sum += num;
 			}
 		    });
 		    ($(el).find('.per-col').length > 0) && $.each(arr, function () {
@@ -138,22 +143,30 @@ $(document).ready(function () {
 		});
             });
 
+
+
+
+
 	    $('.auto-sum').each(function (i, el) {    				// On .sum-col-extra  FIXME 
-                $(el).on('change', '.sum-col-extra input', function () {
+                $(el).on('change', 'input: .sum-col-extra', function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col-extra input');
                     $.each(arr, function () {
 			num = parseFloat(this.value.replace(".","").replace(",","."));
 			if( !isNaN(num))
 			{
-							sum += num;
+				sum += num;
 			}
 		    });
 		    $(el).find('tr:last-child .sum-col-extra input').val(sum);
 	 	});
             });
 		
-	    $('.auto-sum').each(function (i, el) {    				// On .sum-col-extra-2 FIXME 
+	    
+
+
+
+	$('.auto-sum').each(function (i, el) {    				// On .sum-col-extra-2 FIXME 
                 $(el).on('change', '.sum-col-extra-2 input', function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col-extra-2 input');
@@ -165,6 +178,7 @@ $(document).ready(function () {
                     $(el).find('tr:last-child .sum-col-extra-2 input').val(sum);
                 });
             });
+
         },
         view: {
             parent: "bootstrap-edit-horizontal",
