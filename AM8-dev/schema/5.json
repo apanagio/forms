@@ -429,9 +429,7 @@
 						"b": {
 							"type": "array",
 							"title": null,
-							"default": [{}, {"a": null, "b": "Σύνολο Δικαιούχος", "c": null, "d": null, "e": null, "f": null, "g": null},
-								{}, {"a": null, "b": "Γενικό Σύνολο", "c": null, "d": null, "e": null, "f": null, "g": null}
-							],
+							"default": [{}, {"a": null, "b": "Σύνολο Δικαιούχος", "c": null, "d": null, "e": null, "f": null, "g": null}],
 							"items": {
 								"type": "object",
 								"properties": {
@@ -474,11 +472,60 @@
 	
 								}
 							}
-						}						
+						},
+						"c": {
+							"type": "array",
+							"title": "Γενικό Σύνολο",
+							"default": [{"a": null, "b": "Γενικό Σύνολο", "c": null, "d": null, "e": null, "f": null, "g": null}
+							],
+							"items": {
+								"type": "object",
+								"properties": {
+									"a": {
+										"type": "string",
+										"title": "ΔΑΠΑΝΗ"
+									},
+									"b": {
+										"type": "string",
+										"title": "(*) ΕΙΔΟΣ ΕΡΕΥΝΑΣ"
+									},
+									"c": {
+										"type": "number",
+										"title": "Προϋπολογισμός  (€)"
+									},
+									"d": {
+										"type": "number",
+										"title": "Ένταση Ενίσχυσης (%)"
+									},
+									"e": {
+										"type": "number",
+										"title": "ΠΡΟΣΑYΞΗΣΗ ΑΝΑΛΟΓΑ ΤΟ ΜΕΓΕΘΟΣ",
+										"readonly": true
+									},
+									"f": {
+										"type": "number",
+										"title": "ΠΡΟΣΑΥΞΗΣΕΙΣ ΠΕΔΙΟΥ 4.4 ΕΝΤΥΠΟΥ ΥΠΟΒΟΛΗΣ",
+										"readonly": true
+									},
+									"g": {
+										"type": "number",
+										"title": "Δημόσια Δαπάνη  (€)",
+										"readonly": true
+									},
+									"h": {
+										"type": "number",
+										"title": "(**) % επί του συνολικού Π/Υ έργου ",
+										"readonly": true
+									}
+	
+								}
+												
+							}
+						}
 					}
-				}
+				}	
 			}
-          }
+        	}
         },
         "c": {
           "type": "object",

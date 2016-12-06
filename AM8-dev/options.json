@@ -304,12 +304,7 @@
                                 "view": "bootstrap-display"
                             },
 							"c": {
-								"fieldClass": "sum-col",
-								"type": "currency",
-                                                		"centsSeparator": ",",
-                                                		"prefix": "",
-                                                		"suffix": "€",
-                                                		"thousandsSeparator": "."
+								"fieldClass": "sum-col"
 	
 							}
                         }
@@ -331,21 +326,15 @@
                                         "type": "textarea",
                                         "view": "bootstrap-display"
                                     },
-									"c": {
-										"fieldClass": "sum-col",
-										"type": "currency",
-                                                				"centsSeparator": ",",
-                                                				"prefix": "",
-                                                				"suffix": "€",
-                                                				"thousandsSeparator": "."
-
-									},
-									"d": {
-										"fieldClass": "per-col"
+				    "c": {
+					"fieldClass": "sum-col"
+		     		    },
+				    "d": {
+					"fieldClass": "per-col"
 										
 										
 									}
-                                }
+                                    }	
                             }
 
                         },
@@ -360,17 +349,12 @@
                                         "type": "textarea",
                                         "view": "bootstrap-display"
                                     },
-									"c": {
-										"fieldClass": "sum-col",
-										"type": "currency",
-                                                				"centsSeparator": ",",
-                                                				"prefix": "",
-                                                				"suffix": "€",
-                                                				"thousandsSeparator": "."
+				    "c": {
+					"fieldClass": "sum-col"
 										
-									},
-									"d": {
-										"fieldClass": "per-col"
+				    },
+				   "d": {
+					"fieldClass": "per-col"
 										
 									}
                                 }
@@ -388,12 +372,7 @@
                                         "view": "bootstrap-display"
                                     },
 				    "c": {
-					"fieldClass": "sum-col",
-					"type": "currency",
-                                        "centsSeparator": ",",
-                                        "prefix": "",
-                                        "suffix": "€",
-                                        "thousandsSeparator": "."
+					"fieldClass": "sum-col"
 					
 				    },
 				    "d": {
@@ -414,8 +393,14 @@
                                         "view": "bootstrap-edit",
                                         "fieldClass": "zero-margin, array-with-help, array52, dynamic-table",
                                         "helpers": ["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας", "(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"]
-                                    }
-				
+                                    },
+				   "c": {
+                            		"type": "table",
+                            		"showActionsColumn": false,
+                            		"view": "bootstrap-edit",
+                            		"fieldClass": "zero-margin, array_total_sum, auto-sum"
+                          
+				   }
                                 }
                             }
                         }
@@ -432,12 +417,7 @@
                                 "fields": {
 
 					"f": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
 						
 					}
 			        }
@@ -452,21 +432,11 @@
                                 "fields": {
    
 			 		"e": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
 						 
 					},
 			    		"g": { 
-						"fieldClass": "sum-col-extra",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col-extra"
 						 
 					}
 				}
@@ -481,12 +451,7 @@
                                 "fields": {
 	
                             		"d": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
 						 
 					}
 				}
@@ -501,12 +466,7 @@
                                 "fields": {
 
                             		"d": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 			   	}
@@ -521,12 +481,7 @@
                                 "fields": {
 
 			    		"d": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 				}
@@ -541,12 +496,7 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 				}
@@ -561,12 +511,7 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 				}
@@ -582,12 +527,7 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 				}
@@ -602,12 +542,7 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 				}
@@ -622,12 +557,7 @@
                                 "fields": {
 
 			    		"c": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 				}
@@ -642,12 +572,7 @@
                                 "fields": {
 
 	 		    		"c": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					}
 				}
@@ -664,33 +589,18 @@
                                 "fields": {
 
 		    			"d": { 
-						"fieldClass": "sum-col-extra",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col-extra"
  
 					},
 		    			"e": { 
-						"fieldClass": "sum-col",
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
  
 					},
 		   			"f": { 
 						"fieldClass": "per-col" 
 					},
 		    			"g": { 
-						"fieldClass": "sum-col-extra-2" ,
-						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col-extra-2" 
 
 					}
 				}
@@ -704,12 +614,7 @@
                                 "fields": {
 
 		    			"c": { 
-						"fieldClass": "sum-col",
- 						"type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+						"fieldClass": "sum-col"
 
 
 					},
