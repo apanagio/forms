@@ -43,27 +43,24 @@ body {
 .array-with-help-2 .table>thead>tr>td, .table>thead>tr>th {
   padding: 12px;
 }
-
 .subtitle {
     font-weight: bold;
     text-align: center;
 }
-
 .subtitle-sum {
     font-weight: bold;
     text-align: right;
 }
-
 button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-actionbar-action="down"] {
   display: none;
 }
 .actionbar {
   width: 85px;
 }
-
 .dynamic-table tr.alpaca-container-item-last .actionbar{
     display: none;
 }
-
-
+.no-remove-button.no-remove-button tr.alpaca-container-item-first  button[data-alpaca-array-actionbar-action="remove"]{
+	display: none;
+}
 
