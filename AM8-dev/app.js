@@ -114,13 +114,9 @@ $(document).ready(function () {
             tableSelect('.array54', [], [5]).find('input').attr('readonly', true);
 	    tableSelect('.array55', [], [3]).find('input').attr('readonly', true);
 			
-	    $('body').on('DOMNodeInserted', '.array52', function() {   // testing for new array FIXME
-		
-			alert('');
-		});
 
 
-            $('body ').each(function (i, el) {				// Default sum, per function FIXME
+            $('.auto-sum').each(function (i, el) {				// Default sum, per function FIXME
                 $(el).on('change', '.sum-col > input', function () {
                     var sum = 0;
                     var arr = $(el).find('tr:not(:last-child) .sum-col input');
@@ -178,6 +174,24 @@ $(document).ready(function () {
                     $(el).find('tr:last-child .sum-col-extra-2 input').val(sum);
                 });
             });
+
+
+
+
+	$('body').on('click','.section52  .alpaca-array-actionbar-top button[data-alpaca-array-actionbar-action="add"]', function (el) {
+		setTimeout( function() {
+		
+		var $arr = $('.section52 > div > div.alpaca-container-item-last');
+		
+		$arr.find('tr:last').find('input').attr('readonly','true');
+		$arr.find('tr:last').find($alpaca(1)).attr("colspan","2").addClass("subtitle-sum");
+		$arr.find('tr:last').find($alpaca(0)).remove();
+										
+	
+		}, 5000);
+		
+	}); 
+ 
 			
 	$('body').on('mouseup','.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]',function (el) {
 		alert("You pressed remove button");

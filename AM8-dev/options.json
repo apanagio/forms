@@ -386,6 +386,7 @@
 		 "b": {
                     "fields": {
                         "a": {
+			    "fieldClass": "section52",
                             "items": {
                                 "fields": {
                                     "b": {
