@@ -706,7 +706,7 @@
                 "array1": {
                     "type": "table",
                     "view": "bootstrap-edit",
-                    "fieldClass": "zero-margin, array-with-help-2"
+                    "fieldClass": "zero-margin"
                 },
                 "inputFields2": {
                     "fields": {

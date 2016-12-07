@@ -34,15 +34,6 @@ body {
 .array-with-help .help-block {
 	margin-left: 0;
 }
-.array-with-help-2 {
-  margin-right: 0;
-}
-.array-with-help-2 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th {
-  padding: 1px;
-}
-.array-with-help-2 .table>thead>tr>td, .table>thead>tr>th {
-  padding: 12px;
-}
 .subtitle {
     font-weight: bold;
     text-align: center;
