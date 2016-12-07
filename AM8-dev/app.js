@@ -112,78 +112,56 @@ $(document).ready(function () {
             });
 			
             tableSelect('.array54', [], [5]).find('input').attr('readonly', true);
+			//add dynamically readonly to new percentage columns
+			$('body').on('DOMNodeInserted', '.array54', function () {
+				//alert("");
+				tableSelect($(this), [], [5]).find('input').attr('readonly', true);
+			});
 	    tableSelect('.array55', [], [3]).find('input').attr('readonly', true);
 			
-	    $('body').on('DOMNodeInserted', '.array52', function() {   // testing for new array FIXME
-		
-			alert('');
-		});
-
-
-            $('body ').each(function (i, el) {				// Default sum, per function FIXME
-                $(el).on('change', '.sum-col > input', function () {
-                    var sum = 0;
-                    var arr = $(el).find('tr:not(:last-child) .sum-col input');
-                    $.each(arr, function () {
-			num = parseFloat(this.value.replace(".","").replace(",","."));
-			if( !isNaN(num))
-			{
-				sum += num;
+			var computeSum = function (el, col, per, offset){
+				var sum = 0 - offset;
+				var arr = $(el).find('tr:not(:last-child) ' +col+ ' input');
+				$.each(arr, function () {
+					var num = 1* this.value;
+					!isNaN(num) && (sum += num);
+					(per == true) && ($(el).find('.per-col').length > 0) && $.each(arr, function () {
+						num = 1 * this.value;
+						if( !isNaN(num))
+						{
+						$(this).closest("tr").find('.per-col input').val((100 * num / sum).toFixed(2));
+						}
+						$(el).find('tr:last-child .per-col input').val("100");
+					});
+					$(el).find('tr:last-child ' +col+ ' input').val(sum);
+				});				
 			}
-		    });
-		    ($(el).find('.per-col').length > 0) && $.each(arr, function () {
-			num = parseFloat(this.value.replace(".","").replace(",", "."));
-			if( !isNaN(num))
-			{
-				$(this).closest("tr").find('.per-col input').val((100 * num / sum).toFixed(2));
-			}
-		    });
-		    $(el).find('tr:last-child .sum-col input').val(sum);
-		    $(el).find('tr:last-child .per-col input').val("100");
-		});
-            });
-
-
-
-
-
-	    $('.auto-sum').each(function (i, el) {    				// On .sum-col-extra  FIXME 
-                $(el).on('change', '.sum-col-extra input', function () {
-                    var sum = 0;
-                    var arr = $(el).find('tr:not(:last-child) .sum-col-extra input');
-                    $.each(arr, function () {
-			num = parseFloat(this.value.replace(".","").replace(",","."));
-			if( !isNaN(num))
-			{
-				sum += num;
-			}
-		    });
-		    $(el).find('tr:last-child .sum-col-extra input').val(sum);
-	 	});
-            });
-		
-	    
-
-
-
-	$('.auto-sum').each(function (i, el) {    				// On .sum-col-extra-2 FIXME 
-                $(el).on('change', '.sum-col-extra-2 input', function () {
-                    var sum = 0;
-                    var arr = $(el).find('tr:not(:last-child) .sum-col-extra-2 input');
-                    $.each(arr, function () {
-			num = parseFloat(this.value.replace(".","").replace(",",""));
-			if( !isNaN(num))
-				sum += num;
-		    });
-                    $(el).find('tr:last-child .sum-col-extra-2 input').val(sum);
-                });
-            });
 			
-	$('body').on('mouseup','.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]',function (el) {
-		alert("You pressed remove button");
-		//add the logic for sum/percentages. They have to be unified.				
-	});
+            $('.auto-sum').each(function (i, el) {			// Default sum, per function FIXME
+                									
+				$(el).on('change', '.sum-col > input', function () {
+					computeSum(el,'.sum-col', true, 0);	
+				});
+				$(el).on('mouseup','.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]',function (el1) {
+					//alert("You pressed remove button");
+					var temp = $(this).closest('tr').find('.sum-col input').val();
+					computeSum(el,'.sum-col', true, temp);						
+				});	
+				
+				['.sum-col-extra', '.sum-col-extra-2'].forEach(function (col) {
+					if ($(el).find(col).length > 0) {
+						$(el).on('change', col+' > input', function () {
+							computeSum(el,col, false, 0);	
+						});
+						$(el).on('mouseup','.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]',function (el1) {
+						//alert("You pressed remove button");
+							var temp = $(this).closest('tr').find(col+' input').val();
+							computeSum(el,col, false, temp);						
+						});	
+					};
+				});				
 
+			});
 
         },
         view: {
