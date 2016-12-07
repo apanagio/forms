@@ -1,1 +1,40 @@
-{}
+{
+  "title": "8. ΧΡΟΝΟΔΙΑΓΡΑΜΜΑ ΑΝΑ ΦΟΡΕΑ",
+  "type": "object",
+  "properties": {
+    "array1": {
+      "type": "array",
+      "default": [{}],
+      "items": {
+        "type": "object",
+        "properties": {
+          "phases": {
+            "type": "string",
+            "title": "ΦΑΣΕΙΣ"
+          },
+          "activities": {
+            "type": "string",
+            "title": "Δραστηριότητες για την πραγματοποίηση του επιχειρηματικού σχεδίου"
+          },
+          "starting_month": {
+            "type": "number",
+            "title": "Μήνας έναρξης"
+          },
+          "duration": {
+            "type": "number",
+            "title": "Διάρκεια σε μήνες"
+          }
+        }
+      }
+    },
+    "inputFields2": {
+      "type" : "object",
+      "title" : "8.2 Τεκμηρίωση του χρονοδιαγράμματος (Διαδικασίες – Μεθοδολογία – Χρονοδιάγραμμα κλπ)",
+      "properties": {
+        "textfield1": {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

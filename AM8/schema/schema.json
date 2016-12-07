@@ -10,35 +10,35 @@
         "person": {
             "type": "object",
             "properties": {
-                "1": {
+                "fieldtext1": {
                     "type": "string",
                     "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ"
                 },
-                "2": {
+                "fieldtext2": {
                     "type": "string",
                     "title": "ΟΝΟΜΑΣΙΑ ΦΟΡΕΑ"
                 },
-                "3": {
+                "fieldtext3": {
                     "type": "string",
                     "title": "ΘΕΣΗ ΣΤΟ ΦΟΡΕΑ"
                 },
-                "4": {
+                "fieldtext4": {
                     "type": "string",
                     "title": "ΔΙΕΥΘΥΝΣΗ"
                 },
-                "5": {
+                "fieldtext5": {
                     "type": "string",
                     "title": "ΤΗΛΕΦΩΝΟ"
                 },
-                "6": {
+                "fieldtext6": {
                     "type": "string",
                     "title": "ΤΗΛΕΦΩΝΟ ΚΙΝΗΤΟ"
                 },
-                "7": {
+                "fieldtext7": {
                     "type": "string",
                     "title": "FAX"
                 },
-                "8": {
+                "fieldtext8": {
                     "type": "string",
                     "title": "e-mail"
                 }
@@ -46,27 +46,27 @@
         },
 		"company": {
 			"properties": {
-				"1": {
+				"fieldtext1": {
 					"type": "integer",
 					"title": "α/α"
 				},
-				"2": {
+				"fieldtext2": {
 					"type": "string",
 					"title": "Συνδεδεμένος Φορέας"
 				},
-				"3": {
+				"fieldtext3": {
 					"type": "string",
 					"title": "Περίοδος Αναφοράς"
 				},
-				"4": {
+				"fieldtext4": {
 					"type": "number",
 					"title": "Απασχολούμενοι (ΕΜΕ)"
 				},
-				"5": {
+				"fieldtext5": {
 					"type": "number",
 					"title": "Σύνολο Ενεργητικού (€)"
 				},
-				"6": {
+				"fieldtext6": {
 					"type": "number",
 					"title": "Κύκλος Εργασιών (€)"
 				}
@@ -75,20 +75,20 @@
 		"companySize": {
 			"type": "object",
 			"properties": {
-                "0": {
+                "fieldtext0": {
                     "type": "integer",
                     "title": "Έτος",
                     "readonly": true
                 },
-				"1": {
+				"fieldtext1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"2": {
+				"fieldtext2": {
 					"title": "ΣΥΝΟΛΟ ΕΤΗΣΙΟΥ ΙΣΟΛΟΓΙΣΜΟΥ (ΣΕ €)",
 					"type": "number"
 				},
-				"3": {
+				"fieldtext3": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ (ΣΕ ΕΜΕ)",
 					"type": "number"
 				}
@@ -97,32 +97,32 @@
 		"companyFinance": {
 			"type": "object",
 			"properties": {
-                "0": {
+                "fieldtext0": {
                     "type": "integer",
                     "title": "Έτος",
                     "readonly": true
                 },
-				"1": {
+				"fieldtext1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"2": {
+				"fieldtext2": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ   (ΣΕ ΕΜΕ)",
 					"type": "number"
 				},
-				"3": {
+				"fieldtext3": {
 					"title": "ΙΔΙΩΤΙΚΗ ΣΥΜΜΕΤΟΧΗ ΓΙΑ ΤΗΝ ΧΡΗΜΑΤΟΔΟΤΗΣΗ ΕΠΕΝΔΥΣΕΩΝ  (ΣΕ €)",
 					"type": "number"
 				},
-				"4": {
+				"fieldtext4": {
 					"title": "ΑΞΙΑ ΕΞΑΓΩΓΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"5": {
+				"fieldtext5": {
 					"title": "Σύνολο Ενεργητικού",
 					"type": "number"
 				},
-				"6": {
+				"fieldtext": {
 					"title": "Αποτελέσματα Χρήσης",
 					"type": "number"
 				}
@@ -130,15 +130,15 @@
 		}
     },
     "properties": {
-        "1": {"$ref": "1.json"},
-        "2": {"$ref": "2.json"},
-        "3": {"$ref": "3.json"},
-		"4": {"$ref": "4.json"},
-        "5": {"$ref": "5.json"},
-        "6": {"$ref": "6.json"},
-        "7": {"$ref": "7.json"},
-		"8": {"$ref": "8.json"},
-		"9": {"$ref": "9.json"},
-        "10": {"$ref": "10.json"}
+        "tab1": {"$ref": "1.json"},
+        "tab2": {"$ref": "2.json"},
+        "tab3": {"$ref": "3.json"},
+	    "tab4": {"$ref": "4.json"},
+        "tab5": {"$ref": "5.json"},
+        "tab6": {"$ref": "6.json"},
+        "tab7": {"$ref": "7.json"},
+		"tab8": {"$ref": "8.json"},
+		"tab9": {"$ref": "9.json"},
+        "tab10": {"$ref": "10.json"}
     }
 }

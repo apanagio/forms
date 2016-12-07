@@ -1,4 +1,4 @@
-html {
+html{
   position: relative;
   min-height: 100%;
 }
@@ -34,3 +34,24 @@ body {
 .array-with-help .help-block {
 	margin-left: 0;
 }
+.subtitle {
+    font-weight: bold;
+    text-align: center;
+}
+.subtitle-sum {
+    font-weight: bold;
+    text-align: right;
+}
+button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-actionbar-action="down"] {
+  display: none;
+}
+.actionbar {
+  width: 85px;
+}
+.dynamic-table tr.alpaca-container-item-last .actionbar{
+    display: none;
+}
+.no-remove-button.no-remove-button tr.alpaca-container-item-first  button[data-alpaca-array-actionbar-action="remove"]{
+	display: none;
+}
+

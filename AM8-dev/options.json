@@ -197,7 +197,7 @@
                 }
             }
         },
-	"tab4": {
+        "tab4": {
             "fieldClass": "top-level-object",
             "helpers": ["Για την πληρέστερη αξιολόγηση της πρότασης, δύναται να επισυναφθεί στην αίτηση ηλεκτρονικά, αρχείο (έως 10 σελίδες Α4), που θα περιλαμβάνει πρόσθετες επεξηγηματικές πληροφορίες των ανωτέρω."],
             "fields": {
@@ -235,16 +235,16 @@
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin",
-               "items": {
+                    "items": {
                         "fields": {
-                            "textfield4" : {
+                            "textfield4": {
                                 "type": "currency",
                                 "centsSeparator": ",",
                                 "prefix": "",
                                 "suffix": "€",
                                 "thousandsSeparator": "."
                             },
-                            "textfield5" : {
+                            "textfield5": {
                                 "type": "currency",
                                 "centsSeparator": ",",
                                 "prefix": "",
@@ -303,10 +303,10 @@
                                 "type": "textarea",
                                 "view": "bootstrap-display"
                             },
-							"c": {
-								"fieldClass": "sum-col"
-	
-							}
+                            "c": {
+                                "fieldClass": "sum-col"
+
+                            }
                         }
                     },
                     "helper": "Συνολικά, οι «Δαπάνες προσωπικού με σύμβαση εξηρτημένης σχέσης εργασίας» και οι «Δαπάνες προσωπικού με σύμβαση μίσθωσης έργου», θα πρέπει να αποτελούν τουλάχιστον το 25%, ενώ δεν θα πρέπει να υπερβαίνουν το 70% του επιχορηγούμενου Π/Υ του έργου."
@@ -326,15 +326,15 @@
                                         "type": "textarea",
                                         "view": "bootstrap-display"
                                     },
-				    "c": {
-					"fieldClass": "sum-col"
-		     		    },
-				    "d": {
-					"fieldClass": "per-col"
-										
-										
-									}
-                                    }	
+                                    "c": {
+                                        "fieldClass": "sum-col"
+                                    },
+                                    "d": {
+                                        "fieldClass": "per-col"
+
+
+                                    }
+                                }
                             }
 
                         },
@@ -349,14 +349,14 @@
                                         "type": "textarea",
                                         "view": "bootstrap-display"
                                     },
-				    "c": {
-					"fieldClass": "sum-col"
-										
-				    },
-				   "d": {
-					"fieldClass": "per-col"
-										
-									}
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    },
+                                    "d": {
+                                        "fieldClass": "per-col"
+
+                                    }
                                 }
                             }
                         },
@@ -371,58 +371,56 @@
                                         "type": "textarea",
                                         "view": "bootstrap-display"
                                     },
-				    "c": {
-					"fieldClass": "sum-col"
-					
-				    },
-				    "d": {
-					"fieldClass": "per-col"
-				    }
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    },
+                                    "d": {
+                                        "fieldClass": "per-col"
+                                    }
                                 }
                             }
                         }
                     }
                 },
-		 "b": {
+                "b": {
                     "fields": {
                         "a": {
-			    "fieldClass": "section52",
+                            "fieldClass": "section52",
                             "items": {
                                 "fields": {
                                     "b": {
                                         "type": "table",
                                         "view": "bootstrap-edit",
-                                        "fieldClass": "zero-margin,  array52, dynamic-table, auto-sum, no-remove-button",
-					"items": {
-						"fields": {
-							"c" : {
-								"fieldClass": "sum-col"
-							},
-							"d": {
-								"fieldClass": "per-col"
-							},
-							"g": {
-								"fieldClass": "sum-col-extra"
-							}
-						}
-					}
-                                    
-				    }
-				}
-                           }
-                            
-                       },
-		      "b": {
-				"type": "table",
-                            	"showActionsColumn": false,
-                            	"view": "bootstrap-edit",
-                            	"fieldClass": "zero-margin, array-total-sum, array-with-help",
-				"helpers": ["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας", 
-					"(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"]
-                          
-		        }
+                                        "fieldClass": "zero-margin,  array52, dynamic-table, auto-sum, no-remove-button, array-with-help",
+                                        "helpers": ["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας",
+                                            "(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"
+                                        ],
+                                        "items": {
+                                            "fields": {
+                                                "c": {
+                                                    "fieldClass": "sum-col"
+                                                },
+                                                "d": {
+                                                    "fieldClass": "per-col"
+                                                },
+                                                "g": {
+                                                    "fieldClass": "sum-col-extra"
+                                                }
+                                            }
+                                        }
 
-				
+                                    }
+                                }
+                            }
+
+                        },
+                        "b": {
+                            "type": "table",
+                            "showActionsColumn": false,
+                            "view": "bootstrap-edit",
+                            "fieldClass": "zero-margin, array-total-sum"
+                        }
                     }
                 },
                 "c": {
@@ -432,16 +430,16 @@
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5311, auto-sum, no-remove-button",
                             "helpers": ["(*) Ονοματίζονται τα άτομα της ομάδας έργου από κάθε φορέα. Για τα ονοματιζόμενα αυτά άτομα (των οποίων τα βιογραφικά λαμβάνονται υπόψη κατά την αξιολόγηση) δηλώνονται συνολική αμοιβή και ανθρωπομήνες. Η υπόλοιπη ανθρωποπροσπάθεια ορίζεται ως προς τις ειδικότητες, της συνολική δαπάνη και τους συνολικούς ανθρωπομήνες μόνο (όχι αριθμός ατόμων, όχι ονόματα).", "(**) Αναφέρεται η κατηγορία ερευνητικού προσωπικού: Έμπειρος Ερευνητής, Ερευνητής, τεχνικό προσωπικό, βοηθητικό προσωπικό", "(***) Μικτό κόστος ανθρωπομήνα σύμφωνα με τα όρια που ορίζονται στην αναλυτική πρόσκληση"],
-                       	    "items": {
+                            "items": {
                                 "fields": {
 
-					"f": { 
-						"fieldClass": "sum-col"
-						
-					}
-			        }
-			    }
-			 },
+                                    "f": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
+                        },
                         "b": {
                             "type": "table",
                             "view": "bootstrap-edit",
@@ -449,153 +447,153 @@
                             "helpers": ["(*) Σε μήνες που αποδίδονται/ αναλογούν στο έργο", "(**) Επιλέξιμες θεωρούνται μόνον οι δαπάνες απόσβεσης, που αντιστοιχούν στη διάρκεια του έργο, οι οποίες υπολογίζονται με βάσει τις γενικά αποδεκτές λογιστικές αρχές"],
                             "items": {
                                 "fields": {
-   
-			 		"e": { 
-						"fieldClass": "sum-col"
-						 
-					},
-			    		"g": { 
-						"fieldClass": "sum-col-extra"
-						 
-					}
-				}
-			    }
-			},
+
+                                    "e": {
+                                        "fieldClass": "sum-col"
+
+                                    },
+                                    "g": {
+                                        "fieldClass": "sum-col-extra"
+
+                                    }
+                                }
+                            }
+                        },
                         "c": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5313, auto-sum, no-remove-button",
                             "helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"],
-			    "items": {
+                            "items": {
                                 "fields": {
-	
-                            		"d": { 
-						"fieldClass": "sum-col"
-						 
-					}
-				}
-			    }
-			},
+
+                                    "d": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
+                        },
                         "d": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5314, auto-sum, no-remove-button",
                             "helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"],
-			    "items": {
+                            "items": {
                                 "fields": {
 
-                            		"d": { 
-						"fieldClass": "sum-col"
- 
-					}
-			   	}
-			    }
-			},
+                                    "d": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
+                        },
                         "e": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5315, auto-sum, no-remove-button",
                             "helpers": ["Απαιτείται προσφορά από τον αναφερόμενο φορέα"],
-			    "items": {
+                            "items": {
                                 "fields": {
 
-			    		"d": { 
-						"fieldClass": "sum-col"
- 
-					}
-				}
-			    }
+                                    "d": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
                         },
                         "f": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5316, auto-sum, no-remove-button",
                             "helpers": ["Αφορούν δαπάνες μετακινήσεων και λοιπών δαπανών απαραίτητες για την εκτέλεση του έργου"],
-			    "items": {
+                            "items": {
                                 "fields": {
 
-			    		"c": { 
-						"fieldClass": "sum-col"
- 
-					}
-				}
-			    }
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
                         },
                         "g": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5317, auto-sum, no-remove-button",
                             "helpers": ["Αφορούν απαραίτητα υλικά ή εξαρτήματα για την εκτέλεση του έργου"],
-			    "items": {
+                            "items": {
                                 "fields": {
 
-			    		"c": { 
-						"fieldClass": "sum-col"
- 
-					}
-				}
-			    }
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
 
                         },
                         "h": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5318, auto-sum, no-remove-button",
-                            "helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"],	
-			    "items": {
+                            "helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"],
+                            "items": {
                                 "fields": {
 
-			    		"c": { 
-						"fieldClass": "sum-col"
- 
-					}
-				}
-			    }
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
 
                         },
                         "i": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5319, auto-sum, no-remove-button",
-			    "items": {
+                            "items": {
                                 "fields": {
 
-			    		"c": { 
-						"fieldClass": "sum-col"
- 
-					}
-				}
-			    }
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
 
                         },
                         "j": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array53110, auto-sum, no-remove-button",
-			    "items": {
+                            "items": {
                                 "fields": {
 
-			    		"c": { 
-						"fieldClass": "sum-col"
- 
-					}
-				}
-			    }
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
 
                         },
                         "k": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array53111, auto-sum, no-remove-button",
-			    "items": {
+                            "items": {
                                 "fields": {
 
-	 		    		"c": { 
-						"fieldClass": "sum-col"
- 
-					}
-				}
-			    }
+                                    "c": {
+                                        "fieldClass": "sum-col"
+
+                                    }
+                                }
+                            }
 
                         }
                     }
@@ -604,44 +602,44 @@
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin, dynamic-table, array54, auto-sum, no-remove-button",
-		    "items": {
-                                "fields": {
+                    "items": {
+                        "fields": {
 
-		    			"d": { 
-						"fieldClass": "sum-col-extra"
- 
-					},
-		    			"e": { 
-						"fieldClass": "sum-col"
- 
-					},
-		   			"f": { 
-						"fieldClass": "per-col" 
-					},
-		    			"g": { 
-						"fieldClass": "sum-col-extra-2" 
+                            "d": {
+                                "fieldClass": "sum-col-extra"
 
-					}
-				}
-		    }
+                            },
+                            "e": {
+                                "fieldClass": "sum-col"
+
+                            },
+                            "f": {
+                                "fieldClass": "per-col"
+                            },
+                            "g": {
+                                "fieldClass": "sum-col-extra-2"
+
+                            }
+                        }
+                    }
                 },
                 "e": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin, dynamic-table, array55, auto-sum, no-remove-button",
-		    "items": {
-                                "fields": {
+                    "items": {
+                        "fields": {
 
-		    			"c": { 
-						"fieldClass": "sum-col"
+                            "c": {
+                                "fieldClass": "sum-col"
 
 
-					},
-      		    			"d": { 
-						"fieldClass": "per-col" 
-					}
-				}
-		    }
+                            },
+                            "d": {
+                                "fieldClass": "per-col"
+                            }
+                        }
+                    }
                 }
 
             }
@@ -650,43 +648,43 @@
         "tab6": {
             "fields": {
                 "fields6.1": {
-					"fields":{
-						"textfield2":{
-							"type": "textarea",
-							"helpers": ["Μέχρι 1000 χαρακτήρες"]
-						},
-						"textfield4":{
-							"type": "textarea",
-							"helpers": ["Μέχρι 1000 χαρακτήρες"]
-						}
-					}
+                    "fields": {
+                        "textfield2": {
+                            "type": "textarea",
+                            "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                        },
+                        "textfield4": {
+                            "type": "textarea",
+                            "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                        }
+                    }
 
                 },
                 "fields6.2": {
-					"fields":{
-						"textfield6":{
-							"type": "textarea",
-							"helpers": ["Μέχρι 1000 χαρακτήρες"]
-						}
-					}
+                    "fields": {
+                        "textfield6": {
+                            "type": "textarea",
+                            "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                        }
+                    }
 
                 },
                 "fields6.3": {
-					"fields":{
-						"textfield8":{
-							"type": "textarea",
-							"helpers": ["Μέχρι 1000 χαρακτήρες"]
-						}
-					}
+                    "fields": {
+                        "textfield8": {
+                            "type": "textarea",
+                            "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                        }
+                    }
 
                 },
                 "fields6.4": {
-					"fields":{
-						"textfield10":{
-							"type": "textarea",
-							"helpers": ["Μέχρι 1000 χαρακτήρες"]
-						}
-					}
+                    "fields": {
+                        "textfield10": {
+                            "type": "textarea",
+                            "helpers": ["Μέχρι 1000 χαρακτήρες"]
+                        }
+                    }
 
                 }
             }
