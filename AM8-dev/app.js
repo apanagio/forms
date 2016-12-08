@@ -171,6 +171,7 @@ $(document).ready(function() {
 
             $('.section52').on('click', '.alpaca-array-actionbar-top button[data-alpaca-array-actionbar-action="add"], button[data-alpaca-array-toolbar-action="add"]',
                 function(el) {
+			[ 1000, 2000, 4000, 6000 ].forEach ( function(time) {
                     setTimeout(function() {
 
                         $('.array-with-help').find('.help-block').each(function() {
@@ -195,7 +196,9 @@ $(document).ready(function() {
                     		computeSum($arr, '.sum-col', true, temp);
                 	});
 
-                }, 5000);
+                },time );
+		
+		});
 
 	});
 

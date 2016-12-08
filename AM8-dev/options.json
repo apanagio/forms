@@ -456,8 +456,7 @@
                         "c": {
                             "type": "table",
                             "view": "bootstrap-edit",
-                            "fieldClass": "zero-margin, array-with-help, dynamic-table, array5313, auto-sum, no-remove-button",
-                            "helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"],
+                            "fieldClass": "zero-margin, dynamic-table, array5313, auto-sum, no-remove-button",
                             "items": {
                                 "fields": {
 
@@ -471,8 +470,7 @@
                         "d": {
                             "type": "table",
                             "view": "bootstrap-edit",
-                            "fieldClass": "zero-margin, array-with-help, dynamic-table, array5314, auto-sum, no-remove-button",
-                            "helpers": ["Απαιτείται προσύμφωνο συνεργασίας με τον αναφερόμενο φορέα, το οποίο θα πρέπει να επισυναφθεί σκαναρισμένο ηλεκτρονικά"],
+                            "fieldClass": "zero-margin, dynamic-table, array5314, auto-sum, no-remove-button",
                             "items": {
                                 "fields": {
 
@@ -486,8 +484,7 @@
                         "e": {
                             "type": "table",
                             "view": "bootstrap-edit",
-                            "fieldClass": "zero-margin, array-with-help, dynamic-table, array5315, auto-sum, no-remove-button",
-                            "helpers": ["Απαιτείται προσφορά από τον αναφερόμενο φορέα"],
+                            "fieldClass": "zero-margin, dynamic-table, array5315, auto-sum, no-remove-button",
                             "items": {
                                 "fields": {
 
