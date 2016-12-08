@@ -123,7 +123,7 @@ $(document).ready(function() {
                 this.parentNode.appendChild(this);
             });
 
-            ['.array51', '.array25', '.array3', '.array28', '.array52',
+            ['.array51', '.array25', '.array3', '.array28',
                 '.array5311', '.array5312', '.array5313', '.array5314',
                 '.array5315', '.array5316', '.array5317', '.array5318',
                 '.array5319', '.array53110', '.array53111', '.array54',
@@ -134,9 +134,9 @@ $(document).ready(function() {
                 tableSelect(el, [-1], [0]).remove();
             });
 
-            tableSelect('.array52', [1], [1]).attr('colspan', 2).addClass('subtitle');
+            tableSelect('.array52', [1], [0]).attr('colspan', 2).addClass('subtitle');
             tableSelect('.array52', [1], []).find('input').attr('readonly', true);
-            tableSelect('.array52', [1], [0]).remove();
+            tableSelect('.array52', [1], [1]).remove();
 
             tableSelect('.array51', [0, 10], [1]).attr('colspan', 4).addClass('subtitle');
             tableSelect('.array51', [0, 10], [0, 2, 3]).remove();
@@ -184,9 +184,9 @@ $(document).ready(function() {
                             var $arr = $('.section52 > div > div.alpaca-container-item-last');
 
                             $arr.find('tr:last').find('input').attr('readonly', 'true');
-                            $arr.find('tr:last').find($alpaca(1)).attr("colspan", "2").addClass("subtitle-sum");
+                            $arr.find('tr:last').find($alpaca(0)).attr("colspan", "2").addClass("subtitle-sum");
 
-                            $arr.find('tr:last').find($alpaca(0)).remove();
+                            $arr.find('tr:last').find($alpaca(1)).remove();
 
 
                             $arr.find('.auto-sum').on('change', '.sum-col input', function() { // Summing when new array52 is added
@@ -263,11 +263,11 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 1,
+                    "tab1": 5,
                     "tab2": 2,
                     "tab3": 3,
                     "tab4": 4,
-                    "tab5": 5,
+                    "tab5": 1,
                     "tab6": 6,
                     "tab7": 7,
                     "tab8": 8,

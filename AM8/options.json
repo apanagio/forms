@@ -400,6 +400,10 @@
                                             "fields": {
                                                 "c": {
                                                     "fieldClass": "sum-col"
+                                                },
+                                                "b": {
+                                                    "type": "select",
+                                                    "hideNone": true
                                                 }
                                             }
                                         }
