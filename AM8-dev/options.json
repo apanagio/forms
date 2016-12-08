@@ -400,12 +400,6 @@
                                             "fields": {
                                                 "c": {
                                                     "fieldClass": "sum-col"
-                                                },
-                                                "d": {
-                                                    "fieldClass": "per-col"
-                                                },
-                                                "g": {
-                                                    "fieldClass": "sum-col-extra"
                                                 }
                                             }
                                         }
