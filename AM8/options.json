@@ -709,15 +709,6 @@
         },
         "tab9": {
             "fields": {
-                "inputFields1": {
-                    "fields": {
-                        "textfield1": {
-                            "type": "textarea"
-
-                        }
-                    }
-                },
-
                 "inputFields2": {
                     "fields": {
                         "textfield1": {
@@ -732,9 +723,6 @@
                         "textfield4": {
                             "type": "textarea"
                         }
-
-
-
                     }
                 }
             }
