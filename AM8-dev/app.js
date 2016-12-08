@@ -28,7 +28,7 @@ var createGant = function() {
 
     var options = {
         xaxis: {
-            minTickSize: 1,
+            minTickSize: 1
         },
         series: {
             lines: { show:false },
