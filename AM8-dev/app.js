@@ -1,42 +1,51 @@
-/*global $ Alpaca Plotly*/
+/*global $ Alpaca */
 var $alpaca = function(index, prefix, suffix) {
     return (prefix ? prefix : "") + '[data-alpaca-container-item-index="' + index + '"]' + (suffix ? suffix : "");
 };
 
 var createGant = function() {
     var div = 'gant-chart';
-    var trace1 = {
-        x: [20, 14, 23],
-        y: ['giraffes', 'orangutans', 'monkeys'],
-        name: 'SF Zoo',
-        orientation: 'h',
-        marker: {
-            color: 'rgba(55,128,191,0.6)',
-            width: 1
-        },
-        type: 'bar'
-    };
+    var series = [{
+        data: [
+            [0, 100],
+            [1, 150],
+            [2, 125],
+            [3, 160],
+            [4, 95]
+        ],
+        label: "Series 1"
+    }, {
+        data: [
+            [0, 20],
+            [1, 35],
+            [2, 20],
+            [3, 35],
+            [4, 35]
+        ],
+        label: "Series 2"
+    }, {
+        data: [
+            [0, 55],
+            [1, 40],
+            [2, 60],
+            [3, 10],
+            [4, 20]
+        ],
+        label: "Series 3"
+    }];
 
-    var trace2 = {
-        x: [12, 18, 29],
-        y: ['giraffes', 'orangutans', 'monkeys'],
-        name: 'LA Zoo',
-        orientation: 'h',
-        type: 'bar',
-        marker: {
-            color: 'rgba(255,153,51,0.6)',
-            width: 1
+    var options = {
+        xaxis: {
+            minTickSize: 1
+        },
+        series: {
+            stack: true,
+            lines: { show:false },
+            bars: { show: true, barWidth: 0.6, horizontal:false }
         }
     };
-
-    var data = [trace1, trace2];
-
-    var layout = {
-        title: 'Colored Bar Chart',
-        barmode: 'stack'
-    };
-
-    Plotly.newPlot(div, data, layout);
+    
+        $.plot("#" + div, series, options);
 };
 
 /**
