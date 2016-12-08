@@ -7,44 +7,35 @@ var createGant = function() {
     var div = 'gant-chart';
     var series = [{
         data: [
-            [0, 100],
-            [1, 150],
-            [2, 125],
-            [3, 160],
-            [4, 95]
+            [100, 0],
+            [150, 1],
+            [125, 2],
+            [160, 3],
+            [95, 4]
         ],
-        label: "Series 1"
+        label: "Series1",
+		color : '#FFFFFF'
     }, {
         data: [
-            [0, 20],
-            [1, 35],
-            [2, 20],
-            [3, 35],
-            [4, 35]
+            [20, 0],
+            [35,1],
+            [20,2],
+            [35,3],
+            [35,4]
         ],
-        label: "Series 2"
-    }, {
-        data: [
-            [0, 55],
-            [1, 40],
-            [2, 60],
-            [3, 10],
-            [4, 20]
-        ],
-        label: "Series 3"
+        label: "Series2"
     }];
 
     var options = {
         xaxis: {
-            minTickSize: 1
+            minTickSize: 1,
         },
         series: {
-            stack: true,
             lines: { show:false },
-            bars: { show: true, barWidth: 0.6, horizontal:false }
+            bars: { barWidth: 0.6, horizontal:true, show:true},
+			stack: true
         }
     };
-    
         $.plot("#" + div, series, options);
 };
 
