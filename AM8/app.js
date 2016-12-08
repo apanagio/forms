@@ -15,6 +15,10 @@ var createGant = function(chartDiv, $dataDiv) {
 
     var d = getPlotData($dataDiv);
 
+    if (d.length < 2) {
+        return;
+    }
+
     var series = [{
         data: d.map(function(el, i) {
             return [1 * el[3] + 1 * el[2], i, 1 * el[2]];
