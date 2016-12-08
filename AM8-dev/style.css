@@ -55,3 +55,7 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
 	display: none;
 }
 
+#gant-chart {
+  width: 400px;
+  height: 300px;
+}

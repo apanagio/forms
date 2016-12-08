@@ -1,28 +1,42 @@
-/*global $ Alpaca CanvasJS*/
+/*global $ Alpaca Plotly*/
 var $alpaca = function(index, prefix, suffix) {
     return (prefix ? prefix : "") + '[data-alpaca-container-item-index="' + index + '"]' + (suffix ? suffix : "");
 };
 
-var createGant = function () {
-    var chart = new CanvasJS.Chart("gant-chart", {
-		title:{
-			text: "My First Chart in CanvasJS"              
-		},
-		data: [              
-		{
-			// Change type to "doughnut", "line", "splineArea", etc.
-			type: "column",
-			dataPoints: [
-				{ label: "apple",  y: 10  },
-				{ label: "orange", y: 15  },
-				{ label: "banana", y: 25  },
-				{ label: "mango",  y: 30  },
-				{ label: "grape",  y: 28  }
-			]
-		}
-		]
-	});
-	chart.render();
+var createGant = function() {
+    var div = 'gant-chart';
+    var trace1 = {
+        x: [20, 14, 23],
+        y: ['giraffes', 'orangutans', 'monkeys'],
+        name: 'SF Zoo',
+        orientation: 'h',
+        marker: {
+            color: 'rgba(55,128,191,0.6)',
+            width: 1
+        },
+        type: 'bar'
+    };
+
+    var trace2 = {
+        x: [12, 18, 29],
+        y: ['giraffes', 'orangutans', 'monkeys'],
+        name: 'LA Zoo',
+        orientation: 'h',
+        type: 'bar',
+        marker: {
+            color: 'rgba(255,153,51,0.6)',
+            width: 1
+        }
+    };
+
+    var data = [trace1, trace2];
+
+    var layout = {
+        title: 'Colored Bar Chart',
+        barmode: 'stack'
+    };
+
+    Plotly.newPlot(div, data, layout);
 };
 
 /**
@@ -37,7 +51,7 @@ var tableSelect = function(arr, rows, cols) {
     var $arr = $(arr).find('table');
     var length = $arr.find('>tbody >tr').length;
     var colSelector, ret;
-    
+
     var rowSelector = rows.reduce(function(acc, el, i) {
         el < 0 && (el = length + el);
         var selector = $alpaca(el);
@@ -209,10 +223,10 @@ $(document).ready(function() {
                     }
                 });
             });
-            
-            $('.gant-data').append('<div id="gant-chart">Here</div>');
+
+            $('.gant-data').append('<div id="gant-chart"></div>');
             createGant();
-            
+
         },
         view: {
             parent: "bootstrap-edit-horizontal",
