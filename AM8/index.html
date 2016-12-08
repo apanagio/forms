@@ -24,13 +24,17 @@
     <!-- jQuery date Format -->
     <script src="../deps/jquery-dateFormat/jquery-dateFormat.min.js"></script>
 
+
+    <script src="../deps/flot/jquery.flot.min.js"></script>
+    <script src="../deps/flot/jquery.flot.stack.min.js"></script>
+
     <script type="text/javascript" src="app.js"></script>
     <link href="style.css" rel="stylesheet">
 
 </head>
 
 <body>
-	<header class="jumbotron">
+    <header class="jumbotron">
         <div class="container">
             <h1>Φόρμα υποβολής για τη δράση ...</h1>
             <p>
@@ -48,29 +52,27 @@
             <div id="form1">
             </div>
             <div class="row">
-            <a id="download-btn" class="download-btn btn btn-primary btn-lg col-md-3">
-                <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
-                Download
-            </a>
-            <div class="col-md-8">
-                <a href="advanced-download" id="advanced-download-link" data-toggle="modal" data-target="#advanced-download" class="download-btn btn btn-danger btn-sm">
-                    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-                    Πρόβλημα στο κατέβασμα
+                <a id="download-btn" class="download-btn btn btn-primary btn-lg col-md-3">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Download
                 </a>
-<div class="modal fade" id="advanced-download" role="dialog">
-    <div class="modal-dialog">
-<div class="modal-content">
-        <div class="modal-body">
-                    Αντιγράψτε το παρακάτω περιεχόμενο σε ένα αρχείο και ανεβάστε το αρχέιο στο σύστημα υποβολών
-                    <textarea id="submit-content" class="form-control"></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-</div>
-    </div>
-</div>
-            </div>
+                <div class="col-md-8">
+                    <a href="advanced-download" id="advanced-download-link" data-toggle="modal" data-target="#advanced-download" class="download-btn btn btn-danger btn-sm">
+                        <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Πρόβλημα στο κατέβασμα
+                    </a>
+                    <div class="modal fade" id="advanced-download" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    Αντιγράψτε το παρακάτω περιεχόμενο σε ένα αρχείο και ανεβάστε το αρχέιο στο σύστημα υποβολών
+                                    <textarea id="submit-content" class="form-control"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

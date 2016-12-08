@@ -1,6 +1,50 @@
-/*global $ Alpaca*/
+/*global $ Alpaca */
 var $alpaca = function(index, prefix, suffix) {
     return (prefix ? prefix : "") + '[data-alpaca-container-item-index="' + index + '"]' + (suffix ? suffix : "");
+};
+var getPlotData = function($div) {
+
+    return $div.find('tbody tr').toArray().map(function(el) {
+        return $(el).find('input').toArray().map(function(el) {
+            return el.value;
+        });
+    });
+};
+
+var createGant = function(chartDiv, $dataDiv) {
+
+    var d = getPlotData($dataDiv);
+
+    var series = [{
+        data: d.map(function(el, i) {
+            return [1 * el[3] + 1 * el[2], i, 1 * el[2]];
+        }),
+        color: '#123456'
+    }];
+
+    var options = {
+        xaxis: {
+            minTickSize: 1,
+            min: 0
+        },
+        yaxis: {
+            ticks: d.map(function(el, i) {
+                return [i, el[0]];
+            }),
+        },
+        series: {
+            lines: {
+                show: false
+            },
+            bars: {
+                barWidth: 0.6,
+                horizontal: true,
+                show: true
+            },
+            stack: true
+        }
+    };
+    return $.plot("#" + chartDiv, series, options);
 };
 
 /**
@@ -14,8 +58,8 @@ var tableSelect = function(arr, rows, cols) {
     'use strict';
     var $arr = $(arr).find('table');
     var length = $arr.find('>tbody >tr').length;
-    var colSelector, ret,
-        res;
+    var colSelector, ret;
+
     var rowSelector = rows.reduce(function(acc, el, i) {
         el < 0 && (el = length + el);
         var selector = $alpaca(el);
@@ -126,23 +170,34 @@ $(document).ready(function() {
 
             $('.section52').on('click', '.alpaca-array-actionbar-top button[data-alpaca-array-actionbar-action="add"], button[data-alpaca-array-toolbar-action="add"]',
                 function(el) {
-                    setTimeout(function() {
+                    [1000, 2000, 4000, 6000].forEach(function(time) {
+                        setTimeout(function() {
 
-                        $('.array-with-help').find('.help-block').each(function() {
-                            this.parentNode.appendChild(this);
-                        });
+                            $('.array-with-help').find('.help-block').each(function() {
+                                this.parentNode.appendChild(this);
+                            });
 
-                        var $arr = $('.section52 > div > div.alpaca-container-item-last');
+                            var $arr = $('.section52 > div > div.alpaca-container-item-last');
 
-                        $arr.find('tr:last').find('input').attr('readonly', 'true');
-                        $arr.find('tr:last').find($alpaca(1)).attr("colspan", "2").addClass("subtitle-sum");
-                        $arr.find('tr:last').find($alpaca(0)).remove();
+                            $arr.find('tr:last').find('input').attr('readonly', 'true');
+                            $arr.find('tr:last').find($alpaca(1)).attr("colspan", "2").addClass("subtitle-sum");
 
-                        $arr.find('.auto-sum').on('change', 'input', function() {
-                            // Continue FIXME		
-                        });
+                            $arr.find('tr:last').find($alpaca(0)).remove();
 
-                    }, 5000);
+
+                            $arr.find('.auto-sum').on('change', '.sum-col input', function() { // Summing when new array52 is added
+                                computeSum($arr, '.sum-col', false, 0);
+
+                            });
+                            // Subtracting when a row is deleted
+                            $arr.on('mouseup', '.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]', function(el) {
+                                var temp = $(this).closest('tr').find('.sum-col input').val();
+                                computeSum($arr, '.sum-col', true, temp);
+                            });
+
+                        }, time);
+
+                    });
 
                 });
 
@@ -187,6 +242,14 @@ $(document).ready(function() {
                     }
                 });
             });
+
+            $('.gant-data').append('<div id="gant-chart"></div>');
+            var plot = createGant('gant-chart', $('.gant-data'));
+
+            $('.gant-data').on('change', 'input', function() {
+                plot = createGant('gant-chart', $('.gant-data'));
+            })
+
         },
         view: {
             parent: "bootstrap-edit-horizontal",
@@ -196,14 +259,14 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 1,
+                    "tab1": 8,
                     "tab2": 2,
                     "tab3": 3,
                     "tab4": 4,
                     "tab5": 5,
                     "tab6": 6,
                     "tab7": 7,
-                    "tab8": 8,
+                    "tab8": 1,
                     "tab9": 9,
                     "tab10": 10
                 },
