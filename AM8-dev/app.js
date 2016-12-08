@@ -1,6 +1,28 @@
-/*global $ Alpaca*/
+/*global $ Alpaca CanvasJS*/
 var $alpaca = function(index, prefix, suffix) {
     return (prefix ? prefix : "") + '[data-alpaca-container-item-index="' + index + '"]' + (suffix ? suffix : "");
+};
+
+var createGant = function () {
+    var chart = new CanvasJS.Chart("gant-chart", {
+		title:{
+			text: "My First Chart in CanvasJS"              
+		},
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "column",
+			dataPoints: [
+				{ label: "apple",  y: 10  },
+				{ label: "orange", y: 15  },
+				{ label: "banana", y: 25  },
+				{ label: "mango",  y: 30  },
+				{ label: "grape",  y: 28  }
+			]
+		}
+		]
+	});
+	chart.render();
 };
 
 /**
@@ -14,8 +36,8 @@ var tableSelect = function(arr, rows, cols) {
     'use strict';
     var $arr = $(arr).find('table');
     var length = $arr.find('>tbody >tr').length;
-    var colSelector, ret,
-        res;
+    var colSelector, ret;
+    
     var rowSelector = rows.reduce(function(acc, el, i) {
         el < 0 && (el = length + el);
         var selector = $alpaca(el);
@@ -187,6 +209,10 @@ $(document).ready(function() {
                     }
                 });
             });
+            
+            $('.gant-data').append('<div id="gant-chart">Here</div>');
+            createGant();
+            
         },
         view: {
             parent: "bootstrap-edit-horizontal",
@@ -196,14 +222,14 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 1,
+                    "tab1": 8,
                     "tab2": 2,
                     "tab3": 3,
                     "tab4": 4,
                     "tab5": 5,
                     "tab6": 6,
                     "tab7": 7,
-                    "tab8": 8,
+                    "tab8": 1,
                     "tab9": 9,
                     "tab10": 10
                 },

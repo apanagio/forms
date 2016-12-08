@@ -705,7 +705,7 @@
                 "array1": {
                     "type": "table",
                     "view": "bootstrap-edit",
-                    "fieldClass": "zero-margin"
+                    "fieldClass": "zero-margin, gant-data"
                 },
                 "inputFields2": {
                     "fields": {
