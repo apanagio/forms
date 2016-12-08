@@ -162,6 +162,7 @@ $(document).ready(function() {
 
             $('.section52').on('click', '.alpaca-array-actionbar-top button[data-alpaca-array-actionbar-action="add"], button[data-alpaca-array-toolbar-action="add"]',
                 function(el) {
+			[ 1000, 2000, 4000, 6000 ].forEach ( function(time) {
                     setTimeout(function() {
 
                         $('.array-with-help').find('.help-block').each(function() {
@@ -172,15 +173,25 @@ $(document).ready(function() {
 
                         $arr.find('tr:last').find('input').attr('readonly', 'true');
                         $arr.find('tr:last').find($alpaca(1)).attr("colspan", "2").addClass("subtitle-sum");
+			
                         $arr.find('tr:last').find($alpaca(0)).remove();
+	
 
-                        $arr.find('.auto-sum').on('change', 'input', function() {
-                            // Continue FIXME		
-                        });
+                        $arr.find('.auto-sum').on('change', '.sum-col input', function() {	// Summing when new array52 is added
+				computeSum($arr, '.sum-col', false, 0);
 
-                    }, 5000);
+                    	});
+			// Subtracting when a row is deleted
+			$arr.on('mouseup', '.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]', function(el) {
+                    		var temp = $(this).closest('tr').find('.sum-col input').val();
+                    		computeSum($arr, '.sum-col', true, temp);
+                	});
 
-                });
+                },time );
+		
+		});
+
+	});
 
 
 
