@@ -218,7 +218,17 @@
                         "array4.1a": {
                             "type": "table",
                             "view": "bootstrap-edit",
-                            "fieldClass": "zero-margin"
+                            "fieldClass": "zero-margin",
+                            "items": {
+                                "fields": {
+                                    "textfield1": {
+                                        "type": "select",
+                                        "multiple": true,
+                                        "hideNone": true,
+                                        "dataSource": "/AM8/kad/kad.json"
+                                    }
+                                }
+                            }
                         },
                         "array4.1a2": {
                             "type": "table",
