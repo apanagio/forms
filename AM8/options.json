@@ -223,7 +223,6 @@
                                 "fields": {
                                     "textfield1": {
                                         "type": "select",
-                                        "multiple": true,
                                         "hideNone": true,
                                         "dataSource": "/AM8/kad/kad.json"
                                     }
