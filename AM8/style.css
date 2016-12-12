@@ -59,3 +59,7 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
   width: 700px;
   height: 300px;
 }
+.kad-column {
+  width: 400px !important;
+  margin-right: 0px !important;
+}

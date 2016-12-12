@@ -37,11 +37,12 @@
 							},
 							"textfield1": {
 								"type": "string",
-								"title": "Κωδικός"
+								"title": "Περιγραφή ΚΑΔ"
 							},
 							"textfield2": {
 								"type": "string",
-								"title": "Περιγραφή ΚΑΔ"
+								"title": "Κωδικός", 
+								"readonly": true
 							},
 							"textfield3": {
 								"type": "string",
@@ -68,11 +69,11 @@
 							},
 							"textfield1": {
 								"type": "string",
-								"title": "Κωδικός"
+								"title": "Περιγραφή ΚΑΔ"
 							},
 							"textfield2": {
 								"type": "string",
-								"title": "Περιγραφή ΚΑΔ"
+								"title": "Κωδικός"
 							},
 							"textfield3": {
 								"type": "string",

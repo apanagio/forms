@@ -218,13 +218,14 @@
                         "array4.1a": {
                             "type": "table",
                             "view": "bootstrap-edit",
-                            "fieldClass": "zero-margin",
+                            "fieldClass": "zero-margin, kad-table, kad-table-limit",
                             "items": {
                                 "fields": {
                                     "textfield1": {
                                         "type": "select",
                                         "hideNone": true,
-                                        "dataSource": "/AM8/kad/kad.json"
+                                        "dataSource": "/AM8/kad/kad.json",
+                                        "fieldClass": "kad-column"
                                     }
                                 }
                             }

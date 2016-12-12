@@ -116,7 +116,7 @@ $(document).ready(function() {
         schemaSource: "./schema/compiledSchema.json",
         optionsSource: "./options.json",
         dataSource: "./data.json",
-        postRender: function() {
+        postRender: function(control, a, b) {
             $('body').css('cursor', 'default');
 
             $('.array-with-help').find('.help-block').each(function() {
@@ -169,9 +169,6 @@ $(document).ready(function() {
             });
             tableSelect('.array55', [], [3]).find('input').attr('readonly', true);
 
-
-
-
             $('.section52').on('click', '.alpaca-array-actionbar-top button[data-alpaca-array-actionbar-action="add"], button[data-alpaca-array-toolbar-action="add"]',
                 function(el) {
                     [1000, 2000, 4000, 6000].forEach(function(time) {
@@ -188,7 +185,6 @@ $(document).ready(function() {
 
                             $arr.find('tr:last').find($alpaca(1)).remove();
 
-
                             $arr.find('.auto-sum').on('change', '.sum-col input', function() { // Summing when new array52 is added
                                 computeSum($arr, '.sum-col', false, 0);
 
@@ -198,14 +194,9 @@ $(document).ready(function() {
                                 var temp = $(this).closest('tr').find('.sum-col input').val();
                                 computeSum($arr, '.sum-col', true, temp);
                             });
-
                         }, time);
-
                     });
-
                 });
-
-
 
             var computeSum = function(el, col, per, offset) {
                 var sum = 0 - offset;
@@ -252,7 +243,14 @@ $(document).ready(function() {
 
             $('.gant-data').on('change', 'input', function() {
                 plot = createGant('gant-chart', $('.gant-data'));
-            })
+            });
+            
+            $('.kad-table').on('change', $alpaca(1, 'td', ' :input'), function () {
+                $(this).closest('tr').find($alpaca(2, 'td', ' input')).val($(this).val());
+            });
+            
+            var kadLimit = control.getControlByPath("tab4/fields4.1a/array4.1a");
+            console.log(kadLimit);
 
         },
         view: {
