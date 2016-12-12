@@ -261,10 +261,10 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 1,
+                    "tab1": 4,
                     "tab2": 2,
                     "tab3": 3,
-                    "tab4": 4,
+                    "tab4": 1,
                     "tab5": 5,
                     "tab6": 6,
                     "tab7": 7,

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+template={{path}}
+target=.
+sedStr='s#'"$template"'#'"$target"'#g'
+
+sed  $sedStr app.js > pathApp.js
+sed  $sedStr index.html > pathIndex.html
+sed  $sedStr options.json > pathOptions.json
+sed  $sedStr schema/compiledSchema.json > schema/pathCompiledSchema.json
+
+
