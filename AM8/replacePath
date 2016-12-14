@@ -1,7 +1,7 @@
 #!/bin/bash
 
 template={{path}}
-target=.
+target=../../SAMIS/AM1XP/Controls/SourceHTMLCode
 sedStr='s#'"$template"'#'"$target"'#g'
 
 sed  $sedStr app.js > pathApp.js

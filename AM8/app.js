@@ -249,9 +249,6 @@ $(document).ready(function() {
                 $(this).closest('tr').find($alpaca(2, 'td', ' input')).val($(this).val());
             });
             
-            var kadLimit = control.getControlByPath("tab4/fields4.1a/array4.1a");
-            console.log(kadLimit);
-
         },
         view: {
             parent: "bootstrap-edit-horizontal",

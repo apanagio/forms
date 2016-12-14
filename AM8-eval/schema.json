@@ -1,0 +1,114 @@
+{
+    "title": "Αξιολόγηση",
+    "type": "object",
+    "properties": {
+        "tab1": {
+            "type": "object",
+            "title": "Α. Κάλυψη Τυπικών Προϋποθέσεων",
+            "properties": {
+                "field1": {
+                    "type": "object",
+                    "title": "Έλεγχος Συμβατότητας - από το σύστημα (ΝΑΙ/ΟΧΙ)",
+                    "properties": {
+                        "field1": {
+                            "type": "boolean",
+                            "title": "Η ημερομηνία υποβολής αίτησης είναι εντός της προθεσμίας που τίθεται στην πρόσκληση"
+                        },
+                        "field2": {
+                            "type": "",
+                            "title": "Ο αιτούμενος προϋπολογισμός είναι εντός των ορίων, εφόσον τίθενται στην πρόσκληση"
+                        },
+                        "field3": {
+                            "type": "Το τεχνικό δελτίο είναι πλήρως συμπληρωμένο",
+                            "title": ""
+                        },
+                        "field4": {
+                            "type": "Το τεχνικό δελτίο είναι πλήρως συμπληρωμένο",
+                            "title": "Έχει υποβληθεί η Υπεύθυνη Δήλωση Ένταξης (pdf) -  Παράρτημα 7."
+                        }
+                    }
+                },
+                "field2": {
+                    "type": "",
+                    "title": ""
+                },
+                "field3": {
+                    "type": "",
+                    "title": ""
+                }
+            }
+        },
+        "tab2": {
+            "type": "object",
+            "title": "Β. Κατάσταση Επιχείρησης",
+            "properties": {
+                "field1": {
+                    "type": "",
+                    "title": ""
+                },
+                "field2": {
+                    "type": "",
+                    "title": ""
+                },
+                "field3": {
+                    "type": "",
+                    "title": ""
+                }
+            }
+        },
+        "tab3": {
+            "type": "object",
+            "title": "Γ.Σαφήνεια Επενδυτικού Σχεδίου",
+            "properties": {
+                "field1": {
+                    "type": "",
+                    "title": ""
+                },
+                "field2": {
+                    "type": "",
+                    "title": ""
+                },
+                "field3": {
+                    "type": "",
+                    "title": ""
+                }
+            }
+        },
+        "tab4": {
+            "type": "object",
+            "title": "Δ.Ωριμότητα Επενδυτ. Σχεδίου",
+            "properties": {
+                "field1": {
+                    "type": "",
+                    "title": ""
+                },
+                "field2": {
+                    "type": "",
+                    "title": ""
+                },
+                "field3": {
+                    "type": "",
+                    "title": ""
+                }
+            }
+        },
+        "tab5": {
+            "type": "object",
+            "title": "Φύλλο Αξιολόγησης Πράξης",
+            "properties": {
+                "field1": {
+                    "type": "",
+                    "title": ""
+                },
+                "field2": {
+                    "type": "",
+                    "title": ""
+                },
+                "field3": {
+                    "type": "",
+                    "title": ""
+                }
+            }
+        }
+    }
+}

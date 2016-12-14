@@ -224,7 +224,7 @@
                                     "textfield1": {
                                         "type": "select",
                                         "hideNone": true,
-                                        "dataSource": "/AM8/kad/kad.json",
+                                        "dataSource": "./kad/kad.json",
                                         "fieldClass": "kad-column"
                                     }
                                 }
