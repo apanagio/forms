@@ -19,3 +19,20 @@ body {
 .download-btn {
   margin-left: 10px;
 }
+.padded-array tbody td {
+  padding-left: 30px !important;
+  padding-right: 20px !important;
+}
+.padded-array textarea {
+  min-width: 300px;
+}
+.checkbox-array .col-sm-9 {
+  width: 25%;
+}
+.checkbox-array .col-sm-3 {
+  width: 65%;
+}
+.strong-helper .alpaca-helper {
+  background: #a0debf;
+  padding: 10px;
+}

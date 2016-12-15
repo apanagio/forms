@@ -1,8 +1,32 @@
 {
     "fields": {
-        "details": {
-            "type": "textarea",
-            "rows": 5
+        "tab1": {
+            "helper": "Προϋπόθεση θετικής αξιολόγησης: H πρόταση θα πρέπει να εκπληρώνει (ΝΑΙ) όλα τα κριτήρια",
+            "fieldClass": "strong-helper",
+            "fields": {
+                "field1": {
+                    "fieldClass": "checkbox-array"
+                },
+                "field2": {
+                    "type": "table",
+                    "showActionsColumn": false,
+                    "view": "bootstrap-edit",
+                    "fieldClass": "padded-array",
+                    "items": {
+                        "fields": {
+                            "critirio": {
+                                "view": "bootstrap-display"
+                            },
+                            "tekmiriosi": {
+                                "view": "bootstrap-display"
+                            },
+                            "comments": {
+                                "type": "textarea"
+                            }
+                        }
+                    }
+                }
+            }
         },
         "expenses": {
             "type": "table",
