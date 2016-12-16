@@ -65,12 +65,12 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 6,
+                    "tab1": 1,
                     "tab2": 2,
                     "tab3": 3,
                     "tab4": 4,
                     "tab5": 5,
-                    "tab6": 1
+                    "tab6": 6
                 },
                 steps: [{
                     title: "1",
