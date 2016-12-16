@@ -1,6 +1,10 @@
-/*global $ */
+/*global Alpaca $ budgetRules*/
+
 $(document).ready(function() {
     $('body').css('cursor', 'progress');
+
+    Alpaca.defaultToolbarSticky = true;
+
 
     $("#form1").alpaca({
         schemaSource: "./schema.json",
@@ -34,6 +38,24 @@ $(document).ready(function() {
                     $('[data-alpaca-field-name=tab3] tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=' + col + ']').remove();
                 });
             });
+
+            //tab4
+            $('[data-alpaca-field-name=tab4] table').removeClass('table-hover table-striped');
+            $('[data-alpaca-field-name=tab4] tbody tr[data-alpaca-container-item-index=0] td[data-alpaca-container-item-index=0]').attr('rowspan', 5);
+            [1, 2, 3, 4].map(function(row) {
+                $('[data-alpaca-field-name=tab4] tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=0]').remove();
+            });
+            [2, 3, 6].map(function(col) {
+                $('[data-alpaca-field-name=tab4] tbody tr[data-alpaca-container-item-index=3] td[data-alpaca-container-item-index=' + col + ']').attr('rowspan', 5);
+            });
+            [4].map(function(row) {
+                [2, 3, 6].map(function(col) {
+                    $('[data-alpaca-field-name=tab4] tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=' + col + ']').remove();
+                });
+            });
+
+            budgetRules();
+            
         },
         view: {
             parent: "bootstrap-edit-horizontal",
@@ -43,11 +65,12 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 3,
+                    "tab1": 6,
                     "tab2": 2,
-                    "tab3": 1,
+                    "tab3": 3,
                     "tab4": 4,
-                    "tab5": 5
+                    "tab5": 5,
+                    "tab6": 1
                 },
                 steps: [{
                     title: "1",
@@ -63,6 +86,9 @@ $(document).ready(function() {
                     description: "Ωριμότητα",
                 }, {
                     title: "5",
+                    description: "Αλλαγές προϋπολογισμoύ"
+                }, {
+                    title: "6",
                     description: "Συνολικά"
                 }]
             }
