@@ -32,7 +32,6 @@
             "type": "table",
             "showActionsColumn": false,
             "view": "bootstrap-edit",
-            "fieldClass": "",
             "id": "tab2",
             "items": {
                 "fields": {
@@ -52,6 +51,41 @@
                     },
                     "analysis": {
                         "view": "bootstrap-display"
+                    },
+                    "weight": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "xs-col"
+                    },
+                    "comments": {
+                        "type": "textarea",
+                        "fieldClass": "l-col"
+                    }
+                }
+            }
+        },
+        "tab3": {
+            "type": "table",
+            "showActionsColumn": false,
+            "view": "bootstrap-edit",
+            "id": "tab3",
+            "items": {
+                "fields": {
+                    "group": {
+                        "view": "bootstrap-display"
+                    },
+                    "aa": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "xs-col"
+                    },
+                    "description": {
+                        "view": "bootstrap-display"
+                    },
+                    "specific": {
+                        "view": "bootstrap-display"
+                    },
+                    "analysis": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "l-col"
                     },
                     "weight": {
                         "view": "bootstrap-display",

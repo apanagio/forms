@@ -8,15 +8,32 @@ $(document).ready(function() {
         dataSource: "./data.json",
         postRender: function() {
             $('body').css('cursor', 'default');
+
+            //tab2
             $('[data-alpaca-field-name=tab2] table').removeClass('table-hover table-striped');
             $('[data-alpaca-field-name=tab2] tbody tr[data-alpaca-container-item-index=0] td[data-alpaca-container-item-index=0]').attr('rowspan', 5);
             $('[data-alpaca-field-name=tab2] tbody tr[data-alpaca-container-item-index=5] td[data-alpaca-container-item-index=0]').attr('rowspan', 2);
-            [1,2,3,4,6].map(function (el) {
-                $('[data-alpaca-field-name=tab2] tbody tr[data-alpaca-container-item-index=' + el + '] td[data-alpaca-container-item-index=0]').remove();
+            [1, 2, 3, 4, 6].map(function(row) {
+                $('[data-alpaca-field-name=tab2] tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=0]').remove();
             });
-            [5,6].map(function (el) {
-                $('[data-alpaca-field-name=tab2] tbody tr[data-alpaca-container-item-index=' + el + ']').addClass('bg-info');
-            })
+            [5, 6].map(function(row) {
+                $('[data-alpaca-field-name=tab2] tbody tr[data-alpaca-container-item-index=' + row + ']').addClass('bg-info');
+            });
+
+            //tab3
+            $('[data-alpaca-field-name=tab3] table').removeClass('table-hover table-striped');
+            $('[data-alpaca-field-name=tab3] tbody tr[data-alpaca-container-item-index=0] td[data-alpaca-container-item-index=0]').attr('rowspan', 6);
+            [1, 2, 3, 4, 5].map(function(row) {
+                $('[data-alpaca-field-name=tab3] tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=0]').remove();
+            });
+            [2, 3, 6].map(function(col) {
+                $('[data-alpaca-field-name=tab3] tbody tr[data-alpaca-container-item-index=1] td[data-alpaca-container-item-index=' + col + ']').attr('rowspan', 5);
+            });
+            [2, 3, 4, 5, 6].map(function(row) {
+                [2, 3, 6].map(function(col) {
+                    $('[data-alpaca-field-name=tab3] tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=' + col + ']').remove();
+                });
+            });
         },
         view: {
             parent: "bootstrap-edit-horizontal",
@@ -26,9 +43,9 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 2,
-                    "tab2": 1,
-                    "tab3": 3,
+                    "tab1": 3,
+                    "tab2": 2,
+                    "tab3": 1,
                     "tab4": 4,
                     "tab5": 5
                 },
