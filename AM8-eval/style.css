@@ -36,3 +36,9 @@ body {
   background: #a0debf;
   padding: 10px;
 }
+.xs-col {
+  max-width: 20px;
+}
+.l-col {
+  min-Width: 250px;
+}

@@ -28,28 +28,38 @@
                 }
             }
         },
-        "expenses": {
+        "tab2": {
             "type": "table",
+            "showActionsColumn": false,
+            "view": "bootstrap-edit",
+            "fieldClass": "",
+            "id": "tab2",
             "items": {
                 "fields": {
-                    "budget": {
-                        "type": "currency",
-                        "centsSeparator": ",",
-                        "prefix": "",
-                        "suffix": "€",
-                        "thousandsSeparator": "."
-                    }
-                }
-            }
-        },
-        "testGroup": {
-            "fields": {
-                "field1": {
-                    "vertical": false
-                },
-                "field3": {
-                    "dependencies": {
-                        "field1": ["μεσαίο"]
+                    "group": {
+                        "view": "bootstrap-display"
+                    },
+                    "aa": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "xs-col"
+                    },
+                    "description": {
+                        "view": "bootstrap-display"
+                    },
+                    "specific": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "l-col"
+                    },
+                    "analysis": {
+                        "view": "bootstrap-display"
+                    },
+                    "weight": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "xs-col"
+                    },
+                    "comments": {
+                        "type": "textarea",
+                        "fieldClass": "l-col"
                     }
                 }
             }
