@@ -483,6 +483,10 @@
                     }
                 }
             }
+        },
+        "tab6": {
+            "view": "bootstrap-display",
+            "id": "tab6"
         }
     }
 }

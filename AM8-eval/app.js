@@ -54,7 +54,11 @@ $(document).ready(function() {
                 });
             });
 
+            //tab5
             budgetRules();
+            
+            //tab6
+            $('#result').show().appendTo('[data-alpaca-field-name=tab6]');
             
         },
         view: {
@@ -65,12 +69,12 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 1,
+                    "tab1": 6,
                     "tab2": 2,
                     "tab3": 3,
                     "tab4": 4,
                     "tab5": 5,
-                    "tab6": 6
+                    "tab6": 1
                 },
                 steps: [{
                     title: "1",

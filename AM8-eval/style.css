@@ -42,3 +42,6 @@ body {
 .l-col {
   min-Width: 250px;
 }
+#result {
+  display: block;
+}
