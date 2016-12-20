@@ -50,8 +50,7 @@
                         "fieldClass": "l-col"
                     },
                     "analysis": {
-                        "view": "bootstrap-display"
-                    },
+                        "view": "bootstrap-display"                    },
                     "weight": {
                         "view": "bootstrap-display",
                         "fieldClass": "xs-col"

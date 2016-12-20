@@ -88,7 +88,10 @@
     </footer>
 
     <div id="result">
-        <button id="calc" class="btn btn-default">Υπολογισμός</button>
+        <button id="calc" class="btn btn-primary">Υπολογισμός</button>
+        <div class="form-group">
+            &nbsp;
+        </div>
         <div class="panel panel-default">
             <div class="panel-heading">Αξιολόγηση των προτάσεων ανά ομάδα κριτηρίων</div>
             <div class="panel-body">
@@ -107,34 +110,42 @@
                             <td>Α</td>
                             <td>Βασικές προϋποθέσεις συμμετοχής (ΝΑΙ/ΟΧΙ)</td>
                             <td>&nbsp;</td>
-                            <td>ΝΑΙ / ΌΧΙ</td>
+                            <td id="on-off"></td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Β</td>
                             <td>Κατάσταση Επιχείρησης</td>
                             <td>30%</td>
-                            <td>0,00</td>
-                            <td>0,00</td>
+                            <td id="condition"></td>
+                            <td id="condition-total"></td>
                         </tr>
                         <tr>
                             <td>Γ</td>
                             <td>Επενδυτικό Σχέδιο</td>
                             <td>50%</td>
-                            <td>0,00</td>
-                            <td>0,00</td>
+                            <td id="investment-plan"></td>
+                            <td id="investment-plan-total"></td>
                         </tr>
                         <tr>
                             <td>Δ</td>
                             <td>Ωριμότητα Επενδυτικού Σχεδίου</td>
                             <td>20%</td>
-                            <td>0,00</td>
-                            <td>0,00</td>
+                            <td id="maturity"></td>
+                            <td id="maturity-total"></td>
                         </tr>
                         <tr>
-                            <td colspan=2>ΠΡΟΫΠΟΘΕΣΗ ΓΙΑ ΘΕΤΙΚΗ ΑΞΙΟΛΟΓΗΣΗ: Η πράξη πρέπει να έχει λάβει θετική αξιολόγηση σε όλες τις ομάδες κριτηρίων και συνολική βαθμολογία μεγαλύτερη από 4, και τα κριτήρια Δ2 και Δ3 που αφορούν στη ρεαλιστικότητα του χρονοδιαγράμματος και του προϋπολογισμού δεν θα πρέπει να λάβουν την τιμή "ΌΧΙ"</td>
+                            <td>Δ</td>
+                            <td>Εκπλήρωση Δ2 και Δ3</td>
+                            <td>&nbsp;</td>
+                            <tdid="maturity-on-off"></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan=2>ΠΡΟΫΠΟΘΕΣΗ ΓΙΑ ΘΕΤΙΚΗ ΑΞΙΟΛΟΓΗΣΗ: Η πράξη πρέπει να έχει λάβει θετική αξιολόγηση σε όλες τις ομάδες κριτηρίων και συνολική βαθμολογία μεγαλύτερη από 4, και τα κριτήρια Δ2 και Δ3 που αφορούν στη ρεαλιστικότητα του χρονοδιαγράμματος
+                                και του προϋπολογισμού δεν θα πρέπει να λάβουν την τιμή "ΌΧΙ"</td>
                             <td colspan=2>ΣΥΝΟΛΙΚΗ ΒΑΘΜΟΛΟΓΙΑ</td>
-                            <td>0,00</td>
+                            <td id="total"></td>
                         </tr>
                     </tbody>
                 </table>
