@@ -18,11 +18,15 @@
           },
           "starting_month": {
             "type": "number",
-            "title": "Μήνας έναρξης"
+            "title": "Μήνας έναρξης",
+            "minimum": 0,
+            "maximum": 60
           },
           "duration": {
             "type": "number",
-            "title": "Διάρκεια σε μήνες"
+            "title": "Διάρκεια σε μήνες",
+            "minimum": 0,
+            "maximum": 60
           }
         }
       }

@@ -18,7 +18,8 @@
                 "table2.1": {
                     "type": "table",
                     "view": "bootstrap-edit",
-                    "fieldClass": "zero-margin"
+                    "fieldClass": "zero-margin",
+                    "showActionsColumn": false
                 }
             }
         },
@@ -26,51 +27,39 @@
             "fields": {
                 "form1": {
                     "fields": {
-                        "fields3D": {
+                        "fields3A": {
                             "fields": {
-                                "array3.D.2.1": {
-                                    "type": "table",
-                                    "view": "bootstrap-edit",
-                                    "fieldClass": "zero-margin",
-                                    "items": {
-                                        "fields": {
-                                            "fieldtext5": {
-                                                "type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
-                                            },
-                                            "fieldtext6": {
-                                                "type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
+                                "fields3A.1": {
+                                    "fields": {
+                                        "fields3A.1.1": {
+                                            "collapsible": true,
+                                            "fields": {
+                                                "fieldtext10": {
+                                                    "helper": "<a target='_blank' href='http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition_el'>Όπως καθορίζεται από τη δήλωση του επενδυτή, με βάση τους ισχύοντες εθνικούς και ενωσιακούς κανονισμούς</a>",
+                                                    "hideNone": true
+                                                }
                                             }
+                                        },
+                                        "fields3A.2": {
+                                            "collapsible": true
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "fields3D": {
+                            "collapsible": true,
+                            "fields": {
+                                "collapsible": true,
+                                "array3D": {
+                                    "collapsible": true
                                 },
-                                "array3.D.2.2": {
-                                    "type": "table",
-                                    "view": "bootstrap-edit",
-                                    "fieldClass": "zero-margin",
-                                    "items": {
-                                        "fields": {
-                                            "fieldtext5": {
-                                                "type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
-                                            },
-                                            "fieldtext6": {
-                                                "type": "currency",
-                                                "centsSeparator": ",",
-                                                "prefix": "",
-                                                "suffix": "€",
-                                                "thousandsSeparator": "."
-                                            }
+                                "fields3D.1": {
+                                    "fields": {
+                                        "array3D.2": {
+                                            "type": "table",
+                                            "view": "bootstrap-edit",
+                                            "fieldClass": "zero-margin"
                                         }
                                     }
                                 }
@@ -79,6 +68,7 @@
                         "fields3E": {
                             "fields": {
                                 "array3E.1": {
+                                    "id": "sourceFin",
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
@@ -88,6 +78,7 @@
                                     "type": "textarea"
                                 },
                                 "array3E.3": {
+                                    "id": "targetFin",
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
@@ -107,6 +98,7 @@
                             }
                         },
                         "fields3F": {
+                            "collapsible": true,
                             "fields": {
                                 "textfield1": {
                                     "type": "textarea",
@@ -168,7 +160,7 @@
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 },
-                                "textfield16": {
+                                "textfield17": {
                                     "type": "textarea",
                                     "helper": "Εως 1000 χαρακτήρες"
                                 }
@@ -223,7 +215,7 @@
                                 "fields": {
                                     "textfield1": {
                                         "type": "select",
-                                        "hideNone": true,
+                                        "hideNone": false,
                                         "dataSource": "./kad/kad.json",
                                         "fieldClass": "kad-column"
                                     }
@@ -247,20 +239,8 @@
                     "fieldClass": "zero-margin",
                     "items": {
                         "fields": {
-                            "textfield4": {
-                                "type": "currency",
-                                "centsSeparator": ",",
-                                "prefix": "",
-                                "suffix": "€",
-                                "thousandsSeparator": "."
-                            },
-                            "textfield5": {
-                                "type": "currency",
-                                "centsSeparator": ",",
-                                "prefix": "",
-                                "suffix": "€",
-                                "thousandsSeparator": "."
-                            }
+                            "textfield4": {},
+                            "textfield5": {}
                         }
                     }
                 },
@@ -280,6 +260,9 @@
                             "fields": {
                                 "fields4.4a1": {
                                     "fields": {
+                                        "fieldBool1": {
+                                            "fieldClass": "exclusive-type"
+                                        },
                                         "fieldtext1": {
                                             "type": "textarea",
                                             "helpers": ["Εφόσον η επενδυτική πρόταση περιλαμβάνει «χρηματοδοτική ενίσχυση προσαυξημένη κατά 15%, διότι τα αποτελέσματα του έργου διαδίδονται ευρέως», τότε, τα αποτελέσματα της έρευνας (όχι μόνο τα συνολικά παραδοτέα του έργου) θα πρέπει να διαδοθούν στο ευρύτερο δυνατό βαθμό, τόσο σε εθνικό όσο και σε κοινοτικό επίπεδο (Ε.Ε.). Οι ανωτέρω προτάσεις θα πρέπει να περιλαμβάνουν στο χρονοπρογραμματισμό τους και ένα σχέδιο δράσεων για τη διάδοση των ερευνητικών αποτελεσμάτων του έργου.", "Μέχρι 1000 χαρακτήρες"]
@@ -288,11 +271,28 @@
                                 },
                                 "fields4.4a2": {
                                     "fields": {
+                                        "fieldBool1": {
+                                            "fieldClass": "exclusive-type"
+                                        },
                                         "fieldtext1": {
                                             "type": "textarea",
                                             "helpers": ["Εφόσον η επενδυτική πρόταση περιλαμβάνει «χρηματοδοτική ενίσχυση προσαυξημένη κατά 15%, διότι τα αποτελέσματα του έργου διαδίδονται ευρέως», τότε, τα αποτελέσματα της έρευνας (όχι μόνο τα συνολικά παραδοτέα του έργου) θα πρέπει να διαδοθούν στο ευρύτερο δυνατό βαθμό, τόσο σε εθνικό όσο και σε κοινοτικό επίπεδο (Ε.Ε.). Οι ανωτέρω προτάσεις θα πρέπει να περιλαμβάνουν στο χρονοπρογραμματισμό τους και ένα σχέδιο δράσεων για τη διάδοση των ερευνητικών αποτελεσμάτων του έργου.", "Μέχρι 1000 χαρακτήρες"]
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "fields4.4.b": {
+                            "fields": {
+                                "fieldBool1": {
+                                    "fieldClass": "exclusive-type"
+                                }
+                            }
+                        },
+                        "fields4.4.c": {
+                            "fields": {
+                                "fieldBool1": {
+                                    "fieldClass": "exclusive-type"
                                 }
                             }
                         }
@@ -320,8 +320,6 @@
                         }
                     },
                     "helper": "Συνολικά, οι «Δαπάνες προσωπικού με σύμβαση εξηρτημένης σχέσης εργασίας» και οι «Δαπάνες προσωπικού με σύμβαση μίσθωσης έργου», θα πρέπει να αποτελούν τουλάχιστον το 25%, ενώ δεν θα πρέπει να υπερβαίνουν το 70% του επιχορηγούμενου Π/Υ του έργου."
-
-
                 },
                 "a": {
                     "fields": {
@@ -341,12 +339,9 @@
                                     },
                                     "d": {
                                         "fieldClass": "per-col"
-
-
                                     }
                                 }
                             }
-
                         },
                         "a": {
                             "type": "table",
@@ -395,45 +390,30 @@
                 },
                 "b": {
                     "fields": {
-                        "a": {
-                            "fieldClass": "section52",
+                        "b": {
+                            "type": "table",
+                            "view": "bootstrap-edit",
+                            "fieldClass": "zero-margin,  array52, dynamic-table, auto-sum, no-remove-button, array-with-help",
+                            "helpers": ["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας",
+                                "(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"
+                            ],
                             "items": {
                                 "fields": {
+                                    "c": {
+                                        "fieldClass": "sum-col"
+                                    },
                                     "b": {
-                                        "type": "table",
-                                        "view": "bootstrap-edit",
-                                        "fieldClass": "zero-margin,  array52, dynamic-table, auto-sum, no-remove-button, array-with-help",
-                                        "helpers": ["(*) ΒΙΕ: Βιομηχανική Έρευνα, ΠΕΑ: Πειραματική Ανάπτυξη, ΜΤΣ: Μελέτες Τεχνικής Σκοπιμότητας",
-                                            "(**) Το ποσοστό του προϋπολογισμού του φορέα νοείται επί του συνολικού προϋπολογισμού του έργου"
-                                        ],
-                                        "items": {
-                                            "fields": {
-                                                "c": {
-                                                    "fieldClass": "sum-col"
-                                                },
-                                                "b": {
-                                                    "type": "select",
-                                                    "hideNone": true
-                                                }
-                                            }
-                                        }
-
+                                        "type": "select",
+                                        "hideNone": true
                                     }
                                 }
                             }
-
-                        },
-                        "b": {
-                            "type": "table",
-                            "showActionsColumn": false,
-                            "view": "bootstrap-edit",
-                            "fieldClass": "zero-margin, array-total-sum"
                         }
                     }
                 },
                 "c": {
                     "helper": "Απαιτείται τεκμηρίωση κόστους, της κατηγορίας δαπανών «όργανα, εξοπλισμός και κτίρια», μέσω, είτε προσφορών/προτιμολογίων με αναλυτική περιγραφή δαπανών ανά είδος και αναγωγή κόστους ανά μετρική μονάδα, ή αντίστοιχα, επικοινωνίας με δυνητικούς προμηθευτές μέσω emails, ή έρευνας από το διαδίκτυο, καθώς και προωθητικών φυλλαδίων",
-                    "fieldClass": "top-level-object",    
+                    "fieldClass": "top-level-object",
                     "fields": {
                         "a": {
                             "type": "table",
@@ -442,10 +422,13 @@
                             "helpers": ["(*) Ονοματίζονται τα άτομα της ομάδας έργου από κάθε φορέα. Για τα ονοματιζόμενα αυτά άτομα (των οποίων τα βιογραφικά λαμβάνονται υπόψη κατά την αξιολόγηση) δηλώνονται συνολική αμοιβή και ανθρωπομήνες. Η υπόλοιπη ανθρωποπροσπάθεια ορίζεται ως προς τις ειδικότητες, της συνολική δαπάνη και τους συνολικούς ανθρωπομήνες μόνο (όχι αριθμός ατόμων, όχι ονόματα).", "(**) Αναφέρεται η κατηγορία ερευνητικού προσωπικού: Έμπειρος Ερευνητής, Ερευνητής, τεχνικό προσωπικό, βοηθητικό προσωπικό", "(***) Μικτό κόστος ανθρωπομήνα σύμφωνα με τα όρια που ορίζονται στην αναλυτική πρόσκληση"],
                             "items": {
                                 "fields": {
-
+                                    "e": {
+                                        "fieldClass": "l-col",
+                                        "hideNone": true,
+                                        "type": "select"
+                                    },
                                     "f": {
                                         "fieldClass": "sum-col"
-
                                     }
                                 }
                             }

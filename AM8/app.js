@@ -244,11 +244,35 @@ $(document).ready(function() {
             $('.gant-data').on('change', 'input', function() {
                 plot = createGant('gant-chart', $('.gant-data'));
             });
-            
-            $('.kad-table').on('change', $alpaca(1, 'td', ' :input'), function () {
+
+            $('.kad-table').on('change', $alpaca(1, 'td', ' :input'), function() {
                 $(this).closest('tr').find($alpaca(2, 'td', ' input')).val($(this).val());
             });
-            
+
+            //tab3 
+            [0, 1, 2].map(function(row) {
+                [1, 3].map(function(col) {
+                    $('[data-alpaca-field-id="sourceFin"] tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=' + col + '] input')
+                        .on('change', function(el) {
+                            $('[data-alpaca-field-id="targetFin"] tbody tr[data-alpaca-container-item-index=' + (row + 2) + '] td[data-alpaca-container-item-index=' + (col == 3 ? 2 : 1) + '] input')
+                                .val(this.value);
+                        });
+
+                    $('[data-alpaca-field-id="targetFin"] tbody tr[data-alpaca-container-item-index=' + (row + 2) + '] td[data-alpaca-container-item-index=' + (col == 3 ? 2 : 1) + '] input')
+                        .prop('disabled', true);
+                });
+            });
+
+            //tab4 
+            //mutually exclusive checkboxes
+            $('.exclusive-type [type="checkbox"]').click(function() {
+                var checkedState = $(this).prop('checked');
+                $('.exclusive-type [type="checkbox"]:checked').each(function() {
+                    $(this).prop('checked', false);
+                });
+                $(this).prop('checked', checkedState);
+            });
+
         },
         view: {
             parent: "bootstrap-edit-horizontal",

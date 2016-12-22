@@ -63,3 +63,7 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
   width: 400px !important;
   margin-right: 0px !important;
 }
+.l-col {
+  min-width: 200px;
+  padding-right: 15px;
+}

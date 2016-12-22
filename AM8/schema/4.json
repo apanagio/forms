@@ -121,16 +121,22 @@
 						"title": "Δημόσια Δαπάνη (€)"
 					},
 					"textfield6": {
-						"type": "string",
-						"title": "Α/Μ"
+						"type": "number",
+						"title": "Α/Μ",
+						"minimum": 0,
+						"maximum": 1500
 					},
 					"textfield7": {
 						"type": "integer",
-						"title": "Έναρξη (μήνας)"
+						"title": "Έναρξη (μήνας)",
+						"minimum": 0,
+						"maximum": 50
 					},
 					"textfield8": {
 						"type": "integer",
-						"title": "Τέλος (μήνας)"
+						"title": "Τέλος (μήνας)",
+						"minimum": 0,
+						"maximum": 50
 					}
 				}
 			}
@@ -165,7 +171,9 @@
 					},
 					"textfield6": {
 						"type": "integer",
-						"title": "Παράδοση (μήνας)"
+						"title": "Παράδοση (μήνας)",
+						"minimum": 0,
+						"maximum": 50
 					}
 				}
 			}
