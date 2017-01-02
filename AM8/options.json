@@ -282,8 +282,9 @@
         "tab5": {
             "lazyLoading": true,
             "fields": {
-                "aa": {
+                "a5_1": {
                     "type": "table",
+                    "id": "5.1",
                     "view": "bootstrap-edit",
                     "showActionsColumn": false,
                     "fieldClass": "zero-margin, array-with-help, array51, auto-sum",
@@ -301,9 +302,9 @@
                     },
                     "helper": "Συνολικά, οι «Δαπάνες προσωπικού με σύμβαση εξηρτημένης σχέσης εργασίας» και οι «Δαπάνες προσωπικού με σύμβαση μίσθωσης έργου», θα πρέπει να αποτελούν τουλάχιστον το 25%, ενώ δεν θα πρέπει να υπερβαίνουν το 70% του επιχορηγούμενου Π/Υ του έργου."
                 },
-                "a": {
+                "a5_1_2": {
                     "fields": {
-                        "aa": {
+                        "a5_1_2_1": {
                             "type": "table",
                             "id": "5.1.2.1",
                             "showActionsColumn": false,
@@ -324,7 +325,7 @@
                                 }
                             }
                         },
-                        "a": {
+                        "a5_1_2_2": {
                             "type": "table",
                             "id": "5.1.2.2",
                             "showActionsColumn": false,
@@ -347,7 +348,7 @@
                                 }
                             }
                         },
-                        "b": {
+                        "a5_1_2_3": {
                             "type": "table",
                             "id": "5.1.2.3",
                             "showActionsColumn": false,
@@ -371,9 +372,9 @@
                         }
                     }
                 },
-                "b": {
+                "a5_2": {
                     "fields": {
-                        "b": {
+                        "a5_2_2": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin,  array52, dynamic-table, auto-sum, no-remove-button, array-with-help",
@@ -394,11 +395,11 @@
                         }
                     }
                 },
-                "c": {
+                "a5_3": {
                     "helper": "Απαιτείται τεκμηρίωση κόστους, της κατηγορίας δαπανών «όργανα, εξοπλισμός και κτίρια», μέσω, είτε προσφορών/προτιμολογίων με αναλυτική περιγραφή δαπανών ανά είδος και αναγωγή κόστους ανά μετρική μονάδα, ή αντίστοιχα, επικοινωνίας με δυνητικούς προμηθευτές μέσω emails, ή έρευνας από το διαδίκτυο, καθώς και προωθητικών φυλλαδίων",
                     "fieldClass": "top-level-object",
                     "fields": {
-                        "a": {
+                        "a5_3_1": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5311, auto-sum, no-remove-button",
@@ -416,7 +417,7 @@
                                 }
                             }
                         },
-                        "b": {
+                        "a5_3_2": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5312, auto-sum, no-remove-button",
@@ -435,7 +436,7 @@
                                 }
                             }
                         },
-                        "c": {
+                        "a5_3_3": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5313, auto-sum, no-remove-button",
@@ -449,7 +450,7 @@
                                 }
                             }
                         },
-                        "d": {
+                        "a5_3_4": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5314, auto-sum, no-remove-button",
@@ -463,7 +464,7 @@
                                 }
                             }
                         },
-                        "e": {
+                        "a5_3_5": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5315, auto-sum, no-remove-button",
@@ -477,7 +478,7 @@
                                 }
                             }
                         },
-                        "f": {
+                        "a5_3_6": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5316, auto-sum, no-remove-button",
@@ -492,7 +493,7 @@
                                 }
                             }
                         },
-                        "g": {
+                        "a5_3_7": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5317, auto-sum, no-remove-button",
@@ -508,7 +509,7 @@
                             }
 
                         },
-                        "h": {
+                        "a5_3_8": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5318, auto-sum, no-remove-button",
@@ -524,7 +525,7 @@
                             }
 
                         },
-                        "i": {
+                        "a5_3_9": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5319, auto-sum, no-remove-button",
@@ -539,7 +540,7 @@
                             }
 
                         },
-                        "j": {
+                        "a5_3_10": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array53110, auto-sum, no-remove-button",
@@ -554,7 +555,7 @@
                             }
 
                         },
-                        "k": {
+                        "a5_3_11": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array53111, auto-sum, no-remove-button",
@@ -571,7 +572,7 @@
                         }
                     }
                 },
-                "d": {
+                "a5_4": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin, dynamic-table, array54, auto-sum, no-remove-button",
@@ -596,7 +597,7 @@
                         }
                     }
                 },
-                "e": {
+                "a5_5": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin, dynamic-table, array55, auto-sum, no-remove-button",
