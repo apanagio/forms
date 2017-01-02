@@ -5,9 +5,7 @@
     "table2.1": {
       "type": "array",
       "title": "2.1 ΔΙΚΑΙΟΥΧΟΣ ΦΟΡΕΑΣ",
-      "default": [
-        {}
-      ],
+      "default": [{}],
       "items": {
         "type": "object",
         "properties": {

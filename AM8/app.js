@@ -264,14 +264,12 @@ $(document).ready(function() {
             });
 
             //tab4 
-            //mutually exclusive checkboxes
-            $('.exclusive-type [type="checkbox"]').click(function() {
-                var checkedState = $(this).prop('checked');
-                $('.exclusive-type [type="checkbox"]:checked').each(function() {
-                    $(this).prop('checked', false);
-                });
-                $(this).prop('checked', checkedState);
+            $('[data-alpaca-field-id="4.4"] .radio').each(function (i, el) {
+                if (i == 1 || i == 3 || i == 4) {
+                    $('#above-option-' + i).prependTo($(el)).css('display', 'block');
+                }
             });
+
 
         },
         view: {

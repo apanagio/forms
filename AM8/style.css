@@ -67,3 +67,9 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
   min-width: 200px;
   padding-right: 15px;
 }
+
+.option-header {
+  display: none;
+  font-size: large;
+  margin-top: 20px;
+}
