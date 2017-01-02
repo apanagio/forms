@@ -273,20 +273,25 @@ $(document).ready(function() {
             //tab5
             //show hide according to tab4
             
-            var b44 = control.getControlByPath('/tab4/moreBudget/category');
-            var a5121 = control.getControlByPath('/tab5/a5_1_2/a5_1_2_1');
-            var a5122 = control.getControlByPath('/tab5/a5_1_2/a5_1_2_2');
-            var a5123 = control.getControlByPath('/tab5/a5_1_2/a5_1_2_3');
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (el) {
+                $('[data-alpaca-field-id="5.1"] tbody tr[data-alpaca-container-item-index=' + el + ']').addClass('show-with show-with-1 show-with-2');
+            });
 
+            [10, 11, 12, 13, 14].map(function (el) {
+                $('[data-alpaca-field-id="5.1"] tbody tr[data-alpaca-container-item-index=' + el + ']').addClass('show-with show-with-3');
+            });
+
+            
+            var b44 = control.getControlByPath('/tab4/moreBudget/category');
+            var hideExpenses = function (value) {
+                $('.show-with').hide();
+                $('.show-with-' + value).show();
+            };
+            
+            hideExpenses(b44.getValue());
+            
             b44.on('change', function (val) {
-                var arr = [a5121, a5122, a5123];
-                arr.map(function (el, i) {
-                    el.field[0].style.display = 'none';
-                });
-                
-                var val = this.getValue();
-                (val === '1') && (val = '2');
-                (val !== "") && (arr[val - 2].field[0].style.display = 'block');
+                hideExpenses(this.getValue());
             });
             
         },
@@ -298,11 +303,11 @@ $(document).ready(function() {
                 validation: false,
                 hideSubmitButton: true,
                 bindings: {
-                    "tab1": 5,
+                    "tab1": 1,
                     "tab2": 2,
                     "tab3": 3,
                     "tab4": 4,
-                    "tab5": 1,
+                    "tab5": 5,
                     "tab6": 6,
                     "tab7": 7,
                     "tab8": 8,
