@@ -1,15 +1,16 @@
 {
+    "hideInitValidationError": true,
     "fields": {
         "tab1": {
             "lazyLoading": true,
             "fields": {
-                "textfield1": {
+                "f1_1": {
                     "type": "textarea"
                 },
-                "textfield2": {
+                "f1_2": {
                     "type": "textarea"
                 },
-                "textfield3": {
+                "f1_3": {
                     "type": "textarea"
                 }
             }
@@ -17,7 +18,7 @@
         "tab2": {
             "lazyLoading": true,
             "fields": {
-                "table2.1": {
+                "a2_1": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin",
@@ -30,32 +31,32 @@
             "fields": {
                 "form1": {
                     "fields": {
-                        "fields3A": {
+                        "a3A": {
                             "fields": {
-                                "fields3A.1": {
+                                "a3A_1": {
                                     "fields": {
-                                        "fields3A.1.1": {
+                                        "a3A_1_1": {
                                             "collapsible": true,
                                             "fields": {
                                             }
                                         },
-                                        "fields3A.2": {
+                                        "a3A_2": {
                                             "collapsible": true
                                         }
                                     }
                                 }
                             }
                         },
-                        "fields3D": {
+                        "a3D": {
                             "collapsible": true,
                             "fields": {
                                 "collapsible": true,
-                                "array3D": {
+                                "a3D": {
                                     "collapsible": true
                                 },
-                                "fields3D.1": {
+                                "a3D_1": {
                                     "fields": {
-                                        "array3D.2": {
+                                        "a3D_2": {
                                             "type": "table",
                                             "view": "bootstrap-edit",
                                             "fieldClass": "zero-margin"
@@ -64,33 +65,33 @@
                                 }
                             }
                         },
-                        "fields3E": {
+                        "a3E": {
                             "fields": {
-                                "array3E.1": {
+                                "a3E_1": {
                                     "id": "sourceFin",
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
                                     "showActionsColumn": false
                                 },
-                                "field3E.2": {
+                                "f3E_2": {
                                     "helper": "<a target='_blank' href='http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition_el'>Όπως καθορίζεται από τη δήλωση του επενδυτή, με βάση τους ισχύοντες εθνικούς και ενωσιακούς κανονισμούς</a>",
                                     "hideNone": true
                                 },
-                                "array3E.3": {
+                                "a3E_3": {
                                     "id": "targetFin",
                                     "type": "table",
                                     "view": "bootstrap-edit",
                                     "fieldClass": "zero-margin",
                                     "showActionsColumn": false
                                 },
-                                "field3E.4": {
+                                "f3E_4": {
                                     "type": "textarea",
                                     "helpers": ["Περιγράψτε με σαφήνεια τους τρόπους με τους οποίους θα καλύψετε την απαιτούμενη «ίδια συμμετοχή» της προτεινόμενης επένδυσης (Εφόσον απαιτείται)", "Δηλώνονται αναλυτικά για κάθε έναν από τους συμμετέχοντες στο φορέα της επένδυσης οι πηγές από τις οποίες θα αντλήσει τα κεφάλαια για την εισφορά του μεριδίου του στο ποσό της ίδιας συμμετοχής. "]
                                 },
-                                "fields3E.6": {
+                                "a3E_6": {
                                     "fields": {
-                                        "textfield1": {
+                                        "f2": {
                                             "type": "textarea"
                                         }
                                     }
@@ -403,6 +404,10 @@
                             "helpers": ["(*) Ονοματίζονται τα άτομα της ομάδας έργου από κάθε φορέα. Για τα ονοματιζόμενα αυτά άτομα (των οποίων τα βιογραφικά λαμβάνονται υπόψη κατά την αξιολόγηση) δηλώνονται συνολική αμοιβή και ανθρωπομήνες. Η υπόλοιπη ανθρωποπροσπάθεια ορίζεται ως προς τις ειδικότητες, της συνολική δαπάνη και τους συνολικούς ανθρωπομήνες μόνο (όχι αριθμός ατόμων, όχι ονόματα).", "(**) Αναφέρεται η κατηγορία ερευνητικού προσωπικού: Έμπειρος Ερευνητής, Ερευνητής, τεχνικό προσωπικό, βοηθητικό προσωπικό", "(***) Μικτό κόστος ανθρωπομήνα σύμφωνα με τα όρια που ορίζονται στην αναλυτική πρόσκληση"],
                             "items": {
                                 "fields": {
+                                    "d": {
+                                        "hideNone": true,
+                                        "type": "select"
+                                    },
                                     "e": {
                                         "fieldClass": "l-col",
                                         "hideNone": true,
@@ -706,14 +711,6 @@
             }
         },
         "tab10": {
-            "lazyLoading": true,
-            "fields": {
-                "textfield1": {
-                    "fields": {
-                        "textinput1": {}
-                    }
-                }
-            }
         }
     }
 }

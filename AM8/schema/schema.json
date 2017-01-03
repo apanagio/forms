@@ -10,35 +10,35 @@
 		"person": {
 			"type": "object",
 			"properties": {
-				"fieldtext1": {
+				"name": {
 					"type": "string",
 					"title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ"
 				},
-				"fieldtext2": {
+				"institution": {
 					"type": "string",
 					"title": "ΟΝΟΜΑΣΙΑ ΦΟΡΕΑ"
 				},
-				"fieldtext3": {
+				"position": {
 					"type": "string",
 					"title": "ΘΕΣΗ ΣΤΟ ΦΟΡΕΑ"
 				},
-				"fieldtext4": {
+				"address": {
 					"type": "string",
 					"title": "ΔΙΕΥΘΥΝΣΗ"
 				},
-				"fieldtext5": {
+				"telephone": {
 					"type": "string",
 					"title": "ΤΗΛΕΦΩΝΟ"
 				},
-				"fieldtext6": {
+				"mobile": {
 					"type": "string",
 					"title": "ΤΗΛΕΦΩΝΟ ΚΙΝΗΤΟ"
 				},
-				"fieldtext7": {
+				"fax": {
 					"type": "string",
 					"title": "FAX"
 				},
-				"fieldtext8": {
+				"email": {
 					"type": "string",
 					"title": "e-mail"
 				}
@@ -75,20 +75,20 @@
 		"companySize": {
 			"type": "object",
 			"properties": {
-				"fieldtext0": {
+				"f0": {
 					"type": "integer",
 					"title": "Έτος",
 					"readonly": true
 				},
-				"fieldtext1": {
+				"f1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"fieldtext2": {
+				"f2": {
 					"title": "ΣΥΝΟΛΟ ΕΤΗΣΙΟΥ ΙΣΟΛΟΓΙΣΜΟΥ (ΣΕ €)",
 					"type": "number"
 				},
-				"fieldtext3": {
+				"f3": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ (ΣΕ ΕΜΕ)",
 					"type": "number"
 				}
@@ -97,32 +97,32 @@
 		"companyFinance": {
 			"type": "object",
 			"properties": {
-				"fieldtext0": {
+				"f0": {
 					"type": "integer",
 					"title": "Έτος",
 					"readonly": true
 				},
-				"fieldtext1": {
+				"f1": {
 					"title": "ΣΥΝΟΛΙΚΟΣ ΚΥΚΛΟΣ ΕΡΓΑΣΙΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"fieldtext2": {
+				"f2": {
 					"title": "ΑΡΙΘΜΟΣ ΑΠΑΣΧΟΛΟΥΜΕΝΩΝ   (ΣΕ ΕΜΕ)",
 					"type": "number"
 				},
-				"fieldtext3": {
+				"f3": {
 					"title": "ΙΔΙΩΤΙΚΗ ΣΥΜΜΕΤΟΧΗ ΓΙΑ ΤΗΝ ΧΡΗΜΑΤΟΔΟΤΗΣΗ ΕΠΕΝΔΥΣΕΩΝ  (ΣΕ €)",
 					"type": "number"
 				},
-				"fieldtext4": {
+				"f4": {
 					"title": "ΑΞΙΑ ΕΞΑΓΩΓΩΝ (ΣΕ €)",
 					"type": "number"
 				},
-				"fieldtext5": {
+				"f5": {
 					"title": "Σύνολο Ενεργητικού",
 					"type": "number"
 				},
-				"fieldtext": {
+				"f6": {
 					"title": "Αποτελέσματα Χρήσης",
 					"type": "number"
 				}

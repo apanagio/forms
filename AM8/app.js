@@ -169,34 +169,6 @@ $(document).ready(function() {
             });
             tableSelect('.array55', [], [3]).find('input').attr('readonly', true);
 
-            $('.section52').on('click', '.alpaca-array-actionbar-top button[data-alpaca-array-actionbar-action="add"], button[data-alpaca-array-toolbar-action="add"]',
-                function(el) {
-                    [1000, 2000, 4000, 6000].forEach(function(time) {
-                        setTimeout(function() {
-
-                            $('.array-with-help').find('.help-block').each(function() {
-                                this.parentNode.appendChild(this);
-                            });
-
-                            var $arr = $('.section52 > div > div.alpaca-container-item-last');
-
-                            $arr.find('tr:last').find('input').attr('readonly', 'true');
-                            $arr.find('tr:last').find($alpaca(0)).attr("colspan", "2").addClass("subtitle-sum");
-
-                            $arr.find('tr:last').find($alpaca(1)).remove();
-
-                            $arr.find('.auto-sum').on('change', '.sum-col input', function() { // Summing when new array52 is added
-                                computeSum($arr, '.sum-col', false, 0);
-
-                            });
-                            // Subtracting when a row is deleted
-                            $arr.on('mouseup', '.table-bordered>tbody>tr>td.actionbar button[data-alpaca-array-actionbar-action="remove"]', function(el) {
-                                var temp = $(this).closest('tr').find('.sum-col input').val();
-                                computeSum($arr, '.sum-col', true, temp);
-                            });
-                        }, time);
-                    });
-                });
 
             var computeSum = function(el, col, per, offset) {
                 var sum = 0 - offset;
@@ -213,7 +185,7 @@ $(document).ready(function() {
                     });
                     $(el).find('tr:last-child ' + col + ' input').val(sum);
                 });
-            }
+            };
 
             $('.auto-sum').each(function(i, el) { // Default sum, per function 
 
@@ -280,7 +252,6 @@ $(document).ready(function() {
             [10, 11, 12, 13, 14].map(function (el) {
                 $('[data-alpaca-field-id="5.1"] tbody tr[data-alpaca-container-item-index=' + el + ']').addClass('show-with show-with-3');
             });
-
             
             var b44 = control.getControlByPath('/tab4/moreBudget/category');
             var hideExpenses = function (value) {
@@ -301,6 +272,7 @@ $(document).ready(function() {
                 title: "Welcome to the Wizard",
                 description: "Please fill things in as you wish",
                 validation: false,
+                markAllStepsVisited: true,
                 hideSubmitButton: true,
                 bindings: {
                     "tab1": 1,
