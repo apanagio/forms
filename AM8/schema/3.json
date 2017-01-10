@@ -21,28 +21,23 @@
                                     "properties": {
                                         "f1": {
                                             "title": "3Α.1.1.1 ΕΠΩΝΥΜΙΑ ΕΠΙΧΕΙΡΗΣΗΣ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f2": {
                                             "title": "3Α.1.1.2 ΔΙΑΚΡΙΤΙΚΟΣ ΤΙΤΛΟΣ ΕΠΙΧΕΙΡΗΣΗΣ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f3": {
                                             "title": "3Α.1.1.3 ΗΜΕΡΟΜΗΝΙΑ ΙΔΡΥΣΗΣ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f4": {
                                             "title": "3Α.1.1.4 ΝΟΜΙΚΗ ΜΟΡΦΗ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f5": {
                                             "title": "3Α.1.1.5 Α.Φ.Μ.",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f6": {
                                             "title": "3Α.1.1.6 V.A.T. (ΕΚΤΟΣ ΕΛΛΑΔΟΣ) - ΧΩΡΑ",
@@ -50,18 +45,15 @@
                                         },
                                         "f7": {
                                             "title": "3Α.1.1.7 Δ.Ο.Υ.",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f8": {
                                             "title": "3Α.1.1.8 ΥΦΙΣΤΑΜΕΝΟ ΑΝΤΙΚΕΙΜΕΝΟ ΚΥΡΙΑΣ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ (ΚΑΔ)",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f9": {
                                             "title": "3Α.1.1.9 ΕΙΔΟΣ ΕΠΙΧΕΙΡΗΣΗΣ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         }
                                     }
                                 },
@@ -72,33 +64,27 @@
                                     "properties": {
                                         "f1": {
                                             "title": "3Α.2.1 ΠΕΡΙΦΕΡΕΙΑ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f2": {
                                             "title": "3Α.2.2 ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f3": {
                                             "title": "3Α.2.3 ΔΗΜΟΣ – ΚΟΙΝΟΤΗΤΑ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f4": {
                                             "title": "3Α.2.4 ΔΗΜΟΤΙΚΟ ΔΙΑΜΕΡΙΣΜΑ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f5": {
                                             "title": "3Α.2.5 ΔΙΕΥΘΥΝΣΗ ΕΔΡΑΣ ΟΔΟΣ – ΑΡΙΘΜΟΣ ΤΟΠΟΘΕΣΙΑ ΤΑΧ. ΚΩΔΙΚΟΣ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f6": {
                                             "title": "3Α.2.6 ΤΗΛΕΦΩΝΟ ΕΠΙΚΟΙΝΩΝΙΑΣ",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         },
                                         "f7": {
                                             "title": "3Α.2.7 FAX",
@@ -110,8 +96,7 @@
                                         },
                                         "f9": {
                                             "title": "3Α.2.9 Ηλεκτρονική Διεύθυνση (e-mail) (αποκλειστικά της επιχείρησης ή του νόμιμου εκπροσώπου)",
-                                            "type": "string",
-                                            "minLength": 1
+                                            "type": "string"
                                         }
                                     }
                                 }
@@ -134,8 +119,7 @@
                         },
                         "f1": {
                             "title": "3Β.1 Περιφέρεια",
-                            "type": "string",
-                            "minLength": 1
+                            "type": "string"
                         },
                         "a3B_2": {
                             "title": "3Β.2 Τόπος",
@@ -147,23 +131,19 @@
                                 "properties": {
                                     "f1": {
                                         "title": "ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f2": {
                                         "title": "ΔΗΜΟΣ – ΚΟΙΝΟΤΗΤΑ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f3": {
                                         "title": "ΔΗΜΟΤΙΚΟ ΔΙΑΜΕΡΙΣΜΑ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f4": {
                                         "title": "ΟΔΟΣ – ΑΡΙΘΜΟΣ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f5": {
                                         "title": "ΤΟΠΟΘΕΣΙΑ",
@@ -171,13 +151,11 @@
                                     },
                                     "f6": {
                                         "title": "ΤΑΧ. ΚΩΔΙΚΟΣ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f7": {
                                         "title": "ΤΗΛΕΦΩΝΟ ΕΠΙΚΟΙΝΩΝΙΑΣ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f8": {
                                         "title": "FAX",
@@ -185,13 +163,11 @@
                                     },
                                     "f9": {
                                         "title": "e-mail",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f10": {
                                         "title": "ΕΙΔΟΣ ΕΓΚΑΤΑΣΤΑΣΗΣ (ΠΑΡΑΓΩΓΙΚΗ, ΕΡΕΥΝΗΤΙΚΗ ΚΛΠ)",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     }
                                 }
                             }
@@ -265,11 +241,11 @@
                     }
                 },
                 "a3D": {
-                    "title": "3Δ. ΣΤΟΙΧΕΙΑ ΕΤΑΙΡΩΝ/ΜΕΤΟΧΩΝ",
                     "type": "object",
                     "properties": {
                         "a3D": {
                             "type": "array",
+                            "title": "3Δ. ΣΤΟΙΧΕΙΑ ΕΤΑΙΡΩΝ/ΜΕΤΟΧΩΝ",
                             "default": [{}],
                             "items": {
                                 "type": "object",
@@ -287,13 +263,11 @@
                                     },
                                     "f2": {
                                         "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ Ή ΕΠΩΝΥΜΙΑ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f3": {
                                         "title": "ΕΙΔΟΣ ΠΡΟΣΩΠΟΥ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f4": {
                                         "title": "ΜΕΤΟΧΟΣ ΕΚΤΟΣ ΕΛΛΑΔΟΣ",
@@ -301,8 +275,7 @@
                                     },
                                     "f5": {
                                         "title": "Α.Φ.Μ.",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f6": {
                                         "title": "V.A.T. (ΕΚΤΟΣ ΕΛΛΑΔΟΣ)",
@@ -310,23 +283,19 @@
                                     },
                                     "f7": {
                                         "title": "Δ.Ο.Υ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f8": {
                                         "title": "ΧΩΡΑ ΕΓΚΑΤΑΣΤΑΣΗΣ/ΔΙΑΜΟΝΗΣ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f9": {
                                         "title": "ΟΔΟΣ – ΑΡΙΘΜΟΣ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f10": {
                                         "title": "ΠΟΛΗ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f11": {
                                         "title": "ΤΑΧ. ΚΩΔΙΚΑΣ",
@@ -334,8 +303,7 @@
                                     },
                                     "f12": {
                                         "title": "ΤΗΛΕΦΩΝΟ ΕΠΙΚΟΙΝΩΝΙΑΣ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f13": {
                                         "title": "FAX",
@@ -343,8 +311,7 @@
                                     },
                                     "f14": {
                                         "title": "e-mail",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f15": {
                                         "title": "ΕΤΟΣ ΙΔΡΥΣΗΣ ΕΠΙΧΕΙΡΗΣΗΣ",
@@ -352,13 +319,11 @@
                                     },
                                     "f16": {
                                         "title": "Α.Φ.Μ. ΝΟΜΙΜΟΥ ΕΚΠΡΟΣΩΠΟΥ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     },
                                     "f17": {
                                         "title": "ΘΕΣΗ ΕΤΑΙΡΟΥ/ΜΕΤΟΧΟΥ ΣΤΟΝ ΦΟΡΕΑ",
-                                        "type": "string",
-                                        "minLength": 1
+                                        "type": "string"
                                     }
                                 }
                             }
@@ -387,18 +352,15 @@
                                             },
                                             "b": {
                                                 "title": "ΟΝΟΜΑΤΕΠΩΝΥΜΟ Ή ΕΠΩΝΥΜΙΑ ΕΤΑΙΡΟΥ ΜΕΤΟΧΟΥ",
-                                                "type": "string",
-                                                "minLength": 1
+                                                "type": "string"
                                             },
                                             "c": {
                                                 "title": "ΕΙΔΟΣ ΠΡΟΣΩΠΟΥ",
-                                                "type": "string",
-                                                "minLength": 1
+                                                "type": "string"
                                             },
                                             "d": {
                                                 "title": "ΕΠΩΝΥΜΙΑ ΕΠΙΧΕΙΡΗΣΗΣ",
-                                                "type": "string",
-                                                "minLength": 1
+                                                "type": "string"
                                             },
                                             "e": {
                                                 "title": "ΕΤΟΣ ΙΔΡΥΣΗΣ ΕΠΙΧΕΙΡΗΣΗΣ",
@@ -407,13 +369,11 @@
                                             },
                                             "f": {
                                                 "title": "ΑΝΤΙΚΕΙΜΕΝΟ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ ΤΗΣ ΕΠΙΧΕΙΡΗΣΗΣ",
-                                                "type": "string",
-                                                "minLength": 1
+                                                "type": "string"
                                             },
                                             "g": {
                                                 "title": "ΘΕΣΗ ΕΤΑΙΡΟΥ-ΜΕΤΟΧΟΥ ΣΤΟΝ ΦΟΡΕΑ(Νόμιμος εκπρόσωπος, μέλος ΔΣ, Πρόεδρος Δ.Σ., Διευθύνων Σύμβουλος κ.λ.π.)",
-                                                "type": "string",
-                                                "minLength": 1
+                                                "type": "string"
                                             }
                                         }
                                     }
@@ -473,8 +433,7 @@
                         },
                         "f3E_4": {
                             "title": "3Ε.4 ΠΗΓΕΣ ΚΑΛΥΨΗΣ ΙΔΙΑΣ ΣΥΜΜΕΤΟΧΗΣ",
-                            "type": "string",
-                            "minLength": 1
+                            "type": "string"
                         },
                         "aE_5": {
                             "title": "3Ε.5 ΑΝΑΚΤΗΣΗ ΠΡΟΗΓΟΥΜΕΝΗΣ ΕΝΙΣΧΥΣΗΣ",

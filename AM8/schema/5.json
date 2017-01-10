@@ -187,7 +187,8 @@
                              },
                              "c": {
                                  "type": "number",
-                                 "title": "Σύνολο Π/Υ"
+                                 "title": "Σύνολο Π/Υ",
+                                 "readonly": true
                              },
                              "d": {
                                  "type": "number",
@@ -244,7 +245,8 @@
                              },
                              "c": {
                                  "type": "number",
-                                 "title": "Σύνολο Π/Υ"
+                                 "title": "Σύνολο Π/Υ",
+                                 "readonly": true
                              },
                              "d": {
                                  "type": "number",

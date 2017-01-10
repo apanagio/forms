@@ -37,8 +37,7 @@
                                     "fields": {
                                         "a3A_1_1": {
                                             "collapsible": true,
-                                            "fields": {
-                                            }
+                                            "fields": {}
                                         },
                                         "a3A_2": {
                                             "collapsible": true
@@ -396,9 +395,11 @@
                 "a5_3": {
                     "helper": "Απαιτείται τεκμηρίωση κόστους, της κατηγορίας δαπανών «όργανα, εξοπλισμός και κτίρια», μέσω, είτε προσφορών/προτιμολογίων με αναλυτική περιγραφή δαπανών ανά είδος και αναγωγή κόστους ανά μετρική μονάδα, ή αντίστοιχα, επικοινωνίας με δυνητικούς προμηθευτές μέσω emails, ή έρευνας από το διαδίκτυο, καθώς και προωθητικών φυλλαδίων",
                     "fieldClass": "top-level-object",
+                    "id": "5.3",
                     "fields": {
                         "a5_3_1": {
                             "type": "table",
+                            "id": "5.3.1",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5311, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "helpers": ["(*) Ονοματίζονται τα άτομα της ομάδας έργου από κάθε φορέα. Για τα ονοματιζόμενα αυτά άτομα (των οποίων τα βιογραφικά λαμβάνονται υπόψη κατά την αξιολόγηση) δηλώνονται συνολική αμοιβή και ανθρωπομήνες. Η υπόλοιπη ανθρωποπροσπάθεια ορίζεται ως προς τις ειδικότητες, της συνολική δαπάνη και τους συνολικούς ανθρωπομήνες μόνο (όχι αριθμός ατόμων, όχι ονόματα).", "(**) Αναφέρεται η κατηγορία ερευνητικού προσωπικού: Έμπειρος Ερευνητής, Ερευνητής, τεχνικό προσωπικό, βοηθητικό προσωπικό", "(***) Μικτό κόστος ανθρωπομήνα σύμφωνα με τα όρια που ορίζονται στην αναλυτική πρόσκληση"],
@@ -421,6 +422,7 @@
                         },
                         "a5_3_2": {
                             "type": "table",
+                            "id": "5.3.2",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5312, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "helpers": ["(*) Σε μήνες που αποδίδονται/ αναλογούν στο έργο", "(**) Επιλέξιμες θεωρούνται μόνον οι δαπάνες απόσβεσης, που αντιστοιχούν στη διάρκεια του έργο, οι οποίες υπολογίζονται με βάσει τις γενικά αποδεκτές λογιστικές αρχές"],
@@ -440,6 +442,7 @@
                         },
                         "a5_3_3": {
                             "type": "table",
+                            "id": "5.3.3",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5313, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
@@ -454,6 +457,7 @@
                         },
                         "a5_3_4": {
                             "type": "table",
+                            "id": "5.3.4",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5314, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
@@ -469,6 +473,7 @@
                         "a5_3_5": {
                             "type": "table",
                             "view": "bootstrap-edit",
+                            "id": "5.3.5",
                             "fieldClass": "zero-margin, dynamic-table, array5315, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
                                 "fields": {
@@ -483,6 +488,7 @@
                         "a5_3_6": {
                             "type": "table",
                             "view": "bootstrap-edit",
+                            "id": "5.3.6",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5316, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "helpers": ["Αφορούν δαπάνες μετακινήσεων και λοιπών δαπανών απαραίτητες για την εκτέλεση του έργου"],
                             "items": {
@@ -498,6 +504,7 @@
                         "a5_3_7": {
                             "type": "table",
                             "view": "bootstrap-edit",
+                            "id": "5.3.7",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5317, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "helpers": ["Αφορούν απαραίτητα υλικά ή εξαρτήματα για την εκτέλεση του έργου"],
                             "items": {
@@ -515,6 +522,7 @@
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5318, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
+                            "id": "5.3.8",
                             "helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
@@ -529,6 +537,7 @@
                         },
                         "a5_3_9": {
                             "type": "table",
+                            "id": "5.3.9",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array5319, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
@@ -544,6 +553,7 @@
                         },
                         "a5_3_10": {
                             "type": "table",
+                            "id": "5.3.10",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array53110, auto-sum, no-remove-button, show-with, show-with-3",
                             "items": {
@@ -559,6 +569,7 @@
                         },
                         "a5_3_11": {
                             "type": "table",
+                            "id": "5.3.11",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array53111, auto-sum, no-remove-button, show-with, show-with-3",
                             "items": {
@@ -710,7 +721,6 @@
                 }
             }
         },
-        "tab10": {
-        }
+        "tab10": {}
     }
 }

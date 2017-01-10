@@ -236,35 +236,134 @@ $(document).ready(function() {
             });
 
             //tab4 
-            $('[data-alpaca-field-id="4.4"] .radio').each(function (i, el) {
+            $('[data-alpaca-field-id="4.4"] .radio').each(function(i, el) {
                 if (i == 1 || i == 3 || i == 4) {
                     $('#above-option-' + i).prependTo($(el)).css('display', 'block');
                 }
             });
-            
+
             //tab5
             //show hide according to tab4
-            
-            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (el) {
+
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(function(el) {
                 $('[data-alpaca-field-id="5.1"] tbody tr[data-alpaca-container-item-index=' + el + ']').addClass('show-with show-with-1 show-with-2');
             });
 
-            [10, 11, 12, 13, 14].map(function (el) {
+            [10, 11, 12, 13].map(function(el) {
                 $('[data-alpaca-field-id="5.1"] tbody tr[data-alpaca-container-item-index=' + el + ']').addClass('show-with show-with-3');
             });
-            
+
             var b44 = control.getControlByPath('/tab4/moreBudget/category');
-            var hideExpenses = function (value) {
+            var hideExpenses = function(value) {
                 $('.show-with').hide();
                 $('.show-with-' + value).show();
             };
-            
+
             hideExpenses(b44.getValue());
-            
-            b44.on('change', function (val) {
+
+            b44.on('change', function(val) {
                 hideExpenses(this.getValue());
             });
-            
+
+            //automatic sum of tables
+            /**
+            @param {table} $table - jquery object of the table from which the data will be red
+            @param {number} col - column that will be used for the sums
+            @param {function} condition - function to filter columns
+            @returns {function} - function that returns the sum
+             */
+            var tableSumIf = function($table, col, condition) {
+                if (typeof condition !== "function") {
+                    condition = function() {
+                        return true;
+                    }
+                };
+
+                var sum = 0;
+                var $rows = $table.find('tbody tr:not(:last-child)');
+
+                $.each($rows, function(i, el) {
+                    sum += condition($(el)) ? 1 * $(el).find($alpaca(col, 'td', ' input')).val() : 0;
+                });
+
+                return sum || 0;
+            };
+
+            var sel = function(row, col) {
+                return 'tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=' + col + '] input';
+            };
+
+            $('[data-alpaca-field-id="5.3"]').on('change', function() {
+                var arr51 = $('[data-alpaca-field-id="5.1"]');
+                var arr5121 = $('[data-alpaca-field-id="5.1.2.1"]');
+                var arr5122 = $('[data-alpaca-field-id="5.1.2.2"]');
+
+                arr51.find(sel(1, 2)).val(tableSumIf($('[data-alpaca-field-id="5.3.1"]'), 5, function($row) {
+                    return $row.find($alpaca(3, 'td', ' :input')).val() !== "Δελτίο Παροχής";
+                }));
+                arr51.find(sel(2, 2)).val(tableSumIf($('[data-alpaca-field-id="5.3.1"]'), 5, function($row) {
+                    return $row.find($alpaca(3, 'td', ' :input')).val() === "Δελτίο Παροχής";
+                }));
+                arr5121.find(sel(1, 2)).val(tableSumIf($('[data-alpaca-field-id="5.3.1"]'), 5, function($row) {
+                    return $row.find($alpaca(3, 'td', ' :input')).val() === "Υφιστάμενο Προσωπικό";
+                }));
+                arr5121.find(sel(2, 2)).val(tableSumIf($('[data-alpaca-field-id="5.3.1"]'), 5, function($row) {
+                    return $row.find($alpaca(3, 'td', ' :input')).val() === "Νέο Προσωπικό";
+                }));
+                arr5121.find(sel(3, 2)).val(tableSumIf($('[data-alpaca-field-id="5.3.1"]'), 5, function($row) {
+                    return $row.find($alpaca(3, 'td', ' :input')).val() === "Δελτίο Παροχής";
+                }));
+                [
+                    [3, '5.3.2', 6, arr51],
+                    [4, '5.3.2', 6, arr51],
+                    [5, '5.3.3', 3, arr51],
+                    [6, '5.3.5', 3, arr51],
+                    [7, '5.3.6', 2, arr51],
+                    [8, '5.3.8', 2, arr51],
+                    [9, '5.3.4', 3, arr51],
+                    [11, '5.3.11', 2, arr51],
+                    [12, '5.3.10', 2, arr51],
+
+                    [5, '5.3.2', 6, arr5121],
+                    [6, '5.3.2', 6, arr5121],
+                    [8, '5.3.3', 3, arr5121],
+                    [9, '5.3.5', 3, arr5121],
+                    [10, '5.3.9', 2, arr5121],
+                    [12, '5.3.7', 2, arr5121],
+                    [13, '5.3.8', 2, arr5121],
+                    [14, '5.3.6', 2, arr5121],
+                    [15, '5.3.6', 6, arr5121],
+                    [17, '5.3.4', 3, arr5121],
+
+                    [1, '5.3.10', 2, arr5122],
+                    [3, '5.3.11', 2, arr5122]
+                ].map(function(el) {
+                    el[3].find(sel(el[0], 2)).val(tableSumIf($('[data-alpaca-field-id="' + el[1] + '"]'), el[2]));
+                });
+
+            });
+
+            var sum51 = function() {
+                var $target = $('[data-alpaca-field-id="5.1"]');
+                var $source = $('[data-alpaca-field-id="5.1"]');
+
+            };
+
+            var sum512 = function() {
+
+            };
+
+            var sum52 = function() {
+
+            };
+
+            var sum54 = function() {
+
+            };
+
+            var sum55 = function() {
+
+            };
         },
         view: {
             parent: "bootstrap-edit-horizontal",
