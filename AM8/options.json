@@ -234,16 +234,28 @@
                         }
                     }
                 },
-                "fields4.1b": {
+                "a4_1b": {
                     "type": "table",
                     "view": "bootstrap-edit",
+                    "id": "4.1b",
                     "fieldClass": "zero-margin",
                     "items": {
                         "fields": {
-                            "textfield4": {},
-                            "textfield5": {}
+                            "textfield2": {
+                                "hideNone": true,
+                                "type": "select",
+                                "optionLabels": ["4) ΒΙΟΜΗΧΑΝΙΚΗ / ΕΦΑΡΜΟΣΜΕΝΗ ΕΡΕΥΝΑ (Άρθρο 25 - ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 50%)", "3) ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ (Άρθρο 25 - ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 25%)", "2) Καινοτομία για ΜΜΕ (Άρθρο 28 - Η χρήση αυτού του άρθρου γίνεται μόνο από ΜΜΕ - ενταση ενίσχυσης 50%)", "1) ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ - Άρθρο 3"]
+                            },
+                            "free": {
+                                "dependencies": {
+                                    "textfield2": ["1", "2"]
+                                }
+                            }
                         }
                     }
+                },
+                "reason": {
+                    "type": "textarea"   
                 },
                 "fields4.2": {
                     "type": "table",
@@ -254,25 +266,6 @@
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin"
-                },
-                "moreBudget": {
-                    "fields": {
-                        "category": {
-                            "type": "radio",
-                            "id": "4.4",
-                            "noneLabel": "Χωρίς προσαύξηση",
-                            "optionLabels": ["II ΒΙΟΜΗΧΑΝΙΚΗ / ΕΦΑΡΜΟΣΜΕΝΗ ΕΡΕΥΝΑ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 50%)", "III ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ (ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 25%)", "Καινοτομία για ΜΜΕ (Η χρήση αυτού του άρθρου γίνεται μόνο από ΜΜΕ - ενταση ενίσχυσης 50%)", "ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ"]
-                        },
-                        "free": {
-                            "dependencies": {
-                                "category": ["1", "2"]
-                            }
-                        },
-                        "reason": {
-                            "type": "textarea",
-                            "helpers": ["Εφόσον η επενδυτική πρόταση περιλαμβάνει «χρηματοδοτική ενίσχυση προσαυξημένη κατά 15%, διότι τα αποτελέσματα του έργου διαδίδονται ευρέως», τότε, τα αποτελέσματα της έρευνας (όχι μόνο τα συνολικά παραδοτέα του έργου) θα πρέπει να διαδοθούν στο ευρύτερο δυνατό βαθμό, τόσο σε εθνικό όσο και σε κοινοτικό επίπεδο (Ε.Ε.). Οι ανωτέρω προτάσεις θα πρέπει να περιλαμβάνουν στο χρονοπρογραμματισμό τους και ένα σχέδιο δράσεων για τη διάδοση των ερευνητικών αποτελεσμάτων του έργου.", "Μέχρι 1000 χαρακτήρες"]
-                        }
-                    }
                 }
             }
         },
@@ -416,6 +409,11 @@
                                     },
                                     "f": {
                                         "fieldClass": "sum-col"
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -428,14 +426,21 @@
                             "helpers": ["(*) Σε μήνες που αποδίδονται/ αναλογούν στο έργο", "(**) Επιλέξιμες θεωρούνται μόνον οι δαπάνες απόσβεσης, που αντιστοιχούν στη διάρκεια του έργο, οι οποίες υπολογίζονται με βάσει τις γενικά αποδεκτές λογιστικές αρχές"],
                             "items": {
                                 "fields": {
-
+                                    "c": {
+                                        "type": "select",
+                                        "hideNone": true,
+                                        "fieldClass": "m-col"
+                                    },
                                     "e": {
                                         "fieldClass": "sum-col"
-
                                     },
                                     "g": {
                                         "fieldClass": "sum-col-extra"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -451,6 +456,11 @@
                                     "d": {
                                         "fieldClass": "sum-col"
 
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -462,10 +472,13 @@
                             "fieldClass": "zero-margin, dynamic-table, array5314, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
                                 "fields": {
-
                                     "d": {
                                         "fieldClass": "sum-col"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -480,7 +493,11 @@
 
                                     "d": {
                                         "fieldClass": "sum-col"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -490,13 +507,35 @@
                             "view": "bootstrap-edit",
                             "id": "5.3.6",
                             "fieldClass": "zero-margin, array-with-help, dynamic-table, array5316, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
-                            "helpers": ["Αφορούν δαπάνες μετακινήσεων και λοιπών δαπανών απαραίτητες για την εκτέλεση του έργου"],
+                            "helpers": ["Αφορούν δαπάνες απαραίτητες για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
-
                                     "c": {
                                         "fieldClass": "sum-col"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
+                                    }
+                                }
+                            }
+                        },
+                        "a5_3_6_1": {
+                            "type": "table",
+                            "view": "bootstrap-edit",
+                            "id": "5.3.6.1",
+                            "fieldClass": "zero-margin, array-with-help, dynamic-table, array53161, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
+                            "helpers": ["Αφορούν δαπάνες μετακινήσεων απαραίτητων για την εκτέλεση του έργου"],
+                            "items": {
+                                "fields": {
+                                    "c": {
+                                        "fieldClass": "sum-col"
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -509,10 +548,13 @@
                             "helpers": ["Αφορούν απαραίτητα υλικά ή εξαρτήματα για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
-
                                     "c": {
                                         "fieldClass": "sum-col"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -526,10 +568,13 @@
                             "helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
-
                                     "c": {
                                         "fieldClass": "sum-col"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -542,10 +587,13 @@
                             "fieldClass": "zero-margin, dynamic-table, array5319, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
                                 "fields": {
-
                                     "c": {
                                         "fieldClass": "sum-col"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-25"
                                     }
                                 }
                             }
@@ -558,14 +606,16 @@
                             "fieldClass": "zero-margin, dynamic-table, array53110, auto-sum, no-remove-button, show-with, show-with-3",
                             "items": {
                                 "fields": {
-
                                     "c": {
                                         "fieldClass": "sum-col"
-
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-28"
                                     }
                                 }
                             }
-
                         },
                         "a5_3_11": {
                             "type": "table",
@@ -576,10 +626,37 @@
                                 "fields": {
                                     "c": {
                                         "fieldClass": "sum-col"
+                                    },
+                                    "d": {
+                                        "hideNone": true,
+                                        "type": "select",
+                                        "fieldClass": "reference-41b" 
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-28"
                                     }
                                 }
                             }
-
+                        },
+                        "a5_3_12": {
+                            "type": "table",
+                            "id": "5.3.11",
+                            "view": "bootstrap-edit",
+                            "fieldClass": "zero-margin, dynamic-table, array53112, auto-sum, no-remove-button, show-with, show-with-3",
+                            "items": {
+                                "fields": {
+                                    "c": {
+                                        "fieldClass": "sum-col"
+                                    },
+                                    "h": {
+                                        "hideNone": true,
+                                        "type": "select", 
+                                        "fieldClass": "reference-41b reference-article-28"
+                                    }
+                                }
+                            }
                         }
                     }
                 },

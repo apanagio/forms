@@ -68,6 +68,10 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
   padding-right: 15px;
 }
 
+.m-col {
+  min-width: 120px;
+  padding-right: 15px;
+}
 .option-header {
   display: none;
   font-size: large;

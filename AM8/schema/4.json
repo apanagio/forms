@@ -88,13 +88,16 @@
 				}
 			}
 		},
-		"fields4.1b": {
+		"a4_1b": {
 			"type": "array",
 			"title": "4.1β ΠΙΝΑΚΑΣ ΕΝΟΤΗΤΩΝ ΕΡΓΑΣΙΑΣ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
 			"default": [{}],
 			"items": {
 				"type": "object",
 				"title": "",
+				"dependencies": {
+					"free": ["textfield2"]
+				},
 				"properties": {
 					"textfield0": {
 						"type": "integer",
@@ -106,7 +109,13 @@
 					},
 					"textfield2": {
 						"type": "string",
-						"title": "Κατηγορία Δραστηριότητας"
+						"title": "Κατηγορία Δραστηριότητας",
+						"enum": ["1", "2", "3", "4"]
+					},
+					"free": {
+						"type": "boolean",
+						"title": "Ελεύθερη Διάχυση", 
+						"default": true
 					},
 					"textfield3": {
 						"type": "string",
@@ -118,7 +127,8 @@
 					},
 					"textfield5": {
 						"type": "number",
-						"title": "Δημόσια Δαπάνη (€)"
+						"title": "Δημόσια Δαπάνη (€)", 
+						"readonly": true
 					},
 					"textfield6": {
 						"type": "number",
@@ -140,6 +150,10 @@
 					}
 				}
 			}
+		},
+		"reason": {
+			"type": "string",
+			"title": "4.1β.1 ΤΕΚΜΗΡΙΩΣΗ εαν έχετε επιλέξει \"Ελεύθερη Διάχυση\""
 		},
 		"fields4.2": {
 			"type": "array",
@@ -203,28 +217,6 @@
 						"title": "Ειδικότητα"
 					}
 				}
-			}
-		},
-		"moreBudget": {
-			"type": "object",
-			"title": "4.4 ΤΕΚΜΗΡΙΩΣΗ ΠΡΟΣΑΥΞΗΣΗΣ ΠΟΣΟΣΤΟΥ ΕΝΙΣΧΥΣΗΣ",
-			"properties": {
-				"category": {
-					"type": "string",
-					"enum": ["1", "2", "3", "4"]
-				},
-				"free": {
-					"type": "boolean",
-					"title": "4.4.1 Τα αποτελέσματα του έργου διαδίδονται ευρέως μέσω συνεδρίων, δημοσιεύσεων, αποθετηρίων ελεύθερης πρόσβασης ή μέσω δωρεάν λογισμικού ή λογισμικού ανοικτής πηγής (+15%);"
-				},
-				"reason": {
-					"type": "string",
-					"title": "4.4.2 ΕΑΝ ΝΑΙ ΤΕΚΜΗΡΙΩΣΗ (ΠΕΡΙΓΡΑΦΗ)"
-				}
-			},
-			"dependencies": {
-				"free": ["category"],
-				"reason": ["free"]
 			}
 		}
 	}
