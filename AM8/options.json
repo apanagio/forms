@@ -642,7 +642,7 @@
                         },
                         "a5_3_12": {
                             "type": "table",
-                            "id": "5.3.11",
+                            "id": "5.3.12",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, dynamic-table, array53112, auto-sum, no-remove-button, show-with, show-with-3",
                             "items": {
