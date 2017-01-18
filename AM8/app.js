@@ -93,54 +93,229 @@ var tableSelect = function(arr, rows, cols) {
 
 //calculate options for arrays 5.3
 //returns declared worckpackages
-//if article28 = true returns only related with article28
-// if false returns the rest
 var getWorkPackages = function(article28) {
     'use strict'
     var $arr = $('[data-alpaca-field-id="4.1b"] tbody tr').toArray();
-    var arrValues = $arr.map(function(el) {
+    return $arr.map(function(el) {
         return {
             value: $(el).find('td[data-alpaca-container-item-index="0"] input').val(),
             option: $(el).find('td[data-alpaca-container-item-index="2"] :input').val(),
             text: $(el).find('td[data-alpaca-container-item-index="1"] input').val()
         }
     });
-
-    var ret = [];
-
-    if (article28) {
-        ret = arrValues.filter(function(el) {
-            return el.option == 3
-        });
-    }
-    else {
-        ret = arrValues.filter(function(el) {
-            return el.option != 3
-        });
-    }
-    return ret;
 }
 
 var updateSelect = function() {
-    var createOptions = function(arr) {
-        return arr.reduce(function(a, b) {
-            return a + '<option value="' + b.value + '">' + b.text + '</option>';
-        }, '');
+    var createOptions = function(i, arr) {
+        return arr.filter(function(el) {
+                return el.option == i;
+            })
+            .reduce(function(a, b) {
+                return a + '<option value="' + b.value + '">' + b.text + '</option>';
+            }, '');
     };
 
-    var article25 = createOptions(getWorkPackages(false));
-    var article28 = createOptions(getWorkPackages(true));
+    var options = getWorkPackages();
 
-    $('.reference-article-25 select').each( function () {
-        var value = $(this).val();
-        $(this).empty().append($(article25));
-        $(this).val(value);
+    $('.reference-41b').each(function(i, element) {
+        var value = $(this).find('select').val();
+        $(this).find('select').empty();
+        [1, 2, 3, 4, 5].map(function(el) {
+            $(element).filter('.ref-' + el).find('select').append(createOptions(el, options));
+        });
+        $(this).find('select').val(value);
     });
-        
-    $('.reference-article-28 select').each( function () {
-        var value = $(this).val();
-        $(this).empty().append($(article28));
-        $(this).val(value);
+};
+
+
+/**
+           @param {table} $table - jquery object of the table from which the data will be red
+           @param {number} col - column that will be used for the sums
+           @param {function} condition - function to filter columns
+           @returns the sum
+            */
+var tableSumIf = function($table, condition) {
+    if (typeof condition !== "function") {
+        condition = function() {
+            return true;
+        }
+    };
+    var sum = 0;
+    var $rows = $table.find('tbody tr:not(:last-child)');
+
+    $.each($rows, function(i, el) {
+        sum += condition($(el)) ? 1 * $(el).find('.sum-col input').val() : 0;
+    });
+
+    return sum || 0;
+};
+
+var sel = function(row, col) {
+    return 'tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=' + col + '] input';
+};
+
+//generate a function that checks all requirements
+var generateCondition = function(requirement) {
+    return function($row) {
+        if (!requirement) {
+            return true;
+        }
+
+        var ret = true;
+        $.each(requirement, function(i, el) {
+            ret = (ret && el($row.find($alpaca(i, 'td', ' :input')).val()))
+        });
+        return ret;
+    };
+};
+
+var getArticle = function(id) {
+    var package = getWorkPackages();
+    var valid = package.filter(function(el) {
+        return el.value == id;
+    });
+    return valid.length > 0 ? valid[0].option : undefined;
+};
+
+var is25 = function(id) {
+    return getArticle(id) == 1 || getArticle(id) == 2;
+}
+var is28 = function(id) {
+    return getArticle(id) == 3;
+}
+var is3 = function(id) {
+    return getArticle(id) == 4;
+}
+var isMS = function(id) {
+    return getArticle(id) == 5;
+}
+
+var updateSum = function() {
+
+    var arr51 = $('[data-alpaca-field-id="5.1"]');
+    var arr5121 = $('[data-alpaca-field-id="5.1.2.1"]');
+    var arr5122 = $('[data-alpaca-field-id="5.1.2.2"]');
+    var arr5123 = $('[data-alpaca-field-id="5.1.2.3"]');
+
+    //[targetArray, targetRow, sourceArray, condition]
+    [
+        [arr51, 1, '5.3.1'],
+        [arr51, 2, '5.3.2', {
+            2: equals('Εξοπλισμός'),
+        }],
+        [arr51, 3, '5.3.2', {
+            2: equals('Κτίριο'),
+        }],
+        [arr51, 4, '5.3.3'],
+        [arr51, 5, '5.3.5'],
+        [arr51, 6, '5.3.6'],
+        [arr51, 7, '5.3.8'],
+        [arr51, 8, '5.3.4'],
+        [arr51, 10, '5.3.11'],
+        [arr51, 11, '5.3.10'],
+        [arr51, 12, '5.3.12'],
+
+        [arr5121, 1, '5.3.1', {
+            3: equals('Υφιστάμενο Προσωπικό'),
+            7: is25
+        }],
+        [arr5121, 2, '5.3.1', {
+            3: equals('Νέο Προσωπικό'),
+            7: is25
+        }],
+        [arr5121, 3, '5.3.1', {
+            3: equals('Δελτίο Παροχής'),
+            7: is25
+        }],
+        [arr5121, 5, '5.3.2', {
+            2: equals('Εξοπλισμός'),
+            7: is25
+        }],
+        [arr5121, 6, '5.3.2', {
+            2: equals('Κτίριο'),
+            7: is25
+        }],
+        [arr5121, 8, '5.3.3', {
+            4: is25
+        }],
+        [arr5121, 9, '5.3.5', {
+            4: is25
+        }],
+        [arr5121, 10, '5.3.9', {
+            3: is25
+        }],
+        [arr5121, 12, '5.3.7', {
+            3: is25
+        }],
+        [arr5121, 13, '5.3.8', {
+            3: is25
+        }],
+        [arr5121, 14, '5.3.6', {
+            3: is25
+        }],
+        [arr5121, 15, '5.3.6.1', {
+            3: is25
+        }],
+        [arr5121, 17, '5.3.4'],
+
+        [arr5122, 1, '5.3.10', {
+            3: is28
+        }],
+        [arr5122, 3, '5.3.11', {
+            3: equals('Εσωτερικό'),
+            4: is28
+        }],
+        [arr5122, 4, '5.3.11', {
+            3: equals('Εξωτερικό'),
+            4: is28
+        }],
+        [arr5122, 6, '5.3.12', {
+            3: is28
+        }],
+
+        [arr5123, 1, '5.3.1', {
+            3: equals('Υφιστάμενο Προσωπικό'),
+            7: is3
+        }],
+        [arr5123, 2, '5.3.1', {
+            3: equals('Νέο Προσωπικό'),
+            7: is3
+        }],
+        [arr5123, 3, '5.3.1', {
+            3: equals('Δελτίο Παροχής'),
+            7: is3
+        }],
+        [arr5123, 5, '5.3.2', {
+            2: equals('Εξοπλισμός'),
+            7: is3
+        }],
+        [arr5123, 6, '5.3.2', {
+            2: equals('Κτίριο'),
+            7: is3
+        }],
+        [arr5123, 8, '5.3.3', {
+            4: is3
+        }],
+        [arr5123, 9, '5.3.5', {
+            4: is3
+        }],
+        [arr5123, 10, '5.3.9', {
+            3: is3
+        }],
+        [arr5123, 12, '5.3.7', {
+            3: is3
+        }],
+        [arr5123, 13, '5.3.8', {
+            3: is3
+        }],
+        [arr5123, 14, '5.3.6', {
+            3: is3
+        }],
+        [arr5123, 15, '5.3.6.1', {
+            3: is3
+        }]
+    ].map(function(el) {
+        el[0].find(sel(el[1], 2)).val(tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'), generateCondition(el[3])));
     });
 };
 
@@ -199,8 +374,8 @@ $(document).ready(function() {
             tableSelect('.array52', [1], []).find('input').attr('readonly', true);
             tableSelect('.array52', [1], [1]).remove();
 
-            tableSelect('.array51', [0, 10], [1]).attr('colspan', 4).addClass('subtitle');
-            tableSelect('.array51', [0, 10], [0, 2, 3]).remove();
+            tableSelect('.array51', [0, 9], [1]).attr('colspan', 5).addClass('subtitle');
+            tableSelect('.array51', [0, 9], [0, 2, 3, 4]).remove();
 
             tableSelect('.array25', [0, 4, 7, 11, 16], [1]).attr('colspan', 4).addClass('subtitle');
             tableSelect('.array25', [0, 4, 7, 11, 16], [0, 2, 3]).remove();
@@ -229,7 +404,6 @@ $(document).ready(function() {
                 tableSelect($(this), [], [5]).find('input').attr('readonly', true);
             });
             tableSelect('.array55', [], [3]).find('input').attr('readonly', true);
-
 
             var computeSum = function(el, col, per, offset) {
                 var sum = 0 - offset;
@@ -308,242 +482,8 @@ $(document).ready(function() {
             });
 
             //automatic sum of tables
-            /**
-            @param {table} $table - jquery object of the table from which the data will be red
-            @param {number} col - column that will be used for the sums
-            @param {function} condition - function to filter columns
-            @returns {function} - function that returns the sum
-             */
-            var tableSumIf = function($table, col, condition) {
-                if (typeof condition !== "function") {
-                    condition = function() {
-                        return true;
-                    }
-                };
-                var sum = 0;
-                var $rows = $table.find('tbody tr:not(:last-child)');
-
-                $.each($rows, function(i, el) {
-                    sum += condition($(el)) ? 1 * $(el).find($alpaca(col, 'td', ' input')).val() : 0;
-                });
-
-                return sum || 0;
-            };
-
-            var sel = function(row, col) {
-                return 'tbody tr[data-alpaca-container-item-index=' + row + '] td[data-alpaca-container-item-index=' + col + '] input';
-            };
-
-            //generate a function that checks all requirements
-            // requirements is an object {col: value}
-            // the function should return true if all columns have the corresponding values
-            var generateCondition = function(requirement) {
-                return function($row) {
-                    if (!requirement) {
-                        return true;
-                    }
-
-                    var ret = true;
-                    $.each(requirement, function(i, el) {
-                        // ret = (ret && $row.find($alpaca(i, 'td', ' :input')).val() === el);
-                        ret = (ret && el($row.find($alpaca(i, 'td', ' :input')).val()))
-                    });
-                    return ret;
-                };
-            };
-
-            var getArticle = function(id) {
-                var value = $('[data-alpaca-field-id="4.1b"]').find(sel(id, 2)).find('select').val();
-
-                return [0, 25, 25, 28, 3][value];
-            };
-
-            var is25 = function(id) {
-                var package = getWorkPackages(false);
-                var valid = package.filter(function(el) {
-                    return el.value == id && (el.option == 1 || el.option == 2);
-                });
-
-                return valid.length > 0;
-            }
-            var is28 = function(id) {
-                var package = getWorkPackages(true);
-                var valid = package.filter(function(el) {
-                    return el.value == id;
-                });
-
-                return valid.length > 0;
-            }
-            var is3 = function(id) {
-                var package = getWorkPackages(false);
-                var valid = package.filter(function(el) {
-                    return el.value == id && el.option == 4;
-                });
-
-                return valid.length > 0;
-            }
-
             $('[data-alpaca-field-id="5.3"]').on('change', function() {
-
-                var arr51 = $('[data-alpaca-field-id="5.1"]');
-                var arr5121 = $('[data-alpaca-field-id="5.1.2.1"]');
-                var arr5122 = $('[data-alpaca-field-id="5.1.2.2"]');
-                var arr5123 = $('[data-alpaca-field-id="5.1.2.3"]');
-
-
-                arr51.find(sel(1, 2)).val(tableSumIf($('[data-alpaca-field-id="5.3.1"]'), 5, function($row) {
-                    var employ = $row.find($alpaca(3, 'td', ' :input')).val();
-                    var article = $row.find($alpaca(7, 'td', ' :input')).val();
-                    return employ !== 'Δελτίο Παροχής' && is25(article);
-                }));
-
-                //[targetRow, sourceArray, sourceColumn, targetArray, condition]
-                [
-                    [2, '5.3.1', 5, arr51, {
-                        3: equals('Δελτίο Παροχής'),
-                        7: is25
-                    }],
-                    [3, '5.3.2', 6, arr51, {
-                        2: equals('Εξοπλισμός'),
-                        7: is25
-                    }],
-                    [4, '5.3.2', 6, arr51, {
-                        2: equals('Κτίριο'),
-                        7: is25
-                    }],
-                    [5, '5.3.3', 3, arr51, {
-                        4: is25
-                    }],
-                    [6, '5.3.5', 3, arr51, {
-                        4: is25
-                    }],
-                    [7, '5.3.6', 2, arr51, {
-                        3: is25
-                    }],
-                    [8, '5.3.8', 2, arr51, {
-                        3: is25
-                    }],
-                    [9, '5.3.4', 3, arr51, {
-                        4: is25
-                    }],
-                    [11, '5.3.11', 2, arr51, {
-                        4: is28
-                    }],
-                    [12, '5.3.10', 2, arr51, {
-                        3: is28
-                    }],
-                    [13, '5.3.12', 2, arr51, {
-                        3: is28
-                    }],
-
-                    [1, '5.3.1', 5, arr5121, {
-                        3: equals('Υφιστάμενο Προσωπικό'),
-                        7: is25
-                    }],
-                    [2, '5.3.1', 5, arr5121, {
-                        3: equals('Νέο Προσωπικό'),
-                        7: is25
-                    }],
-                    [3, '5.3.1', 5, arr5121, {
-                        3: equals('Δελτίο Παροχής'),
-                        7: is25
-                    }],
-                    [5, '5.3.2', 6, arr5121, {
-                        2: equals('Εξοπλισμός'),
-                        7: is25
-                    }],
-                    [6, '5.3.2', 6, arr5121, {
-                        2: equals('Κτίριο'),
-                        7: is25
-                    }],
-                    [8, '5.3.3', 3, arr5121, {
-                        4: is25
-                    }],
-                    [9, '5.3.5', 3, arr5121, {
-                        4: is25
-                    }],
-                    [10, '5.3.9', 2, arr5121, {
-                        3: is25
-                    }],
-                    [12, '5.3.7', 2, arr5121, {
-                        3: is25
-                    }],
-                    [13, '5.3.8', 2, arr5121, {
-                        3: is25
-                    }],
-                    [14, '5.3.6', 2, arr5121, {
-                        3: is25
-                    }],
-                    [15, '5.3.6.1', 2, arr5121, {
-                        3: is25
-                    }],
-                    [17, '5.3.4', 3, arr5121, {
-                        4: is25
-                    }],
-
-                    [1, '5.3.10', 2, arr5122, {
-                        3: is28
-                    }],
-                    [3, '5.3.11', 2, arr5122, {
-                        3: equals('Εσωτερικό'),
-                        4: is28
-                    }],
-                    [4, '5.3.11', 2, arr5122, {
-                        3: equals('Εξωτερικό'),
-                        4: is28
-                    }],
-                    [6, '5.3.12', 2, arr5122, {
-                        3: is28
-                    }],
-
-                    [1, '5.3.1', 5, arr5123, {
-                        3: equals('Υφιστάμενο Προσωπικό'),
-                        7: is3
-                    }],
-                    [2, '5.3.1', 5, arr5123, {
-                        3: equals('Νέο Προσωπικό'),
-                        7: is3
-                    }],
-                    [3, '5.3.1', 5, arr5123, {
-                        3: equals('Δελτίο Παροχής'),
-                        7: is3
-                    }],
-                    [5, '5.3.2', 6, arr5123, {
-                        2: equals('Εξοπλισμός'),
-                        7: is3
-                    }],
-                    [6, '5.3.2', 6, arr5123, {
-                        2: equals('Κτίριο'),
-                        7: is3
-                    }],
-                    [8, '5.3.3', 3, arr5123, {
-                        4: is3
-                    }],
-                    [9, '5.3.5', 3, arr5123, {
-                        4: is3
-                    }],
-                    [10, '5.3.9', 2, arr5123, {
-                        3: is3
-                    }],
-                    [12, '5.3.7', 2, arr5123, {
-                        3: is3
-                    }],
-                    [13, '5.3.8', 2, arr5123, {
-                        3: is3
-                    }],
-                    [14, '5.3.6', 2, arr5123, {
-                        3: is3
-                    }],
-                    [15, '5.3.6.1', 2, arr5123, {
-                        3: is3
-                    }],
-                    [17, '5.3.4', 3, arr5123, {
-                        4: is3
-                    }]
-                ].map(function(el) {
-                    el[3].find(sel(el[0], 2)).val(tableSumIf($('[data-alpaca-field-id="' + el[1] + '"]'), el[2], generateCondition(el[4])));
-                });
-
+                updateSum();
             });
         },
         view: {

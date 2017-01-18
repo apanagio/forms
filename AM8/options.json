@@ -244,7 +244,7 @@
                             "textfield2": {
                                 "hideNone": true,
                                 "type": "select",
-                                "optionLabels": ["4) ΒΙΟΜΗΧΑΝΙΚΗ / ΕΦΑΡΜΟΣΜΕΝΗ ΕΡΕΥΝΑ (Άρθρο 25 - ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 50%)", "3) ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ (Άρθρο 25 - ΕΝΤΑΣΗ ΕΝΙΣΧΥΣΗΣ 25%)", "2) Καινοτομία για ΜΜΕ (Άρθρο 28 - Η χρήση αυτού του άρθρου γίνεται μόνο από ΜΜΕ - ενταση ενίσχυσης 50%)", "1) ΠΕΙΡΑΜΑΤΙΚΗ ΑΝΑΠΤΥΞΗ - Άρθρο 3"]
+                                "optionLabels": ["δ) Βιομηχανική / εφαρμοσμένη έρευνα (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 50%)", "γ) Πειραματική ανάπτυξη (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 25%)", "β) Καινοτομία για ΜΜΕ (Ε.Κ 651/2014 Άρθρο 28 - Μόνο ΜΜΕ - Ενίσχυση 50%)", "α) Πειραματική ανάπτυξη - Ε.Κ 1407/2013 Άρθρο 3", "ε) Μελέτη Σκοπιμότητας - Ε.Κ 651/2014 Άρθρο 25"]
                             },
                             "free": {
                                 "dependencies": {
@@ -285,8 +285,7 @@
                                 "view": "bootstrap-display"
                             },
                             "c": {
-                                "fieldClass": "sum-col"
-
+                                "fieldClass": "sum-53, m-col"
                             }
                         }
                     },
@@ -307,7 +306,7 @@
                                         "view": "bootstrap-display"
                                     },
                                     "c": {
-                                        "fieldClass": "sum-col"
+                                        "fieldClass": "sum-col, sum-53"
                                     },
                                     "d": {
                                         "fieldClass": "per-col"
@@ -328,7 +327,7 @@
                                         "view": "bootstrap-display"
                                     },
                                     "c": {
-                                        "fieldClass": "sum-col"
+                                        "fieldClass": "sum-col, sum-53"
 
                                     },
                                     "d": {
@@ -343,7 +342,7 @@
                             "id": "5.1.2.3",
                             "showActionsColumn": false,
                             "view": "bootstrap-edit",
-                            "fieldClass": "zero-margin, array3, auto-sum, show-with, show-with-4",
+                            "fieldClass": "zero-margin, array3, auto-sum, show-with, show-with-4, sum-53",
                             "items": {
                                 "fields": {
                                     "b": {
@@ -413,7 +412,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -432,15 +431,15 @@
                                         "fieldClass": "m-col"
                                     },
                                     "e": {
-                                        "fieldClass": "sum-col"
+                                        "fieldClass": "sum-col-extra"
                                     },
                                     "g": {
-                                        "fieldClass": "sum-col-extra"
+                                        "fieldClass": "sum-col"
                                     },
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -460,7 +459,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -478,7 +477,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-5"
                                     }
                                 }
                             }
@@ -497,7 +496,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -516,7 +515,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -535,7 +534,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -554,7 +553,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -574,7 +573,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -593,7 +592,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-25"
+                                        "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
                             }
@@ -612,7 +611,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-28"
+                                        "fieldClass": "reference-41b, ref-3"
                                     }
                                 }
                             }
@@ -635,7 +634,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-28"
+                                        "fieldClass": "reference-41b, ref-3"
                                     }
                                 }
                             }
@@ -653,7 +652,7 @@
                                     "h": {
                                         "hideNone": true,
                                         "type": "select", 
-                                        "fieldClass": "reference-41b reference-article-28"
+                                        "fieldClass": "reference-41b, ref-3"
                                     }
                                 }
                             }
@@ -687,11 +686,8 @@
                     "fieldClass": "zero-margin, dynamic-table, array55, auto-sum, no-remove-button",
                     "items": {
                         "fields": {
-
                             "c": {
                                 "fieldClass": "sum-col"
-
-
                             },
                             "d": {
                                 "fieldClass": "per-col"

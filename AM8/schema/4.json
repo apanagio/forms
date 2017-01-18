@@ -110,11 +110,11 @@
 					"textfield2": {
 						"type": "string",
 						"title": "Κατηγορία Δραστηριότητας",
-						"enum": ["1", "2", "3", "4"]
+						"enum": ["1", "2", "3", "4", "5"]
 					},
 					"free": {
 						"type": "boolean",
-						"title": "Ελεύθερη Διάχυση", 
+						"title": "Ελεύθερη Διάχυση +15%",
 						"default": true
 					},
 					"textfield3": {
@@ -123,11 +123,12 @@
 					},
 					"textfield4": {
 						"type": "number",
-						"title": "Προϋπολογισμός (€)"
+						"title": "Προϋπολογισμός (€)",
+						"readonly": true
 					},
 					"textfield5": {
 						"type": "number",
-						"title": "Δημόσια Δαπάνη (€)", 
+						"title": "Δημόσια Δαπάνη (€)",
 						"readonly": true
 					},
 					"textfield6": {
