@@ -21,7 +21,7 @@
                      },
                      "c": {
                          "type": "number",
-                         "title": "Π/Υ"
+                         "title": "Επιχορηγούμενος Π/Υ"
                      },
                      "e": {
                          "type": "string",
@@ -192,7 +192,7 @@
                              },
                              "d": {
                                  "type": "number",
-                                 "title": "%",
+                                 "title": "% Επιχορήγησης",
                                  "readonly": true
                              }
                          }
@@ -250,7 +250,7 @@
                              },
                              "d": {
                                  "type": "number",
-                                 "title": "%",
+                                 "title": "% Επιχορήγησης",
                                  "readonly": true
                              }
                          }
@@ -341,7 +341,7 @@
                              },
                              "d": {
                                  "type": "number",
-                                 "title": "%",
+                                 "title": "% Επιχορήγησης",
                                  "readonly": true
                              }
                          }

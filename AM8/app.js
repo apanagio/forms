@@ -3,8 +3,16 @@
 var equals = function(i) {
     return function(j) {
         return j === i;
-    }
-}
+    };
+};
+
+var isNumeric = function(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+};
+
+var numOr0 = function(n, neutral) {
+    return isNumeric(n) ? 1 * n : neutral;
+};
 
 var $alpaca = function(index, prefix, suffix) {
     return (prefix ? prefix : "") + '[data-alpaca-container-item-index="' + index + '"]' + (suffix ? suffix : "");
@@ -100,7 +108,8 @@ var getWorkPackages = function(article28) {
         return {
             value: $(el).find('td[data-alpaca-container-item-index="0"] input').val(),
             option: $(el).find('td[data-alpaca-container-item-index="2"] :input').val(),
-            text: $(el).find('td[data-alpaca-container-item-index="1"] input').val()
+            text: $(el).find('td[data-alpaca-container-item-index="1"] input').val(),
+            free: $(el).find('td[data-alpaca-container-item-index="3"] :checkbox').prop('checked')
         }
     });
 }
@@ -129,25 +138,34 @@ var updateSelect = function() {
 
 
 /**
-           @param {table} $table - jquery object of the table from which the data will be red
-           @param {number} col - column that will be used for the sums
-           @param {function} condition - function to filter columns
-           @returns the sum
-            */
-var tableSumIf = function($table, condition) {
+@param {table} $table - jquery object of the table from which the data will be red
+@param {function} condition - function to filter rows
+@param {function} transform - function that generates new value 
+@returns the sum
+*/
+var tableSumIf = function($table, condition, transform) {
     if (typeof condition !== "function") {
         condition = function() {
             return true;
-        }
-    };
+        };
+    }
+    if (typeof transform !== "function") {
+        transform = function($row) {
+            return numOr0($row.find('.sum-col input').val(), 0);
+        };
+    }
+
     var sum = 0;
     var $rows = $table.find('tbody tr:not(:last-child)');
 
-    $.each($rows, function(i, el) {
-        sum += condition($(el)) ? 1 * $(el).find('.sum-col input').val() : 0;
+    $.each($rows, function(i, row) {
+        if (!condition($(row))) {
+            return;
+        }
+        sum += condition($(row)) ? transform($(row)) : 0;
     });
 
-    return sum || 0;
+    return sum;
 };
 
 var sel = function(row, col) {
@@ -170,6 +188,9 @@ var generateCondition = function(requirement) {
 };
 
 var getArticle = function(id) {
+    if (id === "") {
+        return undefined;
+    }
     var package = getWorkPackages();
     var valid = package.filter(function(el) {
         return el.value == id;
@@ -179,19 +200,201 @@ var getArticle = function(id) {
 
 var is25 = function(id) {
     return getArticle(id) == 1 || getArticle(id) == 2;
-}
+};
 var is28 = function(id) {
     return getArticle(id) == 3;
-}
+};
 var is3 = function(id) {
     return getArticle(id) == 4;
-}
+};
 var isMS = function(id) {
     return getArticle(id) == 5;
+};
+var isFree = function(id) {
+    var free = getWorkPackages().filter(function(el) {
+        return el.value == id;
+    }).map(function(el) {
+        return el.free;
+    });
+    return free.length > 0 ? free[0] : false;
 }
 
-var updateSum = function() {
+var getSubsidy = function($row) {
+    var value = numOr0($row.find('.sum-col input').val(), 0);
+    return getSubsidyPer($row) * value;
+};
 
+//given a spending returns the subsidy it gets (before cutting)
+var getSubsidyPer = function($row) {
+    var workSection = $row.find('.reference-41b select').val();
+    var type = getArticle(workSection);
+
+    var free = isFree(workSection) ? 0.15 : 0;
+
+    var extraArr = {
+        "Πολύ μικρή": 0.2,
+        "Μικρή": 0.2,
+        "Μεσαία": 0.1,
+        "Μεγάλη": 0
+    };
+    var size = extraArr[$('[data-alpaca-field-id="3E.2"] select').val()];
+
+    var percentages = [Math.min(0.5 + free + size, 0.8), 0.25 + free + size, 0.5, 0.5, 0.5 + size];
+
+    return numOr0(percentages[type - 1], 0);
+};
+//given a row from 5.1.2 returns the percentage that it will get
+var updateSubsidy = function(row) {
+    var arr51 = $('[data-alpaca-field-id="5.1"]');
+    var arr5121 = $('[data-alpaca-field-id="5.1.2.1"]');
+    var arr5122 = $('[data-alpaca-field-id="5.1.2.2"]');
+    var arr5123 = $('[data-alpaca-field-id="5.1.2.3"]');
+
+    [
+        [arr5121, 1, '5.3.1', {
+            3: equals('Υφιστάμενο Προσωπικό'),
+            7: is25
+        }, 1],
+        [arr5121, 2, '5.3.1', {
+            3: equals('Νέο Προσωπικό'),
+            7: is25
+        }, 1],
+        [arr5121, 3, '5.3.1', {
+            3: equals('Δελτίο Παροχής'),
+            7: is25
+        }, 1],
+        [arr5121, 5, '5.3.2', {
+            2: equals('Εξοπλισμός'),
+            7: is25
+        }, 2],
+        [arr5121, 6, '5.3.2', {
+            2: equals('Κτίριο'),
+            7: is25
+        }, 3],
+        [arr5121, 8, '5.3.3', {
+            4: is25
+        }, 4],
+        [arr5121, 9, '5.3.5', {
+            4: is25
+        }, 5],
+        [arr5121, 10, '5.3.9', {
+            3: is25
+        }, 5],
+        [arr5121, 12, '5.3.7', {
+            3: is25
+        }, 7],
+        [arr5121, 13, '5.3.8', {
+            3: is25
+        }, 7],
+        [arr5121, 14, '5.3.6', {
+            3: is25
+        }, 6],
+        [arr5121, 15, '5.3.6.1', {
+            3: is25
+        }, , 6],
+        [arr5121, 17, '5.3.4', undefined, 8], 
+
+        [arr5122, 1, '5.3.10', {
+            3: is28
+        }, 11],
+        [arr5122, 3, '5.3.11', {
+            3: equals('Εσωτερικό'),
+            4: is28
+        }],
+        [arr5122, 4, '5.3.11', {
+            3: equals('Εξωτερικό'),
+            4: is28
+        }, 10],
+        [arr5122, 6, '5.3.12', {
+            3: is28
+        }, 12],
+
+        [arr5123, 1, '5.3.1', {
+            3: equals('Υφιστάμενο Προσωπικό'),
+            7: is3
+        }, 1],
+        [arr5123, 2, '5.3.1', {
+            3: equals('Νέο Προσωπικό'),
+            7: is3
+        }, 1],
+        [arr5123, 3, '5.3.1', {
+            3: equals('Δελτίο Παροχής'),
+            7: is3
+        }, 1],
+        [arr5123, 5, '5.3.2', {
+            2: equals('Εξοπλισμός'),
+            7: is3
+        }, 2],
+        [arr5123, 6, '5.3.2', {
+            2: equals('Κτίριο'),
+            7: is3
+        }, 2],
+        [arr5123, 8, '5.3.3', {
+            4: is3
+        }, 4],
+        [arr5123, 9, '5.3.5', {
+            4: is3
+        }, 5],
+        [arr5123, 10, '5.3.9', {
+            3: is3
+        }, 5],
+        [arr5123, 12, '5.3.7', {
+            3: is3
+        }, 7],
+        [arr5123, 13, '5.3.8', {
+            3: is3
+        }, 7],
+        [arr5123, 14, '5.3.6', {
+            3: is3
+        }, 6],
+        [arr5123, 15, '5.3.6.1', {
+            3: is3
+        }, 6]
+    ].map(function(el) {
+        el[0].find(sel(el[1], 3)).val(
+            tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
+                generateCondition(el[3]),
+                getFinalSubPer(el[4]))
+            .toFixed(2));
+    });
+
+};
+
+var getFinalSubPer = function(ref) {
+    return function($row) {
+        var per = getSubsidyPer($row);
+        var reduce = subsidyReduce(ref);
+
+        return 100 * per * (1 - reduce);
+    };
+};
+
+//returns the percentage to be reduced
+var subsidyReduce = function(row) {
+
+    var max = [70, 40, 35, 40, 40, 10, 25];
+
+    var $row = $('[data-alpaca-field-id="5.1"]').find($alpaca(row, 'tr'));
+    var per = $row.find('.per-col input').val();
+
+    var reduce;
+
+    if (row <= 7) {
+        reduce = 0.01 * Math.max(1 * per - max[row - 1], 0);
+    }
+    else if (row == 8) {
+        var value = $row.find('.sum-col').val();
+        reduce = numOr0(Math.max((value - 14000) / value, 0));
+    }
+    else {
+        reduce = 0;
+    }
+    return reduce;
+};
+
+
+
+var updateSum = function() {
     var arr51 = $('[data-alpaca-field-id="5.1"]');
     var arr5121 = $('[data-alpaca-field-id="5.1.2.1"]');
     var arr5122 = $('[data-alpaca-field-id="5.1.2.2"]');
@@ -213,8 +416,29 @@ var updateSum = function() {
         [arr51, 8, '5.3.4'],
         [arr51, 10, '5.3.11'],
         [arr51, 11, '5.3.10'],
-        [arr51, 12, '5.3.12'],
+        [arr51, 12, '5.3.12']
+    ].map(function(el) {
+        el[0].find(sel(el[1], 2)).val(
+            tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
+                generateCondition(el[3]),
+                getSubsidy
+            ).toFixed(2));
+    });
+    [
+        [arr51, 6, '5.3.6.1'],
+        [arr51, 7, '5.3.7'],
+        [arr51, 5, '5.3.9']
+    ].map(function(el) {
+        var value = el[0].find(sel(el[1], 2)).val();
+        el[0].find(sel(el[1], 2)).val(1 * value +
+            1 * tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
+                generateCondition(el[3]),
+                getSubsidy
+            ).toFixed(2));
+    });
 
+    //[targetArray, targetRow, sourceArray, condition, 5.1row]
+    [
         [arr5121, 1, '5.3.1', {
             3: equals('Υφιστάμενο Προσωπικό'),
             7: is25
@@ -315,7 +539,59 @@ var updateSum = function() {
             3: is3
         }]
     ].map(function(el) {
-        el[0].find(sel(el[1], 2)).val(tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'), generateCondition(el[3])));
+        el[0].find(sel(el[1], 2)).val(
+            tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
+                generateCondition(el[3])));
+    });
+};
+//updates percentages of table 5.1
+var updatePer = function() {
+    var $arr = $('[data-alpaca-field-id="5.1"]');
+    var sum = tableSumIf($arr);
+
+    $arr.find('tbody tr:last-child .sum-col input').val(sum);
+
+    $arr.find('tbody tr:not(:last-child)').each(function(i, row) {
+        var budget = $(row).find('.sum-col input').val();
+        var per = sum == 0 ? '' : (100 * budget / sum).toFixed(2);
+
+        $(row).find('.per-col input').val(per);
+    });
+};
+
+var markErrors = function() {
+    var markRow = function(row) {
+        $arr.find($alpaca(row, 'tr')).addClass('error-danger');
+    };
+
+    var $arr = $('[data-alpaca-field-id="5.1"]');
+    var min = [25];
+    var max = [70, 40, 35, 40, 40, 10, 25];
+
+    var errorLines = [];
+
+    min.forEach(function(el, i) {
+        var per = $arr.find(sel(i + 1, 3)).val();
+        if (isNumeric(per) && 1 * per < el) {
+            errorLines.push(i + 1);
+        }
+    });
+    max.forEach(function(el, i) {
+        var per = $arr.find(sel(i + 1, 3)).val();
+        if (isNumeric(per) && 1 * per > el) {
+            errorLines.push(i + 1);
+        }
+    });
+    [8, 12].map(function(el) {
+        var cost = $arr.find(sel(el, 2)).val();
+        if (isNumeric(cost) && 1 * cost > 14000) {
+            errorLines.push(el);
+        }
+    })
+
+    $arr.find('tr').removeClass('error-danger');
+    errorLines.map(function(el) {
+        markRow(el);
     });
 };
 
@@ -482,8 +758,14 @@ $(document).ready(function() {
             });
 
             //automatic sum of tables
+            updateSum();
+            updatePer();
+            updateSubsidy();
             $('[data-alpaca-field-id="5.3"]').on('change', function() {
                 updateSum();
+                updatePer();
+                markErrors();
+                updateSubsidy();
             });
         },
         view: {

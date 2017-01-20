@@ -77,3 +77,6 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
   font-size: large;
   margin-top: 20px;
 }
+.error-danger {
+  background: #d83827!important;
+}

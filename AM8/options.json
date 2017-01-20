@@ -75,7 +75,8 @@
                                 },
                                 "f3E_2": {
                                     "helper": "<a target='_blank' href='http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition_el'>Όπως καθορίζεται από τη δήλωση του επενδυτή, με βάση τους ισχύοντες εθνικούς και ενωσιακούς κανονισμούς</a>",
-                                    "hideNone": true
+                                    "hideNone": true,
+                                    "id": "3E.2"
                                 },
                                 "a3E_3": {
                                     "id": "targetFin",
@@ -285,7 +286,10 @@
                                 "view": "bootstrap-display"
                             },
                             "c": {
-                                "fieldClass": "sum-53, m-col"
+                                "fieldClass": "sum-53, m-col, sum-col"
+                            },
+                            "e": {
+                                "fieldClass": "per-col"
                             }
                         }
                     },
