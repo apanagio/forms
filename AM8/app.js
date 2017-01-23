@@ -351,21 +351,25 @@ var updateSubsidy = function(row) {
             3: is3
         }, 6]
     ].map(function(el) {
+        var requested = el[0].find(sel(el[1], 2)).val();
         el[0].find(sel(el[1], 3)).val(
-            tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
+            numOr0( (tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
                 generateCondition(el[3]),
-                getFinalSubPer(el[4]))
+                getFinalSub(el[4])) * 100 / requested), 0 )
             .toFixed(2));
     });
 
 };
 
-var getFinalSubPer = function(ref) {
+var getFinalSub = function(ref) {
     return function($row) {
-        var per = getSubsidyPer($row);
+        var value = $row.find('.sum-col input').val();
+        var sub = getSubsidy($row);
         var reduce = subsidyReduce(ref);
 
-        return 100 * per * (1 - reduce);
+        var amount = sub * (1 - reduce);
+        
+        return amount;
     };
 };
 
