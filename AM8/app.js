@@ -66,6 +66,44 @@ var createGant = function(chartDiv, $dataDiv) {
     return $.plot("#" + chartDiv, series, options);
 };
 
+//calculates totalbudget, eligibleBudget, percentage
+var financialResults = function(data) {
+    var result = data;
+    var total;
+    var eligible;
+
+    var addTable = function(table, col) {
+        return table.reduce(function(a, b) {
+            return a + numOr0(b[col], 0);
+        }, 0);
+    };
+
+    var addTablePer = function(table, col, per) {
+        return table.reduce(function(a, b) {
+            return a + numOr0(b[col] * 0.01 * b[per], 0);
+        }, 0);
+    };
+
+    total = addTable(data.tab5.a5_1_2.a5_1_2_1, 'budget') +
+        addTable(data.tab5.a5_1_2.a5_1_2_2, 'budget') +
+        addTable(data.tab5.a5_1_2.a5_1_2_3, 'budget');
+        
+    eligible = addTablePer(data.tab5.a5_1_2.a5_1_2_1, 'budget', 'percentage') +
+        addTablePer(data.tab5.a5_1_2.a5_1_2_2, 'budget', 'percentage') +
+        addTablePer(data.tab5.a5_1_2.a5_1_2_3, 'budget', 'percentage');
+
+    return {
+        total: total,
+        eligible: eligible
+    };
+};
+
+var updateTotal = function(result) {
+    $('#total-budget').html(result.total);
+    $('#eligible-budget').html(result.eligible);
+    $('#total-percentage').html((100 * result.eligible / result.total).toFixed(2));
+};
+
 /**
 selects the td and tr elements of a given table
 @param {string} arr - selector for the array (usually a class)
@@ -292,7 +330,7 @@ var updateSubsidy = function(row) {
         [arr5121, 15, '5.3.6.1', {
             3: is25
         }, , 6],
-        [arr5121, 17, '5.3.4', undefined, 8], 
+        [arr5121, 17, '5.3.4', undefined, 8],
 
         [arr5122, 1, '5.3.10', {
             3: is28
@@ -353,9 +391,9 @@ var updateSubsidy = function(row) {
     ].map(function(el) {
         var requested = el[0].find(sel(el[1], 2)).val();
         el[0].find(sel(el[1], 3)).val(
-            numOr0( (tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
+            numOr0((tableSumIf($('[data-alpaca-field-id="' + el[2] + '"]'),
                 generateCondition(el[3]),
-                getFinalSub(el[4])) * 100 / requested), 0 )
+                getFinalSub(el[4])) * 100 / requested), 0)
             .toFixed(2));
     });
 
@@ -368,7 +406,7 @@ var getFinalSub = function(ref) {
         var reduce = subsidyReduce(ref);
 
         var amount = sub * (1 - reduce);
-        
+
         return amount;
     };
 };
@@ -550,6 +588,7 @@ var updateSum = function() {
 };
 //updates percentages of table 5.1
 var updatePer = function() {
+
     var $arr = $('[data-alpaca-field-id="5.1"]');
     var sum = tableSumIf($arr);
 
@@ -648,6 +687,7 @@ $(document).ready(function() {
                 tableSelect(el, [-1], [1]).attr('colspan', 2).addClass('subtitle-sum');
                 tableSelect(el, [-1], [0]).remove();
                 tableSelect(el, [-1]).find('.reference-41b').closest('td').remove();
+                tableSelect(el, [-1]).find('.hide-last').closest('td').remove();
             });
 
             tableSelect('.array52', [1], [0]).attr('colspan', 2).addClass('subtitle');
@@ -753,7 +793,7 @@ $(document).ready(function() {
             //tab4 
 
             //tab5
-
+            $('#result-table').prependTo('[data-alpaca-field-id="a5"]').show();
             updateSelect();
             //refresh 5.3 on change of 4.1b and when adding rows
             $('[data-alpaca-field-id="4.1b"]').on('change', updateSelect);
@@ -765,11 +805,16 @@ $(document).ready(function() {
             updateSum();
             updatePer();
             updateSubsidy();
+            updateTotal(financialResults(control.getValue()));
+
             $('[data-alpaca-field-id="5.3"]').on('change', function() {
                 updateSum();
                 updatePer();
                 markErrors();
                 updateSubsidy();
+
+                updateTotal(financialResults(control.getValue()));
+
             });
         },
         view: {

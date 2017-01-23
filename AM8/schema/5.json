@@ -185,12 +185,12 @@
                                  "title": "ΚΑΤΗΓΟΡΙΑ ΔΑΠΑΝΗΣ ΑΝΑ ΕΝΟΤΗΤΑ ΕΡΓΑΣΙΩΝ",
                                  "readonly": true
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Σύνολο Π/Υ",
                                  "readonly": true
                              },
-                             "d": {
+                             "percentage": {
                                  "type": "number",
                                  "title": "% Επιχορήγησης",
                                  "readonly": true
@@ -243,12 +243,12 @@
                                  "title": "ΚΑΤΗΓΟΡΙΑ ΔΑΠΑΝΗΣ ΑΝΑ ΕΝΟΤΗΤΑ ΕΡΓΑΣΙΩΝ",
                                  "readonly": true
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Σύνολο Π/Υ",
                                  "readonly": true
                              },
-                             "d": {
+                             "percentage": {
                                  "type": "number",
                                  "title": "% Επιχορήγησης",
                                  "readonly": true
@@ -335,11 +335,11 @@
                                  "title": "ΚΑΤΗΓΟΡΙΑ ΔΑΠΑΝΗΣ ΑΝΑ ΕΝΟΤΗΤΑ ΕΡΓΑΣΙΩΝ",
                                  "readonly": true
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Σύνολο Π/Υ"
                              },
-                             "d": {
+                             "percentage": {
                                  "type": "number",
                                  "title": "% Επιχορήγησης",
                                  "readonly": true

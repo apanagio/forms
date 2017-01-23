@@ -80,3 +80,8 @@ button[data-alpaca-array-actionbar-action="up"], button[data-alpaca-array-action
 .error-danger {
   background: #d83827!important;
 }
+#result-table {
+  display: none;
+  background: #71b371;
+  background: rgba(0, 128, 0, 0.18);
+}

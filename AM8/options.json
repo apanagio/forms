@@ -272,6 +272,7 @@
         },
         "tab5": {
             "lazyLoading": true,
+            "id": "a5",
             "fields": {
                 "a5_1": {
                     "type": "table",
@@ -633,7 +634,7 @@
                                     "d": {
                                         "hideNone": true,
                                         "type": "select",
-                                        "fieldClass": "reference-41b" 
+                                        "fieldClass": "hide-last" 
                                     },
                                     "h": {
                                         "hideNone": true,
