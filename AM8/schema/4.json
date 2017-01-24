@@ -2,29 +2,30 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
 	"title": "4. ΑΝΑΛΥΤΙΚΑ ΣΤΟΙΧΕΙΑ ΤΟΥ ΕΡΓΟΥ ΩΣ ΠΡΟΣ ΤΟ ΦΥΣΙΚΟ ΑΝΤΙΚΕΙΜΕΝΟ  & ΤΙΣ ΕΠΙΠΤΩΣΕΙΣ",
+	"required": ["f4a", "f4b", "f4c", "a4_1b", "a4_2", "a4_3"],
 	"properties": {
-		"textfield4a": {
+		"f4a": {
 			"type": "string",
 			"title": "4α Περιγραφή  Επενδυτικού Σχεδίου  (έως 1000 χαρακτήρες)"
 		},
-		"textfield4b": {
+		"f4b": {
 			"type": "string",
 			"title": "4β Αντικείμενο του Επενδυτικού Σχεδίου – Αναμενόμενα Αποτελέσματα"
 		},
-		"textfield4c": {
+		"f4c": {
 			"type": "string",
 			"title": "4γ Ωριμότητα Επενδυτικού Σχεδίου"
 		},
-		"fields4.1a": {
+		"a4_1a": {
 			"type": "object",
 			"title": "4.1α Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
 			"dependencies": {
-				"array4.1a2": [
+				"a4_1a2": [
 					"fieldBool1"
 				]
 			},
 			"properties": {
-				"array4.1a": {
+				"a4_1a": {
 					"type": "array",
 					"default": [{}],
 					"items": {
@@ -55,9 +56,9 @@
 					"type": "boolean",
 					"title": "Δήλωση επιπλέον ΚΑΔ"
 				},
-				"array4.1a2": {
+				"a4_1a2": {
 					"type": "array",
-					"title": "4.1α Επιπλέον Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
+					"title": "4.1α2 Επιπλέον Κ.Α.Δ. ΕΠΕΝΔΥΤΙΚΟΥ ΣΧΕΔΙΟΥ (NACE Level Group)",
 					"default": [{}],
 					"items": {
 						"type": "object",
@@ -98,16 +99,17 @@
 				"dependencies": {
 					"free": ["textfield2"]
 				},
+				"required": ["id", "title", "category", "start", "end", "textfield3", "responsible"],
 				"properties": {
-					"textfield0": {
+					"id": {
 						"type": "integer",
 						"title": "Α/Α."
 					},
-					"textfield1": {
+					"title": {
 						"type": "string",
 						"title": "Τίτλος Ενότητας Εργασίας"
 					},
-					"textfield2": {
+					"category": {
 						"type": "string",
 						"title": "Κατηγορία Δραστηριότητας",
 						"enum": ["1", "2", "3", "4", "5"]
@@ -117,16 +119,16 @@
 						"title": "Ελεύθερη Διάχυση +15%",
 						"default": true
 					},
-					"textfield3": {
+					"responsible": {
 						"type": "string",
 						"title": "Υπεύθυνος Ε.Ε. (Φορέας)"
 					},
-					"textfield4": {
+					"budget": {
 						"type": "number",
 						"title": "Προϋπολογισμός (€)",
 						"readonly": true
 					},
-					"textfield5": {
+					"public": {
 						"type": "number",
 						"title": "Δημόσια Δαπάνη (€)",
 						"readonly": true
@@ -137,13 +139,13 @@
 						"minimum": 0,
 						"maximum": 1500
 					},
-					"textfield7": {
+					"start": {
 						"type": "integer",
 						"title": "Έναρξη (μήνας)",
 						"minimum": 0,
 						"maximum": 50
 					},
-					"textfield8": {
+					"end": {
 						"type": "integer",
 						"title": "Τέλος (μήνας)",
 						"minimum": 0,
@@ -156,35 +158,36 @@
 			"type": "string",
 			"title": "4.1β.1 ΤΕΚΜΗΡΙΩΣΗ εαν έχετε επιλέξει \"Ελεύθερη Διάχυση\""
 		},
-		"fields4.2": {
+		"a4_2": {
 			"type": "array",
 			"title": "4.2 ΠΙΝΑΚΑΣ ΠΑΡΑΔΟΤΕΩΝ: ΣΥΝΟΛΙΚΗ ΠΑΡΟΥΣΙΑΣΗ",
 			"default": [{}],
 			"items": {
 				"type": "object",
+				"required": ["a", "b", "c", "d", "e", "f"],
 				"title": "",
 				"properties": {
-					"textfield1": {
+					"a": {
 						"type": "string",
 						"title": "Α/Α"
 					},
-					"textfield2": {
+					"b": {
 						"type": "integer",
 						"title": "ΕΕ"
 					},
-					"textfield3": {
+					"c": {
 						"type": "string",
 						"title": "Τίτλος Παραδοτέου"
 					},
-					"textfield4": {
+					"d": {
 						"type": "string",
 						"title": "Είδος Παραδοτέου"
 					},
-					"textfield5": {
+					"e": {
 						"type": "string",
 						"title": "Υπεύθυνος Φορέας (συντομογραφία)"
 					},
-					"textfield6": {
+					"f": {
 						"type": "integer",
 						"title": "Παράδοση (μήνας)",
 						"minimum": 0,
@@ -193,27 +196,28 @@
 				}
 			}
 		},
-		"fields4.3": {
+		"a4_3": {
 			"type": "array",
 			"title": "4.3 ΣΥΝΘΕΣΗ ΚΥΡΙΑΣ ΕΡΕΥΝΗΤΙΚΗΣ ΟΜΑΔΑΣ  ",
 			"default": [{}],
 			"items": {
 				"type": "object",
 				"title": "",
+				"required": ["a", "b", "c", "d"],
 				"properties": {
-					"textfield1": {
+					"a": {
 						"type": "integer",
 						"title": "Α/Α"
 					},
-					"textfield2": {
+					"b": {
 						"type": "string",
 						"title": "Α/Α ΦΟΡΕΑ & ΣΥΝΤΜΓΡΦΙΑ "
 					},
-					"textfield3": {
+					"c": {
 						"type": "string",
 						"title": "Ονοματεπώνυμο"
 					},
-					"textfield4": {
+					"d": {
 						"type": "string",
 						"title": "Ειδικότητα"
 					}

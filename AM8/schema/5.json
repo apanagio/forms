@@ -363,7 +363,7 @@
                          "c": "---",
                          "d": "---",
                          "e": "---",
-                         "f": null,
+                         "budget": null,
                          "g": "---"
                      }],
                      "title": "5.3.1 Δαπάνες προσωπικού (άρθρο 25, EK 651/2014 - Άρθρο 3)",
@@ -393,7 +393,7 @@
                                  "title": "ΚΑΤΗΓΟΡΙΑ ΠΡΟΣΩΠΙΚΟΥ**",
                                  "enum": ["Έμπειρος Ερευνητής", "Ερευνητής", "τεχνικό προσωπικό", "βοηθητικό προσωπικό"]
                              },
-                             "f": {
+                             "budget": {
                                  "type": "number",
                                  "title": "ΣΥΝΟΛΙΚΗ ΔΑΠΑΝΗ (€) ***"
                              },
@@ -401,7 +401,7 @@
                                  "type": "string",
                                  "title": "Αριθμός Α/Μ"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -443,11 +443,11 @@
                                  "type": "number",
                                  "title": "Διάρκεια απόσβεσης*"
                              },
-                             "g": {
-                                 "type": "string",
+                             "budget": {
+                                 "type": "number",
                                  "title": "Αξία απόσβεσης** (€)"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -477,11 +477,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή & Τεκμηρίωση"
                              },
-                             "d": {
-                                 "type": "string",
+                             "budget": {
+                                 "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -512,11 +512,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή & Τεκμηρίωση"
                              },
-                             "d": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -546,11 +546,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή & Τεκμηρίωση"
                              },
-                             "d": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -575,11 +575,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -604,11 +604,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -633,11 +633,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή & αιτιολογία*"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Κόστος Αγοράς (€)"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -662,11 +662,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -691,11 +691,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -720,11 +720,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -749,7 +749,7 @@
                                  "type": "string",
                                  "title": "Περιγραφή"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
@@ -758,7 +758,7 @@
                                  "title": "Εμβέλεια",
                                  "enum": ["Εσωτερικό", "Εξωτερικό"]
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }
@@ -783,11 +783,11 @@
                                  "type": "string",
                                  "title": "Περιγραφή"
                              },
-                             "c": {
+                             "budget": {
                                  "type": "number",
                                  "title": "Δαπάνη"
                              },
-                             "h": {
+                             "section": {
                                  "type": "string",
                                  "title": "Ενότητα Εργασίας (πίνακας 4.1β)"
                              }

@@ -6,6 +6,12 @@ var equals = function(i) {
     };
 };
 
+var id = function(i) {
+    return function() {
+        return i;
+    }
+}
+
 var isNumeric = function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 };
@@ -104,6 +110,101 @@ var updateTotal = function(result) {
     $('#total-percentage').html((numOr0(100 * result.eligible / result.total, 0)).toFixed(2));
 };
 
+//calculates total and subsideized budget per section
+//returns array [{id: id, total: totalBudget, public: publicBudget}]
+var sectionBudget = function(data) {
+    var getCategory = function(id) {
+        var cat = data.tab4.a4_1b
+            .filter(function(el) {
+                return el.id == id;
+            });
+
+        var ret = cat.length > 0 ? cat[0].category : undefined;
+        return ret;
+    };
+
+    var getPer = function(arr, row) {
+        var hash = {
+            'a5_3_1': function() {
+                return {
+                    "Υφιστάμενο Προσωπικό": 1,
+                    "Νέο Προσωπικό": 2,
+                    "Δελτίο Παροχής": 3,
+                }[data.tab5.a5_3[arr][row].d];
+            },
+            'a5_3_2': function() {
+                return {
+                    "Εξοπλισμός": 5,
+                    "Κτίριο": 6
+                }[data.tab5.a5_3[arr][row].c];
+            },
+            'a5_3_3': id(8),
+            'a5_3_4': id(17),
+            'a5_3_5': id(9),
+            'a5_3_6': id(14),
+            'a5_3_6_1': id(15),
+            'a5_3_7': id(12),
+            'a5_3_8': id(13),
+            'a5_3_9': id(10),
+            'a5_3_10': id(1),
+            'a5_3_11': function() {
+                return {
+                    "Εξωτερικό": 4,
+                    "Εσωτερικό": 3
+                }[data.tab5.a5_3[arr][row].d];
+            },
+            'a5_3_12': id(6)
+        };
+        var cat = getCategory(data.tab5.a5_3[arr][row].section);
+        if (cat === undefined) {
+            return 0;
+        }
+
+        var tables = data.tab5.a5_1_2;
+        var refArray = [tables.a5_1_2_1, tables.a5_1_2_1, tables.a5_1_2_2, tables.a5_1_2_3, tables.a5_1_2_1][cat - 1];
+
+        return 0.01 * refArray[hash[arr]()].percentage;
+    };
+
+    var ret = {};
+
+    $.each(data.tab5.a5_3, function(i, el) {
+        el.forEach(function(item, index, arr) {
+            if (index === arr.length - 1 || item.section === undefined) {
+                return;
+            }
+            if (ret[item.section] === undefined) {
+                ret[item.section] = {
+                    budget: item.budget,
+                    pub: item.budget * getPer(i, index)
+                };
+            } else {
+                ret[item.section].budget += item.budget;
+                ret[item.section].pub += item.budget * getPer(i, index);
+            }
+        });
+    });
+    return ret;
+};
+
+var updateSectionBudget = function (data) {
+    var d = sectionBudget(data);
+    var $arr = $('[data-alpaca-field-id="4.1b"]');
+    
+    $.each(d, function (i, el) {
+        $arr.find('tbody tr')
+        .toArray()
+        .filter(function (row) {
+            return $(row).find('.row-id input').val() == i;
+        })
+        .map(function (row) {
+            $(row).find('.budget-col input').val(el.budget.toFixed(2));
+            $(row).find('.public-col input').val(el.pub.toFixed(2));
+        });
+    });
+};
+
+
 /**
 selects the td and tr elements of a given table
 @param {string} arr - selector for the array (usually a class)
@@ -140,7 +241,7 @@ var tableSelect = function(arr, rows, cols) {
 //calculate options for arrays 5.3
 //returns declared worckpackages
 var getWorkPackages = function(article28) {
-    'use strict'
+    'use strict';
     var $arr = $('[data-alpaca-field-id="4.1b"] tbody tr').toArray();
     return $arr.map(function(el) {
         return {
@@ -148,9 +249,9 @@ var getWorkPackages = function(article28) {
             option: $(el).find('td[data-alpaca-container-item-index="2"] :input').val(),
             text: $(el).find('td[data-alpaca-container-item-index="1"] input').val(),
             free: $(el).find('td[data-alpaca-container-item-index="3"] :checkbox').prop('checked')
-        }
+        };
     });
-}
+};
 
 var updateSelect = function() {
     var createOptions = function(i, arr) {
@@ -329,7 +430,7 @@ var updateSubsidy = function(row) {
         }, 6],
         [arr5121, 15, '5.3.6.1', {
             3: is25
-        }, , 6],
+        }, 6],
         [arr5121, 17, '5.3.4', undefined, 8],
 
         [arr5122, 1, '5.3.10', {
@@ -425,7 +526,7 @@ var subsidyReduce = function(row) {
         reduce = 0.01 * Math.max(1 * per - max[row - 1], 0);
     }
     else if (row == 8) {
-        var value = $row.find('.sum-col').val();
+        var value = $row.find('.sum-col input').val();
         reduce = numOr0(Math.max((value - 14000) / value, 0));
     }
     else {
@@ -613,10 +714,10 @@ var markErrors = function() {
 
     var errorLines = [];
 
-    var sum25 = tableSelect('[data-alpaca-field-id="5.1"]', [1, 2, 3, 4, 5, 6, 7], [2])
+    var sum25 = tableSelect('[data-alpaca-field-id="5.1"]', [1, 2, 3, 4, 5, 6, 7, 8], [2])
         .find('input')
         .toArray()
-        .reduce(function (acc, el) {
+        .reduce(function(acc, el) {
             return acc + numOr0(el.value, 0);
         }, 0);
 
@@ -638,7 +739,7 @@ var markErrors = function() {
         if (isNumeric(cost) && 1 * cost > 14000) {
             errorLines.push(el);
         }
-    })
+    });
 
     $arr.find('tr').removeClass('error-danger');
     errorLines.map(function(el) {
@@ -822,6 +923,8 @@ $(document).ready(function() {
                 updateSubsidy();
 
                 updateTotal(financialResults(control.getValue()));
+                updateSectionBudget(control.getValue());
+
 
             });
         },

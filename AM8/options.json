@@ -195,21 +195,21 @@
             "fieldClass": "top-level-object",
             "helpers": ["Για την πληρέστερη αξιολόγηση της πρότασης, δύναται να επισυναφθεί στην αίτηση ηλεκτρονικά, αρχείο (έως 10 σελίδες Α4), που θα περιλαμβάνει πρόσθετες επεξηγηματικές πληροφορίες των ανωτέρω."],
             "fields": {
-                "textfield4a": {
+                "f4a": {
                     "type": "textarea",
                     "helpers": ["Περιγράφεται το στάδιο ανάπτυξης και προστιθέμενης αξίας του επενδυτικού σχεδίου, καθώς και η κατανόηση ανταγωνιστικών λύσεων. Δύναται να περιληφθεί και σύγκριση με «ιδεατές», γνωστές εμπορικές λύσεις", "Όριο στα mb (πχ 5 για κάθε εντυπο) μέχρι 25 στο σύνολο της πράξης"]
                 },
-                "textfield4b": {
+                "f4b": {
                     "type": "textarea",
                     "helpers": ["Περιγράφονται:<br>Η στόχευση νέων ευκαιριών της αγοράς,</br>Η δυνατότητα ενίσχυσης της ανάπτυξης της εταιρίας</br>Η πειστικότητα επιδόσεων πρότασης και «value for money»</br>Η κατανόηση κινδύνων κι ευκαιριών για την επιτυχή εισαγωγή της καινοτομίας στην αγορά, από τεχνικής κι από εμπορικής απόψεως</br>Η ύπαρξη ζήτησης/αγοράς για την καινοτομία</br>Περιγραφή Παραδοτέων"]
                 },
-                "textfield4c": {
+                "f4c": {
                     "type": "textarea",
                     "helpers": ["Περιγράφονται:<br>Οι άδειες που απαιτούνται για την έναρξη της υλοποίησης του επιχειρηματικού σχεδίου<br>Η ρεαλιστικότητα του χρονοδιαγράμματος<br>Η ρεαλιστικότητα του προϋπολογισμού<br>Η καταλληλότητα του οργανωτικού σχήματος, εάν δηλαδή η πρόταση αποδεικνύει ότι το έργο έχει τους σχετικούς πόρους (προσωπικούς, εγκαταστάσεις, δίκτυα, κλπ.) για την ανάπτυξη των δραστηριοτήτων του και τους ρόλους που θα διαδραματίσουν οι μετέχοντες<br>Η επάρκεια του δυναμικού της επιχείρησης για την υλοποίηση της πρότασης"]
                 },
-                "fields4.1a": {
+                "a4_1a": {
                     "fields": {
-                        "array4.1a": {
+                        "a4_1a": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin, kad-table, kad-table-limit",
@@ -224,7 +224,7 @@
                                 }
                             }
                         },
-                        "array4.1a2": {
+                        "a4_1a2": {
                             "type": "table",
                             "view": "bootstrap-edit",
                             "fieldClass": "zero-margin"
@@ -242,28 +242,37 @@
                     "fieldClass": "zero-margin",
                     "items": {
                         "fields": {
-                            "textfield2": {
+                            "id": {
+                                "fieldClass": "row-id"
+                            },
+                            "budget": {
+                                "fieldClass": "budget-col, m-col"
+                            },
+                            "public": {
+                                "fieldClass": "public-col, m-col"
+                            },
+                            "category": {
                                 "hideNone": true,
                                 "type": "select",
                                 "optionLabels": ["δ) Βιομηχανική / εφαρμοσμένη έρευνα (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 50%)", "γ) Πειραματική ανάπτυξη (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 25%)", "β) Καινοτομία για ΜΜΕ (Ε.Κ 651/2014 Άρθρο 28 - Μόνο ΜΜΕ - Ενίσχυση 50%)", "α) Πειραματική ανάπτυξη - Ε.Κ 1407/2013 Άρθρο 3", "ε) Μελέτη Σκοπιμότητας - Ε.Κ 651/2014 Άρθρο 25"]
                             },
                             "free": {
                                 "dependencies": {
-                                    "textfield2": ["1", "2"]
+                                    "category": ["1", "2"]
                                 }
                             }
                         }
                     }
                 },
                 "reason": {
-                    "type": "textarea"   
+                    "type": "textarea"
                 },
-                "fields4.2": {
+                "a4_2": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin"
                 },
-                "fields4.3": {
+                "a4_3": {
                     "type": "table",
                     "view": "bootstrap-edit",
                     "fieldClass": "zero-margin"
@@ -411,12 +420,12 @@
                                         "hideNone": true,
                                         "type": "select"
                                     },
-                                    "f": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -438,12 +447,12 @@
                                     "e": {
                                         "fieldClass": "sum-col-extra"
                                     },
-                                    "g": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -457,13 +466,13 @@
                             "items": {
                                 "fields": {
 
-                                    "d": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
 
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -476,12 +485,12 @@
                             "fieldClass": "zero-margin, dynamic-table, array5314, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
                                 "fields": {
-                                    "d": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-5"
                                     }
                                 }
@@ -495,12 +504,12 @@
                             "items": {
                                 "fields": {
 
-                                    "d": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -514,12 +523,12 @@
                             "helpers": ["Αφορούν δαπάνες απαραίτητες για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -533,12 +542,12 @@
                             "helpers": ["Αφορούν δαπάνες μετακινήσεων απαραίτητων για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -552,12 +561,12 @@
                             "helpers": ["Αφορούν απαραίτητα υλικά ή εξαρτήματα για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -572,12 +581,12 @@
                             "helpers": ["(*) Αφορούν δαπάνες αναλωσίμων υλικών απαραίτητων για την εκτέλεση του έργου"],
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -591,12 +600,12 @@
                             "fieldClass": "zero-margin, dynamic-table, array5319, auto-sum, no-remove-button, show-with, show-with-1, show-with-2",
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-1, ref-2, ref-4"
                                     }
                                 }
@@ -610,12 +619,12 @@
                             "fieldClass": "zero-margin, dynamic-table, array53110, auto-sum, no-remove-button, show-with, show-with-3",
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-3"
                                     }
                                 }
@@ -628,17 +637,17 @@
                             "fieldClass": "zero-margin, dynamic-table, array53111, auto-sum, no-remove-button, show-with, show-with-3",
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
                                     "d": {
                                         "hideNone": true,
                                         "type": "select",
-                                        "fieldClass": "hide-last" 
+                                        "fieldClass": "hide-last"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-3"
                                     }
                                 }
@@ -651,12 +660,12 @@
                             "fieldClass": "zero-margin, dynamic-table, array53112, auto-sum, no-remove-button, show-with, show-with-3",
                             "items": {
                                 "fields": {
-                                    "c": {
+                                    "budget": {
                                         "fieldClass": "sum-col"
                                     },
-                                    "h": {
+                                    "section": {
                                         "hideNone": true,
-                                        "type": "select", 
+                                        "type": "select",
                                         "fieldClass": "reference-41b, ref-3"
                                     }
                                 }
