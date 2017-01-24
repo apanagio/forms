@@ -87,7 +87,7 @@ var financialResults = function(data) {
     total = addTable(data.tab5.a5_1_2.a5_1_2_1, 'budget') +
         addTable(data.tab5.a5_1_2.a5_1_2_2, 'budget') +
         addTable(data.tab5.a5_1_2.a5_1_2_3, 'budget');
-        
+
     eligible = addTablePer(data.tab5.a5_1_2.a5_1_2_1, 'budget', 'percentage') +
         addTablePer(data.tab5.a5_1_2.a5_1_2_2, 'budget', 'percentage') +
         addTablePer(data.tab5.a5_1_2.a5_1_2_3, 'budget', 'percentage');
@@ -99,9 +99,9 @@ var financialResults = function(data) {
 };
 
 var updateTotal = function(result) {
-    $('#total-budget').html(result.total);
-    $('#eligible-budget').html(result.eligible);
-    $('#total-percentage').html((100 * result.eligible / result.total).toFixed(2));
+    $('#total-budget').html(numOr0(result.total, 0).toFixed(2));
+    $('#eligible-budget').html(numOr0(result.eligible, 0).toFixed(2));
+    $('#total-percentage').html((numOr0(100 * result.eligible / result.total, 0)).toFixed(2));
 };
 
 /**
@@ -613,7 +613,15 @@ var markErrors = function() {
 
     var errorLines = [];
 
-    min.forEach(function(el, i) {
+    var sum25 = tableSelect('[data-alpaca-field-id="5.1"]', [1, 2, 3, 4, 5, 6, 7], [2])
+        .find('input')
+        .toArray()
+        .reduce(function (acc, el) {
+            return acc + numOr0(el.value, 0);
+        }, 0);
+
+
+    sum25 > 0 && min.forEach(function(el, i) {
         var per = $arr.find(sel(i + 1, 3)).val();
         if (isNumeric(per) && 1 * per < el) {
             errorLines.push(i + 1);
