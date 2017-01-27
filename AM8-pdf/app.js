@@ -964,56 +964,56 @@ $(document).ready(function() {
         },
         view: {
             parent: "bootstrap-edit-horizontal",
-            wizard: {
-                title: "Welcome to the Wizard",
-                description: "Please fill things in as you wish",
-                validation: false,
-                markAllStepsVisited: true,
-                hideSubmitButton: true,
-                bindings: {
-                    "tab1": 1,
-                    "tab2": 2,
-                    "tab3": 3,
-                    "tab4": 4,
-                    "tab5": 5,
-                    "tab6": 6,
-                    "tab7": 7,
-                    "tab8": 8,
-                    "tab9": 9,
-                    "tab10": 10
-                },
-                steps: [{
-                    title: "1",
-                    description: "Γενικά"
-                }, {
-                    title: "2",
-                    description: "Παρουσίαση"
-                }, {
-                    title: "3",
-                    description: "Δικαιούχος"
-                }, {
-                    title: "4",
-                    description: "Αναλυτικά",
-                }, {
-                    title: "5",
-                    description: "Οικονομικά"
-                }, {
-                    title: "6",
-                    description: "Ενσωμάτωση"
-                }, {
-                    title: "7",
-                    description: "Άδειες"
-                }, {
-                    title: "8",
-                    description: "Χρονοδιάγραμμα"
-                }, {
-                    title: "9",
-                    description: "Δείκτες"
-                }, {
-                    title: "10",
-                    description: "Δήλωση"
-                }]
-            }
+            // wizard: {
+            //     title: "Welcome to the Wizard",
+            //     description: "Please fill things in as you wish",
+            //     validation: false,
+            //     markAllStepsVisited: true,
+            //     hideSubmitButton: true,
+            //     bindings: {
+            //         "tab1": 1,
+            //         "tab2": 2,
+            //         "tab3": 3,
+            //         "tab4": 4,
+            //         "tab5": 5,
+            //         "tab6": 6,
+            //         "tab7": 7,
+            //         "tab8": 8,
+            //         "tab9": 9,
+            //         "tab10": 10
+            //     },
+            //     steps: [{
+            //         title: "1",
+            //         description: "Γενικά"
+            //     }, {
+            //         title: "2",
+            //         description: "Παρουσίαση"
+            //     }, {
+            //         title: "3",
+            //         description: "Δικαιούχος"
+            //     }, {
+            //         title: "4",
+            //         description: "Αναλυτικά",
+            //     }, {
+            //         title: "5",
+            //         description: "Οικονομικά"
+            //     }, {
+            //         title: "6",
+            //         description: "Ενσωμάτωση"
+            //     }, {
+            //         title: "7",
+            //         description: "Άδειες"
+            //     }, {
+            //         title: "8",
+            //         description: "Χρονοδιάγραμμα"
+            //     }, {
+            //         title: "9",
+            //         description: "Δείκτες"
+            //     }, {
+            //         title: "10",
+            //         description: "Δήλωση"
+            //     }]
+            // }
         }
     });
 
