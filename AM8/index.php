@@ -77,9 +77,9 @@
 
 
         <div class="row">
-            <form id="print-pdf" method="post" action="https://forms-apanagio.c9users.io/print/">
+            <form id="print-pdf" method="post" action="http://www.amifisf.gr:8000/forms/print/">
                 <input type="hidden" id="jsonresult" name="data" value="<?php echo $serverData; ?>">
-                <input type="hidden" id="print-pdf-url" name="url" value="https://forms-apanagio.c9users.io/AM8-pdf/">
+                <input type="hidden" id="print-pdf-url" name="url" value="http://www.amifisf.gr:8000/forms/AM8-pdf/">
                 <button type="submit" id="download-btn" class="download-btn btn btn-primary btn-lg col-md-3">
                     <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Download pdf
                 </button>
