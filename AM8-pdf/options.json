@@ -7,11 +7,9 @@
                 "f1_1": {
                     "type": "textarea"
                 },
-                "f1_2": {
-                    "type": "textarea"
-                },
+                "f1_2": {},
                 "f1_3": {
-                    "type": "textarea"
+                    "type": "text"
                 }
             }
         },
@@ -37,7 +35,11 @@
                                     "fields": {
                                         "a3A_1_1": {
                                             "collapsible": true,
-                                            "fields": {}
+                                            "fields": {
+                                                "f8": {
+                                                    "type": "select"
+                                                }
+                                            }
                                         },
                                         "a3A_2": {
                                             "collapsible": true
@@ -262,7 +264,16 @@
                         "a4_1a2": {
                             "type": "table",
                             "view": "bootstrap-display",
-                            "fieldClass": "zero-margin"
+                            "fieldClass": "zero-margin",
+                            "items": {
+                                "fields": {
+                                    "textfield1": {
+                                        "type": "select",
+                                        "hideNone": false,
+                                        "fieldClass": "kad-column"
+                                    }
+                                }
+                            }
                         },
                         "textfield3": {
                             "type": "textarea",
@@ -289,7 +300,7 @@
                             "category": {
                                 "hideNone": true,
                                 "type": "select",
-                                "optionLabels": ["δ) Βιομηχανική / εφαρμοσμένη έρευνα (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 50%)", "γ) Πειραματική ανάπτυξη (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 25%)", "β) Καινοτομία για ΜΜΕ (Ε.Κ 651/2014 Άρθρο 28 - Μόνο ΜΜΕ - Ενίσχυση 50%)", "α) Πειραματική ανάπτυξη - Ε.Κ 1407/2013 Άρθρο 3", "ε) Μελέτη Σκοπιμότητας - Ε.Κ 651/2014 Άρθρο 25"]
+                                "optionLabels": ["δ) Βιομηχανική / εφαρμοσμένη έρευνα (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 50%)", "γ) Πειραματική ανάπτυξη (Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 25%)", "β) Καινοτομία για ΜΜΕ (Ε.Κ 651/2014 Άρθρο 28 - Μόνο ΜΜΕ - Ενίσχυση 50%)", "α) Πειραματική ανάπτυξη - Ε.Κ 1407/2013 Άρθρο 3 - Ενίσχυση 50%", "ε) Μελέτη Σκοπιμότητας - Ε.Κ 651/2014 Άρθρο 25 - Ενίσχυση 50%"]
                             },
                             "free": {
                                 "dependencies": {
@@ -816,6 +827,9 @@
                     "removeDefaultNone": true,
                     "vertical": true,
                     "sort": false
+                },
+                "f7_2": {
+                    "type": "textarea"
                 }
             }
         },
@@ -833,27 +847,7 @@
                 }
             }
         },
-        "tab9": {
-            "lazyLoading": true,
-            "fields": {
-                "a9_1": {
-                    "fields": {
-                        "f9_1_1_1": {
-                            "type": "textarea"
-                        },
-                        "f9_1_1_2": {
-                            "type": "textarea"
-                        },
-                        "f9_1_1_3": {
-                            "type": "textarea"
-                        },
-                        "f9_1_1_4": {
-                            "type": "textarea"
-                        }
-                    }
-                }
-            }
-        },
+        "tab9": {},
         "tab10": {}
     }
 }
