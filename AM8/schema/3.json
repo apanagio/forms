@@ -29,7 +29,8 @@
                                         },
                                         "f3": {
                                             "title": "3Α.1.1.3 ΗΜΕΡΟΜΗΝΙΑ ΙΔΡΥΣΗΣ",
-                                            "type": "string"
+                                            "type": "number",
+                                            "minimum": 1900
                                         },
                                         "f4": {
                                             "title": "3Α.1.1.4 ΝΟΜΙΚΗ ΜΟΡΦΗ",
@@ -111,7 +112,6 @@
                         "f1": ["otherPlace"],
                         "a3B_2": ["otherPlace"]
                     },
-                    "required": ["f1"],
                     "properties": {
                         "otherPlace": {
                             "title": "Διαφορετικός από τη διεύθυνση έδρας (3Α.2)",
@@ -267,7 +267,8 @@
                                     },
                                     "f3": {
                                         "title": "ΕΙΔΟΣ ΠΡΟΣΩΠΟΥ",
-                                        "type": "string"
+                                        "type": "string", 
+                                        "enum": ["νομικό", "φυσικό"]
                                     },
                                     "f4": {
                                         "title": "ΜΕΤΟΧΟΣ ΕΚΤΟΣ ΕΛΛΑΔΟΣ",
@@ -433,7 +434,8 @@
                         },
                         "f3E_4": {
                             "title": "3Ε.4 ΠΗΓΕΣ ΚΑΛΥΨΗΣ ΙΔΙΑΣ ΣΥΜΜΕΤΟΧΗΣ",
-                            "type": "string"
+                            "type": "string",
+                            "maxLength": 1000
                         },
                         "aE_5": {
                             "title": "3Ε.5 ΑΝΑΚΤΗΣΗ ΠΡΟΗΓΟΥΜΕΝΗΣ ΕΝΙΣΧΥΣΗΣ",
@@ -689,10 +691,6 @@
                         "properties": {
                             "$ref": "#/definitions/person/properties"
                         }
-                    },
-                    "textfield11": {
-                        "type": "string",
-                        "title": "3.2.2 ΠΗΓΕΣ ΚΑΛΥΨΗΣ ΙΔΙΑΣ ΣΥΜΜΕΤΟΧΗΣ"
                     }
                 },
                 "dependencies": {

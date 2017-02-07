@@ -74,7 +74,8 @@
 							},
 							"textfield2": {
 								"type": "string",
-								"title": "Κωδικός"
+								"title": "Κωδικός", 
+								"readonly": true
 							},
 							"textfield3": {
 								"type": "string",
@@ -99,7 +100,7 @@
 				"dependencies": {
 					"free": ["category"]
 				},
-				"required": ["id", "title", "start", "end", "textfield3", "responsible", "category"],
+				"required": ["id", "title", "start", "end", "responsible", "category"],
 				"properties": {
 					"id": {
 						"type": "integer",

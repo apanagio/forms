@@ -28,6 +28,32 @@
     <script src="../deps/flot/jquery.flot.min.js"></script>
     <script src="../deps/flot/jquery.flot.stack.min.js"></script>
 
+    <?php
+        $schema = file_get_contents('schema/compiledSchema.json');
+        if ($schema === false) {
+            echo 'Cannot read schema';
+            die;
+        }
+        $schema = preg_replace('/\t+/', ' ', $schema);
+
+        $readonly = 'false';
+        $serverData = '{}';
+    ?>
+    <script type="text/javascript">
+        window._serverData = '<?php echo $serverData; ?>';
+        window._submissionSchema = <?php echo $schema; ?>;
+        window._Readonly = undefined;
+        if (<?php echo $readonly; ?> === "True") {
+            window._Readonly = "True";
+       }
+        $(document).ready(function () {
+            $('#form1').on('change', ':input', function () {
+                $('#jsonresult').val((JSON.stringify($("#form1").alpaca('get').getValue())));
+            });
+        });
+    </script>
+
+
     <script type="text/javascript" src="app.js"></script>
     <link href="style.css" rel="stylesheet">
 
@@ -50,11 +76,14 @@
         </div>
 
 
-
         <div class="row">
-            <a id="download-btn" class="download-btn btn btn-primary btn-lg col-md-3">
-                <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Download
-            </a>
+            <form id="print-pdf" method="post" action="https://forms-apanagio.c9users.io/print/">
+                <input type="hidden" id="jsonresult" name="data" value="<?php echo $serverData; ?>">
+                <input type="hidden" id="print-pdf-url" name="url" value="https://forms-apanagio.c9users.io/AM8-pdf/">
+                <button type="submit" id="download-btn" class="download-btn btn btn-primary btn-lg col-md-3">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Download pdf
+                </button>
+            </form>
             <div class="col-md-8">
                 <a href="advanced-download" id="advanced-download-link" data-toggle="modal" data-target="#advanced-download" class="download-btn btn btn-danger btn-sm">
                     <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Πρόβλημα στο κατέβασμα

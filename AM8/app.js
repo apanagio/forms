@@ -170,7 +170,7 @@ var sectionBudget = function(data) {
 
     $.each(data.tab5.a5_3, function(i, el) {
         el.forEach(function(item, index, arr) {
-            if (index === arr.length - 1 || item.section === undefined) {
+            if (index === arr.length - 1 || item.section === undefined || !isNumeric(item.budget)) {
                 return;
             }
             if (ret[item.section] === undefined) {
@@ -254,7 +254,7 @@ var getWorkPackages = function(article28) {
     });
 };
 
-var updateSelect = function() {
+var updateSelect = function(data) {
     var createOptions = function(i, arr) {
         return arr.filter(function(el) {
                 return el.option == i;
@@ -266,13 +266,23 @@ var updateSelect = function() {
 
     var options = getWorkPackages();
 
-    $('.reference-41b').each(function(i, element) {
-        var value = $(this).find('select').val();
-        $(this).find('select').empty();
+    $('[data-alpaca-field-id="5.3"] .show-with').each(function(i, element) {
+        var which = $(element).attr('data-alpaca-field-id').replace(/\./g, '_');
+        var values = data && data.tab5 && data.tab5.a5_3 && data.tab5.a5_3['a' + which];
+
+        $(element).find('.reference-41b select').empty();
         [1, 2, 3, 4, 5].map(function(el) {
-            $(element).filter('.ref-' + el).find('select').append(createOptions(el, options));
+            $(element).find('.ref-' + el).find('select').append(createOptions(el, options));
         });
-        $(this).find('select').val(value);
+        $(this).find('.reference-41b select').each(function (index, el) {
+            values && values[index] !== undefined && $(el).val(values[index].section);
+        });
+
+        if ($(element).find('select option').length == 0) {
+            $(element).find('table').find(':input').prop('disabled', true);
+        } else {
+            $(element).find('table').find(':input').prop('disabled', false);
+        }
     });
 };
 
@@ -775,18 +785,48 @@ $(document).ready(function() {
     };
 
     var path = './';
-    // var path = '../../SAMIS/AM1XP/Controls/SourceHTMLCode/';
-
+    //  var path = '../../SAMIS/AM1XP/Controls/SourceHTMLCode/';
+     
+     var readonly = false;
+     if (typeof (window._Readonly) !== "undefined") {
+        readonly = true;
+     }
     Alpaca.defaultToolbarSticky = true;
+    if (window._serverData == "") {
+        window._serverData = "{}";
+    }
 
+    var schema = window._submissionSchema;
+    schema.required = null;
+    schema.readonly = readonly;
     $('#form1').alpaca({
-        schemaSource: path + "schema/compiledSchema.json",
-        schema: {
-            "required": null
-        },
+        schema: schema,
         optionsSource: path + "options.json",
         options: {
             fields: {
+                tab3: {
+                    fields: {
+                        form1: {
+                            fields: {
+                                a3A: {
+                                    fields: {
+                                        a3A_1: {
+                                            fields: {
+                                                a3A_1_1: {
+                                                    fields: {
+                                                        f8: {
+                                                            dataSource: path + 'kad/kadAll.json'
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
                 tab4: {
                     fields: {
                         a4_1a: {
@@ -799,6 +839,15 @@ $(document).ready(function() {
                                             }
                                         }
                                     }
+                                },
+                                a4_1a2: {
+                                    items: {
+                                        fields: {
+                                            textfield1: {
+                                                dataSource: path + 'kad/kadAll.json'
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -806,8 +855,8 @@ $(document).ready(function() {
                 }
             }
         },
-        //dataSource: path + "data.json",
-                data: "{}",
+       // dataSource: path + "data.json",
+        data: window._serverData,
         postRender: function(control) {
             $('body').css('cursor', 'default');
             setTimeout(function () {
@@ -937,11 +986,16 @@ $(document).ready(function() {
 
             //tab5
             $('#result-table').prependTo('[data-alpaca-field-id="a5"]').show();
-            updateSelect();
+            var d = JSON.parse(window._serverData);
+            updateSelect(d);
             //refresh 5.3 on change of 4.1b and when adding rows
-            $('[data-alpaca-field-id="4.1b"]').on('change', updateSelect);
+            $('[data-alpaca-field-id="4.1b"]').on('change', function () {
+                updateSelect (control.getValue());
+             });
             $('[data-alpaca-field-id="5.3"]').on('mousedown', '[data-alpaca-array-actionbar-action="add"]', function() {
-                setTimeout(updateSelect, 400);
+                setTimeout(function () {
+                  updateSelect (control.getValue());
+             }, 400);
             });
 
             //automatic sum of tables
@@ -1017,11 +1071,19 @@ $(document).ready(function() {
         }
     });
 
-    $("#download-btn").on('click', function() {
-        var value = $("#form1").alpaca('get').getValue();
-        this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(value)));
-        this.setAttribute('download', "Υποβολή" + $.format.date(new Date(), 'yyyy_M_d_H_mm_ss') + ".txt");
-    });
+    //  $("#print-pdf").on('submit', function() {
+    //     var value = $("#form1").alpaca('get').getValue();
+    //     $('#print-pdf-content').val(JSON.stringify(value));
+    //     // this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(value)));
+    //     // this.setAttribute('download', "Υποβολή" + $.format.date(new Date(), 'yyyy_M_d_H_mm_ss') + ".txt");
+    //     // $.ajax({
+    //     //     url: 'https://forms-apanagio.c9users.io/print/',
+    //     //     type: "POST",
+    //     //     dataType: "json",
+    //     //     data: value,
+    //     //     contentType: "application/json"
+    //     // });
+    // });
 
     $('#advanced-download-link').on('click', function() {
         var value = $("#form1").alpaca('get').getValue();
