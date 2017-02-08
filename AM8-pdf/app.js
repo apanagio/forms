@@ -1015,6 +1015,8 @@ $(document).ready(function() {
 
 
             });
+            
+            window.finishedRendering = true;
         },
         view: {
             parent: "bootstrap-display-horizontal"
