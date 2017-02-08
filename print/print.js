@@ -2,7 +2,7 @@
 var system = require('system');
 var data = system.stdin.read();
 
-// var URL = 'https://forms-apanagio.c9users.io/AM8-pdf/';
+//var URL = 'http://www.amifisf.gr:8000/forms/AM8-pdf';
 var URL  = system.args[1];
 
 var webpage = require('webpage');
@@ -16,28 +16,16 @@ page.viewportSize = {
     width: 1400,
     height: 900
 };
-
-// page.header = {
-//     height: "1cm",
-//     contents: phantom.callback(function(pageNum, numPages) {
-//         return "<h1>Header <span style='float:right'>" + pageNum + " / " + numPages + "</span></h1>";
-//     })
-// };
-// page.footer = {
-//     height: "1cm",
-//     contents: phantom.callback(function(pageNum, numPages) {
-//         return "<h1>Footer <span style='float:right'>" + pageNum + " / " + numPages + "</span></h1>";
-//     })
-// };
-
+//page.onConsoleMessage = function(msg, lineNum, sourceId) {
+//  console.log('CONSOLE: ' + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
+//};
 
 var createPdf = function(url, settings) {
     page.open(url, settings, function(status) {
         if (status !== 'success') {
-            console.log('Unable to load the address!');
+            console.log('Unable to load the address: ' + url);
             phantom.exit();
-        }
-        else {
+        } else {
             setInterval(function() {
                 var finished = page.evaluate(function() {
                     return window.finishedRendering;

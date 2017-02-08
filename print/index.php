@@ -1,11 +1,11 @@
 <?php
 
-    $data = $_POST[data];
+    $data = $_POST["data"];
     if (empty($data)) {
         $data = '{}';
     }
 
-    $url = $_POST[url];
+    $url = $_POST["url"];
 
     $phantomPath = './';
 
@@ -16,6 +16,7 @@
     $result = exec($command);
 
     $attachment_location = $output.$result;
+    clearstatcache(true);
     if (file_exists($attachment_location)) {
         header($_SERVER['SERVER_PROTOCOL'].' 200 OK');
         header('Cache-Control: public'); // needed for internet explorer
@@ -26,6 +27,6 @@
         readfile($attachment_location);
         die();
     } else {
-        die('Error: File not found.');
+        die('Error: File not found. ' . $result);
     }
     echo $result;

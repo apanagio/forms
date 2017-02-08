@@ -41,16 +41,17 @@
         }
     ?>
     <?php
-        $schema = file_get_contents('schema/compiledSchema.json');
-        if ($schema === false) {
-            echo 'Cannot read schema';
-            die;
-        }
-        $schema = preg_replace('/\t+/', ' ', $schema);
+//        $schema = file_get_contents('schema/compiledSchema.json');
+//        if ($schema === false) {
+//            echo 'Cannot read schema';
+//            die;
+//        }
+//        $schema = preg_replace('/\t+/', ' ', $schema);
 
         $readonly = 'false';
         $serverData = '{}';
     ?>
+    <input type="hidden" id="server-data" value='<?php echo $data; ?>'>
     <div id="form1">
     </div>
     <div id="result-table">
@@ -72,7 +73,8 @@
         </table>
     </div>
     <script>
-        window._submissionSchema = <?php echo $schema; ?>;
+        //window._submissionSchema = <?php echo $schema; ?>;
+        window._submissionSchema = {};
         window._serverData = '<?php echo $data; ?>';
     </script>
 </body>

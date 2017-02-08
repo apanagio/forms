@@ -795,12 +795,13 @@ $(document).ready(function() {
     if (window._serverData == "") {
         window._serverData = "{}";
     }
-
-    var schema = window._submissionSchema;
-    schema.required = null;
-    schema.readonly = readonly;
+    var serverData=$('#server-data').val();
+    //var schema = window._submissionSchema;
+    //schema.required = null;
+    //schema.readonly = readonly;
     $('#form1').alpaca({
-        schema: schema,
+	schemaSource: path + 'schema/compiledSchema.json',
+        schema: {required: null},
         optionsSource: path + "options.json",
         options: {
             fields: {
@@ -856,7 +857,7 @@ $(document).ready(function() {
             }
         },
        // dataSource: path + "data.json",
-        data: window._serverData,
+        data: serverData,
         postRender: function(control) {
             $('body').css('cursor', 'default');
             setTimeout(function () {
@@ -986,7 +987,7 @@ $(document).ready(function() {
 
             //tab5
             $('#result-table').prependTo('[data-alpaca-field-id="a5"]').show();
-            var d = JSON.parse(window._serverData);
+            var d = JSON.parse(serverData);
             updateSelect(d);
             //refresh 5.3 on change of 4.1b and when adding rows
             $('[data-alpaca-field-id="4.1b"]').on('change', function () {
