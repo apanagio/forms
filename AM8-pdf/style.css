@@ -113,8 +113,11 @@ label {
   float: none;
 }
 .space-above {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 .space-above-large {
-  margin-top: 120px;
+  margin-top: 140px;
+}
+.dl-horizontal dt{
+  overflow: visible;
 }
