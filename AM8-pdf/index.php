@@ -39,20 +39,20 @@
             <img src="img/AM8-logo_no_logo.png" class="img-responsive center-block">
         </div>
         <div class="cover-content text-center">
-            <h1 class="space-above">
+            <h4 class="space-above">
                 Ενίσχυση Επιχειρήσεων για ερευνητικά έργα στους τομείς Χημικών Πολυμερών
-            </h1>
-            <h2 class="space-above">
+            </h4>
+            <h5 class="space-above">
                 Ειδική Υπηρεσία Διαχείρισης Επιχειρησιακού Προγράμματος<br>Περιφέρειας Ανατολικής Μακεδονίας & Θράκης
-            </h2>
-            <h4 class="space-above row">
+            </h5>
+            <h6 class="space-above row">
                 <dl class="dl-horizontal col-xs-6 col-md-6 center-col">
                   <dt>Κωδικός Πράξης Έργου <br>(Αριθμός ηλεκτρονικής υποβολής): </dt>
                   <dd>sdsdsdsds</dd>
                   <dt>Ημερομηνία ηλεκτρονικής υποβολής: </dt>
                   <dd>xcxcxcxcxc</dd>
                 </dl>
-            </h4>
+            </h6>
         </div>
         <div class="cover-footer space-above-large">
             <div class="row">
