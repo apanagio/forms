@@ -46,7 +46,7 @@
                 Ειδική Υπηρεσία Διαχείρισης Επιχειρησιακού Προγράμματος<br>Περιφέρειας Ανατολικής Μακεδονίας & Θράκης
             </h5>
             <h6 class="space-above row">
-                <dl class="dl-horizontal col-xs-6 col-md-6 center-col">
+                <dl class="dl-horizontal col-xs-8 col-md-8 center-col">
                   <dt>Κωδικός Πράξης Έργου <br>(Αριθμός ηλεκτρονικής υποβολής): </dt>
                   <dd>sdsdsdsds</dd>
                   <dt>Ημερομηνία ηλεκτρονικής υποβολής: </dt>
