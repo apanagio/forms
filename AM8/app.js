@@ -1071,19 +1071,19 @@ $(document).ready(function() {
         }
     });
 
-    //  $("#print-pdf").on('submit', function() {
-    //     var value = $("#form1").alpaca('get').getValue();
-    //     $('#print-pdf-content').val(JSON.stringify(value));
-    //     // this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(value)));
-    //     // this.setAttribute('download', "Υποβολή" + $.format.date(new Date(), 'yyyy_M_d_H_mm_ss') + ".txt");
-    //     // $.ajax({
-    //     //     url: 'https://forms-apanagio.c9users.io/print/',
-    //     //     type: "POST",
-    //     //     dataType: "json",
-    //     //     data: value,
-    //     //     contentType: "application/json"
-    //     // });
-    // });
+     $("#download-btn").on('click', function() {
+        var value = $("#form1").alpaca('get').getValue();
+        //$('#print-pdf-content').val(JSON.stringify(value));
+        // this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(value)));
+        // this.setAttribute('download', "Υποβολή" + $.format.date(new Date(), 'yyyy_M_d_H_mm_ss') + ".txt");
+        $.post({
+            url: 'http://www.amifisf.gr:8000/forms/print/',
+            data: {data: value, url: 'http://www.amifisf.gr:8000/forms/AM8-pdf/'},
+            success: function (response, status, xhr) {
+                console.log(response, status, xhr);
+            }
+        });
+    });
 
     $('#advanced-download-link').on('click', function() {
         var value = $("#form1").alpaca('get').getValue();
