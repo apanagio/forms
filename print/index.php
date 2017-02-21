@@ -7,6 +7,7 @@
 
     $url = $_POST["url"];
 
+
     $phantomPath = './';
 
     $command = "echo '$data' | phantomjs {$phantomPath}print.js $url ";

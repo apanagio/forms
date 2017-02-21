@@ -10,7 +10,16 @@ var page = webpage.create();
 page.paperSize = {
     format: 'A4',
     orientation: 'portrait',
-    margin: '0.8cm'
+    margin: '0.8cm',
+    footer: {
+            height: "1cm",
+            contents: phantom.callback(function(pageNum, numPages) {
+                if (pageNum == numPages) {
+                    return "";
+                }
+                return "<div style='font-weight:100'>Footer <span style='float:right'>" + pageNum + " / " + numPages + "</span></div>";
+            })
+        }
 };
 page.viewportSize = {
     width: 1400,
