@@ -56,9 +56,9 @@
         </div>
         <div class="cover-footer space-above-large">
             <div class="row">
-                <div class="col-xs-4 col-md-4"><img src="img/europe-small.jpg"/></div>
-                <div class="col-xs-4 col-md-4"><img src="img/Elliniki_dimokratia_logo-small.png"/></div>
-                <div class="col-xs-4 col-md-4"><img src="img/espa1420-small.jpg"/></div>
+                <div class="col-xs-4 col-md-4"><img src="img/europe-small.jpg"/ width=80></div>
+                <div class="col-xs-4 col-md-4"><img src="img/Elliniki_dimokratia_logo-small.png"/ width=80></div>
+                <div class="col-xs-4 col-md-4"><img src="img/espa1420-small.jpg"/ width=80></div>
             </div>
         </div>
     </div>
