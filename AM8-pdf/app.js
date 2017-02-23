@@ -64,7 +64,8 @@ var createGant = function(chartDiv, $dataDiv) {
             bars: {
                 barWidth: 0.6,
                 horizontal: true,
-                show: true
+                show: true,
+                fill: 1
             },
             stack: true
         }
