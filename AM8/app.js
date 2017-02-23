@@ -1077,8 +1077,8 @@ $(document).ready(function() {
         // this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(value)));
         // this.setAttribute('download', "Υποβολή" + $.format.date(new Date(), 'yyyy_M_d_H_mm_ss') + ".txt");
         $.post({
-            url: 'http://www.amifisf.gr:8000/forms/print/',
-            data: {data: value, url: 'http://www.amifisf.gr:8000/forms/AM8-pdf/'},
+            url: 'https://forms-apanagio.c9users.io/print/',
+            data: {data: value, url: 'https://forms-apanagio.c9users.io/AM8-pdf/', ContractCode: 'ididid', SubmissionDate: 'date-date'},
             success: function (response, status, xhr) {
                 console.log(response, status, xhr);
             }

@@ -1,16 +1,19 @@
 <?php
 
-    $data = $_POST["data"];
+    $data = $_POST['data'];
     if (empty($data)) {
         $data = '{}';
     }
 
-    $url = $_POST["url"];
+    $url = $_POST['url'];
+    $id = $_POST['ContractCode'];
+    $date = $_POST['SubmissionDate'];
 
+    $url = "$url?id=$id&date=$date";
 
     $phantomPath = './';
 
-    $command = "echo '$data' | phantomjs {$phantomPath}print.js $url ";
+    $command = "echo '$data' | phantomjs {$phantomPath}print.js '$url' ";
 
     $output = 'output/';
 
@@ -28,6 +31,6 @@
         readfile($attachment_location);
         die();
     } else {
-        die('Error: File not found. ' . $result);
+        die('Error: File not found. '.$result);
     }
     echo $result;

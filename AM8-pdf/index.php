@@ -48,9 +48,9 @@
             <h6 class="space-above row">
                 <dl class="dl-horizontal col-xs-10 col-md-10 center-col">
                   <dt>Κωδικός Πράξης Έργου <br>(Αριθμός ηλεκτρονικής υποβολής): </dt>
-                  <dd>sdsdsdsds</dd>
+                  <dd><?php echo $_GET['id']; ?></dd>
                   <dt>Ημερομηνία ηλεκτρονικής υποβολής: </dt>
-                  <dd>xcxcxcxcxc</dd>
+                  <dd><?php echo $_GET['date']; ?></dd>
                 </dl>
             </h6>
         </div>
@@ -101,7 +101,6 @@
         </table>
     </div>
     <script>
-        //window._submissionSchema = <?php echo $schema; ?>;
         window._submissionSchema = {};
         window._serverData = '<?php echo $data; ?>';
     </script>
