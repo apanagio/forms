@@ -14,7 +14,7 @@ page.paperSize = {
     footer: {
             height: "1cm",
             contents: phantom.callback(function(pageNum, numPages) {
-                if (pageNum == numPages) {
+                if (pageNum == 1) {
                     return "";
                 }
                 return "<div style='font-size:7px;font-weight:100'>Υποβολή<span style='float:right'>" + pageNum + " / " + numPages + "</span></div>";
