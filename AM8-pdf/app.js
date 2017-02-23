@@ -64,8 +64,7 @@ var createGant = function(chartDiv, $dataDiv) {
             bars: {
                 barWidth: 0.6,
                 horizontal: true,
-                show: true,
-                fill: 1
+                show: true
             },
             stack: true
         }
@@ -959,12 +958,12 @@ $(document).ready(function() {
                 });
             });
 
-            $('.gant-data').append('<div id="gant-chart"></div>');
-            var plot = createGant('gant-chart', $('.gant-data'));
+            // $('.gant-data').append('<div id="gant-chart"></div>');
+            // var plot = createGant('gant-chart', $('.gant-data'));
 
-            $('.gant-data').on('change', 'input', function() {
-                plot = createGant('gant-chart', $('.gant-data'));
-            });
+            // $('.gant-data').on('change', 'input', function() {
+            //     plot = createGant('gant-chart', $('.gant-data'));
+            // });
 
             $('.kad-table').on('change', $alpaca(1, 'td', ' :input'), function() {
                 $(this).closest('tr').find($alpaca(2, 'td', ' input')).val($(this).val());
