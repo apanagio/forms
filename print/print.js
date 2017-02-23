@@ -17,7 +17,7 @@ page.paperSize = {
                 if (pageNum == numPages) {
                     return "";
                 }
-                return "<div style='font-weight:100'>Footer <span style='float:right'>" + pageNum + " / " + numPages + "</span></div>";
+                return "<div style='font-weight:100'>Υποβολή<span style='float:right'>" + URL + pageNum + " / " + numPages + "</span></div>";
             })
         }
 };
