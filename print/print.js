@@ -1,5 +1,7 @@
 /*global phantom args*/
 var system = require('system');
+var fs = require('fs');
+
 var data = system.stdin.read();
 
 //var URL = 'http://www.amifisf.gr:8000/forms/AM8-pdf';
@@ -65,7 +67,9 @@ var settings = {
 setTimeout(function() {
     console.log('Timeout expired');
     phantom.exit();
-}, 25000);
+}, 125000);
 
+//fs.writeFile("log/log" + new Date().getTime(), "test", function(err) {
+//}); 
 
 createPdf(url, settings);
