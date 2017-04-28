@@ -1,0 +1,241 @@
+{
+    "hideInitValidationError": true,
+    "lazyLoading": true,
+    "fields": {
+        "tab1": {
+            "helper": "Προϋπόθεση θετικής αξιολόγησης: H πρόταση θα πρέπει να εκπληρώνει (ΝΑΙ) όλα τα κριτήρια",
+            "id": "tab1",
+            "fieldClass": "strong-helper",
+            "fields": {
+                "field1": {
+                    "view": "bootstrap-edit-horizontal",
+                    "fieldClass": "checkbox-array"
+                },
+                "field2": {
+                    "type": "table",
+                    "view": "bootstrap-display",
+                    "showActionsColumn": false,
+                    "fieldClass": "padded-array",
+                    "items": {
+                        "fields": {
+                            "critirio": {
+                                "view": "bootstrap-display"
+                            },
+                            "value": {
+                                "view": "bootstrap-edit"
+                            },
+                            "tekmiriosi": {
+                                "view": "bootstrap-display"
+                            },
+                            "comments": {
+                                "type": "textarea"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "tab2": {
+            "type": "table",
+            "showActionsColumn": false,
+            "view": "bootstrap-display",
+            "id": "tab2",
+            "items": {
+                "fields": {
+                    "group": {
+                        "view": "bootstrap-display"
+                    },
+                    "aa": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "xs-col"
+                    },
+                    "description": {
+                        "view": "bootstrap-display"
+                    },
+                    "specific": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "l-col"
+                    },
+                    "analysis": {
+                        "view": "bootstrap-display"
+                    },
+                    "weight": {
+                        "view": "bootstrap-display",
+                        "fieldClass": "xs-col"
+                    },
+                    "comments": {
+                        "type": "textarea",
+                        "fieldClass": "l-col"
+                    }
+                }
+            }
+        },
+        "tab3": {
+            "view": "bootstrap-edit",
+            "id": "tab3",
+            "fields": {
+                "arC1": {
+                    "type": "table",
+                    "showActionsColumn": false,
+                    "view": "bootstrap-display",
+                    "id": "arC1",
+                    "items": {
+                        "fields": {
+                            "group": {
+                                "view": "bootstrap-display"
+                            },
+                            "aa": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "description": {
+                                "view": "bootstrap-display"
+                            },
+                            "specific": {
+                                "view": "bootstrap-display"
+                            },
+                            "analysis": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "l-col"
+                            },
+                            "weight": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "comments": {
+                                "type": "textarea",
+                                "fieldClass": "l-col"
+                            }
+                        }
+                    }
+                },
+                "arC2": {
+                    "type": "table",
+                    "showActionsColumn": false,
+                    "view": "bootstrap-display",
+                    "id": "arC2",
+                    "items": {
+                        "fields": {
+                            "group": {
+                                "view": "bootstrap-display"
+                            },
+                            "aa": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "description": {
+                                "view": "bootstrap-display"
+                            },
+                            "specific": {
+                                "view": "bootstrap-display"
+                            },
+                            "analysis": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "l-col"
+                            },
+                            "weight": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "comments": {
+                                "type": "textarea",
+                                "fieldClass": "l-col"
+                            }
+                        }
+                    }
+                }
+
+            }
+        },
+        "tab4": {
+            "view": "bootstrap-edit",
+            "id": "tab4",
+            "fields": {
+                "arD1": {
+                    "type": "table",
+                    "helper": "ΕΚΠΛΗΡΩΣΗ ΚΡΙΤΗΡΙΩΝ (*Για την θετική αξιολόγηση της Ομάδας Κριτηρίων Δ τα κριτήρια Δ2 και Δ3 που αφορούν στη ρεαλιστικότητα του χρονοδιαγράμματος και του προϋπολογισμού δεν θα πρέπει να λάβουν την τιμή 0. Επίσης, οι αξιολογητές δύνανται να προτείνουν τεκμηριωμένες τροποποιήσεις στον προϋπολογισμό του έργου).",
+                    "fieldClass": "strong-helper",
+                    "showActionsColumn": false,
+                    "view": "bootstrap-display",
+                    "id": "arD1",
+                    "items": {
+                        "fields": {
+                            "group": {
+                                "view": "bootstrap-display"
+                            },
+                            "aa": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "description": {
+                                "view": "bootstrap-display"
+                            },
+                            "specific": {
+                                "view": "bootstrap-display"
+                            },
+                            "analysis": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "l-col"
+                            },
+                            "weight": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "comments": {
+                                "type": "textarea",
+                                "fieldClass": "l-col"
+                            }
+                        }
+                    }
+                },
+                "arD2": {
+                    "type": "table",
+                    "fieldClass": "strong-helper",
+                    "showActionsColumn": false,
+                    "view": "bootstrap-display",
+                    "id": "arD2",
+                    "items": {
+                        "fields": {
+                            "group": {
+                                "view": "bootstrap-display"
+                            },
+                            "aa": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "description": {
+                                "view": "bootstrap-display"
+                            },
+                            "specific": {
+                                "view": "bootstrap-display"
+                            },
+                            "analysis": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "l-col"
+                            },
+                            "weight": {
+                                "view": "bootstrap-display",
+                                "fieldClass": "xs-col"
+                            },
+                            "comments": {
+                                "type": "textarea",
+                                "fieldClass": "l-col"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "tab5": {
+            "fields": {
+                "field2": {
+                    "type": "textarea"
+                }
+            }
+        },
+        "tab6": {
+            "view": "bootstrap-display",
+            "id": "tab6"
+        }
+    }
+}
