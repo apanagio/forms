@@ -229,8 +229,8 @@
         "tab5": {
             "fields": {
                 "field1": {
-                    "view": "bootstrap-edit-horizontal"
-                }
+                    "view": "bootstrap-edit"
+                },
                 "field2": {
                     "type": "textarea"
                 }
