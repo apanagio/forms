@@ -115,10 +115,13 @@ $(document).ready(function() {
                 e.preventDefault();
             });
             
+            window.finishedRendering = true;
+
         },
         view: {
             parent: "bootstrap-display",
         }
+        
     });
 
 
