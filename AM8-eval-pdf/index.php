@@ -74,12 +74,8 @@
     ?>
 
     <div id="form1"></div>
-    <input id="evaluationJsonResult" hidden="true" runat="server" />
+    <input type="hidden" id="server-data" value='<?php echo $data; ?>'>
 
-    <script>
-        window._submissionSchema = {};
-        window._serverData = '<?php echo $data; ?>';
-    </script>
 </body>
 
 </html>

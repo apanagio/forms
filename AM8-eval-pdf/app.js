@@ -5,13 +5,14 @@ $(document).ready(function() {
     $('body').css('cursor', 'progress');
 
     Alpaca.defaultToolbarSticky = true;
+    var serverData=$('#server-data').val();
 
     // var _path = '../../SAMIS/AM1XP/Controls/SourceHTMLCode/';
     var _path = './';
     $("#form1").alpaca({
         schemaSource: _path + 'schema.json',
         optionsSource: _path + 'options.json',
-        data: window._serverData,
+        data: serverData,
         postRender: function() {
             $('body').css('cursor', 'default');
 
