@@ -67,6 +67,8 @@
         if (empty($data)) {
             $data = '{}';
         }
+        // $data = $_POST['ll'];
+        $data = str_replace(array("\r\n", "\n", "\r"), '     ', $data);
     ?>
     <?php
 //        $schema = file_get_contents('schema/compiledSchema.json');
@@ -79,7 +81,7 @@
         $readonly = 'false';
         $serverData = '{}';
     ?>
-    <input type="hidden" id="server-data" value='<?php echo $data; ?>'>
+    <input type="hidden" id="server-data" value='<?php //echo $data;?>'>
     <div id="form1">
     </div>
     <div id="result-table">

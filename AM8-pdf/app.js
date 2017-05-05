@@ -796,6 +796,9 @@ $(document).ready(function() {
         window._serverData = "{}";
     }
     var serverData=$('#server-data').val();
+    serverData = window._serverData;
+//    serverData = atob (decodeURIComponent( escape( serverData ) ));
+    console.log(serverData);
     //var schema = window._submissionSchema;
     //schema.required = null;
     //schema.readonly = readonly;
