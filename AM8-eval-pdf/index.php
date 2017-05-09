@@ -66,6 +66,7 @@
         if (empty($data)) {
             $data = '{}';
         }
+        $data = str_replace(array("\r\n", "\n", "\r"), '     ', $data);
     ?>
     <?php
 
