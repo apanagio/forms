@@ -44,4 +44,5 @@ body {
 }
 #result {
   display: none;
+  page-break-before: always;
 }
