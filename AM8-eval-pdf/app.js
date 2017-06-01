@@ -63,7 +63,7 @@ $(document).ready(function() {
 
             var calcConditions = function() {
                 return $('[data-alpaca-field-id="tab2"] tbody tr').toArray().reduce(function(acc, el) {
-                    var value = $(el).find('[data-alpaca-container-item-index="5"] input').val();
+                    var value = $(el).find('[data-alpaca-container-item-index="5"] .alpaca-control').text().replace(',', '.');
                     var weight = $(el).find('[data-alpaca-container-item-index="6"] .alpaca-control').text().replace(',', '.');
                     return acc + (value * weight);
                 }, 0);
@@ -71,7 +71,7 @@ $(document).ready(function() {
 
             var calcInvestment = function() {
                 return $('[data-alpaca-field-id="tab3"] tbody tr').toArray().reduce(function(acc, el, i) {
-                    var value = $(el).find('[data-alpaca-container-item-index="4"] input').val();
+                    var value = $(el).find('[data-alpaca-container-item-index="4"] .alpaca-control').text().replace(',', '.');
                     var weight = i == 0 ? 0.4 : 0.6;
                     return acc + (value * weight);
                 }, 0);
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
             var calcMaturity = function() {
                 return $('[data-alpaca-field-id="tab4"] tbody tr').toArray().reduce(function(acc, el, i) {
-                    var value = $(el).find('[data-alpaca-container-item-index="5"] input').val();
+                    var value = $(el).find('[data-alpaca-container-item-index="5"] .alpaca-control').text().replace(',', '.');
                     var weight = i != 4 ? $(el).find('[data-alpaca-container-item-index="6"] .alpaca-control').text().replace(',', '.') : 0.35;
                     return acc + (value * weight);
                 }, 0);
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
             var maturityOnOff = function() {
                 return [1, 2].reduce(function(acc, el) {
-                    return acc * $('[data-alpaca-field-id="tab4"] tbody tr[data-alpaca-container-item-index="' + el + '"] [data-alpaca-container-item-index="5"] input').val();
+                    return acc * $('[data-alpaca-field-id="tab4"] tbody tr[data-alpaca-container-item-index="' + el + '"] [data-alpaca-container-item-index="5"] .alpaca-control').text().replace(',', '.');
                 }, 1);
             };
 
@@ -98,10 +98,11 @@ $(document).ready(function() {
             var pass = function() {
                 return (requirements() && (maturityOnOff() > 0) && (calcTotal() > 4));
             };
+            
 
             //tab6
-            $('#result').show().appendTo('[data-alpaca-field-id=tab6]');
-            $('#calc').on('click', function (e) {
+            $('#result').show().appendTo('[data-alpaca-field-id=tab5]');
+            (function (e) {
                 $('#on-off').html( requirements() ? 'ΝΑΙ' : 'ΟΧΙ');
                 $('#condition').html(calcConditions().toFixed(2));    
                 $('#condition-total').html((calcConditions() * 0.3).toFixed(2));    
@@ -113,8 +114,8 @@ $(document).ready(function() {
                 $('#total').html(calcTotal().toFixed(2));
                 $('#pass').html(pass() ? 'ΝΑΙ' : 'ΟΧΙ');
 
-                e.preventDefault();
-            });
+                // e.preventDefault();
+            })();
             
             window.finishedRendering = true;
 

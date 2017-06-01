@@ -76,7 +76,81 @@
 
     <div id="form1"></div>
     <input type="hidden" id="server-data" value='<?php echo $data; ?>'>
+    
+        <div id="result">
+        
+        <div class="form-group">
+            &nbsp;
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Αξιολόγηση των προτάσεων ανά ομάδα κριτηρίων</div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Α/Α</th>
+                            <th>Ομάδα κριτηρίων</th>
+                            <th>Συντελεστής στάθμισης</th>
+                            <th>Μέγιστη Τιμή/Βαθμολογία</th>
+                            <th>Συνολική βαθμολογία</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Α</td>
+                            <td>Βασικές προϋποθέσεις συμμετοχής (ΝΑΙ/ΟΧΙ)</td>
+                            <td>&nbsp;</td>
+                            <td id="on-off"></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Β</td>
+                            <td>Κατάσταση Επιχείρησης</td>
+                            <td>30%</td>
+                            <td id="condition"></td>
+                            <td id="condition-total"></td>
+                        </tr>
+                        <tr>
+                            <td>Γ</td>
+                            <td>Επενδυτικό Σχέδιο</td>
+                            <td>50%</td>
+                            <td id="investment-plan"></td>
+                            <td id="investment-plan-total"></td>
+                        </tr>
+                        <tr>
+                            <td>Δ</td>
+                            <td>Ωριμότητα Επενδυτικού Σχεδίου</td>
+                            <td>20%</td>
+                            <td id="maturity"></td>
+                            <td id="maturity-total"></td>
+                        </tr>
+                        <tr>
+                            <td>Δ</td>
+                            <td>Εκπλήρωση Δ2 και Δ3</td>
+                            <td>&nbsp;</td>
+                            <td id="maturity-on-off"></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td colspan=2>ΣΥΝΟΛΙΚΗ ΒΑΘΜΟΛΟΓΙΑ</td>
+                            <td>&nbsp;</td>
+                            <td id="total"></td>
+                        </tr>
+                        <tr>
+                            <td colspan=2>ΠΡΟΫΠΟΘΕΣΗ ΓΙΑ ΘΕΤΙΚΗ ΑΞΙΟΛΟΓΗΣΗ: Η πράξη πρέπει να έχει λάβει θετική αξιολόγηση σε όλες τις ομάδες κριτηρίων και συνολική βαθμολογία μεγαλύτερη από 4, και τα κριτήρια Δ2 και Δ3 που αφορούν στη ρεαλιστικότητα του χρονοδιαγράμματος
+                                και του προϋπολογισμού δεν θα πρέπει να λάβουν την τιμή "ΌΧΙ"</td>
+                            <td>Θετική Αξιολόγηση</td>
+                            <td id="pass"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
+    </div>
+
+    
 </body>
 
 </html>
